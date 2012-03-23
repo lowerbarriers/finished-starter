@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Brad Czerniak</title>
-<link rel="alternate" type="application/rss+xml" title="Hawidu RSS Feed" href="http://feeds.feedburner.com/hawidu" />
-</head><body>
-<header>
-	<h1><a href="http://www.hawidu.com/" rel="me">Brad Czerniak</a></h1>
-</header>
-<aside>
-<h2>Brad on the Internet</h2><ul>
-<li><a rel="me" href="http://brad.hawidu.com">R&eacute;sum&eacute;</a></li>
-<li><a rel="me" href="http://twitter.com/ao5357">Twitter (@ao5357)</a></li>
-<li><a rel="me" href="http://www.facebook.com/bradczerniak">Facebook</a></li>
-<li><a rel="me author" href="https://plus.google.com/101859597007067422923?rel=author">Google+</a></li>
-<li><a href="http://www.cantonpl.org/">Canton Public Library (MPOW)</a></li>
-<li><a rel="me" href="http://www.reddit.com/user/ao5357/">Reddit</a></li>
-<li><a rel="me" href="http://www.linkedin.com/in/bczerniak">LinkedIn</a></li>
-</ul>
-</aside>
-<nav class="navigation">
-	<a href="http://hawidu.com/page/2/" >&larr; Previous Entries</a>
-</nav>
-
-<script type="text/javascript">
-var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-697953-3']);_gaq.push(['_trackPageview']);
-(function(){var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
-</script>
-</body></html>
+---
+layout: default
+title: Brad Czerniak
+---
+<div id="home">
+	<h1>Blog Posts</h1>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+	<h1>Brad on the Internet</h1><ul>
+	<li><a rel="me" href="http://brad.hawidu.com">R&eacute;sum&eacute;</a></li>
+	<li><a rel="me" href="http://twitter.com/ao5357">Twitter (@ao5357)</a></li>
+	<li><a rel="me" href="http://www.facebook.com/bradczerniak">Facebook</a></li>
+	<li><a rel="me author" href="https://plus.google.com/101859597007067422923?rel=author">Google+</a></li>
+	<li><a href="http://www.cantonpl.org/">Canton Public Library (MPOW)</a></li>
+	<li><a rel="me" href="http://www.reddit.com/user/ao5357/">Reddit</a></li>
+	<li><a rel="me" href="http://www.linkedin.com/in/bczerniak">LinkedIn</a></li>
+	</ul>
+</div>
