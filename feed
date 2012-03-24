@@ -29,11 +29,11 @@ layout: nil
 		<comments>http://hawidu.com{{ post.url }}#comments</comments>
 		<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
 		<dc:creator>Brad Czerniak</dc:creator>
-		{% for category in page.categories %}
+		{% for category in post.categories %}
 		<category><![CDATA[{{ category }}l]]></category>
 		{% endfor %}
-		<guid isPermaLink="false">http://hawidu.com/?p={{ post.id }}</guid>
-		<content:encoded><![CDATA[{{ post.content | xml_escape }}]]></content:encoded>
+		<guid isPermaLink="false">http://hawidu.com/?p={{ post.wp_id }}</guid>
+		<content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
 	</item>
 	{% endfor %}
 </channel>
