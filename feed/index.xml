@@ -32,7 +32,7 @@ layout: nil
 		{% for category in page.categories %}
 		<category><![CDATA[{{ category }}l]]></category>
 		{% endfor %}
-		<guid isPermaLink="false">http://hawidu.com/?p={{ post.id }}</guid>
+		<guid isPermaLink="false">http://hawidu.com/?p={{ post.wp_id }}</guid>
 		<content:encoded><![CDATA[{{ post.content | xml_escape }}]]></content:encoded>
 	</item>
 	{% endfor %}
