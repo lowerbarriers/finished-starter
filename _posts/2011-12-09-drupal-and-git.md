@@ -4,8 +4,6 @@ layout: post
 title: Drupal and Git
 categories: [Web Design]
 ---
-# Drupal and Git
-
 I'm honored to have been selected to present at the first-ever [DrupalCamp
 Michigan](http://drupalcampmi.org/). The local Drupal community is super
 strong: they opened registration for 50 people and it sold out so quickly they
