@@ -25,9 +25,13 @@ This week I'm spending 2 hours a day doing HITs (Human Intelligence Tasks) on [A
 
 ### What I did
 
-[caption caption="Turk Interface. I spent a lot of time looking for high-paying-yet-simple tasks. This was a fool's errand."]![The Interface Used on AMT](/images/turk.jpg)[/caption]
+![The Interface Used on AMT](/images/turk.jpg)
 
-[caption caption="A Simple Task I performed. I clicked the ads I preferred. It took about 15 minutes for 55 pages of the same thing, bringing me a few cents."]![A Simple Task I performed](/images/hit.jpg)[/caption]
+Turk Interface. I spent a lot of time looking for high-paying-yet-simple tasks. This was a fool's errand.
+
+![A Simple Task I performed](/images/hit.jpg)
+
+A Simple Task I performed. I clicked the ads I preferred. It took about 15 minutes for 55 pages of the same thing, bringing me a few cents.
 
 ### What I Learned Today
 

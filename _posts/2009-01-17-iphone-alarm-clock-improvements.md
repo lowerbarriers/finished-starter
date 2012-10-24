@@ -29,7 +29,7 @@ Here are the problems with this in my opinion:
 
 So I propose an interface more like this:
 
-![Alarm mockup](/images/alarming.png)
+![Alarm mockup](/images/alarming.jpg)
 
 An Apple designer could make it prettier, but the basic ideas are there. The background is black, all elements are — at brightest — 74% gray, the Snooze button is about twice as large, and it says Sleep instead of Snooze. Also, it doesn't really break from the core iPhone UI; the same slider bar, clock, top bar, and dialog colors are all present (though I used black text in the button for contrast's sake).
 

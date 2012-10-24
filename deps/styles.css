@@ -120,10 +120,14 @@ sup{bottom:.33em;position:relative;vertical-align:baseline;}
 
 /*--Structure--*/
 article,aside,figure,footer,header,hgroup,nav,section{display:block;}
-.page{margin:0 auto;max-width:36em;}
 	footer{clear:both;}
 
 /*--Media Queries--*/
+/*-Big Screens-*/
+@media screen and (min-width:36em){
+	.page{margin:0 auto;max-width:36em;}
+	}
+
 /*-Print-*/
 @media print{
 	/*Tag-level*/
