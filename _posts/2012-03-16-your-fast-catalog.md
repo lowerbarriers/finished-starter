@@ -1,5 +1,9 @@
---- wp_id: 340 layout: post title: Your Fast Catalog categories: [Google, Libraries, Web Design] --- 
-
+--- 
+wp_id: 340 
+layout: post 
+title: Your Fast Catalog 
+categories: [Google, Libraries, Web Design] 
+--- 
 [Canton Public Library's Catalog](http://catalog.cantonpl.org/) uses a large
 library application called [Millennium ILS from Innovative Interfaces,
 Inc](http://www.iii.com/products/millennium_ils.shtml). Recently, I undertook
