@@ -1,2 +1,11 @@
---- meta: {} type: post published: true status: publish title: A No-brainer tags: - Predictions layout: post --- Osama Bin Laden will be either killed or captured in September 2008. It will happen, and I've got $5 riding on it. Any other takers? 
+--- 
+meta: {} 
+type: post 
+published: true 
+status: publish 
+title: A No-brainer 
+tags: - Predictions 
+layout: post 
+--- 
 
+Osama Bin Laden will be either killed or captured in September 2008. It will happen, and I've got $5 riding on it. Any other takers?

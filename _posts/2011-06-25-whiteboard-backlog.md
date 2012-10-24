@@ -1,2 +1,19 @@
---- meta: dsq_thread_id: "342364971" _edit_last: "1" type: post published: true status: publish title: Whiteboard Backlog tags: - art - dry erase - General - whiteboard layout: post --- My apartment is covered in dry erase boards. I like to use them. Here are some examples: [![](http://hawidu.com/wp-content/uploads/2011/06/nyan_cat-300x224.jpg)](http://hawidu.com/wp-content/uploads/2011/06/nyan_cat.jpg) [![](http://hawidu.com/wp-content/uploads/2011/06/the_letter_that_johnnie_walker_read-224x300.jpg)](http://hawidu.com/wp-content/uploads/2011/06/the_letter_that_johnnie_walker_read.jpg) This tendency has led to me using them for my slide presentations. I've had two in the hopper that I presented at the Michigan Library Association's Tech Escape workshop in May. As is always the case with my presos, be forewarned that they contain a lot of salty language:  If you have any dry erase board art requests, please leave them in the comments and I will try my best. 
+--- 
+meta: 
+dsq_thread_id: "342364971" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: Whiteboard Backlog 
+tags: - art - dry erase - General - whiteboard 
+layout: post 
+--- 
 
+My apartment is covered in dry erase boards. I like to use them. Here are some examples: 
+
+[![](/images/nyan_cat.jpg)](/images/nyan_cat.jpg)
+
+[![](/images/the_letter_that_johnnie_walker_read.jpg)](/images/the_letter_that_johnnie_walker_read.jpg)
+
+This tendency has led to me using them for my slide presentations. I've had two in the hopper that I presented at the Michigan Library Association's Tech Escape workshop in May. As is always the case with my presos, be forewarned that they contain a lot of salty language:  If you have any dry erase board art requests, please leave them in the comments and I will try my best. 

@@ -1,4 +1,16 @@
---- meta: dsq_thread_id: "319112693" _edit_last: "1" type: post published: true status: publish title: "A Year of Transliteracy: Call to Action" tags: - Transliteracy layout: post --- It was one year ago today that I [first posted about transliteracy](http://hawidu.com/2010/05/31/on-transliteracy/). A few days earlier, I had [complained on twitter](http://twitter.com/ao5357/status/14842494520) that transliteracy was "a bullshit made-up term for the same old stuff." Since it's always been my policy on this blog to offer solutions whenever I identify a problem, it took a few days of thought before I posted the beginnings of the language model. Over the last year, I've done some other transliteracy-related stuff that might interest you: 
+--- 
+meta: 
+dsq_thread_id: "319112693" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: "A Year of Transliteracy: Call to Action" 
+tags: - Transliteracy 
+layout: post 
+--- 
+
+It was one year ago today that I [first posted about transliteracy](http://hawidu.com/2010/05/31/on-transliteracy/). A few days earlier, I had [complained on twitter](http://twitter.com/ao5357/status/14842494520) that transliteracy was "a bullshit made-up term for the same old stuff." Since it's always been my policy on this blog to offer solutions whenever I identify a problem, it took a few days of thought before I posted the beginnings of the language model. Over the last year, I've done some other transliteracy-related stuff that might interest you: 
 
   * Further attempted to [explain the usage of the word 'language' in the context of the model](http://hawidu.com/2010/06/18/speaking-the-same-language/)
   * Asked for feedback on a draft of [Redefining Transliteracy](http://hawidu.com/2010/11/12/redefining-transliteracy/) and [stirred a cauldron of nastiness](https://groups.google.com/d/topic/librariesandtransliteracy/ue3rnwF8j9g/discussion)
@@ -37,8 +49,7 @@ to it as [open source](http://en.wikipedia.org/wiki/Open_source) thinking.
 Professor Thomas calls transliteracy an open source concept in [a well-
 circulated video](http://vimeo.com/2831405):
 
-> We see it as an open source concept, and we offer it up for you to think
-about, develop, write about, go to Wikipedia and argue about the definition...
+> We see it as an open source concept, and we offer it up for you to think about, develop, write about, go to Wikipedia and argue about the definition...
 
 One immediate problem is that Wikipedia is a bad place to argue about the
 definition, since it's a place for things notable outside of itself, not
@@ -101,4 +112,3 @@ douchitude, just don't mention me by name or link to my blog. I don't care –
 all I care about is furthering the discussion of transliteracy by putting
 ideas out there. If you're unwilling to tell your readers about ideas because
 they conflict with your pre-formed assumptions, who's the real asshole?
-

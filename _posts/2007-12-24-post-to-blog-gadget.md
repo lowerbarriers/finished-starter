@@ -1,2 +1,12 @@
---- meta: dsq_thread_id: "108871461" type: post published: true status: publish title: Post To Blog Gadget tags: - Web Design layout: post --- [![Add to Google](http://buttons.googlesyndication.com/fusion/add.gif)](http://fusion.google.com/add?moduleurl=http%3A//www.hawidu.com/postblog/blog.xml) Hey everybody. I hope that my relentless testing this afternoon didn't bog down your aggregator. Anyways, I made a little gadget that communicates to independently-hosted blogs via xml-rpc. [You can read all about it here](http://hawidu.com/projects/post-to-blog-gadget/), and also add it. Hope SOMEBODY besides me finds it useful. Oh, and all the source is available at that link too. Enjoy! 
+--- 
+meta: 
+dsq_thread_id: "108871461" 
+type: post 
+published: true 
+status: publish 
+title: Post To Blog Gadget 
+tags: - Web Design 
+layout: post 
+--- 
 
+Hey everybody. I hope that my relentless testing this afternoon didn't bog down your aggregator. Anyways, I made a little gadget that communicates to independently-hosted blogs via xml-rpc. Hope SOMEBODY besides me finds it useful. Oh, and all the source is available at that link too. Enjoy!
