@@ -1,7 +1,7 @@
 --- 
 meta: 
 dsq_thread_id: "109227522" 
-_wp_old_slug: "" _
+_wp_old_slug: ""
 edit_last: "1" 
 type: post 
 published: true 
