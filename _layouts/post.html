@@ -1,8 +1,10 @@
 ---
 layout: layout
 ---
-<article>
-	<h1>{{ page.title }}</h1>
-    {{ content }}
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 itemprop="name headline">{{ page.title }}</h1>
+	<p class="byline">By <a href="https://plus.google.com/101859597007067422923?rel=author" itemprop="author profile name url" itemscope itemtype="http://schema.org/Person" rel="author">Brad Czerniak</a> on <time datetime="{{ page.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ page.date | date: "%B %e, %Y" }}</time></p>
+	<div itemprop="articleBody">
+		{{ content }}
+	</div>
 </article>
-<p class="post_date">{{ page.date | date: "%B %e, %Y" }}</p>
