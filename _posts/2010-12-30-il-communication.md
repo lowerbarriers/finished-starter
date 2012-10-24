@@ -1,4 +1,17 @@
---- meta: dsq_thread_id: "199808774" _wp_old_slug: "" _edit_last: "1" type: post published: true status: publish title: IL Communication tags: - Libraries - Transliteracy layout: post --- Last week, David Rothman posted [Commensurable Nonsense (Transliteracy)](http://davidrothman.net/2010/12/19/commensurable-nonsense-transliteracy/), a post critical of transliteracy from an Information Literacy perspective. David’s arguments were plausible-sounding fallacies, leading to some serious confusion. 
+--- 
+meta: 
+dsq_thread_id: "199808774" 
+_wp_old_slug: "" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: IL Communication 
+tags: - Libraries - Transliteracy 
+layout: post 
+--- 
+
+Last week, David Rothman posted [Commensurable Nonsense (Transliteracy)](http://davidrothman.net/2010/12/19/commensurable-nonsense-transliteracy/), a post critical of transliteracy from an Information Literacy perspective. David’s arguments were plausible-sounding fallacies, leading to some serious confusion. 
 
 ## tl;dr
 
@@ -69,7 +82,7 @@ week, or just some small sliver of IL?
 
 It’s neither, of course! Information Literacy is the notable exception to the
 transliteracy umbrella. I hinted at this in my [Redefining
-Transliteracy](../2010/11/12/redefining-transliteracy/) post and [a smidge on
+Transliteracy](/2010/11/12/redefining-transliteracy/) post and [a smidge on
 twitter](http://twitter.com/ao5357/status/17012153634525184); here are the
 charges against IL’s compatibility with transliteracy:
 

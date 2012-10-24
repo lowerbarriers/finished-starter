@@ -1,4 +1,17 @@
---- meta: dsq_thread_id: "198752431" _wp_old_slug: "" _edit_last: "1" type: post published: true status: publish title: Languages of a Blueberry Smoothie tags: - General - Libraries - Transliteracy layout: post --- At the end of May I quoted Voltaire in my [first transliteracy-related post](http://hawidu.com/2010/05/31/on-transliteracy/): "Define your terms, you will permit me again to say, or we shall never understand one another." It's been a long process, but I feel I've [defined a language model of transliteracy](http://hawidu.com/2010/11/12/redefining-transliteracy/) to a satisfactory extent. So before I demolish IL in the [Information Literacy](http://davidrothman.net/2010/12/19/commensurable-nonsense-transliteracy/) vs. [transliteracy](http://librariesandtransliteracy.wordpress.com/2010/12/20/why-transliteracy/) debate, I figured it would be fun to offer a practical example of the language model. One thing came to mind when thinking of examples: [Brian Hulsey](http://strangedichotomy.wordpress.com/)'s [Everyday Transliteracy](http://www.youtube.com/watch?v=h06FZryyQM4) video. It's known as the "blueberry smoothie" video to many; it shows how someone might communicate the same message (a blueberry smoothie recipe) using different websites and other forms of communication, and all in a concise, friendly manner.  Let's look at the examples through a linguistic lens. 
+--- 
+meta: 
+dsq_thread_id: "198752431" 
+_wp_old_slug: "" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: Languages of a Blueberry Smoothie 
+tags: - General - Libraries - Transliteracy 
+layout: post 
+--- 
+
+At the end of May I quoted Voltaire in my [first transliteracy-related post](http://hawidu.com/2010/05/31/on-transliteracy/): "Define your terms, you will permit me again to say, or we shall never understand one another." It's been a long process, but I feel I've [defined a language model of transliteracy](http://hawidu.com/2010/11/12/redefining-transliteracy/) to a satisfactory extent. So before I demolish IL in the [Information Literacy](http://davidrothman.net/2010/12/19/commensurable-nonsense-transliteracy/) vs. [transliteracy](http://librariesandtransliteracy.wordpress.com/2010/12/20/why-transliteracy/) debate, I figured it would be fun to offer a practical example of the language model. One thing came to mind when thinking of examples: [Brian Hulsey](http://strangedichotomy.wordpress.com/)'s [Everyday Transliteracy](http://www.youtube.com/watch?v=h06FZryyQM4) video. It's known as the "blueberry smoothie" video to many; it shows how someone might communicate the same message (a blueberry smoothie recipe) using different websites and other forms of communication, and all in a concise, friendly manner.  Let's look at the examples through a linguistic lens. 
 
 ## Written Language
 

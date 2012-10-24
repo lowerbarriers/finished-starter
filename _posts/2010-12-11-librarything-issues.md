@@ -1,4 +1,17 @@
---- meta: dsq_thread_id: "189032274" _wp_old_slug: "" _edit_last: "1" type: post published: true status: publish title: LibraryThing Issues tags: - Libraries layout: post --- I've been weighing whether to blog about some issues I've come across with [LibraryThing](http://www.librarything.com/). I've happily used their flagship product, [listened to their founder/owner keynote conferences](http://www.ala.org/ala/mgrps/divs/lita/litaevents/litaforum2008/2008forumkeynote.cfm), and have been something of a cheerleader for the [LibraryThing for Libraries enhancements](http://www.librarything.com/forlibraries/). So it follows that I was initially optimistic about their [Library Anywhere](http://www.libanywhere.com/) product. Unfortunately, my testing of that product and the conversation with an LT representative that followed (which I consider due diligence in reporting security/performance bugs prior to this post) left a bad taste in my mouth. For full disclosure: 
+--- 
+meta: 
+dsq_thread_id: "189032274" 
+_wp_old_slug: "" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: LibraryThing Issues 
+tags: - Libraries 
+layout: post 
+--- 
+
+I've been weighing whether to blog about some issues I've come across with [LibraryThing](http://www.librarything.com/). I've happily used their flagship product, [listened to their founder/owner keynote conferences](http://www.ala.org/ala/mgrps/divs/lita/litaevents/litaforum2008/2008forumkeynote.cfm), and have been something of a cheerleader for the [LibraryThing for Libraries enhancements](http://www.librarything.com/forlibraries/). So it follows that I was initially optimistic about their [Library Anywhere](http://www.libanywhere.com/) product. Unfortunately, my testing of that product and the conversation with an LT representative that followed (which I consider due diligence in reporting security/performance bugs prior to this post) left a bad taste in my mouth. For full disclosure: 
 
 ## LibraryThing Password Security Issue
 
@@ -87,8 +100,7 @@ interface, so there is zero reason why it couldn't be. After all, separate
 accessible versions of websites [are considered a last resort by standards
 bodies](http://www.webcredible.co.uk/user-friendly-resources/web-accessibility
 /text-only.shtml). Here's an example of the lack of Library Anywhere
-accessibility: [![](http://hawidu.com/wp-content/uploads/2010/12/lanojs-
-201x300.png)](http://hawidu.com/wp-content/uploads/2010/12/lanojs.png) This is
+accessibility: [![](/images/lanojs.png)](/images/lanojs.png) This is
 how the regular version of Library Anywhere appears in a browser with
 JavaScript turned off. This may sound like a red herring at first, but the
 most recent numbers I've heard put non-JavaScript users are around 5%, while

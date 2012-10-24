@@ -1,4 +1,16 @@
---- meta: dsq_thread_id: "267191571" _edit_last: "1" type: post published: true status: publish title: Matters of Media tags: - Transliteracy layout: post --- At the end of last year, my library school classmate [Lane Wilkinson](http://senseandref.blogspot.com/) and I had this great email conversation. I had just posted [Redefining Transliteracy](/2010/11/12/redefining-transliteracy/), and he and I discussed the various implications of it. What I found most awesome were [Lane](https://twitter.com/librarianwilk)'s questions regarding definitions of words used in the language-based transliteracy definition: "What do you mean by language?", "What does encoding and decoding mean in this context?", etc. Given that turnabout is fair play, and that Lane specifically requested feedback, I have a definition-based question regarding [his recent post](http://senseandref.blogspot.com/2011/03/literacy-sucks.html): [![](http://1.bp.blogspot.com/-bL1qlenTQJY/TZK42djJswI/AAAAAAAAHqs/iTblwmSxSdA/s1600/A+Taxonomy+of+Literacies.JPG)](http://senseandref.blogspot.com/2011/03/literacy-sucks.html) What definition of _medium_ is used in this context? 
+--- 
+meta: 
+dsq_thread_id: "267191571" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: Matters of Media 
+tags: - Transliteracy 
+layout: post 
+--- 
+
+At the end of last year, my library school classmate [Lane Wilkinson](http://senseandref.blogspot.com/) and I had this great email conversation. I had just posted [Redefining Transliteracy](/2010/11/12/redefining-transliteracy/), and he and I discussed the various implications of it. What I found most awesome were [Lane](https://twitter.com/librarianwilk)'s questions regarding definitions of words used in the language-based transliteracy definition: "What do you mean by language?", "What does encoding and decoding mean in this context?", etc. Given that turnabout is fair play, and that Lane specifically requested feedback, I have a definition-based question regarding [his recent post](http://senseandref.blogspot.com/2011/03/literacy-sucks.html): [![](http://1.bp.blogspot.com/-bL1qlenTQJY/TZK42djJswI/AAAAAAAAHqs/iTblwmSxSdA/s1600/A+Taxonomy+of+Literacies.JPG)](http://senseandref.blogspot.com/2011/03/literacy-sucks.html) What definition of _medium_ is used in this context? 
 
 ## Mean Medium? Mode?
 

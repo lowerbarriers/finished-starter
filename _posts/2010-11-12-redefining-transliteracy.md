@@ -1,4 +1,16 @@
---- meta: dsq_thread_id: "171458163" _wp_old_slug: "" _edit_last: "1" type: post published: true status: publish title: Redefining Transliteracy tags: - Libraries - Transliteracy layout: post --- [![](http://hawidu.com/wp-content/uploads/2010/11/weirdcomm-300x144.png)](http://hawidu.com/wp-content/uploads/2010/11/weirdcomm.png)
+--- 
+meta: 
+dsq_thread_id: "171458163" 
+_wp_old_slug: "" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: Redefining Transliteracy 
+tags: - Libraries - Transliteracy 
+layout: post 
+--- 
+[![](/images/weirdcomm.jpg)](/images/weirdcomm.jpg)
 
 ### Preface
 

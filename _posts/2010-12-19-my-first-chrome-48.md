@@ -1,4 +1,17 @@
---- meta: dsq_thread_id: "194074313" _wp_old_slug: "" _edit_last: "1" type: post published: true status: publish title: My First Chrome 48 tags: - Google layout: post --- A cool-looking box arrived unannounced at my apartment two days ago. It was Google's Cr-48 notebook for the Chrome OS Pilot Program. It was a pleasant surprise, and I've been happy trying to crash it for the last 48 hours. Here's an analysis of this gift horse's mouth: 
+--- 
+meta: 
+dsq_thread_id: "194074313" 
+_wp_old_slug: "" 
+_edit_last: "1" 
+type: post 
+published: true 
+status: publish 
+title: My First Chrome 48 
+tags: - Google 
+layout: post 
+--- 
+
+A cool-looking box arrived unannounced at my apartment two days ago. It was Google's Cr-48 notebook for the Chrome OS Pilot Program. It was a pleasant surprise, and I've been happy trying to crash it for the last 48 hours. Here's an analysis of this gift horse's mouth: 
 
 ## Trackpad
 
