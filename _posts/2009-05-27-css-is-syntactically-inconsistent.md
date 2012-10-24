@@ -10,7 +10,7 @@ tags: - General
 layout: post 
 --- 
 
-HTML is a pretty straightforward markup language. It has tags, each of which has optional attributes and sometimes required ones as well. Content goes between the opening and closing tags. Sometimes you can even self-close tags (but not <script> ! For the love of all things holy not script!). That's about it — there are comments and a doctype (which is just a special comment in the scheme of things), and some quirks relating mostly to form element attributes, but the gist of html is tags with attributes.
+HTML is a pretty straightforward markup language. It has tags, each of which has optional attributes and sometimes required ones as well. Content goes between the opening and closing tags. Sometimes you can even self-close tags (but not &lt;script&gt; ! For the love of all things holy not script!). That's about it — there are comments and a doctype (which is just a special comment in the scheme of things), and some quirks relating mostly to form element attributes, but the gist of html is tags with attributes.
 
 JavaScript has been to hell and back in attempting to handle this object model, but is getting there. If you want to be there now, the extendability of js allows you to use a library like JQuery to play with the tags, attributes, and their associated behaviors. How, then, can a more recently-updated language like CSS be going so off course? Take, for example, this checkbox: 
 
