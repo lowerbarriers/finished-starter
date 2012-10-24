@@ -73,7 +73,7 @@ that makes anything look like a button, one that pads the left-hand side and
 loads the icon sprite image into the space, and one ['request' above] that
 stipulates where in the sprite image the request icon appears. In the
 traditional sprite, the "IMAGE_MATTYPE3" option _must_ be an image. Since
-there's no getting around that, I used a spacer gif. It's 43 bytes � the
+there's no getting around that, I used a spacer gif. It's 43 bytes — the
 smallest practical image for the web. I then [circumvented the wwwoption to
 add the classes to the image](http://google-
 gruyere.appspot.com/part2#2__stored_xss_via_html_attribute). Those classes set
@@ -128,7 +128,7 @@ What makes this process so awful is connector.php. It's over 150K all by
 itself, and it includes the [sizzle selector library](http://sizzlejs.com/)
 and a bunch of [other](http://robertnyman.com/2005/11/07/the-ultimate-
 getelementsbyclassname/) [utilities](http://blog.stchur.com/2007/04/06
-/serializing-objects-in-javascript/). Which makes one wonder � why not just
+/serializing-objects-in-javascript/). Which makes one wonder: why not just
 use jQuery? Moreover, why does a file that loads a comprehensive selector
 engine need to define getElementsByClassName()? connector.php's JavaScript is
 a Frankenstein's monster of code that pollutes the global namespace. I'm
@@ -197,7 +197,7 @@ and 4.4K less payload on every page.
 #### Image Optimization
 
 I ran all the catalog images through [PNGGauntlet](http://pnggauntlet.com/),
-which uses [PNGOUT](http://advsys.net/ken/utils.htm) to reduce file size �
+which uses [PNGOUT](http://advsys.net/ken/utils.htm) to reduce file size —
 sometimes by 25% or more. For high-use files, I also weighed the quality
 reduction of making them 8-bit PNGs; the sprites, for instance, get served out
 as 8-bit files, making them substantially smaller.
@@ -237,4 +237,3 @@ book jackets from URLs without query parameters.
 ### tl;dr
 
 [Google Page Speed](http://code.google.com/speed/page-speed/index.html).
-

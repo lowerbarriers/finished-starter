@@ -39,7 +39,7 @@ blockquote{background:#f9f9f9;border-left:1em solid #eee;margin:1.5em 1em;paddin
 	blockquote:before{color:#808080;content:open-quote;font-size:4em;line-height:.1em;margin-right:.25em;vertical-align:-.4em;}
 	blockquote > :first-child{display:inline;}
 	blockquote > :last-child{margin-bottom:0;}
-code,pre{background:#f9f9f9;border:.1em solid #ccc;display:block;font-family:monospace;font-size:1em;margin:1.5em 1em;padding:.5em 1em;white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
+pre{background:#f9f9f9;border:.1em solid #ccc;display:block;font-family:monospace;font-size:1em;margin:1.5em 1em;padding:.5em 1em;white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
 embed,img,object{max-width:100%;}
 	img{-ms-interpolation-mode:bicubic;border:0 none;}
 hr{background-color:#808080;border-width:0;color:#808080;height:.2em;line-height:0;margin:1.8571em 2em;page-break-after:always;text-align:center;}
