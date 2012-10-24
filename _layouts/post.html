@@ -1,6 +1,11 @@
 ---
 layout: layout
 ---
+<nav>
+{% if page.previous.url %} 
+	<a href="{{page.previous.url}}">&laquo; Older: {{page.previous.title}}</a>
+{% endif %}
+</nav>
 <article itemscope itemtype="http://schema.org/BlogPosting">
 	<h1 itemprop="name headline">{{ page.title }}</h1>
 	<p class="byline">By <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="https://plus.google.com/101859597007067422923?rel=author" itemprop="name url" rel="author">Brad Czerniak</a></span> on <time datetime="{{ page.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ page.date | date: "%B %e, %Y" }}</time></p>
@@ -8,13 +13,8 @@ layout: layout
 		{{ content }}
 	</div>
 </article>
-
 <nav>
 {% if page.next.url %} 
-	<a href="{{page.next.url}}">Newer: {{page.next.title}}</a>
-{% endif %}
-<br />
-{% if page.previous.url %} 
-	<a href="{{page.previous.url}}">Older: {{page.previous.title}}</a>
+	<a href="{{page.next.url}}">Newer: {{page.next.title}} &raquo;</a>
 {% endif %}
 </nav>
