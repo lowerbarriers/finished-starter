@@ -21,11 +21,14 @@ I got the DVD Box set for [Sports Night](http://www.amazon.com/Sports-Night-Comp
 
 
 
+
 > JEREMY: Because women don't have special powers! Let's dispense with that theory right now. Women don't have a sixth sense. Women don't have intuition. Women don't have special powers!
 
 
 
+
 > Dan: You don't have a rep. You don't have street cred. Your last date was 14 years ago and you ended up with a marriage and a divorce.
+
 
 
 
@@ -35,7 +38,9 @@ I got the DVD Box set for [Sports Night](http://www.amazon.com/Sports-Night-Comp
 
 
 
+
 > CASEY: Hey, you're talkin' about the woman whose first date with me I'm planning. (Pause.) That was some pretty interesting grammar
+
 
 
 
@@ -55,7 +60,9 @@ I got the DVD Box set for [Sports Night](http://www.amazon.com/Sports-Night-Comp
 
 
 
+
 > DAN: Boned and de-boned mean the same thing. There's such a word as disheveled, but "sheveled" is nowhere to be found in the dictionary.
+
 
 
 
@@ -63,7 +70,9 @@ I got the DVD Box set for [Sports Night](http://www.amazon.com/Sports-Night-Comp
 
 
 
+
 > SAM: Do you guys know who Philo Farnsworth was? He invented television. I don't mean he invented television like Uncle Milty, I mean he invented the television. In a little house in Provo, Utah. At a time when the idea of transmitting moving pictures through the air would be like me saying I've figured out a way to beam us aboard the Starship Enterprise. He was a visionary and he died broke and without fanfare. The guy I really like though was his brother-in-law, Cliff Gardner. He said to Philo, "I know everyone thinks you're crazy, but I want to be a part of this. I don't have your head for science, so I'm not gonna be much help with the design and mechanics of the invention. But it sounds like in order to do your testing, you're gonna need glass tubes." See Philo was inventing a cathode receptor, and even though Cliff didn't know what that meant or how it worked, he'd seen Philo's drawing and he knew they were gonna need glass tubes and since television hadn't been invented yet, it's not like you could get 'em at the local TV repair shop. "I want to be a part of this", Cliff said, "and I don't have your head for science. How would it be if I taught myself to be a glassblower? And I could set up a little shop in the backyard. And I could make all the tubes you'll need for testing." There oughta be Congressional medals for people like that.
+
 
 
 
@@ -76,6 +85,7 @@ I got the DVD Box set for [Sports Night](http://www.amazon.com/Sports-Night-Comp
 > NATALIE: A KY test.
 
 > JEREMY: Y2K.
+
 
 
 
