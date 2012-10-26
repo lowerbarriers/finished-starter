@@ -118,6 +118,7 @@ sup{bottom:.33em;position:relative;vertical-align:baseline;}
 	.highlight .vi{color:#008080}
 	.highlight .il{color:#009999}
 .social{clear:both;display:block;margin:1em 0;}
+	.social:hover,.social:active{background:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));background:radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);}
 	.social > img{margin:0 1em 0 0;max-width:48px;vertical-align:middle;}
 
 /*--Structure--*/
