@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>*|MC:SUBJECT|*</title>
+<style type="text/css">
+	/* Client-specific Styles */
+	#outlook a{padding:0;}
+	.ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+
+	/* Reset Styles */
+	body{margin:0;padding:0;}
+	img{border:0; height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;}
+	table,td{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+	#bodyTable{height:100% !important;margin:0;padding:0;width:100% !important;}
+			
+	/* Template Styles
+		http://mailchimp.com/resources/guides/html/mailchimp-for-designers/#design-your-campaign
+	*/
+	h1{color:#222;display:block;font-family:Helvetica;font-size:26px;font-weight:bold;line-height:1.5;margin:0 0 10px;text-align:left;}
+	h2{color:#444;display:block;font-family:Helvetica;font-size:20px;font-weight:bold;line-height:1.5;margin:0 0 10px;text-align:left;}
+	h3{color:#666;display:block;font-family:Helvetica;font-size:16px;font-weight:bold;line-height:1.5;margin:0 0 10px;text-align:left;}
+	h4{color:#888;display:block;font-family:Helvetica;font-size:12px;font-weight:bold;line-height:1.5;margin:0 0 10px;text-align:left;}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: PREHEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color and bottom border for your email's preheader area.
+			* @theme page
+			*/
+			#templatePreheader{
+				/*@editable*/ background-color:#26ABE2;
+				/*@editable*/ border-bottom:0;
+			}
+			
+			/**
+			* @tab Header
+			* @section preheader text
+			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+			*/
+			.preheaderContent{
+				/*@editable*/ color:#FFFFFF;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:10px;
+				/*@editable*/ line-height:125%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Header
+			* @section preheader link
+			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+			*/
+			.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#FFFFFF;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and border for your email's header area.
+			* @theme header
+			*/
+			#templateHeader{
+				/*@editable*/ background-color:#FFFFFF;
+				/*@editable*/ border-top:0;
+				/*@editable*/ border-bottom:0;
+			}
+			
+			/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+			.headerContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:20px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ padding-top:20px;
+				/*@editable*/ padding-right:0;
+				/*@editable*/ padding-bottom:20px;
+				/*@editable*/ padding-left:0;
+				/*@editable*/ text-align:left;
+				/*@editable*/ vertical-align:middle;
+			}
+			
+			/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#26ABE2;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color for your email's body area.
+			*/
+			#templateBody{
+				/*@editable*/ background-color:#FFFFFF;
+				/*@editable*/ border-top:0;
+				/*@editable*/ border-bottom:0;
+				padding:20px;
+			}
+			
+			/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+			.bodyContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:13px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+			.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#26ABE2;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.bodyContent img{
+				display:inline;
+				height:auto;
+				max-width:600px;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the top border for your email's footer area.
+			* @theme footer
+			*/
+			#templateFooter{
+				/*@editable*/ border-top:0;
+				padding:20px;
+			}
+	
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the top border for your email's footer area.
+			* @theme footer
+			*/
+			body, #bodyTable{
+				/*@editable*/ background-color:#F4F4F4;
+			}
+	
+			/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+			.footerContent{
+				/*@editable*/ color:#808080;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:10px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+			.footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#606060;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.footerContent img{
+				display:inline;
+			}
+			
+			/* @media Styles */
+@media only screen and (max-width: 480px){
+				/* Client-specific Reset Styles */
+				body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+				
+				/* Template Styles */				
+				td[id="templateBody"], td[id="templateFooter"]{
+					padding-right:10px !important;
+					padding-left:10px !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section template width
+				* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work, set width to 300px instead.
+				*/
+				table[class="templateContainer"]{
+					max-width:600px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				table[id="templatePreheader"]{ /* Hide the template preheader to save space */
+					display:none;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section heading 1
+				* @tip Make the first-level headings larger in size for better readability on small screens.
+				*/
+				h1{
+					/*@editable*/ font-size:28px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section heading 2
+				* @tip Make the second-level headings larger in size for better readability on small screens.
+				*/
+				h2{
+					/*@editable*/ font-size:24px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section heading 3
+				* @tip Make the third-level headings larger in size for better readability on small screens.
+				*/
+				h3{
+					/*@editable*/ font-size:20px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section heading 4
+				* @tip Make the fourth-level headings larger in size for better readability on small screens.
+				*/
+				h4{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section header image
+				* @tip Make the main header image fluid for portrait or landscape view adaptability. If a fluid layout doesn't work, set width to 300px or half-size instead.
+				*/
+				img[id="headerImage"]{
+					height:auto !important;
+					/*@editable*/ max-width:233px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section header text
+				* @tip Make the header content text larger in size for better readability on small screens.
+				*/
+				.headerContent{
+					/*@editable*/ font-size:21px !important;
+					/*@editable*/ line-height:150% !important;
+					/*@editable*/ padding-top:20px !important;
+					/*@editable*/ padding-right:10px !important;
+					/*@editable*/ padding-bottom:20px !important;
+					/*@editable*/ padding-left:10px !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section body text
+				* @tip Make the body content text larger in size for better readability on small screens.
+				*/
+				.bodyContent{
+					/*@editable*/ font-size:17px !important;
+					/*@editable*/ line-height:150% !important;
+				}
+				
+				/**
+				* @tab Mobile Styles
+				* @section footer text
+				* @tip Make the footer content text larger in size for better readability on small screens.
+				*/
+				.footerContent{
+					/*@editable*/ font-size:13px !important;
+					/*@editable*/ line-height:150% !important;
+				}
+				
+				td[class="footerContent"] a{ /* Place footer social and utility links on their own lines, for easier access */
+					display:block !important;
+				}
+				
+			}
+</style>
+</head><body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0"><center>
+	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+	<tr>
+	<td align="center" valign="top">
+	<!-- // BEGIN PREHEADER -->
+<table border="0" cellpadding="10" cellspacing="0" width="100%" id="templatePreheader">
+	<tr>
+	<td align="center" valign="top">
+	<table border="0" cellpadding="0" cellspacing="0" width="600">
+	<tr>
+	<td valign="top" class="preheaderContent" mc:edit="preheader_content">
+	Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
+</td>
+<!-- *|IFNOT:ARCHIVE_PAGE|* -->
+											<td valign="top" width="220" class="preheaderContent" style="padding-left:20px;" mc:edit="preheader_links">
+Email not displaying correctly?<br><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
+</td>
+											<!-- *|END:IF|* -->
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- END PREHEADER \\ -->
+	<!-- // BEGIN TEMPLATE SECTIONS -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td align="center" valign="top">
+	<!-- // BEGIN BODY -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td align="center" valign="top" id="templateBody">
+	<table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+	<tr>
+<td valign="top" class="bodyContent" mc:edit="body_content">
+	<strong>Dear Generitech Customers,</strong>
+<br>
+<br>
+As the year comes to a close, I'd like to take the opportunity to thank you, Generitech's loyal supporters, for your continued commitment to experiencing the difference with our powerful products and solutions.
+<br>
+<br>
+I've learned a lot from your feedback this year, and from the countless surveys and polls Generitech has conducted. I've learned that you're leaders in your industries. Your innovation is both groundbreaking and wave-making. I've learned that streamlining your company's communication efforts is your #1 priority.
+<br>
+<br>
+I hope that our tools and solutions have improved the way you do business this year. I hope that our around-the-clock support team has impressed you with their knowledge and friendliness. I hope that your company's messaging and support streams improved when you partnered with Generitech. I hope that you've taken advantage of our Leadership Summits, Tools Expos and free whitepapers. If not, I hope you'll get involved in the new year, and I look forward to hearing your feedback.
+<br>
+<br>
+Follow us on Twitter at <a href="http://www.mailchimp.com/" target="_blank">@generitech</a>, and let us know how we're doing.
+<br>
+<br>
+Thanks for a great year.
+<br>
+<br>
+Sincerely,
+<br>
+<br>
+<em>Gary Terry</em>
+<br>
+President, Generitech Solutions
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- END BODY \\ -->
+</td>
+</tr>
+	<tr>
+	<td align="center" valign="top">
+	<!-- // BEGIN FOOTER -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td align="center" valign="top" id="templateFooter" style="padding-bottom:40px;">
+	<table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+<tr>
+	<td colspan="3" valign="top" class="footerContent" mc:edit="footer_social">
+	<a href="*|TWITTER:PROFILEURL|*">Follow on Twitter</a>&nbsp;&nbsp;&nbsp;<a href="*|FACEBOOK:PROFILEURL|*">Friend on Facebook</a>&nbsp;&nbsp;&nbsp;<a href="*|FORWARD|*">Forward to Friend</a>&nbsp;
+</td>
+</tr>
+	<tr>
+<td valign="top" class="footerContent" style="padding-top:20px; padding-bottom:20px;" mc:edit="footer_content">
+<em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+<br>
+*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
+<br>
+<br>
+<strong>Our mailing address is:</strong>
+<br>
+*|HTML:LIST_ADDRESS_HTML|* *|END:IF|*
+<br>
+<br>
+	*|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+</td>
+</tr>
+<tr>
+	<td colspan="3" valign="top" class="footerContent" mc:edit="footer_utility">
+	<a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- END FOOTER \\ -->
+</td>
+</tr>
+</table>
+<!-- END TEMPLATE SECTIONS \\ -->
+</td>
+</tr>
+</table>
+</center></body></html>
