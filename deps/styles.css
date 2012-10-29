@@ -124,6 +124,7 @@ sup{bottom:.33em;position:relative;vertical-align:baseline;}
 /*--Structure--*/
 article,aside,figure,footer,header,hgroup,nav,section{display:block;}
 	footer{clear:both;}
+		footer img{filter:-webkit-grayscale();}
 
 /*--Media Queries--*/
 /*-Big Screens-*/
