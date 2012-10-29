@@ -9,13 +9,13 @@ layout: layout
 	<div itemprop="articleBody">
 		{{ content }}
 	</div>
+	<footer>
+	{% if page.next.url %} 
+		<a class="next" href="{{page.next.url}}">Newer: {{page.next.title}} &raquo;</a>
+	{% endif %}
+	<br />
+	{% if page.previous.url %} 
+		<a class="previous" href="{{page.previous.url}}">&laquo; Older: {{page.previous.title}}</a>
+	{% endif %}
+	</footer>
 </article>
-<nav>
-{% if page.next.url %} 
-	<a class="next" href="{{page.next.url}}">Newer: {{page.next.title}} &raquo;</a>
-{% endif %}
-<br />
-{% if page.previous.url %} 
-	<a class="previous" href="{{page.previous.url}}">&laquo; Older: {{page.previous.title}}</a>
-{% endif %}
-</nav>
