@@ -31,7 +31,7 @@
 	</section>
 	<footer>
 		<h1>Things Brad Likes</h1>
-		{% for affiliate in affiliates reversed limit:2 %}
+		{% for affiliate in site.categories.affiliates.posts reversed limit:2 %}
 		{{ affiliate }}
 		{% endfor %}
 	</footer>
