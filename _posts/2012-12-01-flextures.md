@@ -65,7 +65,7 @@ We've seen some pretty cool games that use device orientation: to steer a car or
 ### Torsion Detection
 Along with having the ability to flex, a device that uses flextures would also need a sensor to detect the direction(s) and intensity of the flexing that occurs. Not being an engineer, I have no idea what this would entail. But I assume it's something that can be done with current technology for the most part.
 
-I believe torsion detection is a practical necessity for devices. If the device's gyro is flexed one way, but the rest of the device is oriented another, the software may orient the screen the wrong direction. The same reasoning also has implications for compasses and other internals. Only by having the software be aware of flexing activity can the user experience not be negatively affected. The potential problem is dependent on the physical locations of sensors in the device, as well as by the over device size.
+I believe torsion detection is a practical necessity for devices. If the device's gyro is flexed one way, but the rest of the device is oriented another, the software may orient the screen the wrong direction. The same reasoning also has implications for compasses and other internals. Only by having the software be aware of flexing activity can the user experience not be negatively affected. The potential problem is dependent on the physical locations of sensors in the device, as well as by the overall device size.
 
 ### tl;dr
-It would be pretty cool if you flexing your phone different ways was a type of gesture.
+It would be pretty cool if flexing your phone different ways was a type of gesture.
