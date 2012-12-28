@@ -10,7 +10,11 @@ tags: - General - Web Design
 layout: post 
 --- 
 
-[Chris Coyier](http://chriscoyier.net/) posted a nice, working [solution to a real problem over at CSS-Tricks](http://css-tricks.com/responsive-data-tables/). Basically, CSS lets you style your website to look and work well on mobile devices [by over-writing the styles of your full-size website](http://www.alistapart.com/articles/responsive-web-design/). There are performance drawbacks to this approach, but for the most part it's the best-of-all-possible-worlds solution. One thorny problem, though, is over-riding the style of certain elements that use the width of the screen liberally by default. One such element is the venerable [data table](http://www.w3schools.com/tags/tag_table.asp). Coyier's solution is great in that each table cell is labeled. However, doing this requires either writing CSS manually for every data table on the site (which is near-impossible for large sites) or having the same thing done with scripting on either the server or client side: 
+[Chris Coyier](http://chriscoyier.net/) posted a nice, working [solution to a real problem over at CSS-Tricks](http://css-tricks.com/responsive-data-tables/). Basically, CSS lets you style your website to look and work well on mobile devices [by over-writing the styles of your full-size website](http://www.alistapart.com/articles/responsive-web-design/). There are performance drawbacks to this approach, but for the most part it's the best-of-all-possible-worlds solution.
+
+One thorny problem, though, is over-riding the style of certain elements that use the width of the screen liberally by default. One such element is the venerable [data table](http://www.w3schools.com/tags/tag_table.asp).
+
+Coyier's solution is great in that each table cell is labeled. However, doing this requires either writing CSS manually for every data table on the site (which is near-impossible for large sites) or having the same thing done with scripting on either the server or client side: 
 
 [![](/images/tables_content_in_css.png)](/images/tables_content_in_css.png)
 
@@ -33,4 +37,6 @@ I propose a generalized solution that requires no scripting whatsoever. The draw
 	}
 {% endhighlight %}
 
-[Open the working demo](http://hawidu.com/responsivetables/) and resize your window to under 720 pixels wide to see the effect. I call this approach the "[Rainbow Table](http://en.wikipedia.org/wiki/Rainbow_table)s" method :-) Thanks to [Chris Coyier](https://twitter.com/chriscoyier) for posting a thoughtful working solution, and thereby motivating me to post about my approach after [sitting on it (in production no less!) for almost a year](http://twitpic.com/21a4do).
+[Open the working demo](http://hawidu.com/responsivetables/) and resize your window to under 720 pixels wide to see the effect. I call this approach the "[Rainbow Tables](http://en.wikipedia.org/wiki/Rainbow_table)" method :-)
+
+Thanks to [Chris Coyier](https://twitter.com/chriscoyier) for posting a thoughtful working solution, and thereby motivating me to post about my approach after [sitting on it (in production no less!) for almost a year](http://twitpic.com/21a4do).
