@@ -9,7 +9,9 @@ tags: — 52for2009 — encyclopedia — great depression
 layout: post 
 --- 
 
-This week I'm reading an entry from each letter of the alphabet (26 entries if you're keeping score) from a different Encyclopedia every day. Today was [Encyclopedia of the Great Depression](http://www.worldcat.org/oclc/52203085?tab=details#tabs), and here's what I read about: 
+This week I'm reading an entry from each letter of the alphabet (26 entries if you're keeping score) from a different Encyclopedia every day.
+
+Today was [Encyclopedia of the Great Depression](http://www.worldcat.org/oclc/52203085?tab=details#tabs), and here's what I read about: 
 
   1. [American Youth Congress](http://en.wikipedia.org/wiki/American_Youth_Congress)
   2. [Bourke-White, Margaret](http://en.wikipedia.org/wiki/Margaret_Bourke-White)
@@ -38,4 +40,8 @@ This week I'm reading an entry from each letter of the alphabet (26 entries if y
   25. —
   26. —
 
-The impression I got from Jonathan Alter's [The Defining Moment](http://www.worldcat.org/oclc/63680088?tab=details#tabs) (or maybe it was a PBS special) was that FDR remained isolationist as late as his 1940 campaign. Even so, it seems people were derided for being isolationist and/or pacifist earlier than that. The things you learn! BTW, did you know Charles Lindbergh was born in Detroit? Altogether, it's a neat little two-volume set. [Week 1 note: I had a Turk-free weekend. When I've completed 8 hours, I'll post the final tally].
+The impression I got from Jonathan Alter's [The Defining Moment](http://www.worldcat.org/oclc/63680088?tab=details#tabs) (or maybe it was a PBS special) was that FDR remained isolationist as late as his 1940 campaign. Even so, it seems people were derided for being isolationist and/or pacifist earlier than that. The things you learn! BTW, did you know Charles Lindbergh was born in Detroit?
+
+Altogether, it's a neat little two-volume set.
+
+[Week 1 note: I had a Turk-free weekend. When I've completed 8 hours, I'll post the final tally].

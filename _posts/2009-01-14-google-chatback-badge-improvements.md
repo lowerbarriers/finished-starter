@@ -24,7 +24,7 @@ Google Chatback badges are great for adding the ability to chat to with your vis
 	</a>
 {% endhighlight %}
 
-It'll look and work like this:  Chat with Brad Notes:
+Notes:
 
   * For those of you that use protocols other than http, the script will conditionally avoid a mismatch. If this isn't a concern, you can remove the javascript and just use the straight img tag
   * The whole thing is wrapped in the link to make the indicator clickable, so the span can be used to style the text with an underline

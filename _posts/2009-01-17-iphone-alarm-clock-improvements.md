@@ -10,7 +10,9 @@ tags: — alarm clock — apple — iPhone — Web Design
 layout: post 
 --- 
 
-You're like me: you use your iPhone as an alarm clock. You even cued up [Sonny & Cher's "I Got You Babe"](http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=855403&id=855409&s=143441) to play just like in [Groundhog Day](http://www.youtube.com/watch?v=eZbtAFq7dP8) (to remind yourself every morning that the only way to beat the futility of day-to-day life is to strive for what you really want). Yeah, you're like me. So I'm going to assume these things are true too: 
+You're like me: you use your iPhone as an alarm clock. You even cued up [Sonny & Cher's "I Got You Babe"](http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=855403&id=855409&s=143441) to play just like in [Groundhog Day](http://www.youtube.com/watch?v=eZbtAFq7dP8) (to remind yourself every morning that the only way to beat the futility of day-to-day life is to strive for what you really want).
+
+Yeah, you're like me. So I'm going to assume these things are true too: 
 
   * When you wake up, the lights are off and your eyes have been closed for 4-12 hours
   * You've kind of enjoyed being asleep, and are kinda cranky at whatever's making that racket

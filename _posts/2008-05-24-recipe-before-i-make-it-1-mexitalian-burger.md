@@ -10,7 +10,9 @@ tags: - burgers - Food - mexitalian - recipes
 layout: post 
 --- 
 
-Part 1 in a continuing series where I think up a recipe, post it, **then** make it. I will post later as to whether it's worth making/eating. I will try to be elaborate with the actual procedural recipes; but right now I'm quite hungry, so here's the menu description:
+Part 1 in a continuing series where I think up a recipe, post it, **then** make it. I will post later as to whether it's worth making/eating.
+
+I will try to be elaborate with the actual procedural recipes; but right now I'm quite hungry, so here's the menu description:
 
 ##MexItalian Burger
 

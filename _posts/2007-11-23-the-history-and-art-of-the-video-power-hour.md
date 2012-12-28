@@ -12,7 +12,9 @@ layout: post
 
 Let's start where any good history begins — in the pre-historic.
 
-Before around 10,000 BCE — animals would find and eat fermented fruits, thereby becoming mildly intoxicated. It is believed that early man observed this animal behavior, leading to the discovery of fermentation. After 10,000 BCE, until around 100 BC — Early man (in civilization sprung up from Egypt to China, to Pre-Columbian America) — Began brewing beer and fermenting wine. In many cases these concoctions were based in their religions, though they were also crude medicines and drank for varying purposes. After around 100 BC, at least in the Arabian Peninsular area, scientists had discovered distillation — leading to new ways to get crunk.
+Before around 10,000 BCE — animals would find and eat fermented fruits, thereby becoming mildly intoxicated. It is believed that early man observed this animal behavior, leading to the discovery of fermentation.
+
+After 10,000 BCE, until around 100 BC — Early man (in civilization sprung up from Egypt to China, to Pre-Columbian America) — Began brewing beer and fermenting wine. In many cases these concoctions were based in their religions, though they were also crude medicines and drank for varying purposes. After around 100 BC, at least in the Arabian Peninsular area, scientists had discovered distillation — leading to new ways to get crunk.
 
 1336-1364 AD — Giovanni De Dondi constructs the first astronomical clocks documented to have measured time in units as small as minutes, creating the first reliable means for partitioning an hour into sub-units.
 
@@ -24,16 +26,24 @@ Let's digress here with some etiquette: Encouraging people to drink large quanti
 
 Tip: Focus on burping throughout the hour — singing along is always fun, but you gotta get the CO2 out!
 
-Okay, so I've been complimented a number of times on my video power hour mix — let me give you the low-down on the schools of thought, and how their combination can create a memorable experience. The W. Silver school of video power hour wisdom — Mr. Silver was a regional pioneer of video power hour majesty. He began with a 1980s-themed hour, then 90s, then a mix. Unfortunately, rampant theft and wear-and-tear has lost these non-DVD gems to history. Silver's principles:
+Okay, so I've been complimented a number of times on my video power hour mix — let me give you the low-down on the schools of thought, and how their combination can create a memorable experience.
+
+The W. Silver school of video power hour wisdom — Mr. Silver was a regional pioneer of video power hour majesty. He began with a 1980s-themed hour, then 90s, then a mix. Unfortunately, rampant theft and wear-and-tear has lost these non-DVD gems to history.
+
+Silver's principles:
 
   1. Everyone watching should be familiar with at least 60% of the videos
-  2. Transitions, transitions, transitions! Transitions cannot be overstated: If you have the ability to do outlandish transitions, by all means…
+  2. Transitions, transitions, transitions!
 
-The cheesier the better. Star wipe? Better use two! My earliest attempts used many of Mr. Silver's videos, and focused almost entirely on his techniques. Despite the primitive nature, I still produced enjoyable hours.
+Transitions cannot be overstated: If you have the ability to do outlandish transitions, by all means… The cheesier the better. Star wipe? Better use two!
+
+My earliest attempts used many of Mr. Silver's videos, and focused almost entirely on his techniques. Despite the primitive nature, I still produced enjoyable hours.
 
 The A.J.I. school: After viewing one of my early attempts, AJI was quite smitten with the concept, and began immediate work crafting his own personal style. His influence led to a renaissance of crafting artful means outside of the video itself and the snappy transitions. He added a textual counter (up and down), as well as humorous text interspersed throughout the film. His videos reached 80% recognizable by even the most inept audience.
 
-By mixing the videos I had collected from both auteurs, and finding my own, I was ready to create the infamous Fall 2005 hour. Since then, I created a limited-release "Heure de Puissance," that was created in one day, premiered the same night, and was never seen again. That was a learning experience. So, here's what you need to know:
+By mixing the videos I had collected from both auteurs, and finding my own, I was ready to create the infamous Fall 2005 hour. Since then, I created a limited-release "Heure de Puissance," that was created in one day, premiered the same night, and was never seen again. That was a learning experience.
+
+So, here's what you need to know:
 
   1. There is nothing wrong with making a video power hour using top-40 hits and "classics"
   2. Skimming the internet for lists of best or worst for music videos will often lead to some fun discoveries

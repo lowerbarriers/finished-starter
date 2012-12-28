@@ -19,4 +19,10 @@ Okay, so it's been about four days since the application launched (btw, I swear 
   5. Tweak my database of librarians with additional email addresses, homepage URLs, and other useful data — currently-registered librarians can easily update, while new librarians will automatically have the option.
   6. More stuff is on the way, especially since the feedback and suggestions have been wonderful!
 
-Note: I get off work today at 9:00PM, and will be burning some hardcore midnight oil to get these launched as quickly as possible. Please be patient as things come into operation over the weekend. Thanks! You can see what I'm up to by <del>adding the alpha app</del>. Also, look out for the open Application Data, and eventually the open source. (Lastly, on a personal note — My packrat mentality makes it insanely difficult to weed "my" collection. Just wanted to get that off my chest.)
+Note: I get off work today at 9:00PM, and will be burning some hardcore midnight oil to get these launched as quickly as possible. Please be patient as things come into operation over the weekend. Thanks!
+
+You can see what I'm up to by <del>adding the alpha app</del>.
+
+Also, look out for the open Application Data, and eventually the open source.
+
+(Lastly, on a personal note — My packrat mentality makes it insanely difficult to weed "my" collection. Just wanted to get that off my chest.)

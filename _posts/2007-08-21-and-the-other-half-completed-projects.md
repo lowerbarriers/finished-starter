@@ -15,5 +15,3 @@ layout: post
   * thisis.hawidu.com
   * my stack of school-related and recreational books
   * get back on track to a healthy lifestyle
-
-If anybody reads this and cares to comment — any thoughts on the order of tackling the tasks?

@@ -10,4 +10,6 @@ tags: - Google
 layout: post 
 --- 
 
-You might ask — which theme does the creator of the [currently] largest <del>iGoogle theme creation tool</del> use for his homepage? The Answer, my friend, is [this one](http://www.google.com/ig?skin=http://www.hawidu.com/themes/hawidu/theme_template.xml).
+You might ask — which theme does the creator of the [currently] largest <del>iGoogle theme creation tool</del> use for his homepage?
+
+The Answer, my friend, is [this one](http://www.google.com/ig?skin=http://www.hawidu.com/themes/hawidu/theme_template.xml).
