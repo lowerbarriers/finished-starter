@@ -26,14 +26,13 @@ layout: nil
 	<item>
 		<title>{{ post.title }}</title>
 		<link>http://hawidu.com{{ post.url }}</link>
-		<comments>http://hawidu.com{{ post.url }}#comments</comments>
 		<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
 		<dc:creator>Brad Czerniak</dc:creator>
 		{% for category in post.categories %}
 		<category><![CDATA[{{ category }}l]]></category>
 		{% endfor %}
 		<guid isPermaLink="false">http://hawidu.com/?p={{ post.wp_id }}</guid>
-		<description><![CDATA[{{ post.content | xml_escape }}]]></description>
+		<description><![CDATA[{{ post.content | strip_html | xml_escape }}]]></description>
 		<content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
 	</item>
 	{% endfor %}
