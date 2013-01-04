@@ -33,11 +33,8 @@ layout: nil
 		<category><![CDATA[{{ category }}l]]></category>
 		{% endfor %}
 		<guid isPermaLink="false">http://hawidu.com/?p={{ post.wp_id }}</guid>
-<<<<<<< HEAD:feed
+		<description><![CDATA[{{ post.content | xml_escape }}]]></description>
 		<content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
-=======
-		<content:encoded><![CDATA[{{ post.content | xml_escape }}]]></content:encoded>
->>>>>>> 91ef375cb4eb438c8610804f3bb9c99b76115a3f:feed/index.xml
 	</item>
 	{% endfor %}
 </channel>
