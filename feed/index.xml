@@ -26,7 +26,7 @@ layout: nil
 	<item>
 		<title>{{ post.title }}</title>
 		<link>http://hawidu.com{{ post.url }}</link>
-		<pubDate>{{ post.date | date: "%a, %d %b %y %H:%M:%S %Z" }}</pubDate>
+		<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
 		<dc:creator>Brad Czerniak</dc:creator>
 		{% for category in post.categories %}
 		<category><![CDATA[{{ category }}l]]></category>
