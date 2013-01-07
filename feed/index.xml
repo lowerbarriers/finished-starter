@@ -16,7 +16,7 @@ layout: nil
 	<atom:link href="http://hawidu.com/feed/" rel="self" type="application/rss+xml" />
 	<link>http://hawidu.com</link>
 	<description>Brad Czerniak's personal site</description>
-	<lastBuildDate>{{ site.time | date: "%a, %d %b %y %H:%M:%S %Z" }}</lastBuildDate>
+	<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
 	<language>en</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
