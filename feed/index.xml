@@ -13,10 +13,10 @@ layout: nil
 
 <channel>
 	<title>hawidu</title>
-	<atom:link href="http://hawidu.com/feed" rel="self" type="application/rss+xml" />
+	<atom:link href="http://hawidu.com/feed/" rel="self" type="application/rss+xml" />
 	<link>http://hawidu.com</link>
-	<description>Brad Czerniak personal site</description>
-	<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+	<description>Brad Czerniak's personal site</description>
+	<lastBuildDate>{{ site.time | date: "%a, %2 %b %y %H:%M:%S %Z" }}</lastBuildDate>
 	<language>en</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -26,12 +26,12 @@ layout: nil
 	<item>
 		<title>{{ post.title }}</title>
 		<link>http://hawidu.com{{ post.url }}</link>
-		<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+		<pubDate>{{ post.date | date: "%a, %2 %b %y %H:%M:%S %Z" }}</pubDate>
 		<dc:creator>Brad Czerniak</dc:creator>
 		{% for category in post.categories %}
 		<category><![CDATA[{{ category }}l]]></category>
 		{% endfor %}
-		<guid isPermaLink="false">http://hawidu.com/?p={{ post.wp_id }}</guid>
+		<guid isPermaLink="false">http://hawidu.com{{ post.url }}</guid>
 		<description><![CDATA[{{ post.content | strip_html | xml_escape }}]]></description>
 		<content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
 	</item>
