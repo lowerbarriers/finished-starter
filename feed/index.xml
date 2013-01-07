@@ -16,7 +16,7 @@ layout: nil
 	<atom:link href="http://hawidu.com/feed/" rel="self" type="application/rss+xml" />
 	<link>http://hawidu.com</link>
 	<description>Brad Czerniak's personal site</description>
-	<lastBuildDate>{{ site.time | date: "%a, %2 %b %y %H:%M:%S %Z" }}</lastBuildDate>
+	<lastBuildDate>{{ site.time | date: "%a, %d %b %y %H:%M:%S %Z" }}</lastBuildDate>
 	<language>en</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -26,7 +26,7 @@ layout: nil
 	<item>
 		<title>{{ post.title }}</title>
 		<link>http://hawidu.com{{ post.url }}</link>
-		<pubDate>{{ post.date | date: "%a, %2 %b %y %H:%M:%S %Z" }}</pubDate>
+		<pubDate>{{ post.date | date: "%a, %d %b %y %H:%M:%S %Z" }}</pubDate>
 		<dc:creator>Brad Czerniak</dc:creator>
 		{% for category in post.categories %}
 		<category><![CDATA[{{ category }}l]]></category>
