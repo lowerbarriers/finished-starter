@@ -1,14 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "110797069" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Drupal is the Answer 
-tags: — Web Design 
-layout: post 
+tags: [Web Design]
 --- 
 
 Here are the slides and notes from my [June 16th presentation for Refresh Detroit](http://refresh-detroit.org/2010/06/22/recap-drupal/). I was fortunate enough to be joined by [Alex Fisher](http://www.commercialprogression.com/) and [Stephen Colson](http://switchbackcms.com/), who really brought everything together and luckily had all the answers. Thanks again, guys.

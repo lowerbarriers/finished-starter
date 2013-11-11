@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: A Hint at the Future 
-tags: - Meta 
-layout: post 
---- 
+---
+title: A Hint at the Future
+tags: [Meta]
+---
 
 I don't want to be one of those sporadic bloggers that apologize whenever they go a while without posting. So I'm not apologizing.
 

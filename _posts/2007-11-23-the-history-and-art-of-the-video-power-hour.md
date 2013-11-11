@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108871459" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
+dsq_thread_id: "108871459"
 title: The History and Art of the Video Power Hour 
-tags: — Music 
-layout: post 
---- 
+tags: [Music]
+---
 
 Let's start where any good history begins — in the pre-historic.
 

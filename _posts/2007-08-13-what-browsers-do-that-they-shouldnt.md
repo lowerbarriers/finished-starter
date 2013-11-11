@@ -1,13 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "109275704" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: What Browsers do (that they shouldn't) 
-tags: - Predictions 
-layout: post 
+---
+dsq_thread_id: "109275704"
+title: What Browsers do (that they shouldn't)
+tags: [Predictions]
 --- 
 
 The browser wars are no fun. Looking at a site like del.icio.us or the software features of Google's search and web histories, it's safe to say that features once relegated strictly to browsers are being taken up by web apps. In the same way that I want to predict everything else, I would like to give an idea of the direction browsing is going.

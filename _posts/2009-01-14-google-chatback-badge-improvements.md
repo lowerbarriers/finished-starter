@@ -1,13 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "617118801" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Google Chatback Badge Improvements 
-tags: - General 
-layout: post 
+tags: [General]
 --- 
 
 Google Chatback badges are great for adding the ability to chat to with your visitors to your sites — Google even offers a couple of formats that you can [copy and paste straight from their site](http://www.google.com/talk/service/badge/New). It couldn't be easier! However, if you'd like the coolness of the iframe version (javascript popup, etc.) and the themability of the simple link, here's a little code for you: 

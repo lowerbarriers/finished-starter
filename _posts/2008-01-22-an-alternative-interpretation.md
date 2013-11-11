@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: An Alternative Interpretation 
-tags: - Meta 
-layout: post 
---- 
+---
+title: An Alternative Interpretation
+tags: [Meta]
+---
 
 Are intellectual pursuits sexy? I contend the answer is 'yes,' and my super-strong argument is "because John Lennon sang so."
 

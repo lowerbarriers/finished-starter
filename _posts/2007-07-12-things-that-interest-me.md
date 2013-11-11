@@ -1,13 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "109206544" 
-type: post 
-published: true 
-status: publish 
-title: Things that interest me 
-tags: - General 
-layout: post 
---- 
+---
+dsq_thread_id: "109206544"
+title: Things that interest me
+tags: [General]
+---
 
  [Herstory](http://en.wikipedia.org/wiki/herstory) — The words "history" and "his" are not related in any way, yet herstory is still a common term.
 

@@ -1,12 +1,7 @@
---- 
-meta: {} 
-type: post 
-published: true 
-status: publish 
-title: General Update 
-tags: - General 
-layout: post 
---- 
+---
+title: General Update
+tags: [General]
+---
 
 **General Update** [salutes]
 

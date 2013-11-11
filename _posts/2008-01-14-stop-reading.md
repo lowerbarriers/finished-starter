@@ -1,13 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "109191949" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
+dsq_thread_id: "109191949"
 title: Stop Reading!
-tags: - General 
-layout: post 
+tags: [General]
 --- 
 
 [![cover of the book I'm talking about](http://books.google.com/books?id=DOrCGAAACAAJ&printsec=frontcover&img=1&zoom=1&sig=p6vLSnZSksEuxWON9n-q3q9KcYk)](http://books.google.com/books?id=DOrCGAAACAAJ)

@@ -1,8 +1,7 @@
 ---
 wp_id: 342
-layout: post
 title: Flextures
-categories: [Technologies]
+tags: [Technology]
 ---
 
 [Flexible phones are coming soon](http://www.bbc.co.uk/news/technology-20526577). At first this could just mean phones will be more comfortable in your pocket and less prone to shattering, but eventually this is bound to serve a practical purpose.

@@ -1,13 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "108871479" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Practically Mobile 
-tags: - General 
-layout: post 
+tags: [General]
 --- 
 
 Are you interested in mobile devices and how libraries can leverage the mobile surge? You may be interested in the presentation I did on May 20th for [MCLS](http://mlc.lib.mi.us/cms/sitem.cfm), entitled "[Practically Mobile](http://docs.google.com/present/view?id=dhsbt2xj_442chgw9jfb)."

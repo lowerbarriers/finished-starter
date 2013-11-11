@@ -1,14 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "149461495" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Both Have Good Points 
-tags: - Libraries 
-layout: post 
+tags: [Libraries]
 --- 
 
 [Bobbi Newman](http://twitter.com/librarianbyday) and [Jason Griffey](http://twitter.com/griffey) had a recent tweet-versation(?) about mobile devices and broadband access. They ended up agreeing to blog about it instead of debating 140 characters at a time: 

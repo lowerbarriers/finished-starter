@@ -1,13 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "108871107" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: iPhone alarm clock improvements 
-tags: — alarm clock — apple — iPhone — Web Design 
-layout: post 
+tags: [alarm clock, apple, iPhone, Web Design]
 --- 
 
 You're like me: you use your iPhone as an alarm clock. You even cued up [Sonny & Cher's "I Got You Babe"](http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=855403&id=855409&s=143441) to play just like in [Groundhog Day](http://www.youtube.com/watch?v=eZbtAFq7dP8) (to remind yourself every morning that the only way to beat the futility of day-to-day life is to strive for what you really want).

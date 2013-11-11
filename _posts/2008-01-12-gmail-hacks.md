@@ -1,13 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "108871495" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
+dsq_thread_id: "108871495"
 title: Gmail hacks 
-tags: - Google 
-layout: post 
+tags: [Google]
 --- 
 
 Gmail is good.

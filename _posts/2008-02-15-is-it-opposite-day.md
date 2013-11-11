@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
 title: Is it Opposite Day? 
-tags: - opposite day christmas awesome - Web Design 
-layout: post 
+tags: [opposite day, christmas, awesome, Web Design]
 --- 
 
 [www.isitoppositeday.com](http://www.isitoppositeday.com/)

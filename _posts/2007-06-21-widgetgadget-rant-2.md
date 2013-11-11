@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: "Widget/Gadget rant #2" 
-tags: - Web Design 
-layout: post 
---- 
+---
+title: "Widget/Gadget rant #2"
+tags: [Web Design]
+---
 
 Let me start with the bottom line: You should make a widget for your site. It should: 
 

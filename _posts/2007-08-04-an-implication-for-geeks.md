@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: An implication for geeks 
-tags: - Predictions 
-layout: post 
+---
+title: An implication for geeks
+tags: [Predictions]
 --- 
 
 I think Freeman Dyson was dead wrong. Why would we search for infrared-heavy emissions from so-called advanced societies in other systems if the theory behind the whole idea is bogus?

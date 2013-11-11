@@ -1,13 +1,7 @@
----
-meta: 
+--- 
 dsq_thread_id: "109227522" 
-edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Speaking the Same Language
-tags: General Transliteracy 
-layout: post
+tags: [General, Transliteracy]
 ---
 
 I appreciate [Sue Thomas](http://travelsinvirtuality.typepad.com/suethomas/), the preeminent scholar of [transliteracy](http://nlabnetworks.typepad.com/transliteracy/), taking the time to read and respond to my [recent post](http://bradczerniak.com/2010/05/31/on-transliteracy/). Her insight, and especially her question, made me realize that I had fallen into the [curse of knowledge](http://37signals.com/svn/posts/213-the-curse-of-knowledge) and had perhaps sacrificed effective communication for the sake of rigor.

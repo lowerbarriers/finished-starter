@@ -1,13 +1,7 @@
 --- 
-meta: 
 dsq_thread_id: "245061257" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Resist That Advice 
-tags: - Libraries - Web Design 
-layout: post 
+tags: [Libraries, Web Design] 
 --- 
 
 I'd like to touch briefly on a widely-circulated LJ post by [Aaron Schmidt](http://twitter.com/walkingpaper) entitled [Resist That Redesign](http://www.libraryjournal.com/lj/communityopinion/889081-274/resist_that_redesign__the.html.csp). It is generally good advice – using iterative website design rather than relying on complete redesigns. However, I think the advice needs better context.

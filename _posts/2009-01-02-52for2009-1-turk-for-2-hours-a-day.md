@@ -1,14 +1,8 @@
---- 
-meta: 
+---
 dsq_thread_id: "108871465" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: "52for2009 #1 — Turk for 2 hours a day" 
-tags: - 52for2009 - Amazon - HITs - Mahalo Answers - Mechanical - Turk 
-layout: post 
---- 
+tags: [2for2009, Amazon, HITs, Mahalo Answers, Mechanical, Turk]
+---
 
 This year I'm doing something new every week. Sometimes it'll be accomplishing a particular thing (like writing all my representative legislators), but more often it will be a daily activity for the week, like watching a Woody Allen film nightly. As you may have guessed, I'll be blogging these experiences. 
 

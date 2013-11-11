@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Keep Reading! 
-tags: - andrew keen - information literacy - internet - Libraries - wikipedia 
-layout: post 
+---
+title: Keep Reading!
+tags: [andrew keen, information literacy, internet, Libraries, wikipedia]
 --- 
 
 [![Cult of the Amateur](http://books.google.com/books?id=W4YuAAAACAAJ&printsec=frontcover&img=1&zoom=1&sig=l5vDLsya7ieCQcjE8lzq0uoJFm4)](http://books.google.com/books?id=W4YuAAAACAAJ)

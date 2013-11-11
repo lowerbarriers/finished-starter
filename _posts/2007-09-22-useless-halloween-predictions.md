@@ -1,13 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "108872161" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Useless Halloween Predictions 
-tags: - Predictions 
-layout: post 
+---
+dsq_thread_id: "108872161"
+title: Useless Halloween Predictions
+tags: [Predictions]
 --- 
 
 Some costumes I expect to see either in person or on the interwebs:

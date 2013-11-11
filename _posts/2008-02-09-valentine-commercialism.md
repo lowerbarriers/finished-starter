@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
 title: Valentine Commercialism 
-tags: — General 
-layout: post 
+tags: [General]
 --- 
 
 Anodizing consumer electronics varying shades of pink does not make them any more romantic as gifts. This is even true for iPods.

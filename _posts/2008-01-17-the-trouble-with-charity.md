@@ -1,13 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "109002741" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: The Trouble with Charity 
-tags: - charity - donation - General - heirs - inheritance - philanthropy - rich 
-layout: post 
+---
+dsq_thread_id: "109002741"
+title: The Trouble with Charity
+tags: [charity, donation, General, heirs, inheritance, philanthropy, rich]
 --- 
 
 I've seen some similar articles [to this one](http://www.guardian.co.uk/money/2008/jan/17/inheritancetax.usa) — about how the **super-rich are electing to donate their fortunes** rather than give the money to their heirs.

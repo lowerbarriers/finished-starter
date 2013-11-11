@@ -1,14 +1,8 @@
---- 
-meta: 
+---
 dsq_thread_id: "290035197" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Another Responsive Data Tables Approach 
-tags: - General - Web Design 
-layout: post 
---- 
+tags: [General, Web Design] 
+---
 
 [Chris Coyier](http://chriscoyier.net/) posted a nice, working [solution to a real problem over at CSS-Tricks](http://css-tricks.com/responsive-data-tables/). Basically, CSS lets you style your website to look and work well on mobile devices [by over-writing the styles of your full-size website](http://www.alistapart.com/articles/responsive-web-design/). There are performance drawbacks to this approach, but for the most part it's the best-of-all-possible-worlds solution.
 

@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "109274161" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: More Theme-y Stuff 
-tags: - Google 
-layout: post 
---- 
+---
+dsq_thread_id: "109274161"
+title: More Theme-y Stuff
+tags: [Google]
+---
 
 You might ask — which theme does the creator of the [currently] largest <del>iGoogle theme creation tool</del> use for his homepage?
 

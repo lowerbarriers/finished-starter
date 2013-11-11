@@ -1,14 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "189032274" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
+dsq_thread_id: "189032274"
 title: LibraryThing Issues 
-tags: - Libraries 
-layout: post 
+tags: [Libraries]
 --- 
 
 I've been weighing whether to blog about some issues I've come across with [LibraryThing](http://www.librarything.com/). I've happily used their flagship product, [listened to their founder/owner keynote conferences](http://www.ala.org/ala/mgrps/divs/lita/litaevents/litaforum2008/2008forumkeynote.cfm), and have been something of a cheerleader for the [LibraryThing for Libraries enhancements](http://www.librarything.com/forlibraries/). So it follows that I was initially optimistic about their [Library Anywhere](http://www.libanywhere.com/) product.

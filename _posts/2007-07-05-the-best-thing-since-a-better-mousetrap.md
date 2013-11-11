@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108889833" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: The Best Thing since a Better Mousetrap 
-tags: - Facebook - Web Design 
-layout: post 
---- 
+---
+dsq_thread_id: "108889833"
+title: The Best Thing since a Better Mousetrap
+tags: [Facebook, Web Design]
+---
 
 Okay, so it's been about four days since the application launched (btw, I swear there will be non-application blog posts someday!), and things are going overwhelmingly well. I've gotten a lot of feedback, mostly positive. My upgrade schedule is pretty-well set, but I'm looking to see if people would do things in a different order: 
 

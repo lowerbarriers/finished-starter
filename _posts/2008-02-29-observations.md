@@ -1,13 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "109006932" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Observations 
-tags: - Movies - TV 
-layout: post 
+title: Observations
+tags: [Movies, TV]
 --- 
 
 [![love guru](/images/lovegurup1.jpg)](/images/lovegurup1.jpg) 

@@ -1,14 +1,7 @@
 --- 
-meta: 
 dsq_thread_id: "110802687" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: iOS 4 Graph Paper Wallpaper 
-tags: - General 
-layout: post 
+tags: [General]
 --- 
 
 I made this for my Dad for Father's Day, but figured other people might like it, too. 

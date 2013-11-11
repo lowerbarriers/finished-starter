@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108871437" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Librarian updates 
-tags: - Facebook 
-layout: post 
---- 
+---
+dsq_thread_id: "108871437"
+title: Librarian updates
+tags: [Facebook]
+---
 
 I'm hesitant to call it "Librarian 2.0 beta" quite yet (I'm still working on the most-requested feature update), but today I launched a widget gallery and the new facebook invite system, so maybe things will pick up.
 

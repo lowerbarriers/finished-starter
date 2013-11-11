@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
 title: Week 2 — Encyclopedia by Letters 
-tags: — 52for2009 — encyclopedia — great depression 
-layout: post 
+tags: [52for2009, encyclopedia, great depression]
 --- 
 
 This week I'm reading an entry from each letter of the alphabet (26 entries if you're keeping score) from a different Encyclopedia every day.

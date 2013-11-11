@@ -1,14 +1,8 @@
 --- 
-meta: 
 dsq_thread_id: "108871474" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: CSS is Syntactically Inconsistent 
-tags: - General 
-layout: post 
---- 
+tags: [General] 
+---
 
 HTML is a pretty straightforward markup language. It has tags, each of which has optional attributes and sometimes required ones as well. Content goes between the opening and closing tags. Sometimes you can even self-close tags (but not &lt;script&gt; ! For the love of all things holy not script!). That's about it — there are comments and a doctype (which is just a special comment in the scheme of things), and some quirks relating mostly to form element attributes, but the gist of html is tags with attributes.
 

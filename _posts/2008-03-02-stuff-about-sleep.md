@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
 title: Stuff about sleep 
-tags: - Meta 
-layout: post 
+tags: [Meta]
 --- 
 
 First, caffeine withdrawal feels like angry jetleg with headaches.

@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
 title: For the Cultural Lexicon 
-tags: — General — TV 
-layout: post 
---- 
+tags: [General, TV]
+---
 
 Since I feel shafted that "rocket surgery" took off unattributed, I propose the following terms: 
 

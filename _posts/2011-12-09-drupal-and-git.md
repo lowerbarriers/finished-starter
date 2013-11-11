@@ -1,8 +1,7 @@
 ---
 wp_id: 331
-layout: post
 title: Drupal and Git
-categories: [Web Design]
+tags: [Web Design]
 ---
 I'm honored to have been selected to present at the first-ever [DrupalCamp
 Michigan](http://drupalcampmi.org/). The local Drupal community is super

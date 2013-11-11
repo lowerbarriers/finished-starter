@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: And the other half-completed projects… 
-tags: - General 
-layout: post 
---- 
+---
+title: And the other half-completed projects…
+tags: [General]
+---
 
   * Facebook Librarian
   * Challenging a book at my home library (more to come soon!)

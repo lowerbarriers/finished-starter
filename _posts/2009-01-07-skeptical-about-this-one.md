@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Skeptical about this one 
-tags: - 52for2009 - cryptozoology - encyclopedia - skepticism 
-layout: post 
+---
+title: Skeptical about this one
+tags: [52for2009, cryptozoology, encyclopedia, skepticism]
 --- 
 
 Today's circulating single-volume wonder was the barely-tolerable [Encyclopedia of Strange and Unexplained Physical Phenomena](http://www.amazon.com/Encyclopedia-Strange-Unexplained-Physical-Phenomena/dp/081038843X/ref=sr_1_1?ie=UTF8&s=books&qid=1231382994&sr=8-1) [Jerome Clark, Gale, 1993].

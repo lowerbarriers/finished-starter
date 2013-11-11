@@ -1,14 +1,7 @@
 --- 
-meta: 
 dsq_thread_id: "199808774" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: IL Communication 
-tags: - Libraries - Transliteracy 
-layout: post 
+tags: [Libraries, Transliteracy] 
 --- 
 
 Last week, David Rothman posted [Commensurable Nonsense (Transliteracy)](http://davidrothman.net/2010/12/19/commensurable-nonsense-transliteracy/), a post critical of transliteracy from an Information Literacy perspective. David’s arguments were plausible-sounding fallacies, leading to some serious confusion. 

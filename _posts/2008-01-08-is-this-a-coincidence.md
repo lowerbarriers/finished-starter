@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Is this a coincidence? 
-tags: - Facebook 
-layout: post 
---- 
+---
+title: Is this a coincidence?
+tags: [Facebook]
+---
 
 Is it just me, or are you more likely to get requests and app invites from people you don't care about/don't like?
 

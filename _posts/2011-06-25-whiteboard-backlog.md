@@ -1,13 +1,7 @@
 --- 
-meta: 
 dsq_thread_id: "342364971" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Whiteboard Backlog 
-tags: - art - dry erase - General - whiteboard 
-layout: post 
+tags: [art, dry erase, General, whiteboard] 
 --- 
 
 My apartment is covered in dry erase boards. I like to use them. Here are some examples: 

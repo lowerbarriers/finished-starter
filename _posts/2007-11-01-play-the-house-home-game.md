@@ -1,13 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108871441" 
-type: post 
-published: true 
-status: publish 
-title: Play the 'House' Home game! 
-tags: - TV 
-layout: post 
---- 
+---
+dsq_thread_id: "108871441"
+title: Play the 'House' Home game!
+tags: [TV]
+---
 
 [Click here for printer-friendly Google Doc](http://docs.google.com/Doc?id=dhsbt2xj_936dh354n)
 

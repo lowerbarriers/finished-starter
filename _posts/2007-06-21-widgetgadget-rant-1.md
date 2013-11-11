@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108877455" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: "Widget/Gadget rant #1" 
-tags: - Web Design 
-layout: post 
---- 
+---
+dsq_thread_id: "108877455"
+title: "Widget/Gadget rant #1"
+tags: [Web Design]
+---
 
 Widgets and Gadgets are a pervasive phenomenon. As such, it's strange that they're so under-developed. That's my complaint.
 

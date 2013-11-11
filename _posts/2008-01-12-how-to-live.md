@@ -1,13 +1,7 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: How to Live 
-tags: - Meta 
-layout: post 
---- 
+---
+title: How to Live
+tags: [Meta]
+---
 
 Philosophies to live by: 
 

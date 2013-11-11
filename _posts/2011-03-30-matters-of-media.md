@@ -1,13 +1,7 @@
 --- 
-meta: 
 dsq_thread_id: "267191571" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Matters of Media 
-tags: - Transliteracy 
-layout: post 
+tags: [Transliteracy]
 --- 
 
 At the end of last year, my library school classmate [Lane Wilkinson](http://senseandref.blogspot.com/) and I had this great email conversation. I had just posted [Redefining Transliteracy](/2010/11/12/redefining-transliteracy/), and he and I discussed the various implications of it. What I found most awesome were [Lane](https://twitter.com/librarianwilk)'s questions regarding definitions of words used in the language-based transliteracy definition: "What do you mean by language?", "What does encoding and decoding mean in this context?", etc.

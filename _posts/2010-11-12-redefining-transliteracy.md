@@ -1,14 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "171458163" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Redefining Transliteracy 
-tags: - Libraries - Transliteracy 
-layout: post 
+tags: [Libraries, Transliteracy]
 --- 
 [![](/images/weirdcomm.jpg)](/images/weirdcomm.jpg)
 

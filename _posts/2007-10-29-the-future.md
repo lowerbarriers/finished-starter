@@ -1,12 +1,6 @@
 --- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: The Future 
-tags: - Predictions 
-layout: post 
+title: The Future
+tags: [Predictions]
 --- 
 
 At work today, I was sent an email regarding futurists, and views of how technology, politics, and global change may influence major decisions. Since I mostly disagree with the [original](http://www.futurist.com/articles/future-trends/eleven-events-trends-and-developments-that-will-change-your-life/) [articles](http://www.futurist.com/archives/future-trends/the-future-of-reading/), I figured this would be a good place to make my predictions, for the benefit of all.

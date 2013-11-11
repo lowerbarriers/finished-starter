@@ -1,12 +1,6 @@
---- 
-meta:
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Encyclopedia of Censorship 
-tags: - 52for2009 - censorship - encyclopedia 
-layout: post 
+---
+title: Encyclopedia of Censorship
+tags: [52for2009, censorship, encyclopedia]
 --- 
 
 Today's Encyclopedia in the series is [The Encyclopedia of Censorship](http://www.amazon.com/Encyclopedia-Censorship-Facts-Library-History/dp/0816044643), edited by Jonathon Green. Here are some Pros right off the bat: 

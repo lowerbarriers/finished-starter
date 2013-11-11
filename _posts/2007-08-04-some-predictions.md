@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108921671" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Some Predictions 
-tags: - Predictions 
-layout: post 
---- 
+---
+dsq_thread_id: "108921671"
+title: Some Predictions
+tags: [Predictions]
+---
 
 Okay, so now that we know energy is, like, super-important — and let me emphasize if it's not already apparent — I am NOT talking about the kind of hippie energy that makes us, like, hold hands and love nature. I hate hippies. No, this is the energy that allows us to exist, and can be measured and predicted via science. This is how it will come into play in the future:
 

@@ -1,13 +1,7 @@
---- 
-meta: 
-dsq_thread_id: "109421319" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
+dsq_thread_id: "109421319"
 title: "Recipe before I make it #1- MexItalian Burger" 
-tags: - burgers - Food - mexitalian - recipes 
-layout: post 
+tags: [burgers, Food, mexitalian, recipes]
 --- 
 
 Part 1 in a continuing series where I think up a recipe, post it, **then** make it. I will post later as to whether it's worth making/eating.

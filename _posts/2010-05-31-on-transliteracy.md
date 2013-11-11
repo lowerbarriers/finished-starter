@@ -1,13 +1,7 @@
---- 
-meta: 
+---
 dsq_thread_id: "108871477" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: On Transliteracy 
-tags: — General — Transliteracy 
-layout: post 
+tags: [General, Transliteracy] 
 --- 
 
 ## Summary

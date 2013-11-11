@@ -1,13 +1,7 @@
 --- 
-meta: 
-dsq_thread_id: "319112693" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: "A Year of Transliteracy: Call to Action" 
-tags: - Transliteracy 
-layout: post 
+dsq_thread_id: "319112693"
+title: "A Year of Transliteracy: Call to Action"
+tags: [Transliteracy]
 --- 
 
 It was one year ago today that I [first posted about transliteracy](http://bradczerniak.com/2010/05/31/on-transliteracy/). A few days earlier, I had [complained on twitter](http://twitter.com/ao5357/status/14842494520) that transliteracy was "a bullshit made-up term for the same old stuff." Since it's always been my policy on this blog to offer solutions whenever I identify a problem, it took a few days of thought before I posted the beginnings of the language model.

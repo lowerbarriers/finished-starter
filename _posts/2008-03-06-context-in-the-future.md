@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1"
-type: post 
-published: true 
-status: publish 
-title: Context in the Future 
-tags: - Predictions 
-layout: post 
+---
+title: Context in the Future
+tags: [Predictions]
 --- 
 
 The strongest argument for a centralized personal account that is device-decentralized is the elimination of redundancy. Read that again.

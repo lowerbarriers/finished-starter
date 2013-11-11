@@ -1,14 +1,8 @@
---- 
-meta: 
-dsq_thread_id: "108872838" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Simple Productivity Hack 
-tags: - Meta 
-layout: post 
---- 
+---
+dsq_thread_id: "108872838"
+title: Simple Productivity Hack
+tags: [Meta]
+---
 
 If you Google yourself often ([and we all do](http://blogs.pcworld.com/staffblog/archives/006076.html)) ([and we should](http://www.lifehack.org/articles/lifehack/reference-check-you-are-who-google-says-you-are.html)), you can actually save yourself a bit of time by mashing together two simple and free web services:
 

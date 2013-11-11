@@ -1,14 +1,8 @@
---- 
-meta: 
+---
 dsq_thread_id: "108872828" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
-title: Sports Night 
-tags: - TV 
-layout: post 
---- 
+title: Sports Night
+tags: [TV]
+---
 
 I got the DVD Box set for [Sports Night](http://www.amazon.com/Sports-Night-Complete-Boxed-Set/dp/B00006IRH9/ref=pd_bbs_sr_1?ie=UTF8&s=dvd&qid=1199217769&sr=8-1) for Christmas about four years ago. Every Winter (and sometimes throughout the year) I revisit the DVDs. Here are a few quotes — ones I thought either funny or meaningful enough to write down:
 

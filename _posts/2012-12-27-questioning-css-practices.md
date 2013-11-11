@@ -1,8 +1,7 @@
 ---
 wp_id: 341
-layout: post
 title: Why Are We CSS-ing All Stupid?
-categories: [Web Design]
+tags: [Web Design]
 ---
 
 When evaluating a CSS methodology or new tool, I tend to ask questions:

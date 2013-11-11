@@ -1,12 +1,6 @@
---- 
-meta: 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
+---
 title: Something to consider 
-tags: - Movies 
-layout: post 
+tags: [Movies]
 --- 
 
 I don't know if you've heard, but [the new Speed Racer movie from the Wachowski brothers](http://speedracerthemovie.warnerbros.com/cmp/main.html) is going to be shot using special cameras from which perfectly in-focus images are derived.

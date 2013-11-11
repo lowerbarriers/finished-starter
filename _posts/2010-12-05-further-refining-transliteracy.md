@@ -1,15 +1,8 @@
---- 
-meta: 
+---
 dsq_thread_id: "185401083" 
-_wp_old_slug: "" 
-_edit_last: "1" 
-type: post 
-published: true 
-status: publish 
 title: Further Refining Transliteracy 
-tags: - General - Transliteracy 
-layout: post 
---- 
+tags: [General, Transliteracy]
+---
 
 ## Preface
 
