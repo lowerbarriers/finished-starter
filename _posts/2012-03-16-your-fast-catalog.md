@@ -116,7 +116,7 @@ speed/docs/payload.html#DeferLoadingJS) until they're complete (whether or not
 there's a result). Total payload for this process is 49K.
 
 Librarything for Libraries is even worse ([here I go
-again](http://hawidu.com/2010/12/11/librarything-issues/)). It goes:
+again](http://bradczerniak.com/2010/12/11/librarything-issues/)). It goes:
 
   * Page calls widget.php (served as javascript) directly, via a script tag
   * widget.php loads connector.php
