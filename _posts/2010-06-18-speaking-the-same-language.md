@@ -10,7 +10,7 @@ tags: General Transliteracy
 layout: post
 ---
 
-I appreciate [Sue Thomas](http://travelsinvirtuality.typepad.com/suethomas/), the preeminent scholar of [transliteracy](http://nlabnetworks.typepad.com/transliteracy/), taking the time to read and respond to my [recent post](http://hawidu.com/2010/05/31/on-transliteracy/). Her insight, and especially her question, made me realize that I had fallen into the [curse of knowledge](http://37signals.com/svn/posts/213-the-curse-of-knowledge) and had perhaps sacrificed effective communication for the sake of rigor.
+I appreciate [Sue Thomas](http://travelsinvirtuality.typepad.com/suethomas/), the preeminent scholar of [transliteracy](http://nlabnetworks.typepad.com/transliteracy/), taking the time to read and respond to my [recent post](http://bradczerniak.com/2010/05/31/on-transliteracy/). Her insight, and especially her question, made me realize that I had fallen into the [curse of knowledge](http://37signals.com/svn/posts/213-the-curse-of-knowledge) and had perhaps sacrificed effective communication for the sake of rigor.
 
 So, I'd like to be a bit less formal and start from the top. 
 
@@ -43,7 +43,7 @@ The method of expression is language. [Languages](http://en.wikipedia.org/wiki/L
 [![A Face-to-face conversation has components of verbal, body, and olfactory
 languages](/images/languages-of-a-conversation.jpg)](/images/languages-of-a-conversation.jpg)
 
-[As Sue points out](http://hawidu.com/2010/05/31/on-transliteracy/#dsq-comment-57325439), I made no mention of body language in my previous post. She is absolutely correct, and has provided an excellent example of how to effectively wrestle with my proposed redefinition of transliteracy.
+[As Sue points out](http://bradczerniak.com/2010/05/31/on-transliteracy/#dsq-comment-57325439), I made no mention of body language in my previous post. She is absolutely correct, and has provided an excellent example of how to effectively wrestle with my proposed redefinition of transliteracy.
 
 Two people engaging in a face- to-face conversation may use three or more different languages. They'd speak verbally, they may gesture or use other body language, and may have intentionally-or-not decided to express information through scent.
 
