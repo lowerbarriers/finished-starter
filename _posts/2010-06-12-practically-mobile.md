@@ -20,7 +20,7 @@ Are you interested in mobile devices and how libraries can leverage the mobile s
 
 Hello. Thank you for sticking around to see me!
 
-I'm [Brad Czerniak](http://www.hawidu.com/), the Digital Resources Developer at [Canton Public Library](http://www.cantonpl.org/) in [Canton, MI](http://www.cantonwiki.org/). They let me hack and play with cool technology all day. It's a pretty sweet gig.
+I'm [Brad Czerniak](http://www.bradczerniak.com/), the Digital Resources Developer at [Canton Public Library](http://www.cantonpl.org/) in [Canton, MI](http://www.cantonwiki.org/). They let me hack and play with cool technology all day. It's a pretty sweet gig.
 
 Today I'll be talking about some common-sense ways to enter the mobile arena.
 
