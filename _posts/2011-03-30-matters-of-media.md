@@ -44,6 +44,6 @@ Language requires a medium. Communicating (over time and space) constitutes info
 
 Since literacies are abilities for a sender to write and a receiver to read a **message**, rather than abilities of either party to grok a **medium**, it makes more sense from a literacy taxonomy standpoint to define and [categorize literacies by linguistic properties](http://senseandref.blogspot.com/2011/01/transliteracy-leftovers.html) rather than media.
 
-Also, I think the literacy ecosystem would be a lot cleaner if we could agree that, whether "information literacy" is actually a literacy or literacies or not, [its name is a really crappy mistake](http://hawidu.com/2010/12/30/il-communication/).
+Also, I think the literacy ecosystem would be a lot cleaner if we could agree that, whether "information literacy" is actually a literacy or literacies or not, [its name is a really crappy mistake](http://bradczerniak.com/2010/12/30/il-communication/).
 
 Otherwise, the diagram is fantastic. It's especially astute because it shows how literacies named and in common use can be grouped, even if those named literacies are themselves problematic. Literacy sucks indeed.
