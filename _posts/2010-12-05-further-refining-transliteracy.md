@@ -17,9 +17,9 @@ I owe a debt of gratitude to my former classmate Lane Wilkinson for the discussi
 
 If you've followed the series of posts about transliteracy on this blog, perhaps you'd agree that I've approached the topic somewhat backwards:
 
-  1. First, I [proposed a new definition](http://hawidu.com/2010/05/31/on-transliteracy/) as a solution to a problem I barely identified
-  2. Next, I [put the proposed definition into context and clarified what I meant by some terminology](http://hawidu.com/2010/06/18/speaking-the-same-language/)
-  3. I then [identified a number of issues with the current working definition](http://hawidu.com/2010/11/12/redefining-transliteracy/) that necessitate the redefinition
+  1. First, I [proposed a new definition](/2010/05/31/on-transliteracy/) as a solution to a problem I barely identified
+  2. Next, I [put the proposed definition into context and clarified what I meant by some terminology](/2010/06/18/speaking-the-same-language/)
+  3. I then [identified a number of issues with the current working definition](/2010/11/12/redefining-transliteracy/) that necessitate the redefinition
 
 In this post I'd like to illustrate that the issues with the definition are causing problems: namely inconsistent communication among transliteracy researchers.
 
@@ -57,4 +57,4 @@ There is no agreement in the literature.
 
 The word 'medium' is being used as a placeholder for an ill-defined unit of literacy. This placeholder isn't serving anyone because of the stark variation in usage.
 
-I've [made a case for language to be the unit](http://hawidu.com/2010/05/31/on-transliteracy/) instead, [clarified what language means](http://hawidu.com/2010/06/18/speaking-the-same-language/), and [showed that it can function across all contemporary literacies](http://hawidu.com/2010/11/12/redefining-transliteracy/). **What else is necessary to get the discussion away from medium** and toward language?
+I've [made a case for language to be the unit](/2010/05/31/on-transliteracy/) instead, [clarified what language means](/2010/06/18/speaking-the-same-language/), and [showed that it can function across all contemporary literacies](/2010/11/12/redefining-transliteracy/). **What else is necessary to get the discussion away from medium** and toward language?
