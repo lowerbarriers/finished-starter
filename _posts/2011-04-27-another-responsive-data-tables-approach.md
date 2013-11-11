@@ -22,21 +22,21 @@ I propose a generalized solution that requires no scripting whatsoever. The draw
 
 {% highlight css %}
 @media screen and (max-width:720px){ 
-	table{display:block;}
-	td,thead th{border-color:#444;border-style:solid;border-width:0 2px 0 0;display:inline;float:left;}
-		td:last-child,th:last-child{border-right:0 none;}
-		thead th{background:transparent;font-size:1.1em;}
-	tr{display:block;float:left;clear:left;padding:6px 0;width:100%;}
-		thead tr{border-bottom:4px solid #444;margin:0 0 .3em 0;padding:0 0 .2em 0;}
-		tbody tr:nth-child(even){background:#ddd;}
-	td:nth-child(5n+1),th:nth-child(5n+1){background:#FFD8D8;}
-	td:nth-child(5n+2),th:nth-child(5n+2){background:#FFE8D8;}
-	td:nth-child(5n+3),th:nth-child(5n+3){background:#FFF8D8;}
-	td:nth-child(5n+4),th:nth-child(5n+4){background:#D8FFD8;}
-	td:nth-child(5n+5),th:nth-child(5n+5){background:#D8D8FF;}
-	}
+  table{display:block;}
+  td,thead th{border-color:#444;border-style:solid;border-width:0 2px 0 0;display:inline;float:left;}
+    td:last-child,th:last-child{border-right:0 none;}
+    thead th{background:transparent;font-size:1.1em;}
+  tr{display:block;float:left;clear:left;padding:6px 0;width:100%;}
+    thead tr{border-bottom:4px solid #444;margin:0 0 .3em 0;padding:0 0 .2em 0;}
+    tbody tr:nth-child(even){background:#ddd;}
+  td:nth-child(5n+1),th:nth-child(5n+1){background:#FFD8D8;}
+  td:nth-child(5n+2),th:nth-child(5n+2){background:#FFE8D8;}
+  td:nth-child(5n+3),th:nth-child(5n+3){background:#FFF8D8;}
+  td:nth-child(5n+4),th:nth-child(5n+4){background:#D8FFD8;}
+  td:nth-child(5n+5),th:nth-child(5n+5){background:#D8D8FF;}
+  }
 {% endhighlight %}
 
-[Open the working demo](http://hawidu.com/responsivetables/) and resize your window to under 720 pixels wide to see the effect. I call this approach the "[Rainbow Tables](http://en.wikipedia.org/wiki/Rainbow_table)" method :-)
+[Open the working demo](http://bradczerniak.com/responsivetables/) and resize your window to under 720 pixels wide to see the effect. I call this approach the "[Rainbow Tables](http://en.wikipedia.org/wiki/Rainbow_table)" method :-)
 
 Thanks to [Chris Coyier](https://twitter.com/chriscoyier) for posting a thoughtful working solution, and thereby motivating me to post about my approach after [sitting on it (in production no less!) for almost a year](http://twitpic.com/21a4do).
