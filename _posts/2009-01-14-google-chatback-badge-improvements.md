@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "617118801" 
 title: Google Chatback Badge Improvements 
 tags: [General]

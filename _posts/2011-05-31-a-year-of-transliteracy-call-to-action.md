@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "319112693"
 title: "A Year of Transliteracy: Call to Action"
 tags: [Transliteracy]

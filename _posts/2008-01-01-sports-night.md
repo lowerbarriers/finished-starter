@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108872828" 
 title: Sports Night
 tags: [TV]

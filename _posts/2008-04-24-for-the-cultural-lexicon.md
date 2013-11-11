@@ -1,4 +1,5 @@
 ---
+layout: post
 title: For the Cultural Lexicon 
 tags: [General, TV]
 ---

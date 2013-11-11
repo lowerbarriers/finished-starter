@@ -1,4 +1,5 @@
 ---
+layout: post
 wp_id: 342
 title: Flextures
 tags: [Technology]

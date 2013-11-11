@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "198752431" 
 title: Languages of a Blueberry Smoothie 
 tags: [General, Libraries, Transliteracy] 

@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108877455"
 title: "Widget/Gadget rant #1"
 tags: [Web Design]

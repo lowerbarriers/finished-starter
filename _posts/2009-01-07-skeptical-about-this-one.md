@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Skeptical about this one
 tags: [52for2009, cryptozoology, encyclopedia, skepticism]
 --- 

@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "110802687" 
 title: iOS 4 Graph Paper Wallpaper 
 tags: [General]

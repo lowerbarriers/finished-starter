@@ -1,4 +1,5 @@
 ---
+layout: post
 title: A Hint at the Future
 tags: [Meta]
 ---

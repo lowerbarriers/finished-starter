@@ -1,4 +1,5 @@
 ---
+layout: post
 title: And the other half-completed projects…
 tags: [General]
 ---

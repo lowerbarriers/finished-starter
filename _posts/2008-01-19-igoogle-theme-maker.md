@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109003185"
 title: iGoogle Theme Maker! 
 tags: [API, color, colors, design, designs, Google, iGoogle, images, theme, theme API, themes]

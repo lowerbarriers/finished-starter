@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Is it Opposite Day? 
 tags: [opposite day, christmas, awesome, Web Design]
 --- 

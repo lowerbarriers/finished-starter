@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "199808774" 
 title: IL Communication 
 tags: [Libraries, Transliteracy] 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Something to consider 
 tags: [Movies]
 --- 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Context in the Future
 tags: [Predictions]
 --- 

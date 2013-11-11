@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871461"
 title: Post To Blog Gadget
 tags: [Web Design]

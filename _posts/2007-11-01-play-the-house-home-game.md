@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871441"
 title: Play the 'House' Home game!
 tags: [TV]

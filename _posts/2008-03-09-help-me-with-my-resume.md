@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "109724236"
 title: Help me with my resume
 tags: [General, Web Design]

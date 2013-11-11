@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109275704"
 title: What Browsers do (that they shouldn't)
 tags: [Predictions]

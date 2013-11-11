@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "189032274"
 title: LibraryThing Issues 
 tags: [Libraries]

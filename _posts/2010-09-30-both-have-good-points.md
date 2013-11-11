@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "149461495" 
 title: Both Have Good Points 
 tags: [Libraries]

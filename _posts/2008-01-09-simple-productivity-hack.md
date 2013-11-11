@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108872838"
 title: Simple Productivity Hack
 tags: [Meta]

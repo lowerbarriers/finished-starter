@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871107" 
 title: iPhone alarm clock improvements 
 tags: [alarm clock, apple, iPhone, Web Design]

@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109002741"
 title: The Trouble with Charity
 tags: [charity, donation, General, heirs, inheritance, philanthropy, rich]

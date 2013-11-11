@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108889833"
 title: The Best Thing since a Better Mousetrap
 tags: [Facebook, Web Design]

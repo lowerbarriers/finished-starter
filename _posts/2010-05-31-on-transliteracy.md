@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871477" 
 title: On Transliteracy 
 tags: [General, Transliteracy] 

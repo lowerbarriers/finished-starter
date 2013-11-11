@@ -1,4 +1,5 @@
---- 
+---
+layout: post 
 dsq_thread_id: "245061257" 
 title: Resist That Advice 
 tags: [Libraries, Web Design] 

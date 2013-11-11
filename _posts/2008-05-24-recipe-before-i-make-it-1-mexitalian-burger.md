@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109421319"
 title: "Recipe before I make it #1- MexItalian Burger" 
 tags: [burgers, Food, mexitalian, recipes]

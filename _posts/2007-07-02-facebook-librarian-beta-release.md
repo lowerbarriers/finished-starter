@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871426"
 title: Facebook Librarian Beta Release
 tags: [Facebook]

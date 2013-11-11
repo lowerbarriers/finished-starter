@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "267191571" 
 title: Matters of Media 
 tags: [Transliteracy]

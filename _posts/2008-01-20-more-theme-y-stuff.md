@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109274161"
 title: More Theme-y Stuff
 tags: [Google]

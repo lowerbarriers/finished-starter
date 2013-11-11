@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "342364971" 
 title: Whiteboard Backlog 
 tags: [art, dry erase, General, whiteboard] 

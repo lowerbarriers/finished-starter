@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871495"
 title: Gmail hacks 
 tags: [Google]

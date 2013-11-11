@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 wp_id: 340  
 title: Your Fast Catalog 
 tags: [Google, Libraries, Web Design] 

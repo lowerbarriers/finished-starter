@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Patrons in their Natural Habitat
 tags: [Libraries]
 ---

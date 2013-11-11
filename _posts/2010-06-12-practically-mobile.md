@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871479" 
 title: Practically Mobile 
 tags: [General]

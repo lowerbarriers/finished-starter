@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Encyclopedia of Censorship
 tags: [52for2009, censorship, encyclopedia]
 --- 

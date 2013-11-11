@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "171458163" 
 title: Redefining Transliteracy 
 tags: [Libraries, Transliteracy]

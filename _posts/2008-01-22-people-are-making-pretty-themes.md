@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108921544"
 title: People are making pretty themes!
 tags: [Meta]

@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "108871474" 
 title: CSS is Syntactically Inconsistent 
 tags: [General] 

@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "185401083" 
 title: Further Refining Transliteracy 
 tags: [General, Transliteracy]

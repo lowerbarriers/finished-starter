@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108875483"
 title: His name is Miles, get it? 
 tags: [General]

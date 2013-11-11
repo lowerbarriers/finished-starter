@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Valentine Commercialism 
 tags: [General]
 --- 

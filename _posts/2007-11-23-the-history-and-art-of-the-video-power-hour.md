@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871459"
 title: The History and Art of the Video Power Hour 
 tags: [Music]

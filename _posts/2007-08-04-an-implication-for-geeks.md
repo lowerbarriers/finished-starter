@@ -1,4 +1,5 @@
 ---
+layout: post
 title: An implication for geeks
 tags: [Predictions]
 --- 

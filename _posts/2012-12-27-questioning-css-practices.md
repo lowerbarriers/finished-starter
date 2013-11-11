@@ -1,4 +1,5 @@
 ---
+layout: post
 wp_id: 341
 title: Why Are We CSS-ing All Stupid?
 tags: [Web Design]

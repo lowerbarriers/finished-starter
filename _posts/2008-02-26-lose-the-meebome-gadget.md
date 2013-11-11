@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109861942"
 title: Lose the MeeboMe Gadget
 tags: [chat, chatback, gmail, Google, google talk, Libraries, libraryh3lp, meebmo, meebo]

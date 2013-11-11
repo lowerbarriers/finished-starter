@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "194074313" 
 title: My First Chrome 48 
 tags: [Google]

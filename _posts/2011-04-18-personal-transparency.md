@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "282914743" 
 title: Personal Transparency 
 tags: [General]

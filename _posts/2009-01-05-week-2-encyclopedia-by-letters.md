@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Week 2 — Encyclopedia by Letters 
 tags: [52for2009, encyclopedia, great depression]
 --- 

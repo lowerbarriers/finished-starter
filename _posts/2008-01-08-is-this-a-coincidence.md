@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Is this a coincidence?
 tags: [Facebook]
 ---

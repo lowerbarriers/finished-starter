@@ -1,4 +1,5 @@
 ---
+layout: post
 wp_id: 331
 title: Drupal and Git
 tags: [Web Design]

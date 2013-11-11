@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Those Canadians!
 tags: [canadian, commercial, Genesis Device, molson, molson canadian, protomatter, television, terraforming, TV]
 --- 

@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109206544"
 title: Things that interest me
 tags: [General]

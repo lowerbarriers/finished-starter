@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 title: The Future
 tags: [Predictions]
 --- 

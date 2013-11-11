@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 dsq_thread_id: "109227522" 
 title: Speaking the Same Language
 tags: [General, Transliteracy]

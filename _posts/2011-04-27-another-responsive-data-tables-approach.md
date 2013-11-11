@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "290035197" 
 title: Another Responsive Data Tables Approach 
 tags: [General, Web Design] 

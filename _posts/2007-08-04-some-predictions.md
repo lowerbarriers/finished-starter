@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108921671"
 title: Some Predictions
 tags: [Predictions]

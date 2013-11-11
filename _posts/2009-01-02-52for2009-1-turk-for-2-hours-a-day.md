@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871465" 
 title: "52for2009 #1 — Turk for 2 hours a day" 
 tags: [2for2009, Amazon, HITs, Mahalo Answers, Mechanical, Turk]

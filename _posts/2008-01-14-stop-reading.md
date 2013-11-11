@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109191949"
 title: Stop Reading!
 tags: [General]

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Only Upgrade?
 tags: [Google]
 --- 

@@ -1,4 +1,5 @@
---- 
+---
+layout: post
 title: A No-brainer
 tags: [Predictions]
 ---

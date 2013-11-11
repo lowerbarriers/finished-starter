@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108872161"
 title: Useless Halloween Predictions
 tags: [Predictions]

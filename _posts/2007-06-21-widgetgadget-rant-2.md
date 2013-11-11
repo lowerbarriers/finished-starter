@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Widget/Gadget rant #2"
 tags: [Web Design]
 ---

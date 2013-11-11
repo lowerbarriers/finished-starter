@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "108871437"
 title: Librarian updates
 tags: [Facebook]

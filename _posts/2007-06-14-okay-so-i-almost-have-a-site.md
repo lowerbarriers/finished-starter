@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Okay, so I almost have a site
 tags: [General]
 --- 

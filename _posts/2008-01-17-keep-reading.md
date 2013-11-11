@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Keep Reading!
 tags: [andrew keen, information literacy, internet, Libraries, wikipedia]
 --- 

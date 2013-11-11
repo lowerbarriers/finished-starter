@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "110797069" 
 title: Drupal is the Answer 
 tags: [Web Design]

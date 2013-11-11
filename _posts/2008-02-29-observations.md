@@ -1,4 +1,5 @@
 ---
+layout: post
 dsq_thread_id: "109006932" 
 title: Observations
 tags: [Movies, TV]
