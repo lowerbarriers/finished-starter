@@ -11,7 +11,9 @@ body {
 }
 
 /*-Link-*/
-a {}
+a {
+  transition: .3s ease-in;
+}
   a:link {
     color: #888; //#00619e;
   }
@@ -197,8 +199,15 @@ sup {
 .affiliates {}
   .affiliates a {
     display: inline-block;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     padding: 1em;
+    transition: .3s ease-in;
   }
+    .affiliates a:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
 .column {
   float: left;
   margin: 1.5em 0;
@@ -290,6 +299,7 @@ sup {
   }
 .posts {
   list-style: none;
+  overflow: hidden;
   padding: 0;
 }
   .posts li {
@@ -302,6 +312,10 @@ sup {
       .datetime .year { min-width: 3em; }
       .datetime .month { min-width: 3em; }
       .datetime .day { min-width: 3em; }
+  .posts-toggle {
+    cursor: pointer;
+    padding: 0 0 0 9.5em;
+  }
 .region {
   border-bottom: 1px solid #ddd;
   padding: 0 0 1em;
@@ -324,13 +338,20 @@ sup {
     vertical-align: middle;
   }
 .splash {
-  background: #888 url('/images/bpcz_gc_bg.jpg') top center scroll no-repeat;
+  background: #00619e url('/images/bpcz_gc_bg.jpg') top center scroll no-repeat;
   background-size: contain;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   height: 430px;
+  transition: 3s ease-in;
 }
+  .splash:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
   .splash .callout {
     background: #000;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 97, 158, .8);
     color: #fff;
     float: right;
     margin: 2em 2em 0 0;
@@ -360,34 +381,26 @@ header {
   overflow: hidden;
   padding: .5em 0 1em;
 }
-  header > p {
+  header p {
     clear: none;
     float: left;
     margin: 9px 1em 0 0;
   }
   .site-name {
+    background: transparent url('justvector/bpcz.svg') top left scroll no-repeat;
+    background-size: contain;
+    color: transparent;
+    display: block;
+    height: 40px;
+    font-size: 1px;
+    line-height: 1;
+    width: 55px;
     float: left;
-    margin: 0 .5em 0 0;
+    margin: 0 25px 0 0;
   }
-    .site-name a {
-      background: transparent url('justvector/bpcz.svg') top left scroll no-repeat;
-      background-size: contain;
-      color: transparent;
-      display: block;
-      height: 40px;
-      font-size: 1px;
-      line-height: 1;
-      width: 55px;
-    }
 footer {
   clear: both;
 }
-  footer img {
-    -webkit-filter: grayscale();
-    filter: gray;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http: //www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    vertical-align: middle;
-  }
 
 /*--Media Queries--*/
 /*-Big Screens-*/
