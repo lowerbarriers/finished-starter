@@ -13,9 +13,11 @@ jQuery(document).ready(function($) {
       $(this).remove();
       
       var $postlis = $posts.find('li').slice(4),
-          i = 0;
+          i = 0,
+          transition = 250;
       (function() {  
-        $($postlis[i++]).show(250, arguments.callee);  
+        $($postlis[i++]).show(transition, arguments.callee);
+        transition = (transition > 30) ? transition - 10 : 20;
       })();
     });
   }
