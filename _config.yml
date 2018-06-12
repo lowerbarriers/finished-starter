@@ -1,5 +1,41 @@
-markdown: rdiscount
+## Jekyll configs
 permalink: /:year/:month/:day/:title/
-pygments: true
-rdiscount:
-  extensions: [smart]
+highlighter: rouge
+kramdown:
+  parse_block_html: true
+plugins:
+  - jemoji
+  - jekyll-sitemap
+
+## Basic info
+title: Brad Czerniak
+primary_author: "Brad Czerniak"
+shortname: bpcz
+tagline: "Polymath for hire"
+offering: "Web & Drupal development, consulting"
+offer_description: "I solve interesting problems."
+
+## Site and contact bits
+email: ao5357@gmail.com
+phone: (248) 721-0350
+phonedigits: "2487210350"
+gaid: UA-697953-3
+
+## schema.org type (default for site, often "Website")
+schema: Website
+
+## Open Graph
+og_street_address: 1428 Mark Ave
+og_locality: Lincoln Park
+og_region: MI
+og_postal_code: "48146"
+og_country: USA
+
+## Social links
+social:
+  -
+    title: Facebook
+    url: https://www.facebook.com/bradczerniak
+  -
+    title: Twitter
+    url: https://twitter.com/ao5357
