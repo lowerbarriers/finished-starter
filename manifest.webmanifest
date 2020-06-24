@@ -1,0 +1,26 @@
+---
+layout: compress
+permalink: /manifest.webmanifest
+---
+{
+  "short_name": "{{ site.shortname }}",
+  "name": "{{ site.title }}",
+  "description": "{{ site.tagline }}",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/required/logo-mark_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "{{ site.manifest_webmanifest.background_color }}",
+  "display": "minimal-ui",
+  "scope": "/",
+  "theme_color": "{{ site.manifest_webmanifest.theme_color }}"
+}

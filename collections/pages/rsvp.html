@@ -1,0 +1,97 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 2
+  footer: 5
+  main: 5
+#  utility: 1
+meta:
+  description: "Please let us know if you can make it."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /rsvp/
+#published: true
+#schema:
+#  type: "Thing"
+sections:
+  - cta
+#sitemap: true
+#tags: ["three", "four"]
+title: "RSVP"
+---
+
+<section class="layout--stripe">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Please let us know if you can make it."
+      classes="text-shadow--second-light--solid"
+      level="2"
+    %}
+
+    <div class="layout--row display--flex">
+      <aside class="layout--column flex--2 display--flex flex-direction--column justify-content--flex-start">
+        {% include organisms/form.html
+          mode="ref"
+          slug="rsvp"
+        %}
+      </aside>
+
+      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+        padding-horizontal--8 padding-horizontal--collapse">
+        {% include atoms/image.html
+          src="download_20191130_095212.jpg"
+          alt="One big happy family"
+          caption="Can't wait to see you!"
+          classes="text-align--center"
+        %}
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="layout--stripe background-color--main-dark background-image--gradient--main color--white">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Gifts/Registries/etc."
+      classes="heading--h1 text-align--center"
+      level="2"
+    %}
+
+    {% include atoms/spacer.html size="2" %}
+
+    <div class="layout--row display--flex flex-direction--row-reverse">
+      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center padding-horizontal--8
+        padding-horizontal--collapse">
+        <p>
+          We are a blessed couple, wanting for very little, and exercising Marie-Kondo-levels of decluttering. If possible,
+          we ask not to receive any gifts of physical/household items, except of course for those of sentimental value.
+        </p>
+
+        <p>
+          If you would like to help celebrate our special occasion by giving us a gift, we'd certainly appreciate it. Our
+          plan is to use financial contributions by cash, check, or <a href="http://paypal.me/ao5357/50usd">online</a> to
+          go on an awesome honeymoon.
+        </p>
+
+        <p>
+          Thank you!
+        </p>
+      </aside>
+
+      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center">
+        {% include atoms/image.html
+          src="1200x630/marie-kondo.jpg"
+          alt="Marie Kondo"
+          classes="js--to-animate js--event--click js--event--mouseover animation-name--scale animation-iteration-count--infinite animation-duration--3s box-shadow--lifted-edges"
+        %}
+      </aside>
+    </div>
+  </div>
+</section>

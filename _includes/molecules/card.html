@@ -1,0 +1,94 @@
+{% comment %} Subtitle, if applicable {% endcomment %}
+{% case include.entity.collection %}
+  {% when "events" %}
+    {% capture card_subtitle %}{{ include.entity.date | date: "%a, %b %e, %Y" }}{% endcapture %}
+  {% when "people" %}
+    {% if include.entity.job_title %}{% assign card_subtitle=include.entity.job_title %}{% endif %}
+  {% when "posts" %}
+    {% capture card_subtitle %}{{ include.entity.date | date: "%B %e, %Y" }}{% endcapture %}
+  {% when "products" %}
+    {% capture card_subtitle %}${{ include.entity.price }}{% endcapture %}
+{% endcase %}
+
+{% comment %} Get a pre-made description or derive it. {% endcomment %}
+{% if include.entity.meta.description %}
+  {% assign entity_description=include.entity.meta.description %}
+{% else %}
+  {% capture entity_description %}{{ include.entity.content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155, '' }}}{% endcapture %}
+{% endif %}
+
+{% comment %} Image src {% endcomment %}
+{% if include.entity.meta.image.src %}
+  {% assign image_src=include.entity.meta.image.src %}
+{% else %}
+  {% assign image_src=site.meta.image.src %}
+{% endif %}
+
+{% comment %} Alt text {% endcomment %}
+{% if include.entity.meta.image.alt %}
+  {% assign image_alt=include.entity.meta.image.alt %}
+{% else %}
+  {% assign image_alt=site.meta.image.alt %}
+{% endif %}
+
+{% capture component %}
+  <li class="card js--child--link display--flex flex-direction--column {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="card--text padding-horizontal--4 padding-vertical--4">
+      <h3 class="card--title font-size--1p25em"><a href="{{ include.entity.url }}">{{ include.entity.title }}</a></h3>
+      {% if card_subtitle %}
+        <strong class="card--subtitle display--block font-size--p875em font-weight--100 font-style--italic">{{ card_subtitle }}</strong>
+      {% endif %}
+      <p class="card--description font-size--p75em">{{ entity_description }}</p>
+    </div>
+
+    {% include atoms/image.html
+      src=image_src
+      alt=image_alt
+      classes="figure--card--image order--neg1 box-shadow--lifted-edges"
+    %}
+  </li>
+{% endcapture %}
+
+{% capture name %}Card{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/card.html
+    entity=event
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Cards are represent content that has its own page.
+
+@see https://inclusive-components.design/cards/
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+
+@see https://inclusive-components.design/cards/
+{% endcapture %}
+
+{% capture props %}
+  classes| css classes applied to parent| color--main-dark,
+  entity| An individual item from a output collection| post
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

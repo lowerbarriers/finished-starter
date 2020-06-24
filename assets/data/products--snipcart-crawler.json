@@ -1,0 +1,21 @@
+---
+entity_type: products
+layout: compress
+#limit: 100
+meta:
+  description: "A feed of all site products for snipcart, in a format you can use to fetch at https://app.snipcart.com/dashboard/products/fetch"
+---
+[
+  {% for entity in site[page.entity_type] %}
+    {
+      "name": {{ entity.title | jsonify }},
+      "id": {{ entity.sku | jsonify }},
+      "price": {{ entity.price }},
+      "description": {{ entity.meta.description | jsonify }},
+      {% if entity.meta.image.src %}
+        "image": "{{ site.url }}{{ site.subpath }}/assets/images/{{ entity.meta.image.src }}",
+      {% endif %}
+      "url": "{{ entity.url | absolute_url }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

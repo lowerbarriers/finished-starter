@@ -1,0 +1,86 @@
+---
+# Frontmatter note: Liquid tags used for imports.
+# Do not add layout: compress to this front-matter, as it will work locally and fail on gh-pages
+---
+
+/**
+ * While we set our woff2 files to preload in the <head>, formally declaring their url calls early is a performance boost.
+ *
+ * See _config.yml woff for preload settings in _includes/head/head.html
+ */
+{% include_relative font-face.css %}
+
+/**
+ * CSS Custom properties for colors and other variables.
+ *
+ * Based on the design tokens specified in _data/design-tokens/
+ * @see https://github.com/amzn/style-dictionary
+ */
+:root {
+  {% for file in site.data.design-tokens.root %}
+    {% for property in file[1] %}
+      {% include head/design-token-nest.html property=property %}
+    {% endfor %}
+  {% endfor %}
+}
+
+/**
+ * CSS Custom properties for translating pseudo-element content.
+ */
+{% for file in site.data.design-tokens.lang %}
+  [lang="{{ file[0] }}"] {
+    {% for property in file[1] %}
+      {% include head/design-token-nest.html property=property %}
+    {% endfor %}
+  }
+{% endfor %}
+
+/**
+ * Note: Presently you can only scope to tags and classes, or some combination of those.
+ *
+ * Double-underscores become spaces, single underscores become periods, with double-underscores evaluated first.
+ *
+ * Example:
+ * This file: _data/design-tokens/scoped/div__a_street-sign___font-family--secondary.json
+ * Places all its custom properties in the following scope: div a.street-sign .font-family--secondary
+ */
+{% for scope in site.data.design-tokens %}
+  {% assign scopename = scope[0] %}
+  {% unless scopename == "root" or scopename == "lang" %}
+    {% for file in site.data.design-tokens[scopename] %}
+      {{ file[0] | replace: "__", " " | replace: "_", "." }} {
+        {% for property in file[1] %}
+          {% include head/design-token-nest.html property=property %}
+        {% endfor %}
+      }
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+
+/**
+ * Include the main partials in useful specificity order.
+ *
+ * theme--base.css is tag-level, so first.
+ * Then the utilities
+ * The theme files containing classes and higher.
+ */
+{% include_relative theme/theme--base.css %}
+
+{% include_relative utility/property--value.css %}
+{% include_relative utility/utility--animation.css %}
+{% include_relative utility/utility--color.css %}
+{% include_relative utility/utility--classes.css %}
+{% include_relative utility/utility--typography.css %}
+{% include_relative utility/utility--layout.css %}
+{% include_relative utility/utility--spacing.css %}
+
+{% include_relative theme/theme--pygments.css %}
+{% include_relative theme/theme--classes.css %}
+{% include_relative theme/theme--shame.css %}
+
+/**
+ * Include a print stylesheet that hides the boring stuff.
+ */
+@media print {
+  {% include_relative print.css %}
+}

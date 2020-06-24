@@ -1,0 +1,58 @@
+{% capture component %}
+  <section class="include include--organisms include--organisms--section layout--stripe
+    {% if include.classes %}{{ include.classes }}{% endif %}"
+    {% if include.title %}id="section--{{ include.title | slugify }}"{% endif %}>
+    <div class="layout--stripe--inner">
+      {% if include.title %}
+        <h2 class="{{ include.title_classes }}">{{ include.title }}</h2>
+      {% endif %}
+
+      {{ include.children }}
+    </div>
+  </section>
+{% endcapture %}
+
+{% capture name %}Section{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/section.html
+    slug="alerts"
+    mode="ref"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Sections separate large distinct portions of content on a page.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+  classes| css classes applied to parent| background-color--main-dark color--white,
+  children| Contents and sub-contents of the section| Here is some text.,
+  title| Each section should have an h2| This describes what is in the section,
+  title_classes| Styling for the section title| heading--h1
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% elsif include.mode == "ref" %}
+  {{ site.sections | where:"slug",include.slug }}
+{% else %}
+  {{ component }}
+{% endif %}

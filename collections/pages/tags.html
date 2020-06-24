@@ -1,0 +1,57 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 4
+#  footer: 3
+#  main: 3
+#  utility: 1
+meta:
+  description: "List of all the tags on the site, with their tagged items."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /tags/
+#published: true
+#schema:
+#  type: "Thing"
+#sections:
+#  - cta
+sitemap: false
+#tags: ["three", "four"]
+title: "Tags"
+---
+
+<section class="layout--stripe ">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Grouped cards"
+      classes="a11y--visually-hidden"
+      level="2"
+    %}
+
+    {% assign taxonomy_size = site.tags | size %}
+    {% if taxonomy_size >= 1 %}
+      {% for term in site.tags %}
+        <h3 id="tag--{{ term[0] | slugify }}">{{ term[0] }}</h3>
+
+        <ul class="list-style--none layout--multiple--horizontal">
+          {% for entity in term[1] %}
+            {% include molecules/card.html
+              entity=entity
+            %}
+          {% endfor %}
+        </ul>
+
+        {% include atoms/spacer.html size="2" %}
+      {% endfor %}
+    {% else %}
+      <p class="listing--no-results">There are presently no tags defined on the site.</p>
+    {% endif %}
+  </div>
+</section>

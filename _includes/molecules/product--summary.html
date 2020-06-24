@@ -1,0 +1,47 @@
+{% capture component %}
+  <div class="product--summary {% if include.classes %}{{ include.classes }}{% endif %}">
+    <p><em>SKU</em>: {{ include.entity.sku }}</p>
+    <p><em>Price</em>: <strong>{{ include.entity.price }}</strong></p>
+  </div>
+{% endcapture %}
+
+{% capture name %}Product summary{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/product--summary.html
+    entity=product
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Product summary is the product equivalent of a byline or event details component. It shows the SKU, price, and other fixed
+fields for a product.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+entity| the product with the necessary props| product
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

@@ -1,0 +1,121 @@
+{% comment %}
+  <!-- Main CSS and Loading interstitial. Grabbing main CSS first since it's an HTTP round-trip to prioritize.
+    -- Uses a slightly modified version of the print stylesheet technique: https://timkadlec.com/remembers/2020-02-13-when-css-blocks/
+    -->
+{% endcomment %}
+{% if site.woff %}
+  {% for woff in site.woff %}
+    <link rel="preload" href="{{ site.subpath }}/assets/fonts/{{ woff }}" as="font" type="font/woff2" crossorigin />
+  {% endfor %}
+{% endif %}
+
+{% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
+  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency/style.css" media="print" onload="this.media='all'" />
+{% else %}
+  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" media="print" onload="this.media='all'" />
+{% endif %}
+<noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" /></noscript>
+{% include head/loading.html %}
+{% if page.attached.css[0] %}
+  {% for css in page.attached.css %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}{{ css }}" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}{{ css }}" /></noscript>
+  {% endfor %}
+{% endif %}
+
+{% comment %}
+  <!-- Page title (auto-appended with site title). Allow a different title tag string than the title that appears
+    -- on the page, in case there's an SEO or tab-brevity advantage. May also be useful for social.
+    --
+    -- See in the SEO/social meta sections for how these titles are handled, too.
+    -->
+{% endcomment %}
+{% if page.front %}
+  <title>{{ site.title }} | {{ page.title }}</title>
+{% elsif page.meta.title %}
+  <title>{{ page.meta.title }} | {{ site.title }}</title>
+{% else %}
+  <title>{{ page.title }} | {{ site.title }}</title>
+{% endif %}
+
+{% comment %}
+  <!-- Link/meta tags primarily for semantics/SEO/social.
+    -- Where possible setting a site-wide value from _config.yml that can be overridden on a page-by-page basis using
+    -- the same value in the YAML front-matter (page. instead of site.)
+    -->
+{% endcomment %}
+<meta property="og:title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}" />
+<meta name="robots" content="{% if page.meta.robots %}{{ page.meta.robots }}{% else %}{{ site.meta.robots }}{% endif %}" />
+<link rel="canonical" href="{{ site.url }}{{ site.subpath }}{{ page.url }}" />
+<meta property="og:url" content="{{ site.url }}{{ site.subpath }}{{ page.url }}" />
+{% if page.previous %}<link rel="prev" href="{{ page.previous.url | relative_url }}" />{% endif %}
+{% if page.next %}<link rel="next" href="{{ page.next.url | relative_url }}" />{% endif %}
+<link rel="help" href="{% link collections/pages/faqs.html %}" />
+
+{% comment %}<!-- Identification/Specification tags --> {% endcomment %}
+<meta name="author" content="{% if page.authors[0] %}{% for author in page.authors %}{% assign person = site.people | where: 'slug', author | first %}{{ person.title }}, {% endfor %}{% else %}{{ site.primary_author }}{% endif %}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta name="twitter:creator" content="{% if page.authors[0] %}{% assign person = site.people | where: 'slug', page.authors[0] | first %}{{ person.twitter.creator }}{% elsif page.twitter.creator %}{{ page.twitter.creator }}{% else %}{{ site.twitter.creator }}{% endif %}" />
+<meta name="twitter:site" content="{{ site.twitter.site }}" />
+{% if site.open_graph.fb_app_id %}
+  <meta property="fb:app_id" content="{{ site.open_graph.fb_app_id }}" />
+{% endif %}
+<meta name="twitter:card" content="{% if page.twitter.card %}{{ page.twitter.card }}{% else %}{{ site.twitter.card }}{% endif %}" />
+<meta property="og:type" content="{% if page.open_graph.og_type %}{{ page.open_graph.og_type }}{% else %}{{ site.open_graph.og_type }}{% endif %}" />
+
+{% comment %}<!-- Geo/contact tags --> {% endcomment %}
+<meta property="og:locale" content="{% if page.html.locale %}{{ page.html.locale }}{% else %}{{ site.html.locale }}{% endif %}" />
+<meta property="og:street_address" content="{% if page.locations[0].street_address %}{{ page.locations[0].street_address }}{% else %}{{ site.locations[0].street_address }}{% endif %}" />
+<meta property="og:locality" content="{% if page.locations[0].locality %}{{ page.locations[0].locality }}{% else %}{{ site.locations[0].locality }}{% endif %}" />
+<meta property="og:region" content="{% if page.locations[0].region %}{{ page.locations[0].region }}{% else %}{{ site.locations[0].region }}{% endif %}" />
+<meta property="og:postal_code" content="{% if page.locations[0].postal_code %}{{ page.locations[0].postal_code }}{% else %}{{ site.locations[0].postal_code }}{% endif %}" />
+<meta property="og:country_name" content="{% if page.locations[0].country_name %}{{ page.locations[0].country_name }}{% else %}{{ site.locations[0].country_name }}{% endif %}" />
+<meta property="og:email" content="{% if page.email %}{{ page.email }}{% else %}{{ site.email }}{% endif %}" />
+<meta property="og:phone_number" content="{% if page.phone.mailto %}{{ page.phone.mailto }}{% else %}{{ site.phone.mailto }}{% endif %}" />
+{% if page.fax.mailto %}
+  <meta property="og:fax_number" content="{{ page.fax.mailto }}" />
+{% elsif site.fax.mailto %}
+  <meta property="og:fax_number" content="{{ site.fax.mailto }}" />
+{% endif %}
+
+{% comment %}<!-- Image (social share) tags --> {% endcomment %}
+{% if page.meta.image.src %}
+  <meta property="og:image" content="{{ site.url }}{{ site.subpath }}/assets/images/{{ page.meta.image.src }}" />
+  <link rel="image_src" href="{{ site.url }}{{ site.subpath }}/assets/images/{{ page.meta.image.src }}" />
+  <meta name="og:image:alt" content="{{ page.meta.image.alt }}" />
+  <meta name="twitter:image:alt" content="{{ page.meta.image.alt }}" />
+{% else %}
+  <meta property="og:image" content="{{ site.url }}{{ site.subpath }}/assets/images/{{ site.meta.image.src }}" />
+  <link rel="image_src" href="{{ site.url }}{{ site.subpath }}/assets/images/{{ site.meta.image.src }}" />
+  <meta name="og:image:alt" content="{{ site.meta.image.alt }}" />
+  <meta name="twitter:image:alt" content="{{ site.meta.image.alt }}" />
+{% endif %}
+
+{% comment %}<!-- Description/brief/abstract tags --> {% endcomment %}
+{% if page.meta.description %}
+  {% assign content_description=page.meta.description %}
+{% else %}
+  {% capture content_description %}{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155, '' }}}{% endcapture %}
+{% endif %}
+<meta name="description" content="{{ content_description  }}" />
+<meta property="og:description" content="{{ content_description }}" />
+
+{% comment %}
+  <!-- PWA and browser-specific tweaks.
+    -- Some of these could tentatively make HTTP calls that we don't need,
+    -- so let's throw them at the bottom of the head.
+    -->
+{% endcomment %}
+{% if site.content_security_policy %}<meta http-equiv="Content-Security-Policy" content="{{ site.content_security_policy }}">{% endif%}
+<meta name="apple-mobile-web-app-title" content="{{ site.shortname }}" />
+<meta name="theme-color" content="{{ site.manifest_webmanifest.theme_color }}" />
+<meta name="Generator" content="{{ site.meta.generator }}" />
+<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
+<link rel="manifest" href="{{ site.subpath }}/manifest.webmanifest" />
+<link rel="author" href="{{ site.url }}{{ site.subpath }}/humans.txt" />
+<link rel="search" type="application/opensearchdescription+xml" href="{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.subpath }}/rss/blog/" title="Blog feed" />
+<link rel="alternate" type="application/json" href="{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.subpath }}/rss/events/" title="Events feed" />
+<link rel="alternate" type="application/json" href="{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
+<link rel="alternate" type="application/list+json" href="{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />

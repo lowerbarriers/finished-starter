@@ -1,0 +1,67 @@
+{% capture component %}
+  <div class="form--item form--item--input form--item--input--{{ include.type }} {% if include.classes %}{{ include.classes }}{% endif %}">
+    <label class="label form--item--label display--block font-size--p75em" for="{{ include.name }}">
+      {{ include.label }}
+      {% if include.required %}
+        <sup class="form--item--required" aria-hidden="true">*</sup>
+        <span class="a11y--visually-hidden">required</span>
+      {% endif %}
+    </label>
+    <input name="{{ include.name }}" id="{{ include.name }}" type="{{ include.type }}"
+      {% if include.description %}aria-describedby="{{ include.name }}--description" {% endif %}
+      {% if include.required %}required{% endif %}
+    />
+    {% if include.description %}
+      <p class="form--item--description" id="{{ include.name }}--description">{{ include.description }}</p>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% capture name %}Input{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include forms/form--input.html
+    classes=""
+    description="Inputs can have description text."
+    label="Primary email"
+    name="email"
+    required=true
+    type="email"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Use the input component for text, tel, email, hidden, or other varieties of the base-level `<input>` tag.
+{% endcapture %}
+
+{% capture accessibility %}
+Form inputs require a matching label that is associated with it either implicitly or by using the `for` attribute.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+description| Longer textual description or help text| Inputs can have description text,
+label| text as short description of what to fill out| Primary email,
+name| input name passed as the key for the value in the form| email,
+required| Whether it is required to fill this out in order to submit the form| true,
+type| the type attribute to apply to the tag| text
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

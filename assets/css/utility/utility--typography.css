@@ -1,0 +1,110 @@
+/**
+ * @file
+ * Font and text classes outside of property--value.
+ */
+
+/**
+ * Font size multiplier classes.
+ */
+.font-size--p375em {
+  font-size: 0.375em;
+}
+.font-size--p5em {
+  font-size: 0.5em;
+}
+.font-size--p625em {
+  font-size: 0.625em;
+}
+.font-size--p75em {
+  font-size: 0.75em;
+}
+.font-size--p875em {
+  font-size: 0.875em;
+}
+.font-size--1em {
+  font-size: 1em;
+}
+.font-size--1rem {
+  font-size: 1rem; /* Reset a container to 16px and scale text relatively from there. */
+}
+.font-size--1p125em {
+  font-size: 1.125em;
+}
+.font-size--1p25em {
+  font-size: 1.25em;
+}
+.font-size--1p375em {
+  font-size: 1.375em;
+}
+.font-size--1p5em {
+  font-size: 1.5em;
+}
+.font-size--1p625em {
+  font-size: 1.625em;
+}
+.font-size--1p75em {
+  font-size: 1.75em;
+}
+.font-size--1p875em {
+  font-size: 1.875em;
+}
+.font-size--2em {
+  font-size: 2em;
+}
+.font-size--4em {
+  font-size: 4em;
+}
+
+/**
+ * Horizontally center children of the text-align--center class.
+ *
+ * If a parent has text-align--center while a child has a different text-align
+ * class, it may be necessary to override those classes similarly (since the
+ * specificity is higher that a bare class).
+ */
+.text-align--center figure,
+.text-align--center img,
+.text-align--center p,
+.text-align--center picture,
+.text-align--center svg,
+.text-align--center video,
+.text-align--justify figure,
+.text-align--justify img,
+.text-align--justify p,
+.text-align--justify picture,
+.text-align--justify svg,
+.text-align--justify table,
+.text-align--justify video,
+[class*="text-align--"] .text-align--center img,
+[class*="text-align--"] .text-align--center picture {
+  margin: 0 auto var(--spacing--single);
+}
+.text-align--center figure img,
+.text-align--center figure picture,
+.text-align--justify figure img,
+.text-align--justify figure picture {
+  margin-bottom: 0;
+}
+.text-align--left figure,
+.text-align--left img,
+.text-align--left picture,
+.text-align--left svg,
+.text-align--left video,
+.text-align--right figure,
+.text-align--right img,
+.text-align--right picture,
+.text-align--right svg,
+.text-align--right table,
+.text-align--right video {
+  margin: 0;
+}
+.text-align--left p,
+.text-align--right p {
+  margin: 0 0 var(--spacing--single);
+}
+.text-align--center p:last-child,
+.text-align--justify p:last-child,
+.text-align--left p:last-child,
+.text-align--right p:last-child {
+  margin-bottom: 0;
+}

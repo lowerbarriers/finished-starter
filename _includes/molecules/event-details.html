@@ -1,0 +1,84 @@
+{% assign word_count = content | strip_html | strip_newlines | replace: '  ', ' ' | split: " " | size %}
+{% capture component %}
+  <div class="event-details event-details--{{ include.entity.collection | slugify }} display--flex layout--row justify-content--center
+    {% if include.classes %}{{ include.classes }}{% endif %}">
+    {% if include.entity.authors[0] %}
+      <aside class="event-details--times layout--column flex--1 display--flex flex-direction--column justify-content--center
+        padding-horizontal--4 padding-horizontal--collapse">
+        <time class=""
+          datetime="{{ include.entity.date | date_to_xmlschema }}"
+          itemprop="startDate" content="{{ include.entity.date | date_to_xmlschema }}"
+        >
+          {% if include.entity.date_end %}
+            <strong>Start</strong>:
+          {% endif %}
+          {{ include.entity.date | date: "%A, %B %e, %Y at %l:%M%p" }}
+        </time>
+
+        {% if include.entity.date_end %}
+          <time class=""
+            datetime="{{ include.entity.date_end | date_to_xmlschema }}"
+            itemprop="endDate" content="{{ include.entity.date_end | date_to_xmlschema }}"
+          >
+            <strong>End</strong>: {{ include.entity.date_end | date: "%A, %B %e, %Y at %l:%M%p" }}
+          </time>
+        {% endif %}
+      </aside>
+    {% endif %}
+
+    {% if include.entity.location %}
+      <aside class="byline--word-count layout--column flex--1 display--flex flex-direction--column justify-content--center
+        padding-horizontal--4 padding-horizontal--collapse">
+        <address itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+          <span>{{ include.entity.location.name }}</span><br>
+          <span itemprop="streetAddress">{{ include.entity.location.street_address }}</span><br>
+          <span itemprop="addressLocality">{{ include.entity.location.locality }}</span>,
+          <span itemprop="addressRegion">{{ include.entity.location.region }}</span>
+          <span itemprop="postalCode">{{ include.entity.location.postal_code }}</span>
+        </address>
+      </aside>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% capture name %}Event details{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/event-details.html
+    classes=""
+    entity=page
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Event details can be placed in the page hero for an event, or perhaps elsewhere. Events have details that other collections
+do not, so putting the dates and locations somewhere other than the body may yield greater attention to it.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+entity| an event with all the expected event fields| page
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

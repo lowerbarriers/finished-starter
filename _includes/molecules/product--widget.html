@@ -1,0 +1,73 @@
+{% capture component %}
+  <div class="product--widget layout--hide--no-javascript {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="product--widget--quantity">
+      <label for="{{ include.entity.sku | slugify }}-quantity">Quantity:</label>
+      <input type="number" id="{{ include.entity.sku | slugify }}-quantity" name="{{ include.entity.sku | slugify }}-quantity"
+        class="product--widget--quantity--input" min="1" value="1" />
+    </div>
+    <div class="product--widget--buy-button">
+      <button type="button"
+        class="buy-button snipcart-add-item"
+        data-item-quantity="{{ include.entity.starting_quantity }}"
+        data-item-id="{{ include.entity.sku }}"
+        data-item-name={{ include.entity.title | jsonify }}
+        data-item-price="{{ include.entity.price }}"
+        {% if include.entity.meta.image.src %}
+          data-item-image="{{ site.url }}{{ site.subpath }}/assets/images/{{ include.entity.meta.image.src }}"
+        {% endif %}
+        data-item-url="{{ include.entity.url | absolute_url }}"
+        data-item-description="{{ include.entity.meta.description }}"
+      >
+        Add to cart
+      </button>
+    </div>
+  </div>
+  <noscript>
+    {% include molecules/alert.html
+      children="<p><strong>Notice</strong>: Shopping cart functionality requires JavaScript to be enabled.</p>"
+      classes=""
+      dismissible=true
+      level="error"
+    %}
+  </noscript>
+{% endcapture %}
+
+{% capture name %}Product widget{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/product--widget.html
+    entity=product
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Product widgets set up a buy button for snipcart with a quantity selector.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+  classes| css classes applied to parent| color--main-dark,
+  entity| the product with the necessary props| product
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

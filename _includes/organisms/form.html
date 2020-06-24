@@ -1,0 +1,107 @@
+{% if include.entity.action %}
+  {% assign action = include.entity.action %}
+{% else %}
+  {% capture action %}{{ site.form_components.handler_url }}/{{ site.email }}{% endcapture %}
+{% endif %}
+
+{% if include.entity.honeypot_name %}
+  {% assign honeypot_name = include.entity.honeypot_name %}
+{% else %}
+  {% assign honeypot_name = site.form_components.honeypot_name %}
+{% endif %}
+
+{% if include.entity.method %}
+  {% assign method = include.entity.method %}
+{% else %}
+  {% assign method = site.form_components.method %}
+{% endif %}
+
+{% if include.entity.thank_you %}
+  {% assign thank_you = include.entity.thank_you %}
+{% else %}
+  {% capture thank_you %}{% link collections/pages/thank-you.md %}{% endcapture %}
+{% endif %}
+
+{% if include.entity.thankyou_name %}
+  {% assign thankyou_name = include.entity.thankyou_name %}
+{% else %}
+  {% assign thankyou_name = site.form_components.thankyou_name %}
+{% endif %}
+
+{% if include.entity.submit %}
+  {% assign submit = include.entity.submit %}
+{% else %}
+  {% assign submit = site.form_components.default_submit %}
+{% endif %}
+
+{% capture component %}
+  <form method="{{ method }}" action="{{ action }}"
+    {% if include.entity.enctype != false %}enctype="multipart/form-data"{% endif %}
+    {% if include.entity.form_name %}name="{{ include.entity.form_name }}"{% endif %}
+    class="form include include--organism include--organism--form
+    {% if include.entity.classes %}{{ include.entity.classes }}{% endif %}
+    {% if include.classes %}{{ include.classes }}{% endif %}">
+    <label for="{{ honeypot_name }}" class="a11y--visually-hidden" aria-hidden="true">
+      Math CAPTCHA: What's the number of stars on the American flag divided by two?
+    </label>
+    <input type="text" id="{{ honeypot_name }}" name="{{ honeypot_name }}"
+      placeholder="(if you're human leave this blank)" class="a11y--visually-hidden" aria-hidden="true" />
+    {% unless include.entity.hide_handler_fields %}
+      <input type="hidden" name="{{ thankyou_name }}" value="{{ thank_you | absolute_url }}" />
+      <input type="hidden" name="_template" value="box" />
+      <input type="hidden" name="_subject" value="[{{ site.title }}] {{ include.entity.title }}" />
+    {% endunless %}
+
+    {{ include.entity.content }}
+
+    <div class="form--actions {% if include.entity.actions_classes %}{{ include.entity.actions_classes }}{% endif %}">
+      <button class="form--button form--button--submit form--actions--button form--actions--button--submit" type="submit">{{ submit }}</button>
+      <button class="form--button form--button--reset form--actions--button form--actions--button--reset a11y--visually-hidden" type="reset">Reset</button>
+    </div>
+  </form>
+{% endcapture %}
+
+{% capture name %}Form{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/form.html
+    entity=form
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The form section can use the mode property in conjunction with a slug to call an entity from a form collection. It can also
+build a form with any suitably-constructed entity with all the necessary props.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+entity| the form entity with all the required props| form,
+mode| to show a form as a docblock or ref a form entity directly| ref,
+slug| if mode is ref this is the slug of the form entity to ref| mailchimp
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% elsif include.mode == "ref" %}
+  {{ site.forms | where:"slug",include.slug }}
+{% else %}
+  {{ component }}
+{% endif %}

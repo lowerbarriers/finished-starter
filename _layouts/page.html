@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% assign extension = page.name | slice: -2, 2 %}
+{% if extension == "ml" %}
+  {{ content }}
+{% else %}
+  <section class="layout--stripe markdownified {% if page.classes %}{{ page.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      {{ content }}
+    </div>
+  </section>
+{% endif %}

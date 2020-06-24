@@ -1,0 +1,46 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "The very smallest components in the design system."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Atoms"
+---
+
+<p>These are the smallest constituent components of the system.</p>
+
+{% include atoms/heading.html
+  children="About this section"
+  classes="text-shadow--second-light--solid"
+  level="2"
+  mode="docblock"
+%}
+
+{% include atoms/icon.html
+  library='octicons'
+  mode='docblock'
+  symbol='octoface'
+%}
+
+{% include atoms/image.html
+  alt="Shelby and Brad flanking a star"
+  caption="You will see this as the default on the site"
+  classes=""
+  mode="docblock"
+  src="required/meta-image--default.jpg"
+%}
+
+{% include atoms/spacer.html
+  mode="docblock"
+  size="4"
+%}

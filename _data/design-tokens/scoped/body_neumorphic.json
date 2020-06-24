@@ -1,0 +1,46 @@
+{
+  "neumorphic": {
+    "border": {
+      "category": "Mood",
+      "description": "Little lip border that appears on hover/active/focus/checked neumorphic elements (all sizes)",
+      "type": "border",
+      "value": "2px solid transparent",
+      "active": {
+        "category": "Mood",
+        "description": "Active state for neumorphic lip border",
+        "type": "border",
+        "value": "2px solid rgba(255,255,255,.2)"
+      }
+    },
+    "box-shadow": {
+      "category": "Mood",
+      "description": "Box shadow as applied to small/regular neumorphic elements",
+      "type": "box-shadow",
+      "value": "4px 2px 6px rgba(136,165,191,.5), -4px -2px 4px rgba(255,255,255,1)",
+      "active": {
+        "category": "Mood",
+        "description": "Active (hover/active/focus/clicked) state for neumorphic box shadow",
+        "type": "box-shadow",
+        "value": "4px 2px 6px rgba(136,165,191,.5), -4px -2px 4px rgba(255,255,255,1), inset 2px 1px 3px rgba(136,165,191,.5), inset -2px -1px 3px rgba(255,255,255,.9)"
+      },
+      "large": {
+        "category": "Mood",
+        "description": "Box shadow as applied to large neumorphic elements",
+        "type": "box-shadow",
+        "value": "8px 4px 12px rgba(136,165,191,.5), -8px -4px 8px rgba(248,248,248,.5)",
+        "active": {
+          "category": "Mood",
+          "description": "Active (hover/active/focus/clicked) state for large neumorphic box shadow",
+          "type": "box-shadow",
+          "value": "8px 4px 12px rgba(136,165,191,.5), -8px -4px 8px rgba(248,248,248,.5), inset 4px 2px 6px rgba(136,165,191,.5), inset -4px -2px 6px rgba(248,248,248,.5)"
+        }
+      }
+    },
+    "text-shadow": {
+      "category": "Mood",
+      "description": "Subtle text shadow in neumorphic-styled elements (all sizes)",
+      "type": "text-shadow",
+      "value": "0 0 2px rgba(0,0,0,.325)"
+    }
+  }
+}

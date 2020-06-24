@@ -1,0 +1,77 @@
+---
+#action: "https://formsubmit.co/ao5357@gmail.com"
+actions_classes: "display--flex justify-content--center"
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+classes: ""
+#date: 2020-03-03 02:02:02
+excerpt: "RSVP Form"
+#published: true
+submit: "Send"
+#tags: ["three", "four"]
+thank_you: false # "https://www.google.com/"
+title: "RSVP Form"
+title_classes: "a11y--visually-hidden"
+---
+
+<fieldset name="party">
+  <legend>Your party</legend>
+
+  {% include forms/form--input.html
+    classes=""
+    description=false
+    label="Primary email"
+    name="email"
+    required=true
+    type="email"
+  %}
+
+  {% include forms/form--yes-no.html
+    classes=""
+    default=false
+    description="Will you attend the wedding reception dinner on October 9, 2020?"
+    label="Répondez s'il vous plaît"
+    label_off="With regret"
+    label_on="Looking forward to it!"
+    name="rsvp"
+    required=false
+  %}
+
+  {% include forms/form--yes-no.html
+    classes=""
+    default=false
+    description="We are thinking of going to brunch the next morning. Would you be in for that?"
+    label="Interested in brunch?"
+    label_off="Nah"
+    label_on="You had me at 'brunch'"
+    name="brunch"
+    required=false
+  %}
+
+</fieldset>
+
+<fieldset name="attendee">
+  <legend>Attendee</legend>
+
+  {% include forms/form--input.html
+    classes=""
+    description=false
+    label="Full name"
+    name="fullname"
+    required=false
+    type="text"
+  %}
+
+</fieldset>
+<button class="js--copy-above layout--hide--no-javascript" type="button">+ Add person</button>
+
+{% include atoms/spacer.html size="2" %}
+{% include forms/form--textarea.html
+  classes=""
+  description="Questions, dietary info, well-wishes, <em>your single greatest piece of advice besides wash-your-hands and wear-sunscreen</em>."
+  label="Commentary"
+  name="comment"
+  required=false
+  rows="4"
+%}

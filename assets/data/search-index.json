@@ -1,0 +1,39 @@
+---
+## Stolen liberally from https://github.com/daviddarnes/alembic/blob/master/_config.yml
+##
+## Search from the title/content, include props for building cards.
+layout: compress
+meta:
+  description: "All the published textual content of the site split out by page, for searching on the front end"
+---
+[
+  {% assign collections = site.collections | where_exp:'collection','collection.output != false' %}
+  {% for collection in collections %}
+    {% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}
+    {% for doc in docs %}
+      {
+        "title": {{ doc.title | jsonify }},
+        "content": {{ doc.content | strip_html | normalize_whitespace | jsonify }},
+        {% if doc.meta.image %}
+          "image": {{ doc.meta.image | jsonify }}
+        {% else %}
+          "image": {{ site.meta.image | jsonify }}
+        {% endif %},
+        "url": {{ doc.url | absolute_url | jsonify }}
+      },
+    {% endfor %}
+  {% endfor %}
+  {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' %}
+  {% for doc in pages %}
+    {
+      "title": {{ doc.title | jsonify }},
+      "content": {{ doc.content | strip_html | normalize_whitespace | jsonify }},
+      {% if doc.meta.image %}
+        "image": {{ doc.meta.image | jsonify }}
+      {% else %}
+        "image": {{ site.meta.image | jsonify }}
+      {% endif %},
+      "url": {{ doc.url | absolute_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

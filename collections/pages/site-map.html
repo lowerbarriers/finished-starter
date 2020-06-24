@@ -1,0 +1,74 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+  copyright: 4
+#  footer: 3
+#  main: 3
+#  utility: 1
+meta:
+  description: "A list of all links on the site, grouped by type and in alphabetical order."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /site-map/
+#published: true
+#schema:
+#  type: "Thing"
+#sections:
+#  - cta
+#sitemap: false
+#tags: ["three", "four"]
+title: "Site map"
+---
+
+<section class="layout--stripe ">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Comprehensive lists"
+      classes="text-shadow--second-light--solid"
+      level="2"
+    %}
+
+    {% include atoms/spacer.html size="2" %}
+
+    <p>Here's everything on the site, except for <a href="{% link collections/pages/docs.html %}">the technical documentation</a>.</p>
+  </div>
+</section>
+
+<section class="layout--stripe background-color--white">
+  <div class="layout--stripe--inner">
+    <h2 id="#pages">Pages</h2>
+
+    {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' | sort: "title", "last" %}
+    <ul>
+      {% for doc in pages %}
+        <li><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% assign collections = site.collections | where_exp:'collection','collection.output != false' %}
+{% for collection in collections %}
+  {% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' | sort: "title", "last" %}
+  {% if docs[1] %}
+    {% assign zebra = forloop.index | modulo: 2 %}
+    <section class="layout--stripe {% if zebra >= 1 %}background-color--white{% endif %}">
+      <div class="layout--stripe--inner">
+        <h2 id="#{{ collection.label | slugify }}" class="text-transform--capitalize">{{ collection.label }}</h2>
+
+        <ul>
+          {% for doc in docs %}
+            <li><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,256 @@
+/**
+ * @file
+ * Classes in a property--value style used across projects.
+ */
+
+/**
+ * Accessibly hide elements.
+ */
+.a11y--visually-hidden:not(:focus-within) {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/**
+ * Hides background images on mobile.
+ */
+@media all and (max-width: 1023px) {
+  .background-image-display-mobile--hide {
+    background-image: none !important;
+  }
+}
+
+/**
+ * Generic borders.
+ */
+.border--1px-solid {
+  border: 1px solid;
+}
+.border--default {
+  border: var(--border--default);
+}
+.border-bottom--1px-solid {
+  border-bottom: 1px solid;
+}
+
+/**
+ * Border radius helpers
+ */
+.border-radius--default {
+  border-radius: var(--border-radius--default);
+}
+.border-radius--none {
+  border-radius: 0;
+}
+.border-radius--round {
+  border-radius: 50%;
+}
+
+/**
+ * Positioning helpers: bottom.
+ */
+.bottom--0 {
+  bottom: 0;
+}
+
+/**
+ * Box shadow helpers.
+ */
+.box-shadow--default {
+  box-shadow: var(--box-shadow--default);
+}
+.box-shadow--lifted-edges,
+pre.highlight {
+  position: relative;
+}
+.box-shadow--lifted-edges:before,
+pre.highlight:before,
+.box-shadow--lifted-edges:after,
+pre.highlight:after {
+  bottom: calc(1.5 * var(--spacing--single));
+  box-shadow: 0 calc(1.5 * var(--spacing--single))
+    calc(1 * var(--spacing--single)) rgba(0, 0, 0, 0.75);
+  content: "";
+  left: calc(1 * var(--spacing--single));
+  max-width: 300px; /* Magic number */
+  position: absolute;
+  top: 80%;
+  transform: rotate(-3deg);
+  width: 50%;
+  z-index: -1;
+}
+.box-shadow--lifted-edges:after,
+pre.highlight:after {
+  transform: rotate(3deg);
+  right: calc(1 * var(--spacing--single));
+  left: auto;
+}
+
+/**
+ * Flex-basis helpers.
+ */
+.flex-basis--100 {
+  flex-basis: 100%;
+}
+
+/**
+ * Positioning helpers: left.
+ */
+.left--0 {
+  left: 0;
+}
+
+/**
+ * Line-heights.
+ */
+.line-height--0 {
+  line-height: 0;
+}
+.line-height--1 {
+  line-height: 1;
+}
+.line-height--default {
+  line-height: var(--line-height--default);
+}
+.line-height--heading {
+  line-height: var(--line-height--heading);
+}
+
+/**
+ * Order in flexbox. Numeric properties.
+ */
+.order--neg1 {
+  order: -1;
+}
+.order--0 {
+  order: 0;
+}
+.order--1 {
+  order: 1;
+}
+
+/**
+ * Printer page breaks.
+ */
+@media print {
+  .print---page-break-before--always {
+    page-break-before: always;
+  }
+}
+
+/**
+ * Positioning helpers: right.
+ */
+.right--0 {
+  right: 0;
+}
+
+/**
+ * When you need to set text in columns that auto-adjust to their container.
+ */
+.text-column--2-column,
+.text-column--3-column,
+.text-column--4-column {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: calc(4 * var(--spacing--single));
+  -webkit-column-gap: calc(4 * var(--spacing--single));
+  column-gap: calc(4 * var(--spacing--single));
+}
+.text-column--2-column > *,
+.text-column--3-column > *,
+.text-column--4-column > * {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+}
+.text-column--3-column {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+.text-column--4-column {
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+  column-count: 4;
+}
+@media all and (max-width: 767px) {
+  .text-column--2-column,
+  .text-column--3-column,
+  .text-column--4-column {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+/**
+ * Text shadow classes.
+ */
+.text-shadow--default {
+  text-shadow: var(--text-shadow--default);
+}
+
+/**
+ * Positioning helpers: top.
+ */
+.top--0 {
+  top: 0;
+}
+.top--50p {
+  top: 50%;
+}
+
+/**
+ * Positioning helpers: z-index.
+ *
+ * If you need more z-indices than these then it's a big code smell; you're doing something very wrong.
+ */
+.z-index--neg2 {
+  z-index: -2;
+}
+.z-index--neg1 {
+  z-index: -1;
+}
+.z-index--0 {
+  z-index: 0;
+}
+.z-index--1 {
+  z-index: 1;
+}
+.z-index--2 {
+  z-index: 2;
+}
+.z-index--3 {
+  z-index: 3;
+}
+.z-index--4 {
+  z-index: 4;
+}
+.z-index--5 {
+  z-index: 5;
+}
+.z-index--6 {
+  z-index: 6;
+}
+.z-index--7 {
+  z-index: 7;
+}
+.z-index--8 {
+  z-index: 8;
+}
+.z-index--9 {
+  z-index: 9;
+}
+.z-index--9998 {
+  z-index: 9998;
+}
+.z-index--9999 {
+  z-index: 9999;
+}

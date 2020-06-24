@@ -1,0 +1,42 @@
+---
+layout: compress
+---
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": {{ site.title | append: " | " | append: page.title | jsonify }},
+  {% if site.meta.description %}"description": {{ site.meta.description | jsonify }},{% endif %}
+  "home_page_url": "{{ site.url }}{{ site.subpath }}",
+  "feed_url": "{{ page.url | absolute_url }}",
+  "icon": "{{ site.url}}{{ site.subpath }}/assets/images/required/logo-mark_512.png",
+  "favicon": "{{ site.url}}{{ site.subpath }}/apple-touch-icon.png",
+  {% if site.author %}
+  "author": {
+    "name": {{ site.primary_author | jsonify }}
+  },
+  {% endif %}
+  "items": [
+    {% for post in site[page.collection] limit:20 %}
+      {% assign all_tags = post.tags | concat: post.categories | uniq %}
+      {% assign all_tags_size = all_tags | size %}
+      {
+        "id": "{{ post.url | absolute_url }}",
+        "url": "{{ post.url | absolute_url }}",
+        "title": {{ post.title | jsonify }},
+        "content_html": {{ post.content | jsonify }},
+        "content_text": {{ post.content | strip_html | jsonify  }},
+        {% if post.meta.description %}"summary": {{ post.meta.description | jsonify }},{% endif %}
+        {% if post.meta.image.src %}"banner_image": "{{ site.url }}{{ site.subpath }}/assets/images/{{ post.meta.image.src }}",{% endif %}
+        {% if post.authors %}
+          {% for author in post.authors limit: 1 %}
+            {% assign person = site.people | where: 'slug', author | first %}
+            "author": {
+              "name": {{ person.title | jsonify }}
+            },
+          {% endfor %}
+        {% endif %}
+        {% if all_tags_size %}"tags": {{ all_tags | jsonify }},{% endif %}
+        "date_published": "{{ post.date | date_to_xmlschema }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

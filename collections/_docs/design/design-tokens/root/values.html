@@ -1,0 +1,51 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Values for non-color design tokens."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Values (design tokens)"
+---
+
+<p>The following is a listing of design tokens for the design system of the site. Colors are displayed on their own page.
+  As the design system matures, some values may also be broken out and given examples.</p>
+
+{% assign props = site.data.design-tokens.root | sort %}
+{% for prop in props %}
+  {% if prop[0] != 'color' %}
+    <h3>{{ prop[0] }}</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in prop[1] %}
+          {% for line in item[1] %}
+            <tr>
+              <td class="font-family--monospace">{{ item[0] }}--{{ line[0] }}</td>
+              <td class="font-family--monospace">{{ line[1].value }}</td>
+              <td>{{ line[1].description }}</td>
+              <td>{{ line[1].category }}</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+{% endfor %}

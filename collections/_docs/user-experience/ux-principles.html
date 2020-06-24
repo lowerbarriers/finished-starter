@@ -1,0 +1,272 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Prioritzation of the laws of user experience for heuristic work."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "UX principles"
+---
+
+{% include atoms/heading.html
+  children="Laws of UX"
+  classes=""
+  level="2"
+%}
+
+<p>
+  The <a href="https://lawsofux.com">Laws of UX site</a> is a fantastic resource for learning in depth about mental models,
+  heuristics, and immutable laws of human behavior that undergird the practice of user experience design.
+</p>
+
+<p>
+  Whereas the Laws of UX site presents in a numerical order, that order is just alphabetical with numbers. For the purpose
+  of this site, the ordered list establishes <strong>an opinionated priority</strong>, with 1 being more important than 2,
+  and so forth. In the event that two solutions or even their underlyring principles conflict, the answer abiding to the
+  lowest-number law in the list is the one that should be chosen.
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<ol>
+  <li>
+    <h3><a href="https://lawsofux.com/occams-razor.html">Occam’s Razor</a></h3>
+    <blockquote><p>Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.</p></blockquote>
+    <p>
+      Especially where users' attention is concerned, less is more. If a single form field can do, don't split it into 3.
+      If a section can be a heading, some text, and a little bit of space, avoid a complex layout. Keep it simple.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/jakobs-law.html">Jakob’s Law</a></h3>
+    <blockquote><p>Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.</p></blockquote>
+    <p>
+      When you can stick to convention, reuse obvious patterns, and avoid reinventing the wheel, it's better for <em>eveyone</em>
+      to do so.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/fittss-law.html">Fitts’s Law</a></h3>
+    <blockquote><p>The time to acquire a target is a function of the distance to and size of the target.</p></blockquote>
+    <p>
+      Fitts' Law seems underappreciated compared to other interaction guidance. On this site, important interactive elements
+      should always be big and nearby. Any two elements should have adequate spacing to prevent misses.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/law-of-proximity.html">Law of Proximity</a></h3>
+    <blockquote><p>Objects that are near, or proximate to each other, tend to be grouped together.</p></blockquote>
+    <p>
+      We are strongly inclined to group related content together: at the page and menu level, on a page via sections and
+      the heading outline, and in smaller ways both visually and syntactically.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/serial-position-effect.html">Serial Position Effect</a></h3>
+    <blockquote><p>Users have a propensity to best remember the first and last items in a series.</p></blockquote>
+    <p>
+      We want the starts and ends of things to be the best parts. People derive value from the middle of a story or a section
+      containing supplementary information, yes, but they retain the headline and the call to action. Prioritize this over
+      Miller's Law, slightly.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/millers-law.html">Miller’s Law</a></h3>
+    <blockquote><p>The average person can only keep 7 (plus or minus 2) items in their working memory.</p></blockquote>
+    <p>
+      This, coupled with the serial position effect, should be the basis for navigation menus. Each level of menu (with
+      Occam's Razor driving toward a minimal number of levels) should start and end with the most important items, and should
+      number no more than 9 items, ideally 7 or fewer.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/law-of-common-region.html">Law of Common Region</a></h3>
+    <blockquote><p>Elements tend to be perceived into groups if they are sharing an area with a clearly defined boundary.</p></blockquote>
+    <p>
+      Useful to keep in mind when making a small part of an interface, like a fieldset or layout column. The use of a background,
+      border, or tactical spacing can yield benefits for making an element or elements easier to understand.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/doherty-threshold.html">Doherty Threshold</a></h3>
+    <blockquote><p>Productivity soars when a computer and its users interact at a pace (<400ms) that ensures that neither
+      has to wait on the other.</p></blockquote>
+    <p>
+      We set <a href="{% link _docs/technical/performance-budget.html %}">a performance budget</a> to ensure that everything
+      on the site is as snappy as can be. Where practical, such as the <a href="_docs/design/moodboard.html">moodboard and
+      identity documentation</a>, we also specify that transitions and animations remain within the Doherty Threshold.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/postels-law.html">Postel’s Law</a></h3>
+    <blockquote><p>Be liberal in what you accept, and conservative in what you send.</p></blockquote>
+    <p>
+      It's vitally important, especially in the context of inputs, that we accept user inputs liberally. In the context of
+      <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/">Falsehoods programmers
+      believe about names</a> and the CRM/MA convention of splitting name fields, we want to fight back and let users be
+      their authentic selves. And receiving data means respecting users' privacy.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/aesthetic-usability-effect.html">Aesthetic Usability Effect</a></h3>
+    <blockquote><p>Users often perceive aesthetically pleasing design as design that’s more usable.</p></blockquote>
+    <p>
+      This principle is less important in a decision-making framework because aesthetic can derive from simplicity, from
+      convention, and via detail work rather than foundationally. Aesthetic is also more subjective than other laws and
+      effects in this list.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+</ol>
+
+{% include atoms/heading.html
+  children="Secondary laws"
+  classes=""
+  level="2"
+%}
+
+<p>
+  All laws from the reference site are included, though some are under-emphasized and others deemed redundant or harmful.
+  The remaining laws in the list below should not directly drive decision-making.
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<ul>
+  <li>
+    <h3><a href="https://lawsofux.com/pareto-principle.html">Pareto Principle</a></h3>
+    <blockquote><p>For many events, roughly 80% of the effects come from 20% of the causes..</p></blockquote>
+    <p>
+      This is a useful mental model and certainly a strong effect. For largely-static sites rather than contributory efforts
+      (such as wikis), though, the 20% of causes is largely known and internal to the brand.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/peak-end-rule.html">Peak-End Rule</a></h3>
+    <blockquote><p>People judge an experience largely based on how they felt at its peak and at its end, rather than the
+      total sum or average of every moment of the experience.</p></blockquote>
+    <p>
+      We want to keep this in mind, especially when telling stories; a good story takes great care to make a satisfying
+      climax and ending. For a website, we have to battle serial position and "the fold" against the peak-end, since bounces
+      can mean very quick starts, peaks, and ends for some user segments. Defer to the serial position effect ten times
+      for every application of the Peak-End rule.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/parkinsons-law.html">Parkinson’s Law</a></h3>
+    <blockquote><p>Any task will inflate until all of the available time is spent.</p></blockquote>
+    <p>
+      Less a driver of decision-making and more a joke about project management... We should aspire to provide maximum value
+      for available time. Perhaps the lesson from this 'law' is to always have an enticing backlog!
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/von-restorff-effect.html">Von Restorff Effect</a></h3>
+    <blockquote><p>When multiple similar objects are present, the one that differs from the rest is most likely to be remembered.</p></blockquote>
+    <p>
+      Prioritize this effect, wherein a combo-breaker helps drive user engagement (see "Amazon recommends") over implying
+      patterns via the Law of Similarity. At the same time, do not overuse this effect, since it can lead to the "if everything
+      is bold then nothing is bold" feeling.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li>
+    <h3><a href="https://lawsofux.com/law-of-similarity.html">Law of Similarity</a></h3>
+    <blockquote><p>The human eye tends to perceive similar elements in a design as a complete picture, shape, or group,
+      even if those elements are separated.</p></blockquote>
+    <p>
+      An interesting effect, certainly. However, if a design <em>relies</em> on similarity and difference rather than being
+      simply enhanced by the effect, it is a likely sign of too much visual complexity driving the design.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li class="background-color--grey-light color--grey">
+    <h3><a href="https://lawsofux.com/teslers-law.html">Tesler’s Law</a></h3>
+    <blockquote><p>For any system there is a certain amount of complexity which cannot be reduced.</p></blockquote>
+    <p>
+      Yet another corollary of Occam's Razor, albeit insightful. We want to convey meaning to users as simply as possible.
+      Any simpler and the meaning falls apart. Any more complex and the conveyance is inefficient. We want as simple as we
+      can, but no simpler.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li class="background-color--grey-light color--grey">
+    <h3><a href="https://lawsofux.com/law-of-uniform-connectedness.html">Law of Uniform Connectedness</a></h3>
+    <blockquote><p>Elements that are visually connected are perceived as more related than elements with no connection.</p></blockquote>
+    <p>
+      Another corollary, this time of the law of proximity. Things that are connected are by definition proximate. Let's
+      Occam this and keep in mind how important proximity is.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li class="background-color--grey-light color--grey">
+    <h3><a href="https://lawsofux.com/law-of-pragnanz.html">Law of Prägnanz</a></h3>
+    <blockquote><p>People will perceive and interpret ambiguous or complex images as the simplest form possible, because
+      it is the interpretation that requires the least cognitive effort of us.</p></blockquote>
+    <p>
+      Both a corollary of Occam's Razor and a fairly-minute effect compared to regular-old clear communication. All Gestalt
+      demonstrates that humans recognize and process perceived patterns with innate biases. If an interface relies on Prägnanz
+      in a meaningful way, it's likely too complex of a design to begin with.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li class="background-color--grey-light color--grey">
+    <h3><a href="https://lawsofux.com/zeigarnik-effect.html">Zeigarnik Effect</a></h3>
+    <blockquote><p>People remember uncompleted or interrupted tasks better than completed tasks.</p></blockquote>
+    <p>
+      Some psychological principles are true, but not necessarily pleasant. This effect enhances memory while increasing
+      anxiety. We don't want our visitors to feel anxious about completing tasks, and we don't want users to feel like a
+      first-year marketing intern is sending them a "time's running out" email. Just note that this is a tool in the black-hat
+      UX box and move on.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+
+  <li class="background-color--grey-light color--grey">
+    <h3><a href="https://lawsofux.com/hicks-law.html">Hick’s Law</a></h3>
+    <blockquote><p>The time it takes to make a decision increases with the number and complexity of choices.</p></blockquote>
+    <p>
+      This is a corollary of Occam's Razor; while true, in the interest of abiding by our first principles we'll de-prioritize
+      it.
+    </p>
+    {% include atoms/spacer.html size="8" %}
+  </li>
+</ul>

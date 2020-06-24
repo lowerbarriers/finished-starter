@@ -1,0 +1,616 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Fonts, colors, logos and imagery, and other things that contribute to the feel."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Moodboard"
+---
+
+{% include atoms/heading.html
+  children="Identity and mood"
+  classes="text-shadow--second-light--solid"
+  level="2"
+%}
+
+{% include atoms/heading.html
+  children="Brand positioning"
+  classes=""
+  level="3"
+%}
+
+<p><strong>Promise</strong>: We make the least-breakable widgets on the market in the Peoria area.</p>
+
+<p><strong>Mission</strong>: Take the Chicagoland area's widget market by storm in the next five years.</p>
+
+<p><strong>Tone</strong>: Direct, concise, uncomplicated. You should get what we're saying the first time you read it.</p>
+
+<p><strong>Elevator pitch</strong>: "You know when you're up on the top floor trying to install a widget, and it breaks?
+  Yeah, we've dealt with that forever, too. Our company makes widgets that don't break, so you pay less and get more."</p>
+
+{% include atoms/heading.html
+  children="Logo mark concepts"
+  classes=""
+  level="3"
+%}
+
+{% include atoms/spacer.html size="2" %}
+
+<p>Worked through 8 concepts, which seems like the right number to really explore the creative space. Each concept is
+  a black-and-white rendering, since the end result has to be used for web, print (including b&amp;w), and other media.</p>
+
+{% include atoms/spacer.html size="2" %}
+
+<ul class="list-style--none layout--multiple--horizontal">
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+  <li class="flex--1">
+    {% include atoms/image.html
+      src="required/logo.svg"
+      alt="First logo concept"
+      caption="Rushed the logo"
+    %}
+  </li>
+</ul>
+
+{% include atoms/spacer.html size="2" %}
+
+<p>A logo mark should accomplish a few things:</p>
+
+<ul class="text-align--left">
+  <li>Be quickly recognizable</li>
+  <li>Hint at what the brand is for</li>
+  <li>Not look cheesy, trendy, trashy, or otherwise negative</li>
+  <li>Be able to be printed in black-and-white as well as full-color</li>
+  <li>Allow placement in prominent ways like signage</li>
+  <li>Allow placement in tiny places like tab icons</li>
+  <li>Ideally be a bit clever</li>
+</ul>
+
+{% include atoms/heading.html
+  children="Color"
+  classes=""
+  level="3"
+%}
+
+<p>Color plays a big part in bringing a brand together. Here is the palette of the base scheme, right next to each
+  other. If you can't feel a brand impression or at least get a hint at a mood, it might be worthwhile to revisit the
+  scheme.</p>
+
+<ul class="list-style--none layout--multiple--horizontal">
+  <li class="flex--1">
+    <div class="palette background-color--main color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.main.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--second color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.second.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--third color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.third.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--accent color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.accent.value }}
+    </div>
+  </li>
+</ul>
+
+<p>Often the brand palette is used more subtly, via the light versions of the brand shades. These washed-out or pastel
+  tones should also work together to give you a hint of the brand:</p>
+
+<ul class="list-style--none layout--multiple--horizontal">
+  <li class="flex--1">
+    <div class="palette background-color--main-light font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.main-light.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--second-light font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.second-light.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--third-light font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.third-light.value }}
+    </div>
+  </li>
+</ul>
+
+{% include atoms/heading.html
+children="Brand package"
+classes=""
+level="3"
+%}
+
+<p>Every site/brand has one or more assets that get dropped all over the place: logo for print, social, app icons, etc.
+  Social usually has cover images. There are defaults and treatments that are best explained.</p>
+
+{% include atoms/heading.html
+  children="Icons and tiles"
+  classes=""
+  level="4"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {% include atoms/image.html
+          src="required/logo.svg"
+          alt="Logo"
+        %}
+      </td>
+      <td>The chosen logo concept with its main color treatment</td>
+    </tr>
+
+    <tr>
+      <td>
+        {% include atoms/image.html
+          src="required/apple-touch-icon.png"
+          alt="Apple touch icon"
+        %}
+      </td>
+      <td>The app icon when you install this site as a bookmark on a mobile device.</td>
+    </tr>
+
+    <tr>
+      <td>
+        {% include atoms/image.html
+          src="required/favicon.ico"
+          alt="Favicon"
+        %}
+      </td>
+      <td>The simplified mark used as an icon in browser tabs and bookmarks.</td>
+    </tr>
+
+    <tr>
+      <td>
+        {% include atoms/image.html
+          src="required/tile.png"
+          alt="Tile"
+        %}
+      </td>
+      <td>An app tile, primarily for Windows.</td>
+    </tr>
+
+    <tr>
+      <td>
+        {% include atoms/image.html
+          src="required/tile-wide.png"
+          alt="Wide tile"
+        %}
+      </td>
+      <td>A wide app tile, primarily for Windows.</td>
+    </tr>
+  </tbody>
+</table>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Social"
+  classes=""
+  level="4"
+%}
+
+{% include atoms/spacer.html size="2" %}
+
+{% include atoms/image.html
+  src="required/logo-mark_512.png"
+  alt="Logo for social profile pic"
+  caption="Here is a logo treatment for use in a social profile picture."
+%}
+
+{% include atoms/spacer.html size="4" %}
+
+{% include atoms/image.html
+  src="required/meta-image--default.jpg"
+  alt="Default social and cover pic"
+  caption="Image properly formatted as both a social cover photo and default social share."
+%}
+
+{% include atoms/spacer.html size="4" %}
+
+{% include atoms/image.html
+  src="required/demo.jpg"
+  alt="Brand treatment over a photo"
+  caption="A photo with branded treatments for social posts and elsewhere."
+%}
+
+{% include atoms/spacer.html size="4" %}
+
+{% include atoms/image.html
+  src="required/demo_bw.jpg"
+  alt="Black-and-white treatment demo"
+  caption="A black-and-white photo similarly using a brand treatment."
+%}
+
+
+{% include atoms/heading.html
+  children="Mood"
+  classes="text-align--center"
+  level="3"
+%}
+
+<p>In this section we'll leverage the defaults in the system to see how the design choices reinforce a brand mood.</p>
+
+{% include atoms/heading.html
+  children="Card"
+  classes=""
+  level="3"
+%}
+
+<p>A card is usually a good example of a site's mood, since it often has the site's choices of shadows (lighting direction),
+  borders, corners, colors, image treatments, etc.</p>
+
+<ol class="list-style--none layout--multiple--horizontal">
+  {% include molecules/card.html
+    entity=page
+  %}
+</ol>
+
+{% include atoms/heading.html
+  children="Defaults"
+  classes=""
+  level="4"
+%}
+
+<p>Here are the individual properties, highlighted for review:</p>
+
+<p class="border--default padding-horizontal--4 padding-vertical--4">Along with the standard typographic styles demonstrated
+  in the section below, this paragraph has the default border on it. It also has some padding applied, since otherwise
+  the border would be tight to the text.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">border--default:
+    <strong>{{ site.data.design-tokens.root.border.border.default.value }}</strong></dfn>
+</p>
+
+<p class="border--default border-radius--default padding-horizontal--4 padding-vertical--4">This paragraph is similar
+  to the one above, but it applies the standard amount of corner rounding for the site. In broad terms, very square
+  corners feel calculated, structural, rigid, whereas a very round corner feels smooth, safe, playful. A subtle rounding
+  in between can evoke a compromise between two extremes.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">border-radius--default:
+    <strong>{{ site.data.design-tokens.root.border-radius.border-radius.default.value }}</strong></dfn>
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<p class="border--default border-radius--default box-shadow--default padding-horizontal--4 padding-vertical--4">Here
+  we add the default box-shadow. Even if a site doesn't explicitly use shadows (ie. flat design), setting a default has
+  value because it gives a design idea of a light source and its direction. This can be used for art direction, and can
+  contribute to imagery choice; keeping consistent lighting direction can make a site feel cohesive.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">box-shadow--default:
+    <strong>{{ site.data.design-tokens.root.box-shadow.box-shadow.default.value }}</strong></dfn>
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<div class="border--default background-color--second-light text-align--justify padding-horizontal--4 padding-vertical--4">
+  <p>This box demonstrates how wide a box will go within the content area. Within reason, a narrow content area feels legible
+    and cozy, while a wide area feels creative and expansive. We typically set up a 1200-pixel-wide content area, for two
+    good reasons:</p>
+
+  <ol>
+    <li>A 13-inch laptop usually has the equivalent of a 1280-pixel width, so 1200 gives some breathing room in regular
+      conditions</li>
+    <li>The standard image specification for the site, based on Facebook's social share image spec, is 1200x630. At a
+      1200-pixel content area width, we can format all our images consistently and they'll take up their allotment</li>
+  </ol>
+
+  <dfn class="background-color--grey-dark color--white font-family--monospace">layout--content-area:
+    <strong>{{ site.data.design-tokens.root.layout.layout.content-area.value }}</strong></dfn>
+</div>
+
+{% include atoms/spacer.html size="4" %}
+
+<p>The standard spacing on the site is multiples of a single,set value. This way, if you end up wanting to change the
+  feel of the site, you can do it by changing one thing in one place. A site with big whitespace feels luxurious and
+  upmarket, while tight spacing feels efficient but can also come across as unrefined. Here is a single space, not very
+  indicative of much on its own:
+  <br />
+  <div class="display--inline-block background-color--accent padding-vertical--1 padding-horizontal--1"></div>
+  <br />
+  We set the spacing based relatively on the root font-size, which is almost always 16px.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">spacing--single:
+    <strong>{{ site.data.design-tokens.root.spacing.spacing.single.value }}</strong></dfn>
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<p>Motion, transitions, animations, and 'micro-animations' (which is industry buzzword talk rather than a meaningful
+  distinction) can also influence how a visitor feels about your brand presence. An example of the default transition
+  timing is below:</p>
+
+<button>Hover this for a transition example</button>
+
+{% include atoms/spacer.html size="2" %}
+
+<p>Human perception and preference for snappy interfaces constrains transitions to between instant and half a second.
+  Obviously you can't make a transition faster than instant, and any slower than half a second and people feel like
+  there's a computer problem.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">transition--default:
+    <strong>{{ site.data.design-tokens.root.transition.transition.default.value }}</strong></dfn>
+</p>
+
+{% include atoms/heading.html
+children="Typography"
+classes="text-align--center"
+level="3"
+%}
+
+<p>Below are textual explanations of the typographic choices, as well as some samples of common elements. This is what
+  normal body text looks like, for instance.</p>
+
+{% include atoms/heading.html
+  children="Heading 2 begins a section"
+  classes="text-align--center"
+  level="2"
+%}
+
+<p>Following a heading should be some text. If there's a heading and then another heading it's usually a sign that the
+  content isn't being outlined in a manner that humans of all abilities as well as search engines can easily understand.</p>
+
+{% include atoms/heading.html
+  children="Level-3 headings are most common within text passages"
+  classes=""
+  level="3"
+%}
+
+<p>A level-1 heading is often the page title. Depending on your school of thought, the logo may also be a level-1 heading.
+  Level-2 headings are for section headers. So once you've gotten into a section and are writing text, you're using third-level
+  headings to keep the right outline level.</p>
+
+<p>There should be a comfortable amount of space between paragraphs. Not a tiny space that makes it feel like a continuous
+  paragraph, nor a giant space that makes the page feel like a void.</p>
+
+<p>Anyway, level three headings, as a common text treatment within body text, should appear distinct from the paragrpah
+  text, but should be legible and easy to visually discern when skimming or scanning.</p>
+
+{% include atoms/heading.html
+  children="Level 4 is the last practical heading level"
+  classes=""
+  level="4"
+%}
+
+<p>In practice, a document written for humans on the web doesn't go down six outline levels. If you find yourself writing
+  a fifth-level heading, it may be time to reconsider the density and complexity of the page. It might be worthwhile to
+  write simpler prose and split different concepts onto different pages.</p>
+
+{% include atoms/heading.html
+  children="Alas, Level 5 exists"
+  classes=""
+  level="5"
+%}
+
+<p>More often than not, the type scale approaches the body text size around heading level 5 or 6. It's not uncommon for
+  heading level six to be smaller than body text, albeit bold or italic or underlined or a different font or a different
+  shade/color. If you're writing a dense, technical site, it's probably worthwhile to keep heading 5 bigger than body
+  text.</p>
+
+{% include atoms/heading.html
+  children="Might as well be creative with heading level 6"
+  classes=""
+  level="6"
+%}
+
+<p>An important thing to note with heading levels, beyond font size and text treatments, it the comfort of the spacing
+  between a heading and text, especially above it. A consistent amount of space between all text elements including headings
+  is similar to square corners: harsh, calculating, flat. A variable amount of space (bigger headings have bigger spaces)
+  feels more human and organic.</p>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Typefaces"
+  classes=""
+  level="4"
+%}
+
+<p>Here are the fonts used to evoke brand feelings and aid the user in reading the site.</p>
+
+<p class="font-family--primary">This paragraph probably looks like the once above it. That's because paragraphs are
+  overwhelmingly set in the primary font. The web is a majority of sans-serif faces for the body copy, but a serif can
+  give a classic, timeless feel.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">font-family--primary:
+    <strong>{{ site.data.design-tokens.root.font-family.font-family.primary.value }}</strong></dfn>
+</p>
+
+<p class="font-family--secondary">Here is some body text set in the secondary font. Depending on the face being used,
+  this may not be particularly easy-to-read. The secondary font is for making a statement in your headings and other
+  places where feeling can be generated with text treatment. See in the definition box that the main font is declared,
+  but then there's a 'stack' of web-safe fonts separated by commas. These are the fallbacks for when the web font doesn't
+  load. You can also use them as secondary brand fonts.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">font-family--secondary:
+    <strong>{{ site.data.design-tokens.root.font-family.font-family.secondary.value }}</strong></dfn>
+</p>
+
+{% include atoms/heading.html
+  children="Secondary font in realistic example"
+  classes="font-family--secondary"
+  level="2"
+%}
+
+<p class="font-family--monospace">If your site has code samples, having a monospace font can be a good, subtle branding
+  enhancement. Typically we'll just set a web-safe stack, but if you have a technical site you'll likely see a benefit
+  picking and loading a brand-specific code font.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">font-family--monospace:
+    <strong>{{ site.data.design-tokens.root.font-family.font-family.monospace.value }}</strong></dfn>
+</p>
+
+<code class="font-family--monospace"><pre>
+  // Here is some code as an example, set in monospace font:
+  console.log({
+    fontName: 'test1',
+    sillyCode: 'what the heck?'
+  });
+</pre></code>
+
+<p class="font-family--input">Text boxes and other form inputs can have their own font, and on this site it is set to
+  this! For the most part you're gonna want to stick to a boring sans-serif font for form inputs, since that's what
+  users expect.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">font-family--input:
+    <strong>{{ site.data.design-tokens.root.font-family.font-family.input.value }}</strong></dfn>
+</p>
+
+{% include forms/form--input.html
+  classes="font-family--input"
+  description=false
+  label="Example input font"
+  name="EMAIL"
+  required=true
+  type="email"
+%}
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Treatments"
+  classes=""
+  level="4"
+%}
+
+<p class="line-height--default">This paragraph has the standard line-height (leading) applied. A value of 1 means the
+  text is strictly single-spaced. A value of 2 is double-spaced. In practical terms text feels legible when it's a little
+  less than 1.5. You can make the text feel urgent and dense by going lower, or breezy by going higher.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">line-height--default:
+    <strong>{{ site.data.design-tokens.root.line-height.line-height.default.value }}</strong></dfn>
+</p>
+
+<p class="line-height--heading">This is probably more difficult to read. Body text can be nearly double-spaced and it
+  still feels pretty comfortable. Headings with more than about 1.2 spacing begin to subvert the proportions of space.
+  In order to preserve the gestalt of the heading's logical text grouping, text with a line-height for headings should
+  be nearly single-spaced.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">line-height--heading:
+    <strong>{{ site.data.design-tokens.root.line-height.line-height.heading.value }}</strong></dfn>
+</p>
+
+<p class="text-shadow--default">Text shadows are not typically applied to body text because it is so small, and the
+  shadows can interfere with the shapes of letters and words when reading. But headings, especially those placed over
+  image backgrounds, can benefit from a little shadow or glow, especially when a brand mood appreciates depth and lighting
+  over flatness.
+  <br />
+  <dfn class="background-color--grey-dark color--white font-family--monospace">text-shadow--default:
+    <strong>{{ site.data.design-tokens.root.text-shadow.text-shadow.default.value }}</strong></dfn>
+</p>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Elements"
+  classes=""
+  level="4"
+%}
+
+<blockquote>
+  <p>A blockquote is a way to highlight a large amount of quoted text. Often you'll find typographic flourishes in conjunction
+    with lines, spacing, and especially big quotation marks. Colors and backgrounds are also not uncommon.</p>
+</blockquote>
+
+<p>Next, after this paragraph, is a horizontal rule. They can be as plain and utilitarian as a 1-pixel black line, or
+  an ornate source of visual flourishes.</p>
+
+<hr />
+
+<p>Unordered lists most usually have bullet dots at the beginning of each line.</p>
+
+<ul>
+  <li>They should be brief tastes of information</li>
+  <li>They should be easy to skim and scan</li>
+  <li>Both hanging and flush indentation are acceptable</li>
+  <li>Lists work best with between 2 and 7 items</li>
+  <li>Styling the bullets themselves has historically been more trouble than it's worth</li>
+</ul>
+
+<ol>
+  <li>Numbered lists are like bullet lists, but with numbers</li>
+  <li>Bullets are for equal-strength points, while numbers imply order</li>
+</ol>
+
+<p>Here, near the bottom of all this discussion of brand and mood, are <a href-"https://www.bing.com">links, of all things</a>!
+  Within body copy you'll find links, as well as <strong>bold, strong text</strong> and <em>italic, emphasized text</em>.
+  Please, dear reader, keep underlines on textual links, and avoid using underlines for non-link purposes.</p>

@@ -1,0 +1,7 @@
+---
+collection: "posts"
+layout: jsonfeed
+meta:
+  description: "All of the blog posts on the site, in https://jsonfeed.org/ format"
+title: "Blog"
+---

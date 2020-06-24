@@ -1,0 +1,123 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Menus, tagging, and other structures."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Information architecture"
+---
+
+{% include atoms/heading.html
+  children="Site map[ped]"
+  classes="text-shadow--second-light--solid"
+  level="2"
+%}
+
+{% include atoms/heading.html
+  children="Menus"
+  classes=""
+  level="3"
+%}
+
+<p>
+  Menus are a good indication of the implied structure of a site, even when the typed data is stored in a flat manner.
+</p>
+
+{% include atoms/heading.html
+  children="Main"
+  classes=""
+  level="4"
+%}
+
+<p>The main menu is the primary way users navigate between top-level sections. Pages in the main menu should have short,
+  instantly-understandable titles. There should be between 1 and 7 main menu items, including the home page.</p>
+
+{% include molecules/menu.html
+  classes=""
+  menu="main"
+%}
+
+{% include atoms/heading.html
+  children="Footer"
+  classes=""
+  level="4"
+%}
+
+<p>More often than not, the footer menu is a duplicate of the main menu. If there is an important but secondary page that
+  does not fit in the main menu or elsewhere, the footer menu could be the place for it, tentatively. It's a good place to
+  park a page in order to resolve an argument.</p>
+
+{% include molecules/menu.html
+  classes=""
+  menu="footer"
+%}
+
+{% include atoms/heading.html
+children="Utility"
+classes=""
+level="4"
+%}
+
+<p>The utility menu is where to put 'verb' items; if the main menu has nouns like 'About' or 'Products', then the utility
+  menu would be best for 'Contact us' or 'Schedule an appointment'. Overall, the utility menu is a great place for contact
+  information.</p>
+
+{% include molecules/menu.html
+classes=""
+menu="utility"
+%}
+
+{% include atoms/heading.html
+children="Copyright"
+classes=""
+level="4"
+%}
+
+<p>The copyright menu holds legal and technical documentation links. This is stuff you have to have, but not that anybody
+  clicks into with any regularity.</p>
+
+{% include molecules/menu.html
+classes=""
+menu="copyright"
+%}
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Collections"
+  classes=""
+  level="3"
+%}
+
+<p>The site's content can be put into the following buckets for use throughout:</p>
+
+<ul>
+  {% for collection in site.collections %}
+    <li>{{ collection.label }}</li>
+  {% endfor %}
+</ul>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+children="Taxonomy"
+classes=""
+level="3"
+%}
+
+<p>All content on the site can be described (for keyword SEO purposes) and grouped together using two different vocabularies:</p>
+
+<ul>
+  <li><strong>Categories</strong> for broad, structured description</li>
+  <li><strong>Tags</strong> for free-form description</li>
+</ul>

@@ -1,0 +1,10 @@
+{
+  "spacing": {
+    "single": {
+      "category": "Mood",
+      "description": "The base unit for styling of space: with, between, around things. Big values make the design airy, small tight",
+      "type": "spacing",
+      "value": "0.625rem"
+    }
+  }
+}

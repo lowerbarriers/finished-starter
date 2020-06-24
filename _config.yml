@@ -1,41 +1,313 @@
-## Jekyll configs
-permalink: /:year/:month/:day/:title/
-highlighter: rouge
-kramdown:
-  parse_block_html: true
-plugins:
-  - jemoji
-  - jekyll-sitemap
+####
+## @file
+## Jekyll configuration
+##
+## We try to push as much sitewide config as possible into this file, so a new deployment can start with just editing
+## this file.
+##
+## If you need help with YAML syntax, here are some quick references for you:
+## https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+## https://learnxinyminutes.com/docs/yaml/
+##
+## Throughout this file, you'll see two # marks at the start of a line for a permanent comment, and a single # for
+## configuration options that can be enabled by removing the #.
+##
+## When adding new sections, be sure to name them so they make sense to others, and to document with good comments
+## wherever possible/practical.
+####
 
-## Basic info
-title: Brad Czerniak
+## Technical site info
+baseurl: "" # This is better empty
+subpath: "" # Could be a subsite of a domain at a path, ex. "/sub-site"
+#google_analytics: UA-697953-3 # The UA- code provided by GA
+
+## The option below lets you choose between having Jekyll process and minify your CSS and JS (good enough), or adding a
+## step whenever you work on a CSS or JS file to run the .scripts/pre-commit.sh script before committing. This extra
+## step minimizes the size of the CSS/JS files for better front-end performance, but is obviously kind of a pain in the
+## butt.
+no_pre_commit_dependencies: "false, style and script" # Set to true to make the site work without added script hooks
+
+## Content-Security-Policy is preferably something to set in the HTTP headers, but is available here just in case.
+## @see https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+#content_security_policy: "default-src 'self'; script-src 'self' 'unsafe-inline'"
+
+## Basic site info
+title: "Shelby and Brad"
 primary_author: "Brad Czerniak"
-shortname: bpcz
-tagline: "Polymath for hire"
-offering: "Web & Drupal development, consulting"
-offer_description: "I solve interesting problems."
+shortname: brelby
+tagline: "October 9, 2020 — Ferndale, MI"
 
 ## Site and contact bits
 email: ao5357@gmail.com
-phone: (248) 721-0350
-phonedigits: "2487210350"
-gaid: UA-697953-3
-
-## schema.org type (default for site, often "Website")
-schema: Website
-
-## Open Graph
-og_street_address: 1428 Mark Ave
-og_locality: Lincoln Park
-og_region: MI
-og_postal_code: "48146"
-og_country: USA
+#fax:
+#  display: "(248) 555-0123" # Fax number as displayed
+#  mailto: "12485550213" # Fex number with country code for the link
+locations:
+  - name: "Brad Czerniak"
+    street_address: "1428 Mark Ave"
+    locality: Lincoln Park
+    region: MI
+    postal_code: "48146"
+    country_name: USA
+phone:
+  display: "(248) 721-0350" # Phone number as displayed
+  mailto: "12487210350" # Phone number with country code for the link
 
 ## Social links
+## Find icons in _includes/icons/[library]/[symbol].svg
+## The _includes/icons/simple-icons library has all the social ones.
 social:
-  -
-    title: Facebook
+  - title: Facebook
     url: https://www.facebook.com/bradczerniak
-  -
-    title: Twitter
+    icon:
+      library: simple-icons
+      symbol: facebook
+  - title: Twitter
     url: https://twitter.com/ao5357
+    icon:
+      library: simple-icons
+      symbol: twitter
+
+## Press contact
+## For small sites this is the same person and contact information as above. For companies... probably not.
+press:
+  name: "Brad Czerniak"
+  job_title: "Webmaster"
+  email: "ao5357@gmail.com"
+  phone:
+    display: "(248) 721-0350" # Phone number as displayed
+    mailto: "12487210350" # Phone number with country code for the link
+
+## The <html> tag has language and language direction. We can make it configurable
+html:
+  dir: "ltr"
+  lang: "en"
+  locale: "en_US" # Technically used for open_graph, but we can set it here
+
+## Standard <meta> tags for SEO, etc.
+meta:
+  description: "Brad Czerniak and Shelby Hassell (nee Sleete) are getting married in October in Michigan."
+  generator: "[Jekyll](https://github.com/mojombo/jekyll)"
+  image:
+    alt: "Shelby and Brad among the stars" # It's okay for this to be an empty string if the image is decorative
+    src: required/meta-image--default.jpg
+  robots: "index,follow"
+# title: "Do not use" # site.meta.title is not used for anything, but is included for completeness.
+
+## Open Graph - the parts not inferred from other site/meta info above
+## @see https://ogp.me/
+open_graph:
+  og_type: website
+#  fb_app_id: "XXXXXXXXXX"
+
+## schema.org
+## @see https://schema.org/docs/schemas.html
+schema:
+  type: "CreativeWork" # (default for site, often "CreativeWork")
+  publisher:
+    type: "Person" # Whether a "Person" or "Organization" is the publisher of the site.
+
+## Twitter cards
+## @see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started
+twitter:
+  card: "summary_large_image"
+  creator: "@ao5357"
+  site: "@ao5357"
+
+## PWA and other SEO
+## @see https://developer.mozilla.org/en-US/docs/Web/Manifest
+manifest_webmanifest:
+  background_color: "#fff"
+  theme_color: "#003f80"
+
+## JAMstack form handler globals
+## @see https://css-tricks.com/a-comparison-of-static-form-providers/
+form_components:
+  handler_url: "https://formsubmit.co"
+  honeypot_name: "_honey"
+  method: "POST"
+  thankyou_name: "_next"
+  default_submit: "Send" # or "Submit"
+
+## JAMstack product handling, courtesy of snipcart
+## Comment out the below section if you don't have products, to prevent a small script from running on every page load.
+## @see https://snipcart.com/
+snipcart:
+  api_key: "N2Q1OWZiOTMtODcyZi00OTUzLWFiYjAtNTAwMGYzZmE5YmI4NjM3MTk2NDYyNTQ4MTA5ODMx"
+
+## Woff2 files declared as webfonts in your css, relative to /assets/fonts/
+## Placing them here sets them to be preloaded in the head, which reduces request chaining for better performance.
+## @see https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content
+woff:
+  - "engagement/engagement-v9-latin-regular.woff2"
+  - "public_sans/public_sans_variable.woff2"
+  - "public_sans/public_sans_variable_italic.woff2"
+
+## The 'THANKS' and 'SITE' sections of humans.txt
+## @see http://humanstxt.org/
+## (Note: the 'TEAM' section is built from the content in the _people collection
+humans_txt:
+  site:
+    - key: "Components"
+      value: "property--value"
+    - key: "Language"
+      value: "English"
+    - key: "Doctype"
+      value: "HTML5"
+    - key: "IDE"
+      value: "PhpStorm, Sublime Text"
+    - key: "Software"
+      value: "Jekyll"
+    - key: "Standards"
+      value: "CSS3, ES6, HTML5, WCAG 2.1"
+  thanks:
+    - name: "Brad Czerniak"
+      job_title: "finished-starter"
+      contact: "ao5357 [at] gmail.com"
+      twitter: "@ao5357"
+      from: "Lincoln Park, Michigan, USA"
+
+## Content license (comment out to disable entirely)
+## @see https://creativecommons.org/share-your-work/
+content_license:
+  name: "CC BY-SA 4.0"
+  url: "http://creativecommons.org/licenses/by-sa/4.0/"
+  icon:
+    library: simple-icons
+    symbol: creativecommons
+
+## Jekyll configs
+## @see https://jekyllrb.com/docs/configuration/
+collections_dir: collections
+encoding: utf-8
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - netlify.toml
+  - node_modules
+  - package.json
+  - package-lock.json
+  - readme.md
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+future: true
+highlighter: rouge
+include:
+  - ".htaccess"
+keep_files:
+  - ".git"
+  - ".svn"
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  footnote_nr: 1
+  hard_wrap: false
+  input: GFM
+  parse_block_html: false
+  parse_span_html: false
+  show_warnings: true
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: [1, 2, 3, 4, 5, 6]
+liquid:
+  error_mode: strict
+  strict_filters: true
+  strict_variables: false
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+paginate: 30
+paginate_path: /blog/page-:num/
+permalink: /blog/:title/
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+profile: true
+safe: true
+sass:
+  sass_dir: assets/css
+  style: :compressed
+strict_front_matter: true
+theme: jekyll-theme-primer
+timezone: Etc/UTC # Allows use to set dates/times without a GMT offset.
+unpublished: false
+whitelist:
+  - jekyll-redirect-from
+
+## Site structure
+## @see https://jekyllrb.com/docs/collections/
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+  events:
+    output: true
+    permalink: /events/:year/:month/:title/
+  forms:
+    output: false
+    permalink: /:title/
+  people:
+    output: true
+    permalink: /people/:path/
+  products:
+    output: true
+    permalink: /products/:path/
+  sections:
+    output: false
+    permalink: /:title/
+
+## Layout and front matter defaults.
+## @see https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+      sitemap: false
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+      schema:
+        type: "Event"
+  - scope:
+      path: ""
+      type: "forms"
+    values:
+      layout: "form"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "people"
+    values:
+      layout: "person"
+      schema:
+        type: "Person"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      classes: ""
+      layout: "post"
+      schema:
+        type: "Article"
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+      schema:
+        type: "Product"
+  - scope:
+      path: ""
+      type: "sections"
+    values:
+      layout: "section"

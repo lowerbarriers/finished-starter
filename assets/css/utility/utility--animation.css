@@ -1,0 +1,150 @@
+/**
+ * @file
+ * Classes in a property--value style used across projects.
+ */
+
+/**
+ * Animation delay.
+ */
+.animation-delay--1s {
+  animation-delay: 1s;
+}
+
+/**
+ * Animation direction.
+ */
+.animation-direction--normal {
+  animation-direction: normal;
+}
+.animation-direction--reverse {
+  animation-direction: reverse;
+}
+.animation-direction--alternate {
+  animation-direction: alternate;
+}
+.animation-direction--alternate-reverse {
+  animation-direction: alternate-reverse;
+}
+
+/**
+ * Animation delay.
+ */
+.animation-duration--1s {
+  animation-duration: 1s;
+}
+.animation-duration--2s {
+  animation-duration: 2s;
+}
+.animation-duration--3s {
+  animation-duration: 3s;
+}
+
+/**
+ * Animation iteration count.
+ */
+.animation-iteration-count--infinite {
+  animation-iteration-count: infinite;
+}
+
+/**
+ * Named animations per the keyframes below.
+ *
+ * Despite animations working without JavaScript, all animations here are tied to the js--to-animate IntersectionObserver.
+ * This reduces paints at load-time and prevents below-fold issues with any animated lazy-loaded images.
+ */
+@media all and (prefers-reduced-motion: no-preference) {
+  .animation-name--reveal.js--animation--observed {
+    animation-name: reveal;
+  }
+  .animation-name--scale.js--animation--observed {
+    animation-name: scale;
+  }
+  .animation-name--slide.js--animation--observed {
+    animation-name: slide;
+    position: relative;
+  }
+  .animation-name--slide-spin.js--animation--observed {
+    animation-name: slide, spin;
+    position: absolute;
+  }
+  .animation-name--spin.js--animation--observed {
+    animation-name: spin;
+  }
+}
+
+/**
+ * Trigger animated visibility.
+ */
+@media all and (prefers-reduced-motion: no-preference) {
+  .js--animation .animation-name--reveal {
+    opacity: 0;
+  }
+  .js--animation .animation-name--reveal.js--animation--observed {
+    opacity: 1;
+    animation-duration: 2s;
+    animation-name: reveal;
+  }
+}
+
+/**
+ * Stop animations on hover or click.
+ */
+.js--event--click--toggle[class*="animation-name--"],
+.js--event--mouseenter--toggle[class*="animation-name--"],
+.js--event--mouseover--toggle[class*="animation-name--"] {
+  animation-name: none;
+}
+
+/**
+ * All the named keyframes in alphabetical order.
+ */
+@keyframes reveal {
+  /* animate.css 'zoomInUp'. */
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}

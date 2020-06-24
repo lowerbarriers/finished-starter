@@ -1,0 +1,10 @@
+---
+####
+## This is just a place where the design tokens data re-prints in _site. The real design tokens are split into files at
+## ./_data/design-tokens
+####
+layout: none
+meta:
+  description: "A single source of truth for design decisions, to be used in the style guide and in the CSS. Potentially compatible with amzn/style-dictionary ( https://github.com/amzn/style-dictionary )"
+---
+{{ site.data.design-tokens | jsonify }}

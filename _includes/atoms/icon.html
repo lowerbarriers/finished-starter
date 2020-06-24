@@ -1,0 +1,49 @@
+{% capture component %}
+  <figure class="figure figure--icon {% if include.classes %}{{ include.classes }}{% endif %}">
+    {% include icons/{{ include.library }}/{{ include.symbol }}.svg %}
+  </figure>
+{% endcapture %}
+
+{% capture name %}Icon{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include atoms/icon.html
+    classes=""
+    library="octicons"
+    symbol="octoface"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Icons visually represent a small concept. They're used to provide both visual guidance and visual interest to an element.
+{% endcapture %}
+
+{% capture accessibility %}
+Since icons are primarily visual, it's important that icons not be the only way of conveying meaning. Textual labels are
+important to avoid inaccessible and unusable "mystery meat navigation".
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+library| the icon library from which the symbol comes| octicons,
+symbol| the filename/subpath of the icon without the .svg part| alert
+{% endcapture %}
+
+{% assign classes = "color--main, color--accent" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

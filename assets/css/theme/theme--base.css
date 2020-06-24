@@ -1,0 +1,842 @@
+/**
+ * @file
+ * Tag-level, tables, forms, and other base styling.
+ */
+
+/**
+ * Font family declarations, all in one place and early.
+ *
+ * Let's keep all font-family calls right here, so it's manageable. Even classes
+ * if necessary.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-family--input);
+}
+
+body,
+.font-family--primary {
+  font-family: var(--font-family--primary);
+}
+/**
+ * Set various scroll-padding-top values for how many different header bars may appear.
+ *
+ * scroll-padding-top: 65px;
+ */
+
+/**
+ * Often the headings and other sparing elements take a second font family.
+ *
+ * CSSLint and other tools might squawk at double-declaring <h*> tags, but this
+ * puts all the font-family declarations in one place, which feels good.
+ */
+h1,
+h2,
+.font-family--secondary {
+  font-family: var(--font-family--secondary);
+}
+
+/**
+ * Some sites have Monospace text for code samples and the like.
+ */
+code,
+kbd,
+pre,
+samp,
+.font-family--monospace {
+  font-family: var(--font-family--monospace);
+}
+
+/**
+ * Set HTML5 elements to block, in case a browser doesn't do this.
+ */
+article,
+aside,
+blockquote,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+
+/**
+ * Normalize and bugfix for some HTML5 media elements.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+picture,
+svg,
+video {
+  max-width: 100%;
+}
+
+/**
+ * The HTML wrapping tag takes some very general styles. Normalize some rendering.
+ */
+html {
+  font-size: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/**
+ * The body tag should take the site's universal styles.
+ *
+ * rem is based on this font-size dec, so only change if you're sure about the
+ * type scale.
+ * The body line-height should be one of only a handful of [unitless] line-height
+ * declarations in the CSS codebase.
+ */
+body {
+  background-color: #edf3f8; /* var(--color--white); */
+  color: var(--color--black);
+  font-size: 16px;
+  font-weight: 200;
+  line-height: var(--line-height--default);
+  margin: 0;
+  scroll-behavior: smooth;
+}
+body.neumorphic {
+  background-image: linear-gradient(
+    272deg,
+    #c8dae9 0%,
+    transparent 100%
+  ); /* Super-high luminosiry version of --color--main */
+}
+@media all and (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color--grey-dark);
+    background-image: none;
+    filter: grayscale(100%) invert(100%);
+  }
+  figure {
+    filter: invert(100%);
+  }
+}
+
+/**
+ * Change the transition value for folks who prefer reduced motion.
+ */
+@media all and (prefers-reduced-motion: reduce) {
+  :root {
+    --transition--default: none;
+  }
+}
+
+/**
+ * The main element can take a bigger font-size, since body copy should be legible.
+ *
+ * We set the rem size to 16px in the html/body, but want body copy to be between 18px and 22px (or more),
+ * depending on the font.
+ */
+main {
+  font-size: 1.25em; /* 16 * 1.25 = 20px */
+}
+
+/**
+ * Links.
+ *
+ * Links should have set, at a minimum, :link, :visited, :hover, :active, :focus
+ *
+ * We note to designers that blue links are a good signifier for the affordance.
+ * Visited links in a vacuum should look different than unvisited ones.
+ * Hover, active, and focus states should look different than stateless links.
+ */
+a {
+  transition: var(--transition--default);
+  text-decoration: underline;
+}
+a:link {
+  color: var(--color--main);
+}
+a:visited {
+  color: var(--color--accent);
+}
+a:hover {
+  color: var(--color--second);
+}
+a:active {
+  color: var(--color--second);
+}
+a:focus {
+  outline: 0 none;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Abbreviations, semi-deprecated. Used in Drupal 8 and overridden here.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
+}
+abbr.tabledrag-changed,
+abbr.ajax-changed {
+  border-bottom: none;
+}
+
+/**
+ * Address elements are often italicized by the user agent, so this normalizes.
+ */
+address {
+  font-style: normal;
+  text-align: left;
+}
+
+/**
+ * Bold text.
+ *
+ * Semantically, <b> and <strong> are different, but presentationally they are
+ * the same or similar.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Base blockquotes before classing.
+ */
+blockquote {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  padding: 1em 0;
+  position: relative;
+}
+@media all and (max-width: 1023px) {
+  blockquote {
+    font-size: 1.25em;
+  }
+}
+
+/**
+ * The monospace and <pre> elements.
+ *
+ * The font-family has already been declared above, so this is just the
+ * text treatments.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em;
+}
+pre {
+  padding: calc(2 * var(--spacing--single));
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Definition lists. They're a big waste of time usually.
+ */
+dd {
+  margin: 0 0 0 calc(4 * var(--spacing--single));
+}
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Accordions.
+ *
+ * The <details> element has inconsistent browser support and styling, and is
+ * not readily animated, so this should only be our accordion solution for simple
+ * use cases.
+ */
+details {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius--default);
+  margin: calc(2 * var(--spacing--single)) auto;
+  padding: calc(0.5 * var(--spacing--single)) calc(1.5 * var(--spacing--single));
+}
+details > summary {
+  border-radius: var(--border-radius--default);
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: var(--line-height--heading);
+  padding: calc(2 * var(--spacing--single)) calc(4 * var(--spacing--single))
+    calc(2 * var(--spacing--single)) calc(1 * var(--spacing--single));
+  position: relative;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary::marker {
+  display: none;
+}
+details > summary:focus {
+  box-shadow: 0 0 3px;
+  outline: none;
+}
+details > summary:hover,
+details > summary:active,
+details > summary:focus-within,
+details[open] > summary {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+details > summary::after {
+  background-color: var(--color--white);
+  border-radius: 50%;
+  color: var(--color--accent);
+  content: "+";
+  padding: calc(0.5 * var(--spacing--single)) calc(1 * var(--spacing--single));
+  position: absolute;
+  right: calc(0.5 * var(--spacing--single));
+  text-align: center;
+  top: calc(1.5 * var(--spacing--single));
+}
+details > summary:hover::after,
+details > summary:active::after,
+details > summary:focus-within::after,
+details[open] > summary::after {
+  background-color: var(--color--accent);
+  color: var(--color--white);
+}
+details[open] {
+  padding-bottom: calc(2 * var(--spacing--single));
+}
+details[open] > summary {
+  margin-bottom: calc(1 * var(--spacing--single));
+}
+details[open] > summary:after {
+  content: "-";
+}
+
+/**
+ * Let's give divs box-sizing: border-box so we don't have to redeclare.
+ */
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Figures and their captions.
+ *
+ * Used as wrapping elements in media-containing components.
+ */
+figure {
+  display: inline-block;
+  min-width: 1px;
+  margin: 0;
+  max-width: 100%;
+}
+figcaption {
+  font-size: 0.75em;
+}
+
+/**
+ * Headings h1-h6.
+ *
+ * Each set has a main declaration (plus a class for use later), then for <h1>
+ * and <h2> there are @media queries to reduce their size for mobile, then
+ * universal decs that make the links within headings take their color rather
+ * than the default link colors.
+ * All the heading elements have no margin, so spacer components are used for
+ * vertical rhythm.
+ */
+h1,
+.heading--h1 {
+  font-size: 4.5em;
+  font-weight: 500;
+  line-height: var(--line-height--heading);
+  margin: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+@media all and (max-width: 770px) {
+  h1,
+  .heading--h1 {
+    font-size: 3em;
+  }
+}
+h1 > a:link,
+h1 > a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * In practice, <h2> elements on the site are the same size as <h1>, except for
+ * the hero on the home page.
+ */
+h2,
+.heading--h2 {
+  font-size: 3.5em;
+  font-weight: 500;
+  line-height: var(--line-height--heading);
+  margin: 1.5em 0 0.25em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+@media all and (max-width: 770px) {
+  h2,
+  .heading--h2 {
+    font-size: 2.5em;
+  }
+}
+h2:first-child {
+  margin-top: 0;
+}
+h2 > a:link,
+h2 > a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h3,
+.heading--h3 {
+  font-size: 2em;
+  font-weight: 500;
+  line-height: var(--line-height--heading);
+  margin: 1.5em 0 0.25em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+h3:first-child {
+  margin-top: 0;
+}
+h3 > a:link,
+h3 > a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h4,
+.heading--h4 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: var(--line-height--heading);
+  margin: 1.5em 0 0.25em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+h4:first-child {
+  margin-top: 0;
+}
+h4 > a:link,
+h4 > a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h5,
+.heading--h5 {
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: var(--line-height--heading);
+  margin: 1.5em 0 0.25em;
+}
+h5:first-child {
+  margin-top: 0;
+}
+h5 > a:link,
+h5 > a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h6,
+.heading--h6 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: var(--line-height--heading);
+  margin: 1.5em 0 0.25em;
+}
+h6:first-child {
+  margin-top: 0;
+}
+h6 > a:link,
+h6 > a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Horizontal rules.
+ *
+ * Link other text-level elements, the <hr> has the minimal amount of acceptable
+ * spacing, such that spacer components can be used for vertical rhythm.
+ *
+ * For cross-browser, the height is set rather than the border.
+ */
+hr {
+  background-color: var(--color--grey-dark);
+  border-width: 0;
+  color: var(--color--grey-dark);
+  height: 1px;
+  line-height: 0;
+  margin: calc(1 * var(--spacing--single)) 0;
+}
+
+/**
+ * iframes.
+ *
+ * Let's put borders on 'em, unless they don't need them in the theme.
+ */
+iframe {
+  border: 1px solid var(--color--grey-light);
+}
+
+/**
+ * Images.
+ *
+ * Since they have a max-width of 100%, the height: auto is truly important.
+ * There's a render prop for old version of IE.
+ * And the display and line-height props are normalize-ish for spacing.
+ */
+img,
+picture {
+  border: 0;
+  display: block;
+  height: auto !important;
+  -ms-interpolation-mode: bicubic;
+  line-height: 0;
+}
+
+mark,
+.marker {
+  color: var(--color--accent);
+}
+
+p {
+  margin: calc(1 * var(--spacing--single)) 0;
+  max-width: 75ch;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Browser targeting hack. */
+  p {
+    max-width: 100ch;
+  }
+}
+
+/**
+ * Quotes, non-block.
+ *
+ * These might not be used in any of our sites ever, so ignore and keep moving.
+ */
+q {
+  quotes: none;
+}
+q::before,
+q::after {
+  content: "";
+}
+
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+/**
+ * A quick normalize for SVG that I don't really understand.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Table */
+table {
+  background-color: transparent;
+  border-spacing: 0;
+  margin: 0 0 1.5em;
+  text-align: left;
+  border: 0 none;
+}
+td,
+th {
+  padding: calc(0.5 * var(--spacing--single)) calc(1 * var(--spacing--single));
+  border: 0 none;
+}
+th {
+  font-weight: 500;
+}
+[colspan] {
+  padding: calc(1 * var(--spacing--single));
+  text-align: center;
+}
+thead {
+  background-color: var(--color--grey-dark);
+  color: var(--color--white);
+}
+thead th:not(:last-child) {
+  border-right: 1px solid var(--color--white);
+}
+tbody th {
+  background-color: var(--color--grey-light);
+  border-bottom: 1px solid var(--color--grey);
+  color: var(--color--grey-dark);
+  padding: calc(0.5 * var(--spacing--single)) calc(1 * var(--spacing--single))
+    calc(2 * var(--spacing--single));
+  vertical-align: top;
+}
+tbody td {
+  border-bottom: 1px solid var(--color--grey);
+  vertical-align: middle;
+}
+tbody td:not(:last-child) {
+  border-right: 1px solid var(--color--grey-light);
+}
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/**
+ * Number and bullet lists.
+ *
+ * Lists are set to hang; typographically to maintain the same vertical line as
+ * the rest of the text, and for the bullets to be left of the content container.
+ * Lists within lists (nested) are then indented so the bullets/numbers line up
+ * with the previous text, and the new text is indented.
+ *
+ * @see https://markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2
+ */
+ul,
+ol {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+}
+ul ul,
+ol ul {
+  padding: 0 0 0 1.2em;
+}
+ol ol {
+  list-style-type: lower-alpha;
+}
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/**
+ * Ensure <video> tags are responsive like <img> tags.
+ */
+video {
+  height: auto;
+}
+
+/********************************** FORMS *************************************/
+
+form {
+}
+fieldset {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color--grey);
+  border-radius: var(--border-radius--default);
+  margin: calc(2 * var(--spacing--single)) 0;
+  padding: calc(1 * var(--spacing--single)) calc(2 * var(--spacing--single))
+    calc(2 * var(--spacing--single));
+}
+legend {
+  font-size: 0.625em;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0 calc(2 * var(--spacing--single));
+  text-align: center;
+}
+
+/**
+ * Input elements, general styling.
+ */
+::-webkit-input-placeholder {
+  color: var(--color--grey-light);
+}
+:-moz-placeholder {
+  color: var(--color--grey-light);
+}
+::-moz-placeholder {
+  color: var(--color--grey-light);
+}
+:-ms-input-placeholder {
+  color: var(--color--grey-light);
+}
+::-ms-input-placeholder {
+  color: var(--color--grey-light);
+}
+::placeholder {
+  color: var(--color--grey-light);
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: var(--color--white);
+  border: 1px solid var(--color--grey);
+  border-radius: var(--border-radius--default);
+  box-sizing: border-box;
+  color: var(--color--grey-dark);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  max-width: 100%;
+  padding: calc(0.5 * var(--spacing--single)) calc(1 * var(--spacing--single));
+  transition: var(--transition--default);
+  vertical-align: middle;
+}
+@media all and (max-width: 670px) {
+  button,
+  input,
+  select,
+  textarea {
+    max-width: 280px;
+  }
+}
+@media all and (min-width: 671px) {
+  input:not([type]),
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="url"],
+  input[size],
+  select {
+    max-width: 415px;
+    width: 100%;
+  }
+
+  textarea:not([cols]) {
+    max-width: 700px; /* Arbitrary, but about right. */
+    width: 100%;
+  }
+}
+button,
+input {
+  line-height: 1;
+}
+textarea {
+  max-height: inherit;
+}
+
+.button,
+button {
+  background-color: transparent;
+  border: var(--neumorphic--border);
+  border-radius: 0.5em;
+  box-shadow: var(--neumorphic--box-shadow);
+  color: currentColor;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 900;
+  margin: 0 calc(2 * var(--spacing--single)) calc(2 * var(--spacing--single)) 0;
+  padding: calc(1 * var(--spacing--single)) calc(2 * var(--spacing--single));
+  text-align: center;
+  text-decoration: none;
+  text-shadow: var(--neumorphic--text-shadow);
+  transition: var(--transition--default);
+}
+.button:hover,
+button:hover,
+.button.active,
+.button:active,
+button:active {
+  border: var(--neumorphic--border--active);
+  box-shadow: var(--neumorphic--box-shadow--active);
+  color: currentColor;
+}
+.button:focus,
+button:focus {
+  outline: 1px dashed;
+  outline-offset: 1px;
+}
+.button.disabled,
+.button[disabled],
+button.disabled,
+button[disabled] {
+  background-color: var(--color--grey-dark);
+  color: var(--color--white);
+  cursor: default;
+}
+a.button {
+  text-decoration: underline;
+}
+a.button:hover,
+a.button:active,
+a.button:focus-within {
+  text-decoration: underline dashed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  cursor: pointer;
+}
+input:checked + label {
+  font-weight: 900;
+}
+
+input[type="file"] {
+  padding: 2px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  font-size: 0.95em;
+  margin: 0;
+}
+
+input[type="image"] {
+  border: 0 none;
+}
+
+label {
+  display: block;
+}

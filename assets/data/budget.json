@@ -1,0 +1,10 @@
+---
+####
+## This is just a place where the performance budget data re-prints in _site. The real budget.json for you to edit it at
+## ./_data/budget.json
+####
+layout: none
+meta:
+  description: "The site's front-end performance budget, broken down by asset type. Can be used in Lighthouse CLI ( https://web.dev/use-lighthouse-for-performance-budgets/#run-lighthouse )"
+---
+{{ site.data.budget | jsonify }}

@@ -1,0 +1,70 @@
+---
+layout: compress
+---
+<!doctype html>
+<html dir="{% if page.html.dir %}{{ page.html.dir }}{% else %}{{ site.html.dir }}{% endif %}"
+  lang="{% if page.html.lang %}{{ page.html.lang }}{% else %}{{ site.html.lang }}{% endif %}"
+  prefix="og: http://ogp.me/ns#"
+>
+  <head>
+    <meta charset="{{ site.encoding }}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    {% comment %}<!-- ^ The above meta tags are blocking, so don't move them. -->{% endcomment %}
+
+    {% comment %}<!-- The rest of the html <head> is in a separate include. This file was getting big. -->{% endcomment %}
+    {% include head/head.html %}
+  </head>
+  <body class="page--{% if page.front %}front{% else %}{{ page.url | slugify }}{% endif %} neumorphic"
+    itemscope itemtype="http://schema.org/{% if page.schema.type %}{{ page.schema.type }}{% else %}{{ site.schema.type }}{% endif %}">
+    {% include head/ie-upgrade-warning.html %}
+    {% include head/a11y--skip-hide.html %}
+    {% if page.front %}
+      {% include organisms/section.html
+        mode="ref"
+        slug="alerts"
+      %}
+    {% endif %}
+    {% if page.front %}
+      {% comment %}<!-- Optional pre-header 'splash'. -->{% endcomment %}
+      {% include organisms/header--pre.html %}
+    {% endif %}
+    {% include organisms/header.html %}
+    {% include organisms/nav.html %}
+
+    <main class="page" id="main-content">
+      {% comment %}<!-- The 'hero' title area that appears on all non-front pages. -->{% endcomment %}
+      {% include organisms/hero.html %}
+
+      {{ content }}
+
+      {% comment %}<!-- Sections typically only work on pages and HTML files (markdown supports less). -->{% endcomment %}
+      {% if page.sections %}
+        {% for slug in page.sections %}
+          {{ site.sections | where:"slug",slug | first }}
+        {% endfor %}
+      {% endif %}
+    </main>
+
+    {% include organisms/footer.html %}
+    {% include organisms/copyright.html %}
+    {% include head/gdpr--cookie-disclosure.html %}
+
+    {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
+      <script async defer src="{{ site.subpath }}/assets/js/pre-commit-dependency/behavior.js"></script>
+    {% else %}
+      <script async defer src="{{ site.subpath }}/assets/js/behavior.js"></script>
+    {% endif %}
+
+    {% if page.attached.js[0] %}
+      {% for js in page.attached.js %}
+        <script async defer src="{{ site.subpath }}{{ js }}"></script>
+      {% endfor %}
+    {% endif %}
+
+    {% if site.google_analytics %} {% include head/google_analytics.html %}{% endif %}
+    {% if site.snipcart.api_key %}{% include head/snipcart.html %}{% endif %}
+  </body>
+</html>

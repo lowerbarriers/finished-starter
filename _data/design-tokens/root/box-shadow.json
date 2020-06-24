@@ -1,0 +1,10 @@
+{
+  "box-shadow": {
+    "default": {
+      "category": "Mood",
+      "description": "The default shadow cast by an element when an element is supposed to cast a shadow",
+      "type": "box-shadow",
+      "value": "0 .3em .4em rgba(0,0,0,.75)"
+    }
+  }
+}

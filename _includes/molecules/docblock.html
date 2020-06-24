@@ -1,0 +1,155 @@
+{% comment %}
+  Docblocks are special. Please be careful tweaking this component.
+{% endcomment %}
+
+{% capture component %}
+  <section class="docblock border-radius--default background-color--grey-light padding-vertical--4 padding-horizontal--4
+    padding-horizontal--collapse">
+
+    <h3 class="text-align--center">{{ include.name }}</h3>
+
+    <h4 class="docblock--example--label">Example</h4>
+    <div class="docblock--example position--relative">
+      {{ include.html }}
+    </div>
+
+    <details>
+      <summary>Options</summary>
+
+      <div class="layout--row display--flex">
+        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+          padding-horizontal--4 padding-horizontal--collapse">
+          <fieldset class="docblock--classes">
+            <legend>Toggle classes</legend>
+            {% for class in include.classes %}
+              <div class="form--item form--item--checkbox position--relative">
+                <input type="checkbox" name="{{ include.name | slugify }}--{{ class | slugify }}"
+                  id="{{ include.name | slugify }}--{{ class | slugify }}"
+                  value="{{ class }}" class="docblock--classes--class">
+                <label class="label form--item--label display--block font-size--p75em padding-vertical--2"
+                  for="{{ include.name | slugify }}--{{ class | slugify }}">
+                  <code>{{ class }}</code>
+                </label>
+              </div>
+            {% endfor %}
+          </fieldset>
+        </aside>
+        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+          padding-horizontal--4 padding-horizontal--collapse">
+          <h4>Props</h4>
+          <table>
+            <thead>
+             <tr>
+               <th>Name</th>
+               <th>Description</th>
+               <th>Example</th>
+             </tr>
+            </thead>
+            <tbody>
+              {% assign props = include.props | split: "," %}
+              {% for prop in props %}
+                <tr>
+                  {% assign columns = prop | split: "|" %}
+                  {% for column in columns %}
+                    <td>{{ column }}</td>
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </aside>
+      </div>
+
+    </details>
+
+    <details>
+      <summary>Code</summary>
+
+      <div class="layout--row display--flex">
+        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+          padding-horizontal--4 padding-horizontal--collapse">
+          <h4>HTML</h4>
+          {% highlight html %}
+          {{ include.html }}
+          {% endhighlight %}
+        </aside>
+        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+          padding-horizontal--4 padding-horizontal--collapse">
+          <h4>Liquid template</h4>
+          {% highlight smarty %}
+          {{ include.liquid }}
+          {% endhighlight %}
+        </aside>
+      </div>
+    </details>
+
+    <details open>
+      <summary>Usage</summary>
+      <div>
+        {{ include.usage | markdownify }}
+
+
+      </div>
+    </details>
+
+    <details>
+      <summary>Accessibility</summary>
+      <div>
+        {{ include.accessibility | markdownify }}
+      </div>
+    </details>
+  </section>
+{% endcapture %}
+
+{% capture name %}Docblock{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Docblocks are used by the internal component system to show examples and documentation for other components.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+accessibility| text describing any concerns or guidance on the accessibility of the component| Sample text,
+classes| css classes applied to the parent| color--main-dark,
+html| rendered HTML of the component| component,
+liquid| example of calling the component in liquid with the necessary props| liquid,
+name| short name of the component for the block| name,
+props| enumeration of the props for the component in a parsable format| props,
+source| pass along the source include for usage if needed| include,
+usage| detailed notes on using and not using the component| usage
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

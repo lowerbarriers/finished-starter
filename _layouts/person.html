@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+{% if page.ext == ".html" %}
+  <section class="layout--stripe {% if page.classes %}{{ page.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      {{ content }}
+    </div>
+  </section>
+{% else %}
+  <section class="layout--stripe markdownified {% if page.classes %}{{ page.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      {{ content }}
+    </div>
+  </section>
+{% endif %}
+
+{% capture where_exp_str %}item.authors contains page.slug{% endcapture %}
+{% assign posts = site.posts | where_exp:"item", where_exp_str %}
+<section class="layout--stripe text-align--center">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="This author's blog posts"
+      classes="text-shadow--second-light--solid"
+      level="2"
+    %}
+
+    {% include atoms/spacer.html size="2" %}
+
+    {% if posts[0] %}
+      <ul class="list-style--none layout--multiple--horizontal">
+        {% for post in posts %}
+          {% include molecules/card.html
+            entity=post
+          %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="listing--no-results">This person has not authored any posts on this site yet.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="layout--stripe background-color--white">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Navigate to other people"
+      classes="a11y--visually-hidden"
+      level="2"
+    %}
+
+    {% include molecules/prev-next.html entity=page %}
+  </div>
+</section>

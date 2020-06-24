@@ -1,0 +1,16 @@
+{
+  "line-height": {
+    "default": {
+      "category": "Typography",
+      "description": "The leading, or vertical space between lines, of body text, expressed as a unitless number",
+      "type": "line-height",
+      "value": "1.425"
+    },
+    "heading": {
+      "category": "Typography",
+      "description": "The leading, or vertical space between lines, of headings, expressed as a unitless number",
+      "type": "line-height",
+      "value": "1"
+    }
+  }
+}

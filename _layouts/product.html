@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="layout--stripe background-color--white">
+  <div class="layout--stripe--inner">
+
+    {% include atoms/heading.html
+      children="Summary and purchase"
+      classes="a11y--visually-hidden"
+      level="2"
+    %}
+
+    <div class="layout--row display--flex">
+      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+        padding-horizontal--4 padding-horizontal--collapse js--to-animate animation-name--reveal">
+        {% include molecules/product--summary.html entity=page %}
+      </aside>
+      {% if site.snipcart.api_key %}
+        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+          padding-horizontal--4 padding-horizontal--collapse">
+          {% include molecules/product--widget.html entity=page %}
+        </aside>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+{% if page.ext == ".html" %}
+  {{ content }}
+{% else %}
+  <section class="layout--stripe markdownified {% if page.classes %}{{ page.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      {{ content }}
+    </div>
+  </section>
+{% endif %}
+
+{% comment %}<!-- If site uses snipcart, include the third-party resources. Always load product.js locally. -->{% endcomment %}
+{% if site.snipcart.api_key %}
+  <script async defer src="https://cdn.snipcart.com/themes/v3.0.9/default/snipcart.js"></script>
+  <script async defer src="{{ site.subpath }}/assets/js/conditional/product--widget.js"></script>
+{% endif %}

@@ -1,20 +1,65 @@
 ---
-layout: layout
-title: Brad Czerniak
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+front: true
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 1
+  footer: 1
+  main: 1
+#  utility: 1
+meta:
+  description: "Brad Czerniak and Shelby Hassell (nee Sleete) are getting married in October in Michigan."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /index.html
+#published: true
+redirect_from:
+  - /home
+#schema:
+#  type: "Thing"
+sections:
+  - cta
+#sitemap: true
+#tags: ["three", "four"]
+title: "Home"
 ---
-{% include about.html %}
-<div class="region" id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li>
-      <span class="datetime">
-        <span class="year">{{ post.date | date:'%Y'}}</span> 
-        <span class="month">{{ post.date | date:'%b'}}</span> 
-        <span class="day">{{ post.date | date:'%d'}}</span>
-      </span> 
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+
+<section class="layout--stripe background-color--main background-image--affectation color--white text-align--center background-image-display-mobile--hide" id="home">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Brad and Shelby are getting married!"
+      classes="text-shadow--second-light--solid"
+      level="1"
+    %}
+
+    {% include atoms/spacer.html size="2" %}
+
+    <div class="display--flex layout--row justify-content--center">
+      <aside class="display--flex flex-direction--column justify-content--center">
+        {% include atoms/image.html
+          src="FB_IMG_1567973636993.jpg"
+          alt="Shelby and Brad embracing while watching F1"
+          caption="We enjoyed the F1 race."
+        %}
+
+        {% include atoms/spacer.html size="1" %}
+
+        <p class="font-size--2em">
+          Hey, <em>we're Brad and Shelby</em>, and <strong class="text-shadow--second-light--solid">we're rolling out</strong>,
+          looking for America's greatest having, holding, and loving.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% include organisms/section.html
+  mode="ref"
+  slug="animation"
+%}

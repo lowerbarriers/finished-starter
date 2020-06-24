@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section class="layout--stripe has--docs-sidebar position--relative
+  {% if page.ext != '.html' %}markdownified{% endif %}
+  {% if page.classes %}{{ page.classes }}{% endif %}">
+  <aside class="docs-sidebar">
+    <button type="button" class="js--toggle-below" aria-expanded="false">
+      Documentation table of contents<br />
+      <span class="js--toggle-below--label">Open below</span>
+    </button>
+    <nav class="docs-sidebar--nav">
+      {% include molecules/collection-hierarchy.html
+        collection="docs"
+        entity=page
+      %}
+    </nav>
+  </aside>
+
+  <div class="layout--stripe--inner position--relative">
+    {{ content }}
+
+    {% include atoms/spacer.html size="8" %}
+
+    {% include molecules/prev-next.html entity=page %}
+  </div>
+</section>

@@ -1,0 +1,68 @@
+{% capture component %}
+  <div class="form--item form--item--textarea {% if include.classes %}{{ include.classes }}{% endif %}">
+    <label class="label form--item--label display--block font-size--p75em" for="{{ include.name }}">
+      {{ include.label }}
+      {% if include.required %}
+        <sup class="form--item--required" aria-hidden="true">*</sup>
+        <span class="a11y--visually-hidden">required</span>
+      {% endif %}
+    </label>
+    <textarea name="{{ include.name }}" id="{{ include.name }}" rows="{{ include.rows }}"
+      {% if include.description %}aria-describedby="{{ include.name }}--description" {% endif %}
+      {% if include.required %}required{% endif %}
+    ></textarea>
+    {% if include.description %}
+      <p class="form--item--description" id="{{ include.name }}--description">{{ include.description }}</p>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% capture name %}Textarea{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include forms/form--textarea.html
+    classes=""
+    description="Questions, dietary info, well-wishes, <em>your single greatest piece of advice besides wash-your-hands and wear-sunscreen</em>."
+    label="Commentary"
+    name="comment"
+    required=false
+    rows="4"
+    mode="docblock"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Use the textarea component to receive long textual answers.
+{% endcapture %}
+
+{% capture accessibility %}
+Textareas can be finicky.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+description| Longer textual description or help text| Inputs can have description text,
+label| text as short description of what to fill out| Primary email,
+name| input name passed as the key for the value in the form| email,
+required| Whether it is required to fill this out in order to submit the form| true,
+rows| Number of rows for the element. Fewer for shorter anticipated answers| 5
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

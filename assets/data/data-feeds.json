@@ -1,0 +1,25 @@
+---
+extension: ".json"
+layout: compress
+meta:
+  description: "A meta-listing of all publicly-available JSON feeds on the site"
+---
+[
+  {% assign neg_ext_size = page.extension | size | times: -1 %}
+  {% capture feed_out %}
+    {% for file in site.pages %}
+      {% assign file_ext = file.name | slice: neg_ext_size, page.extension.size %}
+      {% if file_ext == page.extension and file.name != "data-feeds.json" %}
+        {
+          "name": {{ file.name | jsonify }},
+          "description": {{ file.meta.description | jsonify }},
+          "path": "{{ file.url | relative_url }}",
+          "url": "{{ file.url | absolute_url }}"
+        },
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+  {% assign clean_out = feed_out | strip %}
+  {% assign clean_out_min = clean_out | size | minus: 1 %}
+  {{ clean_out | slice: 0, clean_out_min  }}
+]

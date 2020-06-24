@@ -1,0 +1,46 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "JavaScript Object Notation files available publicly on this site."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "JSON files"
+---
+
+{% include atoms/heading.html
+  children="Table"
+  classes="text-shadow--second-light--solid"
+  level="2"
+%}
+
+<p>
+  The following JSON feeds can be used by any party abiding by the CORS policy:
+</p>
+
+<table>
+  <thead>
+    <th>File name (linked)</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    {% for file in site.pages %}
+      {% assign file_ext = file.name | slice: -5, 5 %}
+      {% if file_ext == ".json" %}
+        <tr>
+          <td><a href="{{ file.url | absolute_url }}">{{ file.name }}</a></td>
+          <td>{{ file.meta.description }}</td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>

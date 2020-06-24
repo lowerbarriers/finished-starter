@@ -1,0 +1,96 @@
+{% assign word_count = content | strip_html | strip_newlines | replace: '  ', ' ' | split: " " | size %}
+{% capture component %}
+  <div class="byline byline--{{ include.entity.collection | slugify }} display--flex layout--row justify-content--center
+    {% if include.classes %}{{ include.classes }}{% endif %}">
+    {% if include.entity.authors[0] %}
+      <address class="byline--authors author layout--column flex--1 display--flex flex-direction--column justify-content--center
+        padding-horizontal--4 padding-horizontal--collapse">
+        <strong>Author(s):</strong>
+        <ol class="byline--authors--list list-style--none margin-horizontal--0">
+          {% for author in include.entity.authors %}
+            {% assign person = site.people | where: 'slug', author | first %}
+            <li class="byline--authors--list-item">
+              <a rel="author" itemprop="author" href="{{ person.url | relative_url }}">
+                <span itemprop="name">{{ person.title }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ol>
+      </address>
+    {% endif %}
+
+    <time class="layout--column flex--1 display--flex flex-direction--column justify-content--center padding-horizontal--4
+      padding-horizontal--collapse" pubdate datetime="{{ include.entity.date | date: "%Y-%m-%d" }}" itemprop="datePublished">
+      {{ include.entity.date | date: "%B %e, %Y" }}
+    </time>
+
+    <aside class="byline--word-count layout--column flex--1 display--flex flex-direction--column justify-content--center
+      padding-horizontal--4 padding-horizontal--collapse">
+      <div>
+        <strong>Word count</strong>:
+        <span itemprop="wordCount">{{ word_count }}</span>
+      </div>
+
+      <div class="font-size--p875em">
+        That is <span>{{ word_count | divided_by: 225.0 | round: 1 }}</span> minutes of reading.
+      </div>
+    </aside>
+
+    {% if include.entity.tags[0] %}
+      <aside class="blyine--tags layout--column flex--1 display--flex flex-direction--column justify-content--center
+        padding-horizontal--4 padding-horizontal--collapse">
+        <strong>Tag(s):</strong>
+        <ul class="list-style--none margin-horizontal--0">
+        {% for tag in include.entity.tags %}
+          <li>
+            <a href="{% link collections/pages/tags.html %}#tag--{{ tag | slugify }}" rel="tag" class="tag">
+              {{ tag }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </aside>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% capture name %}Byline{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/byline.html
+    classes=""
+    entity=page
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Bylines give metadata about a page, post, or entity.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+entity| the page post event etc. to summarize| page
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

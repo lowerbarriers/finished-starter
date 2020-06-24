@@ -1,0 +1,53 @@
+{% capture component %}
+  <div class="layout--strip background-color--main-light background-image--gradient--second-white-starburst color--white
+  {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      <a class="street-sign" href="{{ site.subpath }}/">
+        <span class="font-family--secondary">Shelby</span>
+        <span class="text-transform--uppercase">
+          <span>&amp; Brad's</span>
+        </span>
+        <span class="font-family--monospace text-transform--uppercase background-image--dirt">
+          <b>W</b><b>e</b><b>d</b><b>d</b><b>i</b><b>n</b><b>g</b>
+        </span>
+      </a>
+    </div>
+  </div>
+{% endcapture %}
+
+{% capture name %}Header (Pre){% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/header--pre.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The header pre is an optional section for the front page, to draw attention above the fold.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

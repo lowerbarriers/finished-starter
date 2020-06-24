@@ -1,0 +1,48 @@
+{% capture component %}
+  <nav class="nav nav--main layout--strip padding-vertical--0 background-color--main-dark color--white font-size--1p5em
+    font-weight--900 {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      {% include molecules/menu.html
+        classes="border-spaced display--flex layout--row menu-layout--horizontal"
+        menu="main"
+      %}
+    </div>
+  </nav>
+{% endcapture %}
+
+{% capture name %}Nav{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/nav.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The nav section contains the main menu. It is a headroom-style sticky menu by default.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

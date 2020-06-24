@@ -1,0 +1,185 @@
+/**
+ * @file
+ * Margin and padding classes.
+ */
+
+/**
+ * Proportional, responsive margin classes.
+ */
+.margin-horizontal--0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.margin-horizontal--1 {
+  margin-left: calc(0.5 * var(--spacing--single));
+  margin-right: calc(0.5 * var(--spacing--single));
+}
+.margin-horizontal--2 {
+  margin-left: calc(1 * var(--spacing--single));
+  margin-right: calc(1 * var(--spacing--single));
+}
+.margin-horizontal--4 {
+  margin-left: calc(2 * var(--spacing--single));
+  margin-right: calc(2 * var(--spacing--single));
+}
+.margin-horizontal--8 {
+  margin-left: calc(4 * var(--spacing--single));
+  margin-right: calc(4 * var(--spacing--single));
+}
+.margin-horizontal--16 {
+  margin-left: calc(8 * var(--spacing--single));
+  margin-right: calc(8 * var(--spacing--single));
+}
+.margin-horizontal--32 {
+  margin-left: calc(16 * var(--spacing--single));
+  margin-right: calc(16 * var(--spacing--single));
+}
+@media all and (max-width: 767px) {
+  .margin-horizontal--collapse {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.margin-top--auto {
+  margin-top: auto;
+}
+
+.margin-vertical--0 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.margin-vertical--1 {
+  margin-bottom: calc(0.5 * var(--spacing--single));
+  margin-top: calc(0.5 * var(--spacing--single));
+}
+.margin-vertical--2 {
+  margin-bottom: calc(1 * var(--spacing--single));
+  margin-top: calc(1 * var(--spacing--single));
+}
+.margin-vertical--4,
+.button.margin-vertical--4,
+a.button.margin-vertical--4 {
+  margin-bottom: calc(2 * var(--spacing--single));
+  margin-top: calc(2 * var(--spacing--single));
+}
+.margin-vertical--8 {
+  margin-bottom: calc(4 * var(--spacing--single));
+  margin-top: calc(4 * var(--spacing--single));
+}
+@media all and (max-width: 960px) {
+  .margin-vertical--8 {
+    margin-bottom: calc(2 * var(--spacing--single));
+    margin-top: calc(2 * var(--spacing--single));
+  }
+}
+.margin-vertical--16 {
+  margin-bottom: calc(8 * var(--spacing--single));
+  margin-top: calc(8 * var(--spacing--single));
+}
+@media all and (max-width: 960px) {
+  .margin-vertical--16 {
+    margin-bottom: calc(4 * var(--spacing--single));
+    margin-top: calc(4 * var(--spacing--single));
+  }
+}
+.margin-vertical--32 {
+  margin-bottom: calc(16 * var(--spacing--single));
+  margin-top: calc(16 * var(--spacing--single));
+}
+@media all and (max-width: 960px) {
+  .margin-vertical--32 {
+    margin-bottom: calc(8 * var(--spacing--single));
+    margin-top: calc(8 * var(--spacing--single));
+  }
+}
+
+/**
+ * Padding classes.
+ *
+ * Horizontal for column section entities. At the mobile breakpoint the padding
+ * zeroes out for consistency.
+ *
+ * Columns are then vertically spaced using flex classes from property--value.
+ */
+.padding-horizontal--0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.padding-horizontal--1 {
+  padding-left: calc(0.5 * var(--spacing--single));
+  padding-right: calc(0.5 * var(--spacing--single));
+}
+.padding-horizontal--2 {
+  padding-left: calc(1 * var(--spacing--single));
+  padding-right: calc(1 * var(--spacing--single));
+}
+.padding-horizontal--4 {
+  padding-left: calc(2 * var(--spacing--single));
+  padding-right: calc(2 * var(--spacing--single));
+}
+.padding-horizontal--8 {
+  padding-left: calc(4 * var(--spacing--single));
+  padding-right: calc(4 * var(--spacing--single));
+}
+.padding-horizontal--16 {
+  padding-left: calc(8 * var(--spacing--single));
+  padding-right: calc(8 * var(--spacing--single));
+}
+.padding-horizontal--32 {
+  padding-left: calc(16 * var(--spacing--single));
+  padding-right: calc(16 * var(--spacing--single));
+}
+@media all and (max-width: 767px) {
+  .padding-horizontal--collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.padding-vertical--0 {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.padding-vertical--1 {
+  padding-bottom: calc(0.5 * var(--spacing--single));
+  padding-top: calc(0.5 * var(--spacing--single));
+}
+.padding-vertical--2 {
+  padding-bottom: calc(1 * var(--spacing--single));
+  padding-top: calc(1 * var(--spacing--single));
+}
+.padding-vertical--4 {
+  padding-bottom: calc(2 * var(--spacing--single));
+  padding-top: calc(2 * var(--spacing--single));
+}
+.padding-vertical--8 {
+  padding-bottom: calc(4 * var(--spacing--single));
+  padding-top: calc(4 * var(--spacing--single));
+}
+@media all and (max-width: 960px) {
+  .padding-vertical--8 {
+    padding-bottom: calc(2 * var(--spacing--single));
+    padding-top: calc(2 * var(--spacing--single));
+  }
+}
+.padding-vertical--16 {
+  padding-bottom: calc(8 * var(--spacing--single));
+  padding-top: calc(8 * var(--spacing--single));
+}
+@media all and (max-width: 960px) {
+  .padding-vertical--16 {
+    padding-bottom: calc(4 * var(--spacing--single));
+    padding-top: calc(4 * var(--spacing--single));
+  }
+}
+.padding-vertical--32 {
+  padding-bottom: calc(16 * var(--spacing--single));
+  padding-top: calc(16 * var(--spacing--single));
+}
+@media all and (max-width: 960px) {
+  .padding-vertical--32 {
+    padding-bottom: calc(8 * var(--spacing--single));
+    padding-top: calc(8 * var(--spacing--single));
+  }
+}

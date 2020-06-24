@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15.34346mm"
+   height="15.34346mm"
+   viewBox="0 0 15.34346 15.34346"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="logo-mark.svg"
+   inkscape:export-filename="/home/brad/htdocs/shelbybrad.github.io/assets/images/required/logo-mark.png"
+   inkscape:export-xdpi="1787.86"
+   inkscape:export-ydpi="1787.86">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="16"
+     inkscape:cx="42.107262"
+     inkscape:cy="33.016241"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="1"
+     fit-margin-left="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="2481"
+     inkscape:window-height="1359"
+     inkscape:window-x="2178"
+     inkscape:window-y="535"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.2665567,-18.276863)">
+    <g
+       id="g834"
+       transform="matrix(0.05051956,-0.02916748,0.02916748,0.05051956,6.9072389,22.383581)">
+      <path
+         style="fill:#ffc227;fill-opacity:1"
+         id="path2-7"
+         d="M 55,237 129,9.000004 203,237 9,96 h 240"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff"
+         id="path2"
+         d="M 48.008468,235.68651 122.00841,7.686441 l 74,228.000069 L 2.0084712,94.686447 H 242.00841" />
+    </g>
+  </g>
+</svg>

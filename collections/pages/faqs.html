@@ -1,0 +1,55 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 2
+#  footer: 3
+#  main: 3
+  utility: 2
+meta:
+  description: "What we've been asked, and what we say when asked."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /faq/
+#published: true
+#schema:
+#  type: "Thing"
+#sections:
+#  - cta
+#sitemap: true
+#tags: ["three", "four"]
+title: "Frequently asked questions"
+---
+
+<section class="layout--stripe">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="All questions"
+      classes="text-align--center text-shadow--second-light--solid"
+      level="2"
+    %}
+
+    <p>Thank you for visiting the site. Below are answers to some support questions we've received, in case they may be
+      helpful to you as well.</p>
+
+    {% include atoms/spacer.html size="2" %}
+
+    {% include molecules/accordion.html
+      classes=""
+      children="<p>We mailed out all invitations a while ago. If you did not receive one you probably were not invited. It's a small wedding, sorry.</p>"
+      title="I haven't gotten my invitation. Are you still mailing them out?"
+    %}
+
+    {% include molecules/accordion.html
+      classes=""
+      children="If you crash the ceremony, we may ignore you but not kick you out. If you crash the reception we'll kick you out. You're encouraged to crash the brunch."
+      title="What happens if I crash?"
+    %}
+  </div>
+</section>

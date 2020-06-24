@@ -1,0 +1,72 @@
+{% capture component %}
+  <section class="copyright layout--strip background-color--main-dark color--white font-size--p875em
+  {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      <h2 class="a11y--visually-hidden">Copyright, license, and documentation</h2>
+
+      <div>
+        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.primary_author }}.
+        {% if site.content_license %}
+          Content is available under the
+          <a itemprop="license" href="{{ site.content_license.url }}">
+            {% if site.content_license.icon.symbol %}
+              {% include atoms/icon.html
+                library=site.content_license.icon.library
+                symbol=site.content_license.icon.symbol
+              %}
+            {% endif %}
+            {{ site.content_license.name }}
+          </a>.
+        {% endif %}
+        {% if site.github.repository_url and site.github.license.url %}
+          <a href="{{ site.github.repository_url }}">
+            {% include atoms/icon.html
+              library="octicons"
+              symbol="mark-github"
+            %}
+            Code
+          </a>
+          is subject to the <a href="{{ site.github.license.url }}" itemprop="license">{{ site.github.license.name }}</a>.
+        {% endif %}
+      </div>
+      {% include molecules/menu.html menu="copyright" classes="border-spaced display--flex layout--row menu-layout--horizontal" %}
+    </div>
+  </section>
+{% endcapture %}
+
+{% capture name %}Copyright{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/copyright.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The copyright section contains the copyright statement, as well as licensing links if applicable, and the copyright menu.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

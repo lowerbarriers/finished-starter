@@ -1,0 +1,111 @@
+{% capture component %}
+  {% if site[include.collection] %}
+    <ul class="collection-hierarchy--list list-style--none {% if include.classes %}{{ include.classes }}{% endif %}">
+      {% assign collection = site[include.collection] | sort: "url" %}
+      {% for entity in collection %}
+
+        {% assign split_current_path =  entity.url | split: "/" %}
+        {% assign current_path_depth = split_current_path | size | minus: 1 %}
+
+        {% comment %} First item opens but does not traverse. {% endcomment %}
+        {% if forloop.first %}
+          {% for i in (2..current_path_depth) %}
+            {% if i != current_path_depth %}
+              <li><strong>{{ split_current_path[i] | replace: "-", " " | capitalize }}</strong>
+                <ul>
+            {% else %}
+              <li><a href="{{ entity.url | relative_url }}" class="
+                {% if entity.url == include.entity.url %}active{% endif %}
+              ">{{ entity.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% comment %} All the middle items traverse the tree. {% endcomment %}
+        {% if previous_entity %}
+
+          {% assign split_previous_path =  previous_entity.url | split: "/" %}
+          {% assign previous_path_depth = split_previous_path | size | minus: 1 %}
+
+          {% comment %} Step 1: Close down to common. {% endcomment %}
+          {% for i in (1..previous_path_depth) %}
+            {% assign j = previous_path_depth | minus: i %}
+
+            {% if split_current_path[j] != split_previous_path[j] and j > 0 %}
+              </ul></li>
+            {% else %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% comment %} Step 2: Open up to complete. {% endcomment %}
+          {% assign k = j | plus: 1 %}
+          {% for l in (k..current_path_depth) %}
+            {% if l != current_path_depth %}
+              <li><strong>{{ split_current_path[l] | replace: "-", " " | capitalize }}</strong>
+                <ul>
+            {% else %}
+              <li><a href="{{ entity.url | relative_url }}" class="
+                {% if entity.url == include.entity.url %}active{% endif %}
+              ">{{ entity.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% comment %} Last item closes up shop. {% endcomment %}
+        {% if forloop.last %}
+          {% if current_path_depth >= 3 %}
+            {% assign closing = current_path_depth | minus: 2 %}
+            {% for d in (1..closing) %}</ul></li>{% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% comment %} Traversal requires the previous item. {% endcomment %}
+        {% assign previous_entity = entity %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endcapture %}
+
+{% capture name %}Collection hierarchy{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/collection-hierarchy.html
+    collection="docs"
+    entity=page
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+A collection hierarchy represents all the items in a collection, as organized in the collection's directory structure. It
+can serve as a secondary navigation, especially on pages for docs.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+collection| a collection registered with Jekyll| docs,
+entity| usually the current page. Used for highlight the active page| page
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

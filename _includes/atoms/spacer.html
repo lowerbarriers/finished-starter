@@ -1,0 +1,47 @@
+{% capture component %}
+<div class="spacer padding-vertical--{{ include.size }} {% if include.classes %}{{ include.classes }}{% endif %}"></div>
+{% endcapture %}
+
+{% capture name %}Spacer{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include atoms/spacer.html
+    size="4"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Spacers are used to put some breathing room vertically between elements.
+
+#### Technical
+
+Spacers are only available in 1, 2, 4, 8, 16, and 32 sizes. Other size values will result in an empty spacer.
+{% endcapture %}
+
+{% capture accessibility %}
+Spacers are empty `<div>` elements with no semantic value. Spacers should not be used for any semantic purpose.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+size| 1 or 2 or 4 or 8 or 16 or 32. How tall the spacer should be| 4
+{% endcapture %}
+
+{% assign classes = "background-color--second-dark" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

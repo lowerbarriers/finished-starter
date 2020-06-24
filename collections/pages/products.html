@@ -1,0 +1,48 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 4
+#  footer: 3
+#  main: 3
+#  utility: 1
+meta:
+  description: "Products for sale."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /products/
+#published: true
+#schema:
+#  type: "Thing"
+sections:
+  - cta
+sitemap: false
+#tags: ["three", "four"]
+title: "Products"
+---
+
+<section class="layout--stripe ">
+  <div class="layout--stripe--inner">
+    <p>Here's everything we're selling.</p>
+
+    {% include atoms/spacer.html size="8" %}
+
+    {% if site.products[0] %}
+      <ul class="list-style--none layout--multiple--horizontal">
+        {% for product in site.products %}
+          {% include molecules/card.html
+            entity=product
+          %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="listing--no-results">There are presently no products for sale.</p>
+    {% endif %}
+  </div>
+</section>

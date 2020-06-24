@@ -1,0 +1,31 @@
+{
+  "name": "finished-starter",
+  "version": "1.0.0",
+  "description": "Finished starter is a complete website you can host anywhere and hack on easily",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowerbarriers/finished-starter.git"
+  },
+  "author": "Brad Czerniak",
+  "license": "MIT",
+  "homepage": "https://github.com/lowerbarriers/finished-starter",
+  "bugs": {
+    "url": "https://github.com/lowerbarriers/finished-starter/issues"
+  },
+  "scripts": {
+    "browserslist": "env BROWSERSLIST_CONFIG=./_includes/.browserslistrc browserslist",
+    "prettier-css": "prettier --write 'assets/css/{theme,utility}/*.css'",
+    "prettier-js": "prettier --write 'assets/js/partials/*.js'",
+    "purgecss": "purgecss -c .node_config/purgecss.config.js -o assets/css/pre-commit-dependency/",
+    "terser": "terser _site/assets/js/behavior.js -o assets/js/pre-commit-dependency/behavior.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserslist": "^4.9.1",
+    "dotenv": "^8.2.0",
+    "dotenv-flow": "^3.1.0",
+    "prettier": "^2.0.5",
+    "purgecss": "^2.1.0",
+    "terser": "^4.6.6"
+  }
+}

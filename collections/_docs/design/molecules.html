@@ -1,0 +1,104 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Components that are made up of more than one little thing."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Molecules"
+---
+
+<p>Molecules are characterized by having more than just one little thing to them, and by not being a form input.</p>
+
+{% include molecules/accordion.html
+  classes=""
+  children="<p>We mailed out all invitations a while ago. If you did not receive one you probably were not invited. It's a small wedding, sorry.</p>"
+  title="I haven't gotten my invitation. Are you still mailing them out?"
+  mode="docblock"
+%}
+
+{% include molecules/alert.html
+  children="<p>Brad made a status alert</p>"
+  classes=""
+  dismissible=true
+  level="status"
+  mode="docblock"
+%}
+
+{% include molecules/byline.html
+  classes=""
+  entity=page
+  mode="docblock"
+%}
+
+{% assign events = site.events | where_exp:"item", "item.date >= site.time" %}
+{% if events[0] %}
+  {% assign event = events[0] %}
+    {% include molecules/card.html
+      entity=event
+      mode="docblock"
+    %}
+{% endif %}
+
+{% include molecules/collection-hierarchy.html
+  collection="docs"
+  entity=page
+  mode="docblock"
+%}
+
+{% include molecules/docblock.html
+  mode="docblock"
+%}
+
+{% assign events = site.events | where_exp:"item", "item.date >= site.time" %}
+{% if events[0] %}
+  {% assign event = events[0] %}
+  {% include molecules/event-details.html
+    classes=""
+    entity=event
+    mode="docblock"
+  %}
+{% endif %}
+
+{% include molecules/menu.html
+  menu="copyright"
+  classes="border-spaced display--flex layout--row menu-layout--horizontal"
+  mode="docblock"
+%}
+
+{% assign events = site.events %}
+{% if events[1] %}
+  {% assign event = events[1] %}
+  {% include molecules/prev-next.html
+    entity=event
+    mode="docblock"
+  %}
+{% endif %}
+
+{% assign products = site.products %}
+{% if products[0] %}
+  {% assign product = products[0] %}
+
+  {% include molecules/product--summary.html
+    entity=product
+    mode="docblock"
+  %}
+
+  {% include molecules/product--widget.html
+    entity=product
+    mode="docblock"
+  %}
+{% endif %}
+
+{% include molecules/search-widget.html
+  mode="docblock"
+%}

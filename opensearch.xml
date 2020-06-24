@@ -1,0 +1,22 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>{{ site.shortname }}</ShortName>
+  <LongName>{{ site.title }} Search</LongName>
+  <Description>Search through the content of the {{ site.title }} site.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <AdultContent>false</AdultContent>
+  <Language>en-us</Language>
+  <Developer>{{ site.primary_author }}</Developer>
+  <Contact>{{ site.email }}</Contact>
+  <Tags>{{ site.tagline }}</Tags>
+  <Attribution>Search from {{ site.shortname }} {{ site.url }}</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <Query role="example" searchTerms="Restaurant"/>
+  <Image height="16" width="16" type="image/vnd.microsoft.icon">{{ site.url }}{{ site.subpath}}/favicon.ico</Image>
+  <Image height="64" width="64" type="image/png">{{ site.url }}{{ site.subpath}}/apple-touch-icon.png</Image>
+  <Url type="text/html" template="{{ site.url }}{{ site.subpath}}/search/?q={searchTerms}"/>
+</OpenSearchDescription>

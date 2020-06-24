@@ -1,0 +1,7 @@
+---
+collection: "events"
+layout: jsonfeed
+meta:
+  description: "All of the events on the site, in https://jsonfeed.org/ format"
+title: "Events"
+---

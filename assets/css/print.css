@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Print-specific styles
+ *
+ * Everything in this file is wrapped in @media print {}, so no need for media queries here.
+ */
+
+/**
+ * If the header+nav and footer+colophon remain outside of the <main> tag, hiding everything that isn't main content is
+ * a snap.
+ */
+body > :not(main) {
+  display: none !important;
+}
+
+/**
+ * Let's save some ink by getting rid of background images and colors, affectations, etc.
+ */
+* {
+  background: #fff !important;
+  box-shadow: none !important;
+  color: #000 !important;
+  text-shadow: none !important;
+}

@@ -1,0 +1,42 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "All the JPEG files in the assets directory."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#sitemap: true
+#tags: ["three", "four"]
+title: "JPEG files"
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign image_files = site.static_files | where: "extname", ".jpg" %}
+    {% for image in image_files %}
+      <tr>
+        <td><img src="{{ image.path | relative_url }}" alt="" loading="lazy" /></td>
+        <td>{{ image.name }}</td>
+        <td>{{ image.path }}</td>
+        <td>Coming soon</td>
+      {{ myimage.path }}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

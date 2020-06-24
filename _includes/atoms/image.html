@@ -1,0 +1,76 @@
+{% capture component %}
+  <figure class="figure figure--image figure--image--{{ include.src | slugify }} {% if include.classes %}{{ include.classes }}{% endif %}">
+    {% if include.link_url %}<a href="{{ include.link_url }}">{% endif %}
+      <picture class="picture picture--lazy-load layout--hide--no-javascript" itemprop="image">
+        {% capture webp_path %}/assets/images/{{ include.src }}.webp{% endcapture %}
+        {% assign webp_version = site.static_files | where: "path", webp_path | first %}
+        {% if webp_version %}
+          <source srcset="{{ site.subpath }}/assets/images/required/s.webp"
+            data-srcset="{{ webp_version.path | relative_url }}" type="image/webp" />
+        {% endif %}
+        <img src="{{ site.subpath }}/assets/images/required/s.gif"
+          data-src="{{ site.subpath }}/assets/images/{{ include.src }}" alt="{{ include.alt }}" loading="lazy" />
+      </picture>
+      <noscript>
+        <img src="{{ site.subpath }}/assets/images/{{ include.src }}" alt="{{ include.alt }}" loading="lazy" />
+      </noscript>
+    {% if include.link_url %}</a>{% endif %}
+    {% if include.caption %}
+      <figcaption class="figcaption figure--image--figcaption position--relative z-index--1">{{ include.caption }}</figcaption>
+    {% endif %}
+  </figure>
+{% endcapture %}
+
+{% capture name %}Image{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include atoms/image.html
+    alt="Shelby and Brad flanking a star"
+    caption="You will see this as the default on the site"
+    classes=""
+    src="required/meta-image--default.jpg"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Images represent ideas visually. They should be used to make an impact where communicating an idea is more effective with
+visual aids.
+
+#### Technical
+
+Images should be inserted using the liquid template include whenever possible, since the liquid template uses conditional
+checks to insert next-generation optimized images if available.
+{% endcapture %}
+
+{% capture accessibility %}
+It is required for all images to have an alt attribute. If an image has no communicative value (ie. it is purely decorative),
+its alt attribute should be an empty string. Otherwise, the alt attribute's text should be a description of the image's role
+in the corpus of the page.
+{% endcapture %}
+
+{% capture props %}
+alt| appropriate alt text| A circus clown,
+caption| an optional caption| We saw this guy at the circus,
+classes| css classes applied to parent| color--main-dark,
+link_url| an optional link to wrap it| http://www.google.com,
+src| the filename/subpath of the image in /assets/images/| circus-clown.jpg
+{% endcapture %}
+
+{% assign classes = "background-color--third-light" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

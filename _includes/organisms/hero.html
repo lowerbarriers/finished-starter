@@ -1,0 +1,99 @@
+{% capture component %}
+  {% if page.front != true %}
+    {% comment %}Using conditionals and assign/capture here because the default filter does not play nice.{% endcomment %}
+    {% if page.hero_classes %}
+      {% assign hero_classes = page.hero_classes %}
+    {% else %}
+      {% capture hero_classes %}background-color--main background-image--affectation color--white text-align--center background-image-display-mobile--hide{% endcapture %}
+    {% endif %}
+
+    <header class="include include--organisms include--organisms--section layout--stripe {{ hero_classes }}
+      {% if include.classes %}{{ include.classes }}{% endif %}"
+      id="hero--{{ page.title | slugify }}">
+      <div class="layout--stripe--inner">
+
+        {% if page.meta.image.src %}
+          <div class="hero--title layout--row display--flex justify-content--center">
+            <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+              padding-horizontal--4 padding-horizontal--collapse">
+              {% include atoms/heading.html
+                children=page.title
+                classes="text-shadow--second-light--solid"
+                level="1"
+              %}
+            </aside>
+
+            <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+              padding-horizontal--4 padding-horizontal--collapse">
+              {% include atoms/image.html
+                src=page.meta.image.src
+                alt=page.meta.image.alt
+                classes="hero--figure hero--image box-shadow--lifted-edges"
+              %}
+            </aside>
+          </div>
+        {% else %}
+          {% include atoms/heading.html
+            children=page.title
+            classes="text-shadow--second-light--solid"
+            level="1"
+          %}
+        {% endif %}
+
+        {% if page.collection == "posts" %}
+          {% include atoms/spacer.html size="2" %}
+
+          {% include molecules/byline.html
+            classes=""
+            entity=page
+          %}
+        {% elsif page.collection == "events" %}
+          {% include atoms/spacer.html size="2" %}
+
+          {% include molecules/event-details.html
+            classes=""
+            entity=page
+          %}
+        {% endif %}
+
+      </div>
+    </header>
+  {% endif %}
+{% endcapture %}
+
+{% capture name %}Hero{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/hero.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The hero contains the page title, and sometimes more information like the meta description or other details.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

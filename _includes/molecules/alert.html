@@ -1,0 +1,54 @@
+{% capture component %}
+  <div class="alert include include--module include--molecule--alert position--relative
+    {% if include.classes %}{{ include.classes }}{% endif %}
+    {% if include.dismissible %}js--dismissible{% endif %}
+    {% if include.level %}alert--{{ include.level }}{% else %}alert--status{% endif %}"
+  id="alert--{{ include.children | strip_html | strip_newlines | slugify | truncate: 30 }}" role="alert">
+    {{ include.children }}
+  </div>
+{% endcapture %}
+
+{% capture name %}Alert{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/alert.html
+    children="<p>Brad made a status alert</p>"
+    classes=""
+    dismissible=true
+    level="status"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Alerts let the user know something more important and timely that body text.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+children| content . Can be plain text or markup| Here is some plain text,
+classes| css classes applied to parent| color--main-dark,
+dismissible| whether the alert can be closed| true,
+level| three levels that influence styling: status warning error| status
+{% endcapture %}
+
+{% assign classes = "margin-vertical--16, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

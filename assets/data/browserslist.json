@@ -1,0 +1,17 @@
+---
+####
+## This is just a place where the browserslist data re-prints in _site. The real .browserslistrc is at
+## ./_includes/.browserslistrc (It is in an rc file rather than in package.json so we can annotate and split it)
+####
+layout: compress
+meta:
+  description: "A JSON representation of .browserslistrc, in the same format as accepted in ./package.json."
+---
+[
+  {% capture browserslist %}{% include .browserslistrc %}{% endcapture %}
+  {% assign browserslist_arr = browserslist | split: "|" %}
+  {% for browser in browserslist_arr %}
+    {% assign browser_arr = browser | normalize_whitespace | split: "#" %}
+    {{ browser_arr[0] | normalize_whitespace | jsonify }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

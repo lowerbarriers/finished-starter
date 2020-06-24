@@ -1,0 +1,27 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+classes: "text-align--center"
+#date: 2020-03-03 02:02:02
+#published: true
+#tags: ["three", "four"]
+title: "Recent posts"
+title_classes: "text-shadow--second-light--solid heading--h1"
+---
+
+{% include atoms/spacer.html size="4" %}
+
+{% if site.posts[0] %}
+  <ul class="list-style--none layout--multiple--horizontal">
+    {% for post in site.posts limit:3 %}
+      {% include molecules/card.html
+        entity=post
+      %}
+    {% endfor %}
+  </ul>
+
+  <p>See more on our <a href="{% link blog/index.html %}">Blog page</a>.</p>
+{% else %}
+  <p class="listing--no-results">There are presently no posts.</p>
+{% endif %}

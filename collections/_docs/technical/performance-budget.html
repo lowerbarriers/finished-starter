@@ -1,0 +1,98 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "The allowed number and size of assets delivered to users on the front end."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Performance budget"
+---
+
+{% include atoms/heading.html
+  children="Budget"
+  classes="text-shadow--second-light--solid"
+  level="2"
+%}
+
+<p>
+  In order to ensure snappy and standards-compliant front-end performance, each asset group should be limited to the
+  following maximum numbers of files and total payload.
+</p>
+
+<table>
+  <thead>
+    <th>Asset class</th>
+    <th>Max number of files</th>
+    <th>Total payload size</th>
+  </thead>
+  <tbody>
+    {% for size in site.data.budget[0].resourceSizes %}
+      {% assign i = forloop.index | minus: 1 %}
+      <tr>
+        <td>{{ size.resourceType }}</td>
+        <td>{{ site.data.budget[0].resourceCounts[i].budget }}</td>
+        <td>{{ size.budget }} kB</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<p>
+  The above data comes from <code>./_data/budget.json</code>, which is a performance budget file that can be directly
+  used <a href="https://web.dev/use-lighthouse-for-performance-budgets/">by the Lighthouse CLI</a> to test pages against
+  the budget.
+</p>
+
+<p>
+  If editing the budget.json file, please ensure to keep the asset classes in both <code>resourceCounts</code> and
+  <code>resourceSizes</code> identical and in the same (alphabetical) order, since the way this table is rendered efficiently
+  depends on that.
+</p>
+
+<h3>Background</h3>
+
+<p>
+  Front-end performance is important, as reflected in this site's strategic plan. Performance affects multiple aspects of
+  site operation:
+</p>
+
+<ul>
+  <li><a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters">User visits and marketing conversions</a></li>
+  <li>Server and bandwidth costs</li>
+  <li>Usability on mobile, low-power, and slow-connection devices</li>
+  <li>Brand perception</li>
+</ul>
+
+<p>
+  As a website team, it is our duty to keep site front-end performance within the budget whenever humanly possible. When
+  we are in jeopardy of exceeding the budget, we can approach the issue in one or more ways
+  (<a href="https://24ways.org/2012/responsive-responsive-design/#targetText=Create%20a%20culture%20of%20performance">according to Tim Kadlec</a>):
+</p>
+
+<ol>
+  <li>Optimize an existing feature or asset on the page</li>
+  <li>Remove an existing feature or asset from the page</li>
+  <li>Don’t add the new feature or asset</li>
+  <li><del>Remove useful content instead</del></li>
+</ol>
+
+<p>
+  Great performance sometimes means making tough choices, but as a team we will prevail as long as we remain goal-oriented.
+</p>
+
+<h3>Resources</h3>
+
+<ul>
+  <li><a href="https://timkadlec.com/2013/01/setting-a-performance-budget/">Setting a performance budget</a> by Tim Kadlec</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Performance_budgets">Performance budgets</a> on the Mozilla Developer Network</li>
+  <li><a href="https://web.dev/performance-budgets-101/">Performance budgets 101</a> at Google's web.dev</li>
+</ul>

@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Ugly CSS that has not yet been refactored where it belongs.
+ */
+
+/**
+ * Put a min-height on the animation container.
+ */
+.animation--container {
+  min-height: 100px;
+}

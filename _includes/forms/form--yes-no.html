@@ -1,0 +1,101 @@
+{% capture component %}
+  <fieldset class="fieldset form--fieldset form--fieldset--yes-no {% if include.classes %}{{ include.classes }}{% endif %}">
+    <legend>{{ include.label }}
+      {% if include.required %}
+        <sup class="form--item--required" aria-hidden="true">*</sup>
+        <span class="a11y--visually-hidden">required</span>
+      {% endif %}
+    </legend>
+
+    <div class="layout--row display--flex flex-direction--row justify-content--space-around">
+      <div class="form--item form--item--radio flex--0 margin-vertical--1 position--relative">
+        <input type="radio" name="{{ include.name }}" id="{{ include.name }}--on"
+          {% if include.description %}aria-describedby="{{ include.name }}--description" {% endif %}
+          {% if include.default == "on" %}checked{% endif %}
+          value="Yes"
+        />
+        <label class="label form--item--label display--block font-size--p75em padding-vertical--2"
+          for="{{ include.name }}--on">
+          {{ include.label_on }}
+        </label>
+      </div>
+
+      <div class="form--item form--item--radio flex--0 margin-vertical--1 position--relative">
+        <input type="radio" name="{{ include.name }}" id="{{ include.name }}--off"
+          {% if include.description %}aria-describedby="{{ include.name }}--description" {% endif %}
+          {% if include.default == "off" %}checked{% endif %}
+          value="No"
+        />
+        <label class="label form--item--label display--block font-size--p75em padding-vertical--2"
+          for="{{ include.name }}--off">
+          {{ include.label_off }}
+        </label>
+      </div>
+    </div>
+
+    {% if include.description %}
+      {% include atoms/spacer.html size="2" %}
+      {% comment %}Divs ensure aria-describedby is the same level in the DOM for copying.{% endcomment %}
+      <div class="text-align--center">
+        <div>
+          <p class="form--item--description" id="{{ include.name }}--description">{{ include.description }}</p>
+        </div>
+      </div>
+    {% endif %}
+  </fieldset>
+{% endcapture %}
+
+{% capture name %}Yes/No{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include forms/form--yes-no.html
+    classes=""
+    default=false
+    description="Will you attend the wedding reception dinner on October 9, 2020?"
+    label="Répondez s'il vous plaît"
+    label_off="With regret"
+    label_on="Looking forward to it!"
+    name="rsvp"
+    required=false
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The yes/no component lets you get a clear answer using radio buttons to toggle. This base level control could then be
+enhanced with JavaScript and styling to be a single switch-style toggle, though that is not strictly necessary.
+{% endcapture %}
+
+{% capture accessibility %}
+Radios are recognized by most assistive technologies. The more you change the markup the greater risk you have of breaking
+the experience for somebody.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+default| whether the on or off value should be checked by default| on,
+description| Longer textual description or help text| Inputs can have description text,
+label| text as short description of what to fill out| Primary email,
+label_off| Short text for a false-returning answer| No thank you,
+label_on| Short text for a true-returning answer| Yes please,
+name| input name passed as the key for the value in the form| email,
+required| Whether it is required to fill this out in order to submit the form| true
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

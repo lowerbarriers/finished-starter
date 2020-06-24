@@ -1,0 +1,45 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+  copyright: 5
+#  footer: 4
+#  main: 4
+#  utility: 1
+meta:
+  description: "Guides and tools for writing and designing around this site."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /docs/
+#published: true
+#schema:
+#  type: "Thing"
+#sections:
+#  - animation
+#sitemap: true
+#tags: ["three", "four"]
+title: "Documentation"
+---
+
+<section class="layout--stripe">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="We have a lot of documents"
+      classes="text-shadow--second-light--solid"
+      level="2"
+    %}
+
+    <p>Check it out.</p>
+
+    {% include molecules/collection-hierarchy.html
+      collection="docs"
+      entity=page
+    %}
+  </div>
+</section>

@@ -1,0 +1,61 @@
+{% capture component %}
+  <h{{ include.level }} class="heading {% if include.classes %}{{ include.classes }}{% endif %}"
+    {% if include.level == "1" %}itemprop="headline"{% endif %}>
+    {% if include.children %}
+      {{ include.children }}
+    {% endif %}
+  </h{{ include.level }}>
+{% endcapture %}
+
+{% capture name %}Heading{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include atoms/heading.html
+    children="About this section"
+    classes="text-shadow--second-light--solid"
+    level="2"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Headings provide your document with an hierarchical outline.
+
+  * Avoid skipping heading levels: always start from `<h1>`, next use `<h2>` and so on
+  * You should only use one `<h1>` per page. Using more than one will not result in an error, but using only one is seen
+    as a best practice. It makes logical sense — `<h1>` is the most important heading, and tells you what the purpose of the
+    overall page is. You wouldn't have a book with more than one title, or a movie with more than one name! Having a single
+    top-level title is also arguably better for screenreader users, and SEO
+
+@see [MDN article on h1-h6](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+{% endcapture %}
+
+{% capture accessibility %}
+A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine
+the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion,
+as the person navigating this way may be left wondering where the missing heading is.
+{% endcapture %}
+
+{% capture props %}
+children| The textual content of the heading| New section,
+classes| css classes applied to parent| color--main-dark,
+level| Number from 1-6 for the heading level| 2
+{% endcapture %}
+
+{% assign classes = "a11y--visually-hidden, color--main, color--second-dark, font-family--primary, font-family--secondary, heading--h1, heading--h3" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

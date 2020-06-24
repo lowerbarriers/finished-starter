@@ -1,0 +1,56 @@
+{% capture component %}
+  <details class="accordion include include--molecule include--molecule--accordion text-align--left
+    {% if include.classes %}{{ include.classes }}{% endif %}" {% if include.open %}open{% endif %}>
+    <summary class="position--relative font-weight--900">{{ include.title }}</summary>
+    {{ include.children }}
+  </details>
+{% endcapture %}
+
+{% capture name %}Accordion{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/accordion.html
+    classes=""
+    children="<p>We mailed out all invitations a while ago. If you did not receive one you probably were not invited. It's a small wedding, sorry.</p>"
+    title="I haven't gotten my invitation. Are you still mailing them out?"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Accordions are used for progressive disclosure. Specifically, they can be used for things like FAQs, where the
+alternativue would be anchor links in a table of contents for showing the headings, then clicking to show the
+answer/detail.
+
+Accordions should not be used to hide large amounts of content. That is being dishonest to the user about the content
+on the page. To mediate this, the accordion could be open by default.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+children| content . Can be plain text or markup| Here is some plain text,
+classes| css classes applied to parent| color--main-dark,
+open| whether or not the accordion is open by default| true,
+title| The summary of the children contents| Plaintext
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="feTurbulence">
+      <feTurbulence result="TURBULENCE" baseFrequency="0.08" numOctaves="1" seed="1" />
+      <feDisplacementMap in="SourceGraphic" in2="TURBULENCE" scale="9" />
+    </filter>
+
+    <filter id="spotlight">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feSpecularLighting result="spotlight" in="blur" specularConstant="1.1" specularExponent="20" lighting-color="#FFF">
+        <feSpotLight x="2000" y="0" z="700" limitingConeAngle="5" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+</svg>

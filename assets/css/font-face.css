@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Webfont @font-face calls with swaps and docs, declared before anything else.
+ *
+ * Webfonts require additional round-trips which are non-blocking, so we want to call them early.
+ */
+
+/**
+ * Fonts imported early and directly.
+ *
+ * Only include fonts that are known to be used, since each is an asset to load.
+ * font-display: swap; is used to prevent text from being hidden on load.
+ * We list src in preference order: local, woff2, then woff
+ *
+ * @see https://google-webfonts-helper.herokuapp.com/fonts
+ */
+@font-face {
+  font-display: swap;
+  font-family: 'Engagement';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Engagement'), local('Engagement-Regular'),
+  url('/assets/fonts/engagement/engagement-v9-latin-regular.woff2') format('woff2'),
+  url('/assets/fonts/engagement/engagement-v9-latin-regular.woff') format('woff');
+}
+/* Public sans variable in woff2 format for you. */
+@font-face {
+  font-display: swap;
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/assets/fonts/public_sans/public_sans_variable.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Public Sans';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('/assets/fonts/public_sans/public_sans_variable_italic.woff2') format('woff2');
+}
+

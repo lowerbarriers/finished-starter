@@ -1,0 +1,28 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+classes: "background-color--white text-align--center"
+#date: 2020-03-03 02:02:02
+#published: true
+#tags: ["three", "four"]
+title: "Product highlights"
+title_classes: "text-shadow--second-light--solid heading--h1"
+---
+
+{% include atoms/spacer.html size="4" %}
+
+{% assign products = site.products %}
+{% if products[0] %}
+  <ul class="list-style--none layout--multiple--horizontal">
+    {% for product in products limit: 3 %}
+      {% include molecules/card.html
+        entity=product
+      %}
+    {% endfor %}
+  </ul>
+
+  <p>To see all products, check out the <a href="{% link collections/pages/products.html %}">Products page</a></p>
+{% else %}
+  <p class="listing--no-results">There are presently no products.</p>
+{% endif %}

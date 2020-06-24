@@ -1,0 +1,10 @@
+{
+  "content": {
+    "error": {
+      "category": "i18n/l10n",
+      "description": "String that can be translated.",
+      "type": "content",
+      "value": "'Fehler: '"
+    }
+  }
+}

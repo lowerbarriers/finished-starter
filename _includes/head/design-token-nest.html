@@ -1,0 +1,15 @@
+{% for subitem in include.property[1] %}
+  {% capture leftchain %}{% if include.leftchain %}{{ include.leftchain }}{% endif %}--{{ include.property[0] }}{% endcapture %}
+  {% if subitem[1].value %}
+    {{ leftchain }}--{{ subitem[0] }}: {{ subitem[1].value }};
+    {% for subprop in subitem[1] %}
+      {% assign subpropsize = subprop[1] | size %}
+      {% assign subpropjoinedsize = subprop[1] | join: "+" | size %}
+      {% if subpropsize != subpropjoinedsize %}
+        {% include head/design-token-nest.html property=subitem leftchain=leftchain %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% include head/design-token-nest.html property=subitem leftchain=leftchain %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,68 @@
+---
+####
+## @file
+## Blog listing page
+##
+## This page exists in the repo file structure here because jekyll's built-in paginator requires the pager be
+## inserted on an html page named index.html in order to build the additional paths
+## @see https://jekyllrb.com/docs/pagination/
+##
+## Note that the molecules/pager.html include does not require this, though without native paging this will not
+## be useful unless you host where you can use a plugin.
+##
+## The setting for the paginator path is in _config.yml , and as you can see below the permalink option is commented
+## out. This is all important for ensuring posts render paged at /blog
+####
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 1
+  footer: 4
+  main: 4
+#  utility: 1
+meta:
+  description: "Our wedding, relationship, and random-related writings."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /blog/
+#published: true
+#schema:
+#  type: "Thing"
+sections:
+  - animation
+  - mailchimp
+#sitemap: true
+#tags: ["three", "four"]
+title: "Blog"
+---
+
+<section class="layout--stripe "><div class="layout--stripe--inner">
+  <ul class="list-style--none layout--multiple--horizontal">
+    {% for post in paginator.posts %}
+      {% include molecules/card.html
+        entity=post
+      %}
+    {% endfor %}
+  </ul>
+
+  {% include atoms/spacer.html size="8" %}
+
+  {% if paginator.total_pages >= 2 %}
+    {% capture this_page_url %}{{ site.url }}{{ site.subpath }}/blog/{% endcapture %}
+    {% include molecules/pager.html
+      base_url=this_page_url
+      page=paginator.page
+      next_page=paginator.next_page
+      next_page_path=paginator.next_page_path
+      previous_page=paginator.previous_page
+      previous_page_path=paginator.previous_page_path
+      total_pages=paginator.total_pages
+    %}
+  {% endif %}
+</div></section>

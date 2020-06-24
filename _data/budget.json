@@ -1,0 +1,80 @@
+[
+  {
+    "resourceCounts": [
+      {
+        "resourceType": "document",
+        "budget": 1
+      },
+      {
+        "resourceType": "font",
+        "budget": 8
+      },
+      {
+        "resourceType": "image",
+        "budget": 20
+      },
+      {
+        "resourceType": "media",
+        "budget": 3
+      },
+      {
+        "resourceType": "other",
+        "budget": 20
+      },
+      {
+        "resourceType": "script",
+        "budget": 5
+      },
+      {
+        "resourceType": "stylesheet",
+        "budget": 3
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 5
+      },
+      {
+        "resourceType": "total",
+        "budget": 40
+      }
+    ],
+    "resourceSizes": [
+      {
+        "resourceType": "document",
+        "budget": 20
+      },
+      {
+        "resourceType": "font",
+        "budget": 250
+      },
+      {
+        "resourceType": "image",
+        "budget": 500
+      },
+      {
+        "resourceType": "media",
+        "budget": 100
+      },
+      {
+        "resourceType": "other",
+        "budget": 100
+      },
+      {
+        "resourceType": "script",
+        "budget": 100
+      },
+      {
+        "resourceType": "stylesheet",
+        "budget": 50
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 60
+      },
+      {
+        "resourceType": "total",
+        "budget": 1500
+      }
+    ]
+  }
+]

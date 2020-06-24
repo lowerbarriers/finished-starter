@@ -1,0 +1,52 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 4
+#  footer: 3
+#  main: 3
+#  utility: 1
+meta:
+  description: "Events that have previously occurred."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /events/archive/
+#published: true
+#schema:
+#  type: "Thing"
+sections:
+  - cta
+#sitemap: true
+#tags: ["three", "four"]
+title: "Events Archive"
+---
+
+{% assign events = site.events | where_exp:"item", "item.date_end <= site.time" %}
+<section class="layout--stripe ">
+  <div class="layout--stripe--inner">
+    <p>
+      Here's an archival list of past events, for posterity. To see current events, check out the
+      <a href="{% link collections/pages/events.html %}">main Events page</a>
+    </p>
+
+    {% include atoms/spacer.html size="8" %}
+
+    {% if events[0] %}
+      <ul class="list-style--none layout--multiple--horizontal">
+        {% for event in events %}
+          {% include molecules/card.html
+            entity=event
+          %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="listing--no-results">None of the events are in the past yet!</p>
+    {% endif %}
+  </div>
+</section>

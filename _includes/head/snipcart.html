@@ -1,0 +1,4 @@
+{% comment %}<!-- For privacy this only loads third-party if user has already started a cart. -->{% endcomment %}
+<div id="snipcart" data-api-key="{{ site.snipcart.api_key }}" hidden></div>
+
+<script async defer src="{{ site.subpath }}/assets/js/conditional/snipcart-checkout.js"></script>

@@ -1,0 +1,96 @@
+####
+## @file
+## Info that feeds the images in the gallery section
+##
+## The section that renders this info can be found at:
+## ./collections/_sections/gallery.html
+####
+- alt: "Shelby's Twitter profile"
+  caption: "Shelby waiting for Brad, patiently"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: 20190608-181432.jpg
+
+- alt: "A Twitter conversation, flirtatious"
+  caption: "Coincidence!"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: 20190611-211923.jpg
+
+- alt: "Poorly-edited photo of Brad and Shelby superimposed on politicians' bodies"
+  caption: "Shelby is the photoshopper of the family"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: download_20190626_181518.jpg
+
+- alt: "A text message conversation"
+  caption: "YOU SHOULD BE DRIVING A KIA"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: 20190703-213748.jpg
+
+- alt: "Poorly-edited photo of a fake ID with Shelby's face on a license for Brad"
+  caption: "Looks legit"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: download_20190707_145824.jpg
+
+- alt: "Shelby and Ellie in sunglesses"
+  caption: "Too cool for school"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: download_20190715_114831.jpg
+
+- alt: "Brad and Shelby making funny faces"
+  caption: "Augie's, crafts, 2019"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: MVIMG_20190731_213254.jpg
+
+- alt: "Shelby giving the camera the finger"
+  caption: "Cute. Rarely outside"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: IMG_20190810_135403.jpg
+
+- alt: "Shelby and Brad smiling outdoors"
+  caption: "ROFLMFAO"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: IMG_20190810.gif
+
+- alt: "The front-door sign for Guy Fieri's restaurant near Philadelphia"
+  caption: "Found the mothership"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: MVIMG_20190824_174507.jpg
+
+- alt: "Shelby and Brad smiling while wearing F1 gear"
+  caption: "Big Ferrari fans"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: FB_IMG_1567973636993.jpg
+
+- alt: "Shelby et al in a restaurant booth"
+  caption: "Emma and Stephen's wedding day!"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: FB_IMG_1568917579856.jpg
+
+- alt: "Shelby giving Brad a look of consternation over dinner"
+  caption: "Dinner at Town House"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: IMG_20191019_174213.jpg
+
+- alt: "Moose pooping on a road in the mountains"
+  caption: "#Vogue"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: IMG_20191101.gif
+
+- alt: "Shelby posing next to a statue of a gorilla"
+  caption: "That Colorado life"
+  classes: "gallery-item flex--1 js--event--click click--lightbox figure--image--polaroid"
+  src: IMG_20191101_121241.jpg
+
+- alt: "Shelby, Brad, and Ellie standing together"
+  caption: "Lots of group hugs"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: download_20191130_095212.jpg
+
+- alt: "Shelby's hand with a ring on it"
+  caption: "Bling"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: download_20200105_113640.jpg
+
+- alt: "Ellie and Brad snuggling on the couch, watching Scooby Doo"
+  caption: "Scooby Doo is weirder than Brad remembers"
+  classes: "gallery-item flex--1 js--event--click click--lightbox"
+  src: download_20200227_194337.jpg

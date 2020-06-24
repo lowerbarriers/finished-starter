@@ -1,0 +1,51 @@
+{% capture component %}
+  <header class="header layout--strip background-color--main color--white text-align--center
+  {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="layout--stripe--inner position--relative has--search-widget">
+      <a class="header--logo logo" itemprop="url" href="{{ site.subpath }}/">
+        <img src="{{ site.subpath }}/assets/images/required/logo.svg" alt="{{ site.title }}"
+          class="image header--image header--logo--image" loading="lazy" />
+        <span class="header--logo--tagline tagline font-weight--900 font-style--italic">{{ site.tagline }}</span>
+      </a>
+
+      {% include molecules/search-widget.html %}
+    </div>
+  </header>
+{% endcapture %}
+
+{% capture name %}Header{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/header.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The header section contains the logo and identifying information. It also houses the search widget markup.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

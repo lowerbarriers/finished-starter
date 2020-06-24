@@ -1,0 +1,283 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Intentional stereotypes used for empathetic framing."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Personas"
+---
+
+{% include atoms/heading.html
+  children="Behavioral personas"
+  classes=""
+  level="2"
+%}
+
+<p>
+  Personas, as used in UX, are useful for testing and heuristics where <em>empathizing with the motivations</em> of a particular
+  user or segment could yield insights about the IA and UI of a site or app. The following personas are applicable to a wide
+  range of applications.
+</p>
+
+{% include atoms/heading.html
+  children="Barry Browser"
+  classes=""
+  level="3"
+%}
+
+<p>
+  Barry is a 65-year-old from a rural area. He's curious, deliberate, and prefers things kind of slow. His primary behavior
+  on websites is <strong>skimming and browsing</strong>. He's likely to peruse 5 or more pages on the site before bouncing,
+  read some passages in depth, and eschew the search functionality in preference to the navigation and other information scents.
+</p>
+
+{% include atoms/spacer.html size="2" %}
+
+<div class="layout--row display--flex flex-direction--row">
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Attributes and behaviors"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Not a digital native. Learned enough about computers to live in 21st-century society</li>
+      <li>Accustomed to reading books front-to-back</li>
+      <li>More likely to print website pages than the average user</li>
+      <li>Uses an iPad. It is his main camera</li>
+      <li>Mildly nostalgic. Not very political, though skewing conservative</li>
+      <li>Polite, but also a little wary of strangers</li>
+    </ul>
+  </aside>
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Goals and needs"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Desires to not hit dead ends when clicking around for relevant information</li>
+      <li>Appreciates relevant imagery. Dislikes misleading stock photos</li>
+      <li>Wants content broken into sections with headings and lists</li>
+      <li>Needs unambiguous wording and logical grouping to thrive</li>
+      <li>Wants to find trustworthy information</li>
+    </ul>
+  </aside>
+</div>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Stephanie Searcher"
+  classes=""
+  level="3"
+%}
+
+<p>
+  Stephanie is 24, a Sagittarius, lives in a suburb, and works in the city. She grew up with the internet, and is not inclined
+  to waste time. She got to the site from a search engine, will use site search to narrow and refine results, and will even
+  <code>Ctrl+F</code> on pages to find what she's looking for. She's more likely to bounce quickly, but may return to a
+  different page via organic.
+</p>
+
+{% include atoms/spacer.html size="2" %}
+
+<div class="layout--row display--flex flex-direction--row">
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Attributes and behaviors"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Has a 13" MacBook for work, and an iPhone for both work and personal use</li>
+      <li>Grew up in a world of standardized tests and endless homework. Values quickly getting useful info</li>
+      <li>Can't remember a world without Google. Knows some solid Google tricks</li>
+      <li>Embraces flat design and post-great-recession minimalism</li>
+      <li>Skeptical but not cynical. Skews liberal</li>
+      <li>Anti-big-business. Prefers to support small, local businesses whenever practical</li>
+    </ul>
+  </aside>
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Goals and needs"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Wants to get the task done. Willing to sacrifice thoroughness for speed</li>
+      <li>Looking for apps and technologies that automate repetitive work</li>
+      <li>Needs on-page text to be visible so Find works</li>
+      <li>Wants single-purpose pages that can be shared</li>
+      <li>Needs relevant keywords and phrases for landing on the right page</li>
+    </ul>
+  </aside>
+</div>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Steve Krug"
+  classes=""
+  level="3"
+%}
+
+<p>
+  Legendary usability author of <cite>Don't make me think!</cite> Steve Krug is a 70-year-old in the suburbs. He has high
+  proficiency with tech, combines information-seeking techniques, and judges sites harshly for problems with IA and content.
+</p>
+
+{% include atoms/spacer.html size="2" %}
+
+<div class="layout--row display--flex flex-direction--row">
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Attributes and behaviors"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Values a short, compelling read</li>
+      <li>Impatient with cumbersome sites from brands that should know better</li>
+      <li>Very smart, but prefers text written at a fifth-grade level</li>
+      <li>Likely to open sites on an Android 'phablet' just to see what happens</li>
+      <li>Politics and overall personality unknown, but obviously sympathetic to the common man</li>
+    </ul>
+  </aside>
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Goals and needs"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Wants to go his whole visit without having to think!</li>
+      <li>Needs information and to complete tasks, and will search and browse to find it</li>
+      <li>Wants a similar experience on both desktop and mobile</li>
+    </ul>
+  </aside>
+</div>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Felicia Frugal"
+  classes=""
+  level="3"
+%}
+
+<p>
+  Felicia is 33 years old. She was absolutely clobbered in her career by the Great Recession. She lives in a suburb in an
+  overpriced rental, has remaining student debt, and has come to terms with her situation not getting much better any time
+  soon. Still, she remains optimistic that technology and societal progress will improve her lot in life by the time she'd
+  want to retire.
+</p>
+
+{% include atoms/spacer.html size="2" %}
+
+<div class="layout--row display--flex flex-direction--row">
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Attributes and behaviors"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Progressive politics are important to her</li>
+      <li>She has an older Windows laptop with Chrome installed, plus a midrange Android phone</li>
+      <li>Remembers AOL and AIM, IE6 when it was good, and Homestar Runner</li>
+      <li>Buys rice in bulk, goes to resale shops, and seeks promo codes and coupons for even small purchases</li>
+      <li>Composts food waste and grows a few square feet of vegetable garden on her balcony</li>
+      <li>Willing to pay a bit extra for longevity and environmental responsibility</li>
+    </ul>
+  </aside>
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Goals and needs"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Wants to find the best free resources</li>
+      <li>Needs justification for any product that costs a premium</li>
+      <li>Wants assurances that brands' values align with hers</li>
+      <li>Needs a break</li>
+      <li>Wants 1990s nostalgia distilled away from the retrograde politics of the era</li>
+    </ul>
+  </aside>
+</div>
+
+{% include atoms/spacer.html size="8" %}
+
+{% include atoms/heading.html
+  children="Dominique Disability"
+  classes=""
+  level="3"
+%}
+
+<p>
+  Dominique is 49 and living in an assisted living facility just outside of the city. She is not defined by her numerous
+  sensory, cognitive, and motor difficulties, but certainly has to grapple with them every day. Dominique wants to get through
+  the computer work so she can get back to her non-computer crafts and hobbies.
+</p>
+
+{% include atoms/spacer.html size="2" %}
+
+<div class="layout--row display--flex flex-direction--row">
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Attributes and behaviors"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Overcoming adversity is a way of life</li>
+      <li>On bad days will use a screen reader. On other days will struggle with color contrast and small elements</li>
+      <li>Is loyal to people and brands that respect her and make things easier without having to ask</li>
+      <li>Gravitates to ergonomic solutions</li>
+      <li>Likes and appreciates arts and crafts</li>
+    </ul>
+  </aside>
+  <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-start
+    padding-horizontal--4 padding-horizontal--collapse">
+    {% include atoms/heading.html
+      children="Goals and needs"
+      classes=""
+      level="4"
+    %}
+
+    <ul>
+      <li>Needs sites that are accessible beyond just visual alternatives</li>
+      <li>Wants to find sites and brands that are trustworthy</li>
+      <li>Wants things to be quick and simple</li>
+    </ul>
+  </aside>
+</div>

@@ -1,0 +1,44 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+classes: "padding-vertical--0"
+#date: 2020-03-03 02:02:02
+excerpt: "All the site-wide alerts"
+#published: true
+#tags: ["three", "four"]
+title: "Site alerts"
+title_classes: "a11y--visually-hidden"
+---
+
+{% comment %}
+  To add a site-wide alert to the alerts section, copy one of these from the comment block and put it below.
+
+  {% include molecules/alert.html
+    children="<p>Brad made a status alert</p>"
+    classes=""
+    dismissible=true
+    level="status"
+  %}
+
+  {% include molecules/alert.html
+    children="This is a warning-level alert using plain text rather than markup."
+    classes=""
+    dismissible=true
+    level="warning"
+  %}
+
+  {% include molecules/alert.html
+    children="<p>Here is an error alert with <strong>bold text</strong> and <a href='https://www.bing.com'>a link</a>.</p>"
+    classes=""
+    dismissible=true
+    level="error"
+  %}
+{% endcomment %}
+
+{% include molecules/alert.html
+  children="<p><strong>Ermahgerd!</strong> Have you <a href='/rsvp/'>RSVPed</a> yet?</p>"
+  classes=""
+  dismissible=true
+  level="warning"
+%}

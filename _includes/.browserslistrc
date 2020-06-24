@@ -1,0 +1,7 @@
+last 2 Chrome versions        # Chrome is an 'Evergreen' browser |
+last 2 ChromeAndroid versions # Chrome is an 'Evergreen' browser |
+last 2 Edge versions          # Edge is an 'Evergreen' browser based on Chrome |
+last 2 Firefox versions       # Firefox is an 'Evergreen' browser |
+last 1 iOS versions           # iOS Safari has a limited release cycle, but software updates are readily performed |
+last 1 Safari versions        # Safari has a limited release cycle, but software updates are readily performed |
+not IE 1-11                   # Internet Explorer has declining market share, poor feature support, and is no longer supported by Microsoft

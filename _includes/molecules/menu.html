@@ -1,0 +1,58 @@
+{% capture where_exp_str %}item.menus.{{ include.menu }} >= 1{% endcapture %}
+{% capture sort_str %}menus.{{ include.menu }}{% endcapture %}
+{% assign pages = site.pages | where_exp:"item", where_exp_str | sort:sort_str %}
+{% capture component %}
+<ul class="menu menu--{{ include.menu | slugify }} list-style--none margin-horizontal--0 {% if include.classes %}{{ include.classes }}{% endif %}">
+  {% for p in pages %}
+    {% unless p.url contains "page-" %}
+      <li class="menu-item menu-item--menu-{{ include.menu | slugify }} menu-item--page-{{ p.title | slugify }}
+        menu-item--menu-{{ include.menu | slugify }}--page-{{ p.title | slugify }} flex--1 display--flex
+        flex-direction--column justify-content--center">
+        <a href="{{ p.url | relative_url }}" class="menu-item--link {% if p.url == page.url %}active{% endif %}
+          display--flex flex-direction--column justify-content--center">{{ p.title }}</a>
+      </li>
+    {% endunless %}
+  {% endfor %}
+</ul>
+{% endcapture %}
+
+{% capture name %}Menu{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/menu.html
+    menu="copyright"
+    classes="border-spaced display--flex layout--row menu-layout--horizontal"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Menus can be used to group related navigation links together in order to display an implied information architecture.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+menu| the name of the menu as it appears in the front matter of the page| main
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

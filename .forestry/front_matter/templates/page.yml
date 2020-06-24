@@ -1,0 +1,33 @@
+---
+label: Page
+hide_body: false
+fields:
+- type: list
+  name: authors
+  label: authors
+- type: boolean
+  name: front
+  label: front
+- type: field_group
+  name: menus
+  label: menus
+  fields:
+  - type: number
+    name: footer
+    label: footer
+  - type: number
+    name: main
+    label: main
+- type: field_group
+  name: meta
+  label: meta
+  fields:
+  - type: text
+    name: description
+    label: description
+- type: list
+  name: sections
+  label: sections
+- type: text
+  name: title
+  label: title

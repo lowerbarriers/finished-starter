@@ -1,0 +1,187 @@
+/**
+ * @file
+ * Main layout classes.
+ */
+
+/**
+ * Make the content area tall enough by default that desktops never see the
+ * footer super high on the page.
+ */
+main,
+.layout--main {
+  min-height: 37vh;
+}
+
+/**
+ * Since they're only used for spacing at desktop width, hide empty columns on
+ * tablet/mobile.
+ */
+@media all and (max-width: 1023px) {
+  .layout--column--empty {
+    display: none;
+  }
+}
+
+/**
+ * Ensure columns are not allowed to become too narrow, starting at the wrap
+ * breakpoint.
+ */
+@media all and (max-width: 1023px) {
+  .layout--column {
+    min-width: 270px; /* This is nearly the max-width of the content area of a small phone. */
+  }
+}
+@media all and (max-width: 767px) {
+  .layout--column {
+    padding-top: calc(2 * var(--spacing--single));
+  }
+  .layout--column:last-child {
+    padding-bottom: calc(2 * var(--spacing--single));
+  }
+}
+
+/**
+ * Wrap layouts in the content area when they get to a narrow desktop-ish viewport.
+ *
+ * And then switch layouts from side-by-side flexes to top-to-bottom flexes at
+ * narrow viewports.
+ */
+@media all and (max-width: 1023px) {
+  .layout--row {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 767px) {
+  .layout--row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 767px) and (-ms-high-contrast: active),
+  all and (max-width: 767px) and (-ms-high-contrast: none) {
+  /* IE hack to avoid column spacing issues for responsive. */
+  .layout--row {
+    display: block;
+  }
+}
+
+/**
+ * By default, stripes should have generous padding.
+ *
+ * Place the overriding class after it in order for cascade purposes.
+ */
+.layout--stripe {
+  padding: calc(10 * var(--spacing--single)) calc(2 * var(--spacing--single));
+}
+.layout--strip {
+  padding: calc(2 * var(--spacing--single)) calc(2 * var(--spacing--single));
+}
+@media all and (max-width: 767px) {
+  .layout--stripe {
+    padding: calc(6 * var(--spacing--single)) calc(2 * var(--spacing--single));
+  }
+}
+
+/**
+ * The inner div of a stripe.
+ */
+.layout--stripe--inner {
+  margin: 0 auto;
+  max-width: var(--layout--content-area);
+  position: relative;
+  z-index: 2;
+}
+
+/**
+ * Layout classes for hiding (see below for showing) at various viewports.
+ */
+@media all and (max-width: 767px) {
+  .layout--hide--narrow {
+    display: none;
+  }
+}
+@media all and (max-width: 1023px) {
+  .layout--hide--medium {
+    display: none;
+  }
+}
+@media all and (min-width: 1024px) {
+  .layout--hide--wide {
+    display: none;
+  }
+}
+@media all and (prefers-reduced-motion: reduce), print {
+  .layout--hide--animations {
+    display: none;
+  }
+}
+@media print {
+  .layout--hide--print {
+    display: none;
+  }
+}
+.layout--hide--no-javascript {
+  display: none;
+}
+.js .layout--hide--no-javascript {
+  display: inherit;
+}
+
+/**
+ * Set cards and things in easy rows of 3.
+ */
+.layout--multiple--horizontal {
+  /* https://github.com/philipwalton/flexbugs */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+}
+.layout--multiple--horizontal {
+  flex-direction: column;
+}
+.layout--multiple--horizontal > * {
+  box-sizing: border-box;
+  margin: 0 0 calc(4 * var(--spacing--single));
+}
+@media all and (min-width: 768px) {
+  .layout--multiple--horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .layout--multiple--horizontal > * {
+    flex-basis: calc(33% - (4 * var(--spacing--single)));
+    margin: 0 calc(2 * var(--spacing--single)) calc(4 * var(--spacing--single));
+    max-width: calc(33% - (4 * var(--spacing--single)));
+    min-width: 205px;
+  }
+}
+
+/**
+ * Layout classes for showing (see above for hiding) at various viewports.
+ */
+@media all and (max-width: 767px) {
+  .layout--show--narrow {
+    display: inherit;
+  }
+}
+@media all and (max-width: 1023px) {
+  .layout--show--medium {
+    display: inherit;
+  }
+}
+@media all and (min-width: 1024px) {
+  .layout--show--wide {
+    display: inherit;
+  }
+}

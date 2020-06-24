@@ -1,0 +1,101 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "The very smallest components in the design system."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Color"
+---
+
+<p>Color plays a big part in bringing a brand together. Here is the palette of the base scheme, right next to each
+  other. If you can't feel a brand impression or at least get a hint at a mood, it might be worthwhile to revisit the
+  scheme.</p>
+
+<ul class="list-style--none layout--multiple--horizontal">
+  <li class="flex--1">
+    <div class="palette background-color--main color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.main.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--second color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.second.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--third color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.third.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--accent color--white font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.accent.value }}
+    </div>
+  </li>
+</ul>
+
+<p>Often the brand palette is used more subtly, via the light versions of the brand shades. These washed-out or pastel
+  tones should also work together to give you a hint of the brand:</p>
+
+<ul class="list-style--none layout--multiple--horizontal">
+  <li class="flex--1">
+    <div class="palette background-color--main-light font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.main-light.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--second-light font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.second-light.value }}
+    </div>
+  </li>
+  <li class="flex--1">
+    <div class="palette background-color--third-light font-family--monospace text-align--center display--flex
+          flex-direction--column justify-content--center">
+      {{ site.data.design-tokens.root.color.color.third-light.value }}
+    </div>
+  </li>
+</ul>
+
+<p>Here are all the brand colors, broken out in logical groupings.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Palette</th>
+      <th>Value</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for color in site.data.design-tokens.root.color.color %}
+      <tr>
+        <td>
+          <div class="palette background-color--{{ color[0] | slugify }}">
+          </div>
+        </td>
+        <td>{{ color[1].value }}</td>
+        <td>{{ color[0] }}</td>
+        <td>{{ color[1].description }}</td>
+        <td>{{ color[1].category }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

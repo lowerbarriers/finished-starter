@@ -1,0 +1,95 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Instructions for testing the site with users."
+#  image:
+#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "User testing"
+---
+
+{% include atoms/heading.html
+  children="Protocol"
+  classes=""
+  level="2"
+%}
+
+<p>
+  This platform relies on the principles of <a href="https://www.nngroup.com/topic/user-testing/">discount usability testing</a>
+  that the Nielsen/Norman Group has promoted for the last 3 decades:
+</p>
+
+<ul>
+  <li>Simple tests</li>
+  <li>5 or 6 individual subjects per test run</li>
+  <li>Test early and often</li>
+  <li>Perform heuristic evaluations between tests</li>
+</ul>
+
+{% include atoms/spacer.html size="2" %}
+
+<p>
+  More than any other piece of testing guidance, the most important thing to ensure when doing discount/guerilla testing
+  is that you're <strong>not leading the user</strong>. The <em>simple</em> test script should be open-ended, and the test
+  should be to get the user telling you what they're doing rather than telling them what to do next (after all, a user getting
+  stuck is a useful result!).
+</p>
+
+{% include atoms/spacer.html size="2" %}
+
+{% include atoms/heading.html
+  children="Heuristics"
+  classes=""
+  level="3"
+%}
+
+<p>
+  See the <a href="{% link _docs/user-experience/ux-principles.html %}">UX principles docs page</a> for the
+  heuristic and Gestalt priorities for the platform.
+</p>
+
+<p>
+  To save test subjects' time and to clear up obvious potential issues, the UX practitioner should perform heuristic analysis
+  following the insights of a test. The team should then update the site based on those analyses before performing more user
+  tests.
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+{% include atoms/heading.html
+children="Template/example"
+classes=""
+level="3"
+%}
+
+<p>
+  Here's a script that can be copy/pasted and adapted to the particulars of the test you're looking to run:
+</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<p>
+  "<strong>Navigate to the FAQ page, then read out loud the second question on that page. Please describe out loud what
+  you're doing as you do it.</strong>"</p>
+
+{% include atoms/spacer.html size="4" %}
+
+<p>
+  As the user describes what they are doing, note what they describe for any navigation dead-ends, ambiguous links or impediments,
+  and other usability issues that the user describes. Seek clarification or expansion if there's anything they say that isn't
+  totally clear. Repeat the test with up to 6 users to get a variety of results.
+</p>
+
+<p>
+  If there is agreement between two or more users (or a single user makes an easy-to-fix insight) about a particular usability
+  issue, it is likely worth addressing.
+</p>
