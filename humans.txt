@@ -1,0 +1,24 @@
+---
+layout: none
+---
+/* TEAM */
+  {% for person in site.people %}
+    {{ person.job_title }}: {{ person.title }}
+    {% if person.contact %}Contact: {{ person.contact }}{% endif %}
+    {% if person.twitter.creator %}Twitter: {{ person.twitter.creator }}{% endif %}
+    {% if person.from %}From: {{ person.from }}{% endif %}
+  {% endfor %}
+
+/* THANKS */
+  {% for person in site.humans_txt.thanks %}
+    {{ person.job_title }}: {{ person.name }}
+    {% if person.contact %}Contact: {{ person.contact }}{% endif %}
+    {% if person.twitter %}Twitter: {{ person.twitter }}{% endif %}
+    {% if person.from %}From: {{ person.from }}{% endif %}
+  {% endfor %}
+
+/* SITE */
+
+    Last update: {{ site.time | date: "%Y/%m/%d" }}
+    {% for item in site.humans_txt.site %}{{ item.key }}: {{ item.value }}
+    {% endfor %}
