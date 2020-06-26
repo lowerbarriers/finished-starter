@@ -765,20 +765,18 @@ textarea {
 
 .button,
 button {
-  background-color: transparent;
-  border: var(--neumorphic--border);
-  border-radius: 0.5em;
-  box-shadow: var(--neumorphic--box-shadow);
-  color: currentColor;
+  background-color: var(--color--main);
+  border: var(--border--default);
+  border-radius: var(--border-radius--default);
+  color: var(--color--white);
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
   font-weight: 900;
-  margin: 0 calc(2 * var(--spacing--single)) calc(2 * var(--spacing--single)) 0;
+  margin: 0 calc(2 * var(--spacing--single)) calc(2 * var(--spacing--single));
   padding: calc(1 * var(--spacing--single)) calc(2 * var(--spacing--single));
   text-align: center;
   text-decoration: none;
-  text-shadow: var(--neumorphic--text-shadow);
   transition: var(--transition--default);
 }
 .button:hover,
@@ -786,8 +784,7 @@ button:hover,
 .button.active,
 .button:active,
 button:active {
-  border: var(--neumorphic--border--active);
-  box-shadow: var(--neumorphic--box-shadow--active);
+  background-color: var(--color--main-light);
   color: currentColor;
 }
 .button:focus,

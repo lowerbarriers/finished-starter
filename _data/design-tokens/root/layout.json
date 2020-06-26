@@ -4,7 +4,7 @@
       "category": "Maximum",
       "description": "The maximum width that content inside sections can get",
       "type": "layout",
-      "value": "1080px"
+      "value": "1200px"
     }
   }
 }

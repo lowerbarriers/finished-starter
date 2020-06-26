@@ -16,16 +16,6 @@
  */
 @font-face {
   font-display: swap;
-  font-family: 'Engagement';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Engagement'), local('Engagement-Regular'),
-  url('/assets/fonts/engagement/engagement-v9-latin-regular.woff2') format('woff2'),
-  url('/assets/fonts/engagement/engagement-v9-latin-regular.woff') format('woff');
-}
-/* Public sans variable in woff2 format for you. */
-@font-face {
-  font-display: swap;
   font-family: 'Public Sans';
   font-style: normal;
   font-weight: 100 900;
@@ -38,4 +28,17 @@
   font-weight: 100 900;
   src: url('/assets/fonts/public_sans/public_sans_variable_italic.woff2') format('woff2');
 }
-
+@font-face {
+  font-display: swap;
+  font-family: 'Emberly';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/assets/fonts/emberly/emberly-variable.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Emberly';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('/assets/fonts/emberly/emberly-variable-italic.woff2') format('woff2');
+}

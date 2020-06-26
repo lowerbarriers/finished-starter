@@ -21,18 +21,16 @@ layout: compress
     itemscope itemtype="http://schema.org/{% if page.schema.type %}{{ page.schema.type }}{% else %}{{ site.schema.type }}{% endif %}">
     {% include head/ie-upgrade-warning.html %}
     {% include head/a11y--skip-hide.html %}
+
     {% if page.front %}
       {% include organisms/section.html
         mode="ref"
         slug="alerts"
       %}
     {% endif %}
-    {% if page.front %}
-      {% comment %}<!-- Optional pre-header 'splash'. -->{% endcomment %}
-      {% include organisms/header--pre.html %}
-    {% endif %}
-    {% include organisms/header.html %}
-    {% include organisms/nav.html %}
+
+    {% include organisms/utility.html %}
+    {% include organisms/header--main.html %}
 
     <main class="page" id="main-content">
       {% comment %}<!-- The 'hero' title area that appears on all non-front pages. -->{% endcomment %}

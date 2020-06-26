@@ -1,0 +1,51 @@
+{% capture component %}
+  <section class="utility layout--strip background-color--main-dark color--white font-size--p875em
+  {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="layout--stripe--inner">
+      <h2 class="a11y--visually-hidden">Utility (verb) navigation</h2>
+
+      {% include molecules/menu.html
+        menu="utility"
+        classes="border-spaced display--flex layout--row menu-layout--horizontal"
+      %}
+    </div>
+  </section>
+{% endcapture %}
+
+{% capture name %}Utility{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/utility.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The utility navigation section is for verb-based navigation actions like "Contact us", as opposed to nouns like About that
+belong in the main nav.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

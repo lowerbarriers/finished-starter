@@ -4,91 +4,91 @@
       "category": "Monochrome",
       "description": "Black or near-black, typically used for body text against a white background.",
       "type": "color",
-      "value": "#000"
+      "value": "#222"
     },
     "grey-dark": {
       "category": "Monochrome",
-      "description": "",
+      "description": "A dark grey used for less text contrast in places, and some light-on-dark sections",
       "type": "color",
       "value": "#555"
     },
     "grey": {
       "category": "Monochrome",
-      "description": "",
+      "description": "A medium grey has lots of utility throughout; borders, text, everything",
       "type": "color",
-      "value": "#999"
+      "value": "#aaa"
     },
     "grey-light": {
       "category": "Monochrome",
-      "description": "",
+      "description": "Especially used for alternating sections with white background, but also versatile",
       "type": "color",
-      "value": "#eee"
+      "value": "#f7f7f7"
     },
     "white": {
       "category": "Monochrome",
-      "description": "",
+      "description": "The one, the only, white.",
       "type": "color",
       "value": "#fff"
     },
     "main": {
       "category": "Theme",
-      "description": "",
+      "description": "A medium shade of an on-brand blue, ideally. Used for links by default",
       "type": "color",
-      "value": "#4074a0"
+      "value": "#0081a7"
     },
     "main-dark": {
       "category": "Theme",
-      "description": "",
+      "description": "A dark shade of the main hue, used for thematic backgrounds",
       "type": "color",
-      "value": "#1d3141"
+      "value": "#002733"
     },
     "main-light": {
       "category": "Theme",
-      "description": "",
+      "description": "A very light shade of the main hue, used for backgrounds primarily.",
       "type": "color",
-      "value": "#74c2ff"
+      "value": "#ccf4ff"
     },
     "second": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#96701d"
+      "value": "#f07167"
     },
     "second-dark": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#41201c"
+      "value": "#331716"
     },
     "second-light": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#ffc227"
+      "value": "#ffcfcc"
     },
     "third": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#73a040"
+      "value": "#00afb9"
     },
     "third-dark": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#204120"
+      "value": "#003033"
     },
     "third-light": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#b7ff61"
+      "value": "#ccfcff"
     },
     "accent": {
       "category": "Theme",
       "description": "",
       "type": "color",
-      "value": "#6d40a0"
+      "value": "#6100a7"
     },
     "status": {
       "category": "UI",
