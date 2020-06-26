@@ -62,24 +62,6 @@
 /**
  * Background images and gradients.
  */
-.background-image--affectation {
-  background-image: url("/assets/images/required/bg--affectation.svg");
-  background-position: top right;
-  background-repeat: no-repeat;
-}
-.background-image--dirt {
-  background-image: url("/assets/images/bg-dirt.svg");
-  background-position: center center;
-  background-repeat: repeat;
-}
-.background-image--gradient--second-white-starburst {
-  background-image: repeating-conic-gradient(
-    from 3deg at -15% 115%,
-    var(--color--second-light) 0 1deg,
-    var(--color--white) 0 4deg,
-    transparent 0 7deg
-  );
-}
 .background-image--gradient--main {
   background-image: linear-gradient(
     -5deg,
@@ -107,6 +89,12 @@
     transparent 50%,
     var(--color--accent) 200%
   );
+}
+.background-image--hero-home {
+  background-image: url("/assets/images/in-css/hero-home.jpg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  min-height: 50vw; /* Roughly the aspect ratio. */
 }
 
 /**

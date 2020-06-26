@@ -11,9 +11,9 @@ menus:
   main: 1
 #  utility: 1
 meta:
-  description: "Brad Czerniak and Shelby Hassell (nee Sleete) are getting married in October in Michigan."
+  description: "Brad Czerniak is a Drupal and JAMstack developer in Michigan."
 #  image:
-#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    alt: "Default social image"
 #    src: required/meta-image--default.jpg
 #  robots: "index,follow"
 #  title: "Overrides the tab title and social titles"
@@ -24,42 +24,32 @@ redirect_from:
 #schema:
 #  type: "Thing"
 sections:
+  - freshness
   - cta
 #sitemap: true
 #tags: ["three", "four"]
 title: "Home"
 ---
 
-<section class="layout--stripe background-color--main background-image--affectation color--white text-align--center background-image-display-mobile--hide" id="home">
+<section class="layout--stripe background-color--grey-dark background-image--hero-home background-size--cover
+  color--white text-align--center background-image-display-mobile--hide" id="home">
   <div class="layout--stripe--inner">
     {% include atoms/heading.html
-      children="Brad and Shelby are getting married!"
-      classes="text-shadow--second-light--solid"
+      children="Brad would rather be at trivia night"
+      classes=""
       level="1"
     %}
 
-    {% include atoms/spacer.html size="2" %}
+    {% include atoms/spacer.html size="4" %}
 
     <div class="display--flex layout--row justify-content--center">
       <aside class="display--flex flex-direction--column justify-content--center">
-        {% include atoms/image.html
-          src="FB_IMG_1567973636993.jpg"
-          alt="Shelby and Brad embracing while watching F1"
-          caption="We enjoyed the F1 race."
-        %}
-
-        {% include atoms/spacer.html size="1" %}
-
         <p class="font-size--2em">
-          Hey, <em>we're Brad and Shelby</em>, and <strong class="text-shadow--second-light--solid">we're rolling out</strong>,
-          looking for America's greatest having, holding, and loving.
+          &hellip;but if he has to <a href="https://solveitonce.com">develop your Drupal or JAMstack website or solve your business
+          problems <em>once</em></a>, trivia can wait.
         </p>
       </aside>
     </div>
   </div>
 </section>
 
-{% include organisms/section.html
-  mode="ref"
-  slug="animation"
-%}

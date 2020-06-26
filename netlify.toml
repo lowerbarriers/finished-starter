@@ -4,4 +4,4 @@
 
 [build.environment]
   JEKYLL_ENV = "production"
-  PAGES_REPO_NWO = "shelbybrad/shelbybrad.github.io"
+  PAGES_REPO_NWO = "lowerbarriers/finished-starter"

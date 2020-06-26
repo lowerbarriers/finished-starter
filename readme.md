@@ -1,7 +1,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![GitHub top language](https://img.shields.io/github/languages/top/shelbybrad/shelbybrad.github.io)
-![GitHub language count](https://img.shields.io/github/languages/count/shelbybrad/shelbybrad.github.io)
+![GitHub top language](https://img.shields.io/github/languages/top/lowerbarriers/finished-starter)
+![GitHub language count](https://img.shields.io/github/languages/count/lowerbarriers/finished-starter)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 This is a great codebase to clone or fork if you want a full-fledged site **completely free** out of the box on day one,
@@ -85,10 +85,10 @@ Also the following:
   3. Edit to your heart's content
 
 If you want to use netlify,
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/shelbybrad/shelbybrad.github.io)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowerbarriers/finished-starter)
 
 If you prefer Vercel,
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/shelbybrad/shelbybrad.github.io)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/lowerbarriers/finished-starter)
 
 ### Creating a local version for development
 

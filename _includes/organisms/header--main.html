@@ -1,10 +1,9 @@
 {% capture component %}
-  <header class="header--main layout--strip color--main-dark text-align--center
+  <header class="header--main layout--strip background-color--white color--main-dark text-align--center
   {% if include.classes %}{{ include.classes }}{% endif %}">
     <div class="layout--stripe--inner ">
       <div class="layout--row display--flex">
-        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
-          padding-horizontal--4 padding-horizontal--collapse">
+        <aside class="layout--column flex--none display--flex flex-direction--column justify-content--center">
           <a class="header--logo logo" itemprop="url" href="{{ site.subpath }}/">
             <img src="{{ site.subpath }}/assets/images/required/logo.svg" alt="{{ site.title }}"
               class="image header--image header--logo--image" loading="lazy" />
@@ -12,7 +11,7 @@
           </a>
         </aside>
 
-        <aside class="layout--column flex--2 display--flex flex-direction--column justify-content--center
+        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
           padding-horizontal--4 padding-horizontal--collapse">
           {% include molecules/menu.html
             classes="border-spaced display--flex layout--row menu-layout--horizontal"
@@ -20,8 +19,8 @@
           %}
         </aside>
 
-        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
-          padding-horizontal--4 padding-horizontal--collapse position--relative has--search-widget">
+        <aside class="layout--column flex--none display--flex flex-direction--column justify-content--center position--relative
+          has--search-widget">
           {% include molecules/search-widget.html %}
         </aside>
       </div>

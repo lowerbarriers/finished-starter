@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: admin
-webhook_url: 
+webhook_url:
 sections:
 - type: jekyll-pages
   label: Pages
@@ -45,7 +45,7 @@ file_template: ":filename:"
 build:
   preview_env:
   - JEKYLL_ENV=staging
-  - PAGES_REPO_NWO=shelbybrad/shelbybrad.github.io
+  - PAGES_REPO_NWO=lowerbarriers/finished-starter
   preview_output_directory: _site
   install_dependencies_command: bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6
