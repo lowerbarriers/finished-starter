@@ -26,6 +26,7 @@ redirect_from:
 sections:
   - freshness
   - cta
+  - mailchimp
 #sitemap: true
 #tags: ["three", "four"]
 title: "Home"
@@ -53,3 +54,31 @@ title: "Home"
   </div>
 </section>
 
+<section class="layout--stripe">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Biography"
+      classes="text-align--center"
+      level="2"
+    %}
+
+    {% include atoms/spacer.html size="4" %}
+
+    <div class="display--flex layout--row justify-content--center">
+      <aside class="display--flex flex-direction--column justify-content--center">
+        <p>
+          Brad Czerniak is a web developer and freelance librarian in Metro Detroit, Michigan, specializing in
+          <a href="https://frostdrupal.com/">Drupal</a> and the JAMstack. You can hire his unique blend of skills through
+          his company, <a href="https://solveitonce.com">Solve it once</a> and contribute to his open-source initiative via
+          <a href="https://lowerbarriers.org">Lower barriers</a>.
+        </p>
+
+        <p>
+          In his down time, Brad enjoys classic films, sitcoms, trivia and British panel shows, and documentaries.
+          He occasionally leaves his fortress of solitude to take food tours of Detroit, and to play frisbee sports. You
+          may see him jogging the streets of his town as well.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>

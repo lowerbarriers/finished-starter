@@ -7,7 +7,7 @@ authors:
 meta:
   description: "The mission, vision, and goals of the website qua website."
   #  image:
-  #    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+  #    alt: "Default social image" # It's okay for this to be empty if the image is decorative
   #    src: required/meta-image--default.jpg
   robots: "noindex,follow"
 #  title: "Overrides the tab title and social titles"
@@ -109,23 +109,23 @@ in three highly different emotional states.
       <td>Obituary of a prominent community member</td>
       <td>People who knew (or knew of) the deceased</td>
       <td>Respectful, reverent, somber</td>
-      <td>“Professor Pelham was respected by his colleagues and revered by students, many of whom would wake before dawn 
-        on registration day to ensure gaining entry to his classes. His wit, gentle humor, and compassion left their mark 
+      <td>“Professor Pelham was respected by his colleagues and revered by students, many of whom would wake before dawn
+        on registration day to ensure gaining entry to his classes. His wit, gentle humor, and compassion left their mark
         on everyone he talked to.”</td>
     </tr>
     <tr>
       <td>Blog post announcing open source documentation guide</td>
       <td>Developers and other readers with a strong tech background</td>
       <td>Direct, impartial</td>
-      <td>“The <a href="https://18f.gsa.gov/2015/07/29/style-guide-for-open-source-documentation/">Open Source Style Guide</a> 
-        is a comprehensive handbook for writing clear, accessible, and user-friendly documentation so that your open source 
+      <td>“The <a href="https://18f.gsa.gov/2015/07/29/style-guide-for-open-source-documentation/">Open Source Style Guide</a>
+        is a comprehensive handbook for writing clear, accessible, and user-friendly documentation so that your open source
         code repositories are accessible both internally and externally.</td>
     </tr>
     <tr>
       <td>Marketing email from the boutique bridal department of a well-known clothing company </td>
       <td>Newly engaged women (ages 28 through 33)</td>
       <td>Enthusiastic, earnest, bubbly</td>
-      <td>“Say ‘I do!’ to 25% off. Now through July 3rd, take an additional 25% off all bridal wear and accessories. 
+      <td>“Say ‘I do!’ to 25% off. Now through July 3rd, take an additional 25% off all bridal wear and accessories.
         Celebrate your big day in style (and get a jumpstart on your honeymoon fund!).”</td>
     </tr>
   </tbody>

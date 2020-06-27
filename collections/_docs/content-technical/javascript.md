@@ -7,7 +7,7 @@ authors:
 meta:
   description: "Scripts and behaviors available for use on the site."
   #  image:
-  #    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+  #    alt: "Default social image" # It's okay for this to be empty if the image is decorative
   #    src: required/meta-image--default.jpg
   robots: "noindex,follow"
 #  title: "Overrides the tab title and social titles"
@@ -183,7 +183,7 @@ classes at the top level so authors may modify the appearance and functionality 
 
 {% include atoms/heading.html
   children="About this section"
-  classes="text-shadow--second-light--solid"
+  classes=""
   level="2"
   mode="docblock"
 %}

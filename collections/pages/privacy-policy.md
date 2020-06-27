@@ -12,7 +12,7 @@ menus:
 meta:
   description: "How you can expect your data to be handled, and when and where cookies are used on the site."
 #  image:
-#    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
 #    src: required/meta-image--default.jpg
 #  robots: "index,follow"
 #  title: "Overrides the tab title and social titles"

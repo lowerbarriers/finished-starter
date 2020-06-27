@@ -7,7 +7,7 @@ authors:
 meta:
   description: "All markdown syntax and its usage for this site."
   #  image:
-  #    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+  #    alt: "Default social image" # It's okay for this to be empty if the image is decorative
   #    src: required/meta-image--default.jpg
   robots: "noindex,follow"
 #  title: "Overrides the tab title and social titles"
@@ -35,7 +35,7 @@ with the following code exactly:
 ```
 
 ## Introduction
-{:.text-shadow--second-light--solid}
+{:.}
 
 On this site we use a text format called markdown for much of the content. This format is plain old text with some extra
 'syntax' (symbols and spacing) to let you make things like links, headings, bold and italic text, and a bunch of other stuff,
@@ -46,7 +46,7 @@ beautiful pages. Anywhere you see a file that ends in `.md` you can use this mar
 heck out of your content without bugging a developer!
 
 ## All syntax
-{:.text-shadow--second-light--solid}
+{:.}
 
 This site renders markdown using the [kramdown engine](https://kramdown.gettalong.org/syntax.html), and as such can take
 any syntax accepted by the engine as a whole. In circumstances where there are multiple ways to make an element, this
@@ -378,7 +378,7 @@ how much you have written.
 
 ## Advanced
 
-{: .text-shadow--second-light--solid}
+{: .}
 
 The elements below get into murky territory, since if you're using them it's often a sign you should be using an HTML file
 instead of a markdown one.
@@ -391,7 +391,7 @@ CSS classes can be added to certain elements using the `{: .classname }` syntax.
 ```markdown
 ## Advanced
 
-{: .text-shadow--second-light--solid}
+{: .}
 ```
 
 ### HTML elements

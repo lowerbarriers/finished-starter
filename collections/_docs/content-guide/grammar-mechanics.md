@@ -7,7 +7,7 @@ authors:
 meta:
   description: "Formatting and consistency in language on the site."
   #  image:
-  #    alt: "Shelby and Brad among the stars" # It's okay for this to be empty if the image is decorative
+  #    alt: "Default social image" # It's okay for this to be empty if the image is decorative
   #    src: required/meta-image--default.jpg
   robots: "noindex,follow"
 #  title: "Overrides the tab title and social titles"

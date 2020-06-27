@@ -29,6 +29,11 @@ layout: compress
       %}
     {% endif %}
 
+    {% comment %}<!-- Special pre-header for front page. Remove the "and false" part to enable. -->{% endcomment %}
+    {% if page.front and false %}
+      {% include organisms/header--pre.html %}
+    {% endif %}
+
     {% include organisms/utility.html %}
     {% include organisms/header--main.html %}
 

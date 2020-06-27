@@ -412,6 +412,7 @@
   padding-right: 55px !important; /* Magic number because of the button width below. */
 }
 .js--dismissible--close {
+  background-color: transparent;
   color: currentColor;
   margin: 0;
   padding: calc(0.75 * var(--spacing--single)) calc(1 * var(--spacing--single));

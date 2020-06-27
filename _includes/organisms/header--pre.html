@@ -1,16 +1,19 @@
 {% capture component %}
-  <div class="layout--strip background-color--main-light background-image--gradient--second-white-starburst color--white
-  {% if include.classes %}{{ include.classes }}{% endif %}">
+  <div class="layout--stripe background-color--second-light color--third-dark js--dismissible
+    {% if include.classes %}{{ include.classes }}{% endif %}">
     <div class="layout--stripe--inner">
-      <a class="street-sign" href="{{ site.subpath }}/">
-        <span class="font-family--secondary">Shelby</span>
-        <span class="text-transform--uppercase">
-          <span>&amp; Brad's</span>
-        </span>
-        <span class="font-family--monospace text-transform--uppercase background-image--dirt">
-          <b>W</b><b>e</b><b>d</b><b>d</b><b>i</b><b>n</b><b>g</b>
-        </span>
-      </a>
+      <strong class="heading--h2 font-family--secondary">Special promotion! (fake heading for doc outline)</strong>
+
+      {% include atoms/spacer.html size="4" %}
+
+      <p>
+        This section can be customized for a fancy, important, temporary feature on the home page. You will probably want
+        to put a fancy background here or otherwise catch users' eyes.
+      </p>
+
+      {% include atoms/spacer.html size="2" %}
+
+      <a href="https://github.com/lowerbarriers/finished-starter" class="button">Make your own site easily</a>
     </div>
   </div>
 {% endcapture %}
