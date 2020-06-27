@@ -105,15 +105,6 @@
 .body-scroll--up .fab {
   bottom: -200px;
 }
-@media all and (min-width: 1024px) {
-  .body-scroll--up .nav--main {
-    box-shadow: 0 2px 6px rgba(136, 165, 191, 0.9);
-    position: sticky;
-    top: 0;
-    transition: var(--transition--default);
-    z-index: 8;
-  }
-}
 
 /**
  * Add stylistic pipes to lists.
@@ -237,7 +228,7 @@
  * GDPR Cookie disclosure dialog (fixed to bottom of screen).
  */
 .dialog--cookie-disclosure {
-  box-shadow: 0 -2px 6px rgba(136, 165, 191, 0.9);
+  box-shadow: 0 -2px 6px rgba(128, 128, 128, 0.9);
 }
 
 /**
@@ -428,37 +419,6 @@
   cursor: pointer;
   transition: var(--transition--default);
 }
-.js--event--click--toggle.click--lightbox {
-  bottom: calc(2 * var(--spacing--single));
-  display: block;
-  left: calc(2 * var(--spacing--single));
-  max-width: none !important;
-  overflow: hidden;
-  position: fixed;
-  right: calc(2 * var(--spacing--single));
-  top: calc(2 * var(--spacing--single));
-  z-index: 9999;
-}
-.js--event--click--toggle.click--lightbox::after {
-  background-color: rgba(0, 0, 0, 0.9);
-  bottom: 0;
-  content: "";
-  display: block;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -2;
-}
-.js--event--click--toggle.click--lightbox picture {
-  margin: auto auto;
-  max-height: calc(100vh - (8 * var(--spacing--single)));
-  width: auto;
-}
-.js--event--click--toggle.click--lightbox:not(.figure--image--polaroid)
-  > figcaption {
-  color: var(--color--white);
-}
 
 /**
  * Toggle below (Open/Close below) buttons.
@@ -504,15 +464,6 @@
   .menu-layout--horizontal {
     text-align: center;
   }
-}
-
-/**
- * Initial "top" state for the main nav, to allow for transitions via body-scroll--
- */
-.nav--main {
-  position: static;
-  top: -300px; /* Need a set negative position taller than the nav but not huge for transition */
-  transition: var(--transition--default);
 }
 
 /**
@@ -602,4 +553,22 @@
 .social a:active,
 .social a:focus-within {
   color: var(--color--second-light);
+}
+
+/**
+ * Initial "top" state for the main nav, to allow for transitions via body-scroll--
+ */
+.sticky--top {
+  position: static;
+  top: -300px; /* Need a set negative position taller than the nav but not huge for transition */
+  transition: var(--transition--default);
+}
+@media all and (min-width: 1024px) {
+  .body-scroll--up .sticky--top {
+    box-shadow: 0 2px 6px rgba(128, 128, 128, 0.9);
+    position: sticky;
+    top: 0;
+    transition: var(--transition--default);
+    z-index: 8;
+  }
 }

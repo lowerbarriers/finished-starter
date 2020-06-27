@@ -1,6 +1,6 @@
 {% capture component %}
   <nav class="nav nav--main layout--strip padding-vertical--0 background-color--main-dark color--white font-size--1p5em
-    font-weight--900 {% if include.classes %}{{ include.classes }}{% endif %}">
+    font-weight--900 sticky--top {% if include.classes %}{{ include.classes }}{% endif %}">
     <div class="layout--stripe--inner">
       {% include molecules/menu.html
         classes="border-spaced display--flex layout--row menu-layout--horizontal"
