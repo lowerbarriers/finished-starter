@@ -1,0 +1,51 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Page metadata for reviewing to ensure good SEO."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Search engine optimization"
+---
+
+{% include atoms/heading.html
+  children="Table"
+  classes=""
+  level="2"
+%}
+
+<p>
+  Use this table to review content and ensure the metadata matches the content:
+</p>
+
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Meta title</th>
+    <th>Img src</th>
+    <th>Img alt</th>
+    <th>Meta robots</th>
+  </thead>
+  <tbody>
+    {% for page in site.pages %}
+      <tr>
+        <td>{{ page.title }}</td>
+        <td>{{ page.meta.description }}</td>
+        <td>{{ page.meta.title }}</td>
+        <td>{{ page.meta.image.src }}</td>
+        <td>{{ page.meta.image.alt }}</td>
+        <td>{{ page.meta.robots }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

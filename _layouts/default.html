@@ -22,6 +22,10 @@ layout: compress
     {% include head/ie-upgrade-warning.html %}
     {% include head/a11y--skip-hide.html %}
 
+    {% comment %}<!--
+      The site alerts need not be only on the front page, though they may not render on markdown pages.
+      Swap the alerts in collections/_sections/alerts.html
+    -->{% endcomment %}
     {% if page.front %}
       {% include organisms/section.html
         mode="ref"
@@ -34,13 +38,22 @@ layout: compress
       {% include organisms/header--pre.html %}
     {% endif %}
 
-    {% include organisms/utility.html %}
+    {% comment %}<!-- Set to true or remove conditional to show the utility menu above the header. -->{% endcomment %}
+    {% if false %}
+      {% include organisms/utility.html %}
+    {% endif %}
+
+    {% comment %}<!-- This can be replaced with header, header and nav separately, etc. -->{% endcomment %}
     {% include organisms/header--main.html %}
 
     <main class="page" id="main-content">
       {% comment %}<!-- The 'hero' title area that appears on all non-front pages. -->{% endcomment %}
       {% include organisms/hero.html %}
 
+      {% comment %}<!--
+        To properly manage templates, be sure to put content-specific liquid tags in the content-type-specific layout files
+        rather than this one using conditions.
+      -->{% endcomment %}
       {{ content }}
 
       {% comment %}<!-- Sections typically only work on pages and HTML files (markdown supports less). -->{% endcomment %}
