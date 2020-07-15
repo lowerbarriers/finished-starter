@@ -1,9 +1,9 @@
 ---
 authors:
-  - alex-inman
+  - brad-czerniak
 #categories: ["one", "two"]
-date: 2020-07-03 17:00:00
-date_end: 2020-07-06 08:00:00
+date: 2076-07-04 10:00:00
+date_end: 2076-07-04 22:00:00
 #hero_classes: "background-color--main-dark color--white"
 location:
   name: "Kensington Metropark"
@@ -13,28 +13,19 @@ location:
   postal_code: "48380"
   country_name: USA
 meta:
-  description: "The guys camping or something."
-  image:
-    alt: "Generic camping scene"
-    src: 1200x630/camping.jpg
+  description: "Arbitrary location for a party three centuries in the making"
+#  image:
+#    alt: "Generic camping scene"
+#    src: 1200x630/camping.jpg
 #  robots: "index,follow"
 #  title: "Overrides the tab title and social titles"
 #permalink: /event/YYYY/MM/title/
 #published: true
 #sitemap: true
 #tags: ["three", "four"]
-title: "Bachelor party"
+title: "Tricentennial party"
 ---
 
 ## Details
 
-We're still ironing out the details on this. Everything is subject to change.
-
-Since the ceremony and reception dinner are so small, this weekend will be the main opportunity for Brad to celebrate with
-his cohort of guy friends. The current plan is a night or two of not-too-primitive camping somewhere in Michigan; not
-aggressively far from the Metro-Detroit area.
-
-## Contact
-
-If you have questions, or would like to assist in the planning in some way, please contact
-[Alex Inman](mailto:inman.alex@gmail.com).
+America will be turning 300. Let's celebrate.

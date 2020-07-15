@@ -1,0 +1,13 @@
+####
+## @file
+## A menu of chiefly-external links, to be displayed in a utility-menu-like manner
+##
+## @see _includes/organisms/utility-external.html
+####
+links:
+  - href: "https://solveitonce.com"
+    text: "Solve it once"
+  - href: "https://lowerbarriers.org"
+    text: "Lower barriers"
+  - href: "https://shelbybrad.com"
+    text: "Shelby and Brad"

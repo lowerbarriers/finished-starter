@@ -43,6 +43,11 @@ layout: compress
       {% include organisms/utility.html %}
     {% endif %}
 
+    {% comment %}<!-- Set to true or remove conditional to show the external utility menu above the header. -->{% endcomment %}
+    {% if true %}
+      {% include organisms/utility-external.html %}
+    {% endif %}
+
     {% comment %}<!-- This can be replaced with header, header and nav separately, etc. -->{% endcomment %}
     {% include organisms/header--main.html %}
 

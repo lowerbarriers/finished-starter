@@ -20,7 +20,7 @@ title: "Observations"
 
 {% include atoms/image.html
   alt="Movie poster for The Love Guru"
-  src="loveguru1.jpg"
+  src="lovegurup1.jpg"
 %}
 
   1. Take apart the message of the Microsoft Sync commercials: "If you use our product, you will become a hazard to yourself
