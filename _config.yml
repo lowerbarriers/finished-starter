@@ -67,6 +67,21 @@ social:
     icon:
       library: simple-icons
       symbol: twitter
+  - title: GitHub
+    url: https://github.com/ao5357
+    icon:
+      library: simple-icons
+      symbol: github
+  - title: Drupal
+    url: https://drupal.org/user/313975
+    icon:
+      library: simple-icons
+      symbol: drupal
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/bczerniak
+    icon:
+      library: simple-icons
+      symbol: linkedin
 
 ## Press contact
 ## For small sites this is the same person and contact information as above. For companies... probably not.
