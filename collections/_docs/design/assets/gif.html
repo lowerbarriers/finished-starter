@@ -34,8 +34,15 @@ title: "GIF files"
         <td><img src="{{ image.path | relative_url }}" alt="" loading="lazy" /></td>
         <td>{{ image.name }}</td>
         <td>{{ image.path }}</td>
-        <td>Coming soon</td>
-      {{ myimage.path }}
+        <td><code><pre>
+          {% raw %}
+            {% include atoms/image.html
+              alt="Alt text here. Important."
+              caption="Caption is optional but pretty cool"
+              src="{% endraw %}{{ image.path | remove: "/assets/images/" }}{% raw %}"
+            %}
+          {% endraw %}
+        </pre></code></td>
       </tr>
     {% endfor %}
   </tbody>

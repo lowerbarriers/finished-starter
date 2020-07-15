@@ -1,16 +1,32 @@
 ---
-layout: post
-wp_id: 340  
-title: Your Fast Catalog 
-tags: [Google, Libraries, Web Design] 
---- 
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Oddly-specific WebPAC tweaks"
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /blog/post-title/
+#published: true
+#sitemap: true
+tags: [Google, Libraries, Web Design]
+title: "Your Fast Catalog"
+---
+
 [Canton Public Library's Catalog](http://catalog.cantonpl.org/) uses a large
 library application called [Millennium ILS from Innovative Interfaces,
 Inc](http://www.iii.com/products/millennium_ils.shtml). Recently, I undertook
 to spruce up the images, styles, and JavaScript for our catalog, and in doing
 so realized substantial speed increases catalog-wide.
 
-**Note**: The speed enhancements below are mostly about optimizing files and client-side stuff. You can also speed up your catalog on the server side with hardware and database optimization, though doing so is likely to require assistance from Innovative.
+**Note**: The speed enhancements below are mostly about optimizing files and client-side stuff. You can also speed up your
+catalog on the server side with hardware and database optimization, though doing so is likely to require assistance from
+Innovative.
 
 ### Why
 
@@ -26,7 +42,8 @@ Speed](http://code.google.com/speed/page-speed/index.html) recommendations.
 
 #### Sprites
 
-**Fact I found interesting**: Before I applied the catalog changes, the directory contained 682 files. It now has 49. Having fewer files doesn't inherently speed up the app, but it does speak to the nature of the changes.
+**Fact I found interesting**: Before I applied the catalog changes, the directory contained 682 files. It now has 49. Having
+fewer files doesn't inherently speed up the app, but it does speak to the nature of the changes.
 
 There are two types of images in a Millennium "example set": icons (or whole
 buttons as images) and media type indicators. A typical setup, until recently,
@@ -36,8 +53,7 @@ images are coupled with some crufty markup to make the buttons work. The
 latest set also ships with 39 media indicators (in fairness, we'd use maybe 13
 of those for our library).
 
-CPL now has [one image for all the icons](http://catalog.cantonpl.org/screens
-/ico-sp.png) and [one image for all the media
+CPL now has [one image for all the icons](http://catalog.cantonpl.org/screens/ico-sp.png) and [one image for all the media
 indicators](http://catalog.cantonpl.org/screens/media-sp.png). In total, the
 catalog screens have 8 images: one is required but never used, [another never
 seen](http://www.perlmonks.org/?node_id=7974), and two others used
@@ -45,52 +61,48 @@ infrequently. Yes, we grab book jackets from an external service, but that's
 the extent of the catalog graphics.
 
 An individual example icon weighs in between 600 bytes and 1.3K. Our icon
-sprite is 5.44K. It can be loaded once and [cached on the user's
-machine](http://code.google.com/speed/page-
-speed/docs/caching.html#LeverageBrowserCaching). For pages with many buttons,
-this results in far fewer HTTP requests and a smaller total payload. The same
+sprite is 5.44K. It can be loaded once and
+[cached on the user's machine](http://code.google.com/speed/page-speed/docs/caching.html#LeverageBrowserCaching).
+For pages with many buttons, this results in far fewer HTTP requests and a smaller total payload. The same
 goes for media indicators.
 
 How do we pull this off? We use two spriting techniques: ['traditional'
-sprites](http://css-tricks.com/css-sprites/) and [pseudo sprites](http://css-
-tricks.com/pseudo-spriting/). The styles to makes these work can be found in
+sprites](http://css-tricks.com/css-sprites/) and [
+pseudo sprites](http://css-tricks.com/pseudo-spriting/). The styles to makes these work can be found in
 the [catalog stylesheet](http://catalog.cantonpl.org/screens/styles.css).
 What's novel, and how you can pull this off in Millennium, is in carefully
 crafting what're called 'wwwoptions':
 
-    
-    
-    # pseudo sprite example
-    ICON_BUT_REQUEST=<span class="but icon request">Request</span>
-    
-    # traditional sprite example
-    IMAGE_MATTYPE3=/screens/spacer.gif" class="media-icon bookmp3
-    
+```
+# pseudo sprite example
+ICON_BUT_REQUEST=<span class="but icon request">Request</span>
+
+# traditional sprite example
+IMAGE_MATTYPE3=/screens/spacer.gif" class="media-icon bookmp3
+```
 
 As you can see, in both cases activating sprites involves appending classes to
 a particular HTML element. In the case of the pseudo sprites, there's a class
 that makes anything look like a button, one that pads the left-hand side and
-loads the icon sprite image into the space, and one ['request' above] that
+loads the icon sprite image into the space, and one ('request' above) that
 stipulates where in the sprite image the request icon appears. In the
 traditional sprite, the "IMAGE_MATTYPE3" option _must_ be an image. Since
 there's no getting around that, I used a spacer gif. It's 43 bytes — the
-smallest practical image for the web. I then [circumvented the wwwoption to
-add the classes to the image](http://google-
-gruyere.appspot.com/part2#2__stored_xss_via_html_attribute). Those classes set
-the background size and position the sprite image.
+smallest practical image for the web. I then
+[circumvented the wwwoption to add the classes to the image](http://google-gruyere.appspot.com/part2#2__stored_xss_via_html_attribute).
+Those classes set the background size and position the sprite image.
 
 Be advised that pseudo sprites only work in standards-compliant browsers and
 IE8+. If a substantial number of your users are on IE7-, you may want to wait.
 Users with non-supporting browsers can still see the button style we use, but
 the icons won't appear. Sites that work for everyone but look better for
-modern browsers are considered [progressively-enhanced](http://www.alistapart.
-com/articles/understandingprogressiveenhancement); that's what you can
+modern browsers are considered [progressively-enhanced](http://www.alistapart.com/articles/understandingprogressiveenhancement);
+that's what you can
 consider these buttons.
 
 #### Distrusting Bowker
 
-We use [Syndetics Plus](http://www.bowker.com/en-
-US/products/syndetics/plus/index.html), [Librarything for
+We use [Syndetics Plus](http://www.bowker.com/en-US/products/syndetics/plus/index.html), [Librarything for
 Libraries](http://www.librarything.com/forlibraries), and [Google Books
 previews](http://code.google.com/apis/books/docs/viewer/developers_guide.html)
 on our bibliographic record pages. That's a lot of stuff to load. As part of
@@ -105,14 +117,13 @@ Syndetics Plus, by default, loads onto a page something like this
   * widget_connector.js gets ready, finds ISBNs on the page, and requests an ISBN-specific widget_response.js
   * widget_response.js writes to the page and asks widget_connector.js to do stuff
 
-This is a mess. It's a long chain of [serialized
-resources](http://code.google.com/speed/page-
-speed/docs/rtt.html#ParallelizeDownloads) that aren't well-cached by the
+This is a mess. It's a long chain of [serialized resources](http://code.google.com/speed/page-speed/docs/rtt.html#ParallelizeDownloads)
+that aren't well-cached by the
 browser, aren't served [minified](http://marijnhaverbeke.nl/uglifyjs) and/or
 [gzipped](http://httpd.apache.org/docs/2.0/mod/mod_deflate.html), can't be
 [served over SSL](http://en.wikipedia.org/wiki/Transport_Layer_Security), and
-that [block full page rendering](http://code.google.com/speed/page-
-speed/docs/payload.html#DeferLoadingJS) until they're complete (whether or not
+that [block full page rendering](http://code.google.com/speed/page-speed/docs/payload.html#DeferLoadingJS)
+until they're complete (whether or not
 there's a result). Total payload for this process is 49K.
 
 Librarything for Libraries is even worse ([here I go
@@ -126,9 +137,8 @@ again](http://bradczerniak.com/2010/12/11/librarything-issues/)). It goes:
 
 What makes this process so awful is connector.php. It's over 150K all by
 itself, and it includes the [sizzle selector library](http://sizzlejs.com/)
-and a bunch of [other](http://robertnyman.com/2005/11/07/the-ultimate-
-getelementsbyclassname/) [utilities](http://blog.stchur.com/2007/04/06
-/serializing-objects-in-javascript/). Which makes one wonder: why not just
+and a bunch of [other](http://robertnyman.com/2005/11/07/the-ultimate-getelementsbyclassname/)
+[utilities](http://blog.stchur.com/2007/04/06/serializing-objects-in-javascript/). Which makes one wonder: why not just
 use jQuery? Moreover, why does a file that loads a comprehensive selector
 engine need to define getElementsByClassName()? connector.php's JavaScript is
 a Frankenstein's monster of code that pollutes the global namespace. I'm
@@ -177,21 +187,16 @@ be a huge help, for instance.
 
 #### More JavaScript Optimization
 
-I was more diligent about jQuery best practices like using [fast
-selectors](http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-think-
-right-to-left-with-jquery/), [caching selected
-objects](http://www.artzstudio.com/2009/04/jquery-performance-rules/#cache-
-jquery-objects), and [delegating events to their appropriate
-containers](http://thinkvitamin.com/code/john-resig-on-advanced-javascript-to-
-improve-your-web-app/).
+I was more diligent about jQuery best practices like using
+[fast selectors](http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-think-right-to-left-with-jquery/),
+[caching selected objects](http://www.artzstudio.com/2009/04/jquery-performance-rules/#cache-jquery-objects),
+and [delegating events to their appropriate containers](http://thinkvitamin.com/code/john-resig-on-advanced-javascript-to-improve-your-web-app/).
 
 Millennium has its own JavaScript library. It's ordinarily served out as 3
-files, but we weren't having any of that. Our Millennium setup [prevents the
-default files from loading](https://docs.google.com/viewer?url=http://www.rodm
-anlibrary.com/iug/egl2008/hackthepac.pdf), and instead serves [a single file
-with all three components
-minified](http://catalog.cantonpl.org/screens/iii.js). iii.js is just under
-20K before compression, and 5.2 over the wire. That's 2 fewer HTTP requests
+files, but we weren't having any of that. Our Millennium setup
+[prevents the default files from loading](https://docs.google.com/viewer?url=http://www.rodmanlibrary.com/iug/egl2008/hackthepac.pdf),
+and instead serves [a single file with all three components minified](http://catalog.cantonpl.org/screens/iii.js).
+iii.js is just under 20K before compression, and 5.2 over the wire. That's 2 fewer HTTP requests
 and 4.4K less payload on every page.
 
 #### Image Optimization
@@ -204,12 +209,10 @@ as 8-bit files, making them substantially smaller.
 
 #### Web Server
 
-I also rolled out [a sprite for the
-site](http://www.cantonpl.org/sites/all/themes/zen/cpl/sprites/site-sp-
-v011712r1.png)'s layout and theme, optimized the chat widget, and [combined
-and minified CSS files](http://lowfatcats.com/blog/1-tutorial/18-how-to-
-optimize-javascript-css-linux-using-yui-compressor.html) for use by the
-catalog. Our web server, in contrast to the catalog, is pretty aggressive
+I also rolled out [a sprite for the site](http://www.cantonpl.org/sites/all/themes/zen/cpl/sprites/site-sp-v011712r1.png)'s
+layout and theme, optimized the chat widget, and
+[combined and minified CSS files](http://lowfatcats.com/blog/1-tutorial/18-how-to-optimize-javascript-css-linux-using-yui-compressor.html)
+for use by the catalog. Our web server, in contrast to the catalog, is pretty aggressive
 about caching. Files are served with far-future expires headers. APC for PHP
 caches the opcode to minimize file reads; this results in faster execution
 speed across the board, but not necessarily faster serving to the end user. We
@@ -231,7 +234,7 @@ pretty easily. Other possibilities:
 
 For the catalog, a few squeaks of extra speed could come from moving static
 files to our web server (which has longer cache lifetimes), combining the
-[minified] catalog CSS into the site CSS, and working with Syndetics to get
+(minified) catalog CSS into the site CSS, and working with Syndetics to get
 book jackets from URLs without query parameters.
 
 ### tl;dr

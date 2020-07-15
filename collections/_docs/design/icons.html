@@ -17,5 +17,124 @@ meta:
 title: "Icons"
 ---
 
-<p>Presently the ls of the icon directories is not available within jekyll. We will work on a clever way to show all
-the icons and update this section accordingly.</p>
+<p>The framework comes with octicons, simple-icons, and a directory for 'other'.</p>
+
+{% include atoms/heading.html
+  children="Octicons"
+  level="2"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign icons = site.data.icons.octicons.files | sort %}
+    {% for icon in icons %}
+      <tr>
+        <td>
+          <figure class="figure figure--icon">
+            {% include icons/octicons/{{ icon }} %}
+          </figure>
+        </td>
+        <td>{{ icon }}</td>
+        <td><code>_includes/icons/octicons/{{ icon }}</code></td>
+        <td>
+          <code><pre>
+            {% raw %}
+              {% include atoms/icon.html
+                library="octicons"
+                symbol="{% endraw %}{{ icon | remove: ".svg" }}{% raw %}"
+              %}
+            {% endraw %}
+          </pre></code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Simple Icons"
+  level="2"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign icons = site.data.icons.simple-icons.files | sort %}
+    {% for icon in icons %}
+      <tr>
+        <td>
+          <figure class="figure figure--icon">
+            {% include icons/simple-icons/{{ icon }} %}
+          </figure>
+        </td>
+        <td>{{ icon }}</td>
+        <td><code>_includes/icons/simple-icons/{{ icon }}</code></td>
+        <td>
+          <code><pre>
+            {% raw %}
+              {% include atoms/icon.html
+                library="simple-icons"
+                symbol="{% endraw %}{{ icon | remove: ".svg" }}{% raw %}"
+              %}
+            {% endraw %}
+          </pre></code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Other"
+  level="2"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign icons = site.data.icons.other.files | sort %}
+    {% for icon in icons %}
+      <tr>
+        <td>
+          <figure class="figure figure--icon">
+            {% include icons/other/{{ icon }} %}
+          </figure>
+        </td>
+        <td>{{ icon }}</td>
+        <td><code>_includes/icons/other/{{ icon }}</code></td>
+        <td>
+          <code><pre>
+            {% raw %}
+              {% include atoms/icon.html
+                library="other"
+                symbol="{% endraw %}{{ icon | remove: ".svg" }}{% raw %}"
+              %}
+            {% endraw %}
+          </pre></code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

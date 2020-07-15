@@ -14,7 +14,7 @@ meta:
 #permalink: /blog/post-title/
 #published: true
 #sitemap: true
-#tags: ["three", "four"]
+tags: ["Meta"]
 title: "Example post"
 ---
 

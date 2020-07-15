@@ -1,9 +1,22 @@
 ---
-layout: post
-dsq_thread_id: "108871495"
-title: Gmail hacks 
-tags: [Google]
---- 
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Forwarding and send as instructions for Wayne State LIS students in 2008."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /blog/post-title/
+#published: true
+#sitemap: true
+tags: ["Google"]
+title: "Gmail hacks"
+---
 
 Gmail is good.
 
@@ -15,7 +28,10 @@ It has a ton of storage. WSU Webmail does not. It's easy to forward your WSU web
   4. [Configure the gmail](http://www.g04.com/misc/GmailTipsComplete.html)
   5. [Apply Filters](http://www.lifehack.org/articles/technology/20-ways-to-use-gmail-filters.html)
 
-Applying filters is the most important part of this equation. Experts generally agree that you should [kick the email-checking habit](http://www.lifehack.org/articles/productivity/the-7-energy-sinkholes- and-how-to-avoid-them.html). By reducing the amount of stuff-you-don't-wanna-read from your inbox, you can save tons of time! Here are a few of my favorite filters (specific to the WSU LISP Listserv):
+Applying filters is the most important part of this equation. Experts generally agree that you should
+[kick the email-checking habit](http://www.lifehack.org/articles/productivity/the-7-energy-sinkholes- and-how-to-avoid-them.html).
+By reducing the amount of stuff-you-don't-wanna-read from your inbox, you can save tons of time! Here are a few of my favorite
+filters (specific to the WSU LISP Listserv):
 
 ##Reduces the number of textbook-selling emails
 
@@ -37,4 +53,5 @@ Subject:(JOB POSTING) Do this: Skip Inbox, Apply label "Job Posting"
 
 ##Tip
 
-One thing you can do with filters is forward your emails — so using [mailbucket](http://www.mailbucket.org/) you can make RSS feeds for certain threads.
+One thing you can do with filters is forward your emails — so using [mailbucket](http://www.mailbucket.org/) you can make
+RSS feeds for certain threads.

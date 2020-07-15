@@ -35,17 +35,51 @@ title: "Search engine optimization"
     <th>Img src</th>
     <th>Img alt</th>
     <th>Meta robots</th>
+    <th>Type</th>
   </thead>
   <tbody>
-    {% for page in site.pages %}
+    {% for page in site.html_pages %}
       <tr>
-        <td>{{ page.title }}</td>
+        <td>
+          {% if page.title %}
+            {% assign title = page.title %}
+          {% else %}
+            {% assign title = "(untitled)" %}
+          {% endif %}
+          <a href="{{ page.url | relative_url }}">{{ title }}</a>
+        </td>
         <td>{{ page.meta.description }}</td>
         <td>{{ page.meta.title }}</td>
         <td>{{ page.meta.image.src }}</td>
         <td>{{ page.meta.image.alt }}</td>
         <td>{{ page.meta.robots }}</td>
+        <td>Page</td>
       </tr>
+    {% endfor %}
+
+    {% assign collections = site.collections | where_exp:'collection','collection.output != false' %}
+    {% for collection in collections %}
+      {% assign docs = collection.docs | sort: "title", "last" %}
+      {% if docs[1] %}
+        {% for page in docs %}
+          <tr>
+            <td>
+              {% if page.title %}
+                {% assign title = page.title %}
+              {% else %}
+                {% assign title = "(untitled)" %}
+              {% endif %}
+              <a href="{{ page.url | relative_url }}">{{ title }}</a>
+            </td>
+            <td>{{ page.meta.description }}</td>
+            <td>{{ page.meta.title }}</td>
+            <td>{{ page.meta.image.src }}</td>
+            <td>{{ page.meta.image.alt }}</td>
+            <td>{{ page.meta.robots }}</td>
+            <td>{{ collection.label }}</td>
+          </tr>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   </tbody>
 </table>

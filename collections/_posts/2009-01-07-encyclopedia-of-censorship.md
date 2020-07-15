@@ -1,10 +1,26 @@
 ---
-layout: post
-title: Encyclopedia of Censorship
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "[Redacted]"
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /blog/post-title/
+#published: true
+#sitemap: true
 tags: [52for2009, censorship, encyclopedia]
---- 
+title: "Encyclopedia of Censorship"
+---
 
-Today's Encyclopedia in the series is [The Encyclopedia of Censorship](http://www.amazon.com/Encyclopedia-Censorship-Facts-Library-History/dp/0816044643), edited by Jonathon Green. Here are some Pros right off the bat: 
+Today's Encyclopedia in the series is
+[The Encyclopedia of Censorship](http://www.amazon.com/Encyclopedia-Censorship-Facts-Library-History/dp/0816044643), edited
+by Jonathon Green. Here are some Pros right off the bat:
 
   * It's a single volume, and we all know I'm a sucker for single-volume 'cycs
   * Due to its age, and for other reasons, this particular copy was in the Circulating collection
@@ -38,4 +54,7 @@ To the learning!
   25. [_Yates v. United States_ (1957)](http://en.wikipedia.org/wiki/Yates_v._United_States)
   26. [Zhdanovism](http://en.wikipedia.org/wiki/Zhdanov_Doctrine)
 
-The entry on Hugh Hefner was particularly entertaining; though I think I found more bad puns than the author had intended. Altogether, this encyclopedia was unimpressive. The articles were pithy to the point of uselessness, and there were many spelling and grammatical errors. Perhaps this is one of those books that's really a dictionary but was entitled with Encyclopedia to sound more official.
+The entry on Hugh Hefner was particularly entertaining; though I think I found more bad puns than the author had intended.
+Altogether, this encyclopedia was unimpressive. The articles were pithy to the point of uselessness, and there were many
+spelling and grammatical errors. Perhaps this is one of those books that's really a dictionary but was entitled with
+Encyclopedia to sound more official.

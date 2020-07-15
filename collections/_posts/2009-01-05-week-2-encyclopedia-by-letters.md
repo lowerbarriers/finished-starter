@@ -1,12 +1,28 @@
 ---
-layout: post
-title: Week 2 — Encyclopedia by Letters 
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Reading a bunch of articles and listing them"
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /blog/post-title/
+#published: true
+#sitemap: true
 tags: [52for2009, encyclopedia, great depression]
---- 
+title: "Week 2 — Encyclopedia by Letters"
+---
 
-This week I'm reading an entry from each letter of the alphabet (26 entries if you're keeping score) from a different Encyclopedia every day.
+This week I'm reading an entry from each letter of the alphabet (26 entries if you're keeping score) from a different
+Encyclopedia every day.
 
-Today was [Encyclopedia of the Great Depression](http://www.worldcat.org/oclc/52203085?tab=details#tabs), and here's what I read about: 
+Today was [Encyclopedia of the Great Depression](http://www.worldcat.org/oclc/52203085?tab=details#tabs), and here's what
+I read about:
 
   1. [American Youth Congress](http://en.wikipedia.org/wiki/American_Youth_Congress)
   2. [Bourke-White, Margaret](http://en.wikipedia.org/wiki/Margaret_Bourke-White)
@@ -35,8 +51,11 @@ Today was [Encyclopedia of the Great Depression](http://www.worldcat.org/oclc/52
   25. —
   26. —
 
-The impression I got from Jonathan Alter's [The Defining Moment](http://www.worldcat.org/oclc/63680088?tab=details#tabs) (or maybe it was a PBS special) was that FDR remained isolationist as late as his 1940 campaign. Even so, it seems people were derided for being isolationist and/or pacifist earlier than that. The things you learn! BTW, did you know Charles Lindbergh was born in Detroit?
+The impression I got from Jonathan Alter's [The Defining Moment](http://www.worldcat.org/oclc/63680088?tab=details#tabs)
+(or maybe it was a PBS special) was that FDR remained isolationist as late as his 1940 campaign. Even so, it seems people
+were derided for being isolationist and/or pacifist earlier than that. The things you learn! BTW, did you know Charles
+Lindbergh was born in Detroit?
 
 Altogether, it's a neat little two-volume set.
 
-[Week 1 note: I had a Turk-free weekend. When I've completed 8 hours, I'll post the final tally].
+Week 1 note: I had a Turk-free weekend. When I've completed 8 hours, I'll post the final tally.

@@ -1,21 +1,35 @@
 ---
-layout: post
-wp_id: 331
-title: Drupal and Git
-tags: [Web Design]
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "A presentation that made me locally infamous"
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /blog/post-title/
+#published: true
+#sitemap: true
+tags: ["Web Design"]
+title: "Drupal and Git"
 ---
+
 I'm honored to have been selected to present at the first-ever [DrupalCamp
 Michigan](http://drupalcampmi.org/). The local Drupal community is super
 strong: they opened registration for 50 people and it sold out so quickly they
 expanded to 100. Not being a good public speaker at all, you'd think this
 might be daunting. However, a combination of under-preparedness and lack of
 sleep really put me in the right mindset. So, without further ado, here are
-the [slides](http://bit.ly/gitdrupal) and a [video of the
-presentation](http://blip.tv/drupalcampmi/how-git-fits-into-your-
-workflow-5802593):
+the [slides](http://bit.ly/gitdrupal) and a
+[video of the presentation](http://blip.tv/drupalcampmi/how-git-fits-into-your-workflow-5802593):
 
-<p><iframe src="https://docs.google.com/presentation/embed?id=13uh9jabl4MQ_W1LVbVc8H_O2wJlQ5ptL6MEKKihzjDI&amp;start=false&amp;loop=false&amp;delayms=30000" frameborder="0" width="480" height="389"></iframe></p>
-<p><iframe src="http://blip.tv/play/h9h3guKVRQI.html" width="550" height="389" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#h9h3guKVRQI" style="display:none"></embed></p>
+<iframe src="https://docs.google.com/presentation/embed?id=13uh9jabl4MQ_W1LVbVc8H_O2wJlQ5ptL6MEKKihzjDI&amp;start=false&amp;loop=false&amp;delayms=30000" frameborder="0" width="480" height="389"></iframe>
+
+<iframe src="http://blip.tv/play/h9h3guKVRQI.html" width="550" height="389" frameborder="0" allowfullscreen></iframe>
 
 ## Notes
 
@@ -30,9 +44,8 @@ of the Drupal APIs, chances are you won't be able to learn much from me.
 
 ### WTF is a git!?
 
-The word git [was first a British slang word for an annoying or stupid
-perso](http://en.wikipedia.org/wiki/Git_%28software%29)n. The software was
-named self-deprecatingly from that word. I like to think git stands for
+The word git [was first a British slang word for an annoying or stupid person](http://en.wikipedia.org/wiki/Git_%28software%29).
+The software was named self-deprecatingly from that word. I like to think git stands for
 something else though: good shit.
 
 Git is a fast, distributed version control system.
@@ -46,7 +59,8 @@ apart.
 From what I've gathered, the most important [differences between git and other
 systems](http://whygitisbetterthanx.com/) are:
 
-  * Git is distributed נthis is important, because having a local copy of a repo lets you access the version history easily, commit whenever it makes sense, and push it to one or more repositories, or remotes, based on the structure of your project
+  * Git is distributed נthis is important, because having a local copy of a repo lets you access the version history easily,
+    commit whenever it makes sense, and push it to one or more repositories, or remotes, based on the structure of your project
   * Git reduces the pain of merging, which means that you can make lots of branches without worry
 
 Other systems, like CVS, subversion, and others, are also considered slow for
@@ -61,7 +75,8 @@ The [Drupal project switched from CVS to git in February
 
   1. Phase 1 was a git mirror, so that people could test and develop in git without affecting the project
   2. Phase 2 is a centralized model based entirely in git
-  3. Phase 3 will be a decentralized, GitHub-like model that will change the Drupal.org contribution workflow. Details are still being hashed out on that front
+  3. Phase 3 will be a decentralized, GitHub-like model that will change the Drupal.org contribution workflow. Details are
+    still being hashed out on that front
 
 ### Local Tools
 
@@ -109,7 +124,7 @@ So that's how you create a new repo from bash
 
 These are the git commands you might use in day-to-day work
 
-*Point at commands and explain what they do*  
+*Point at commands and explain what they do*
 ^ Learn what the commands do
 
 These commands are used less frequently (in general), but it's good to know
@@ -275,7 +290,7 @@ too. Some combination of the features, strongarm, context, and other helper
 modules could let you automate some impressive stuff — like pre-built views.
 
 Hint: it might be manual coding work, but if you install a whole bunch of
-similar sites, writing a [profile name].install file could be a time-saver in
+similar sites, writing a (profile name).install file could be a time-saver in
 the long run. Especially if you swipe one from an existing public profile and
 suit it to your needs.
 
