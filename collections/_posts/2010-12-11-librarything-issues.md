@@ -101,7 +101,10 @@ accessible versions of websites
 [are considered a last resort by standards bodies](http://www.webcredible.co.uk/user-friendly-resources/web-accessibility/text-only.shtml).
 Here's an example of the lack of Library Anywhere accessibility:
 
-[![](/images/lanojs.png)](/images/lanojs.png)
+{% include atoms/image.html
+  alt="Screenshot of Library Anywhere app with JavaScript disabled"
+  src="lanojs.png"
+%}
 
 This is how the regular version of Library Anywhere appears in a browser with JavaScript turned off. This may sound like
 a red herring at first, but the most recent numbers I've heard put non-JavaScript users are around 5%, while blind users,

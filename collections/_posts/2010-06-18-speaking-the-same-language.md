@@ -28,7 +28,10 @@ So, I'd like to be a bit less formal and start from the top.
 
 ## Information
 
-[![](/images/all_i_see_are_equations.png)](http://abstrusegoose.com/275)
+{% include atoms/image.html
+  alt="Abstruse Goose cartoon"
+  src="all_i_see_are_equations.png"
+%}
 
 The Universe is made up of information. This is particularly interesting in the context of concepts like
 [simulated reality](http://en.wikipedia.org/wiki/Simulated_reality). A computer simulating a Universe to as detailed an
@@ -65,8 +68,10 @@ The method of expression is language. [Languages](http://en.wikipedia.org/wiki/L
 
 ## Mixed Signals
 
-[![A Face-to-face conversation has components of verbal, body, and olfactory
-languages](/images/languages-of-a-conversation.jpg)](/images/languages-of-a-conversation.jpg)
+{% include atoms/image.html
+  alt="A Face-to-face conversation has components of verbal, body, and olfactory languages"
+  src="languages-of-a-conversation.jpg"
+%}
 
 [As Sue points out](http://bradczerniak.com/2010/05/31/on-transliteracy/#dsq-comment-57325439), I made no mention of body
 language in my previous post. She is absolutely correct, and has provided an excellent example of how to effectively wrestle

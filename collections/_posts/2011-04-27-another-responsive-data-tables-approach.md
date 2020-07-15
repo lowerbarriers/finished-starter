@@ -31,7 +31,10 @@ Coyier's solution is great in that each table cell is labeled. However, doing th
 for every data table on the site (which is near-impossible for large sites) or having the same thing done with scripting
 on either the server or client side:
 
-[![](/images/tables_content_in_css.png)](/images/tables_content_in_css.png)
+{% include atoms/image.html
+  alt="Table content in CSS"
+  src="tables_content_in_css.png"
+%}
 
 I propose a generalized solution that requires no scripting whatsoever. The drawback of this method, though, is that the
 cells are not individually labeled. The example is also more compact, but this aspect can be tweaked by marrying the two

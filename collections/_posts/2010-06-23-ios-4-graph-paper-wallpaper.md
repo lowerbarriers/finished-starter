@@ -20,10 +20,16 @@ title: "iOS 4 Graph Paper Wallpaper"
 
 I made this for my Dad for Father's Day, but figured other people might like it, too.
 
-[![](/images/960x640baselinegrid.jpg)](/images/960x640baselinegrid.jpg)
+{% include atoms/image.html
+  alt="A baseline grid"
+  src="960x640baselinegrid.jpg"
+%}
 
 When used as a home screen wallpaper, it looks like this:
 
-[![](/images/ios-grid.png)](/images/ios-grid.png)
+{% include atoms/image.html
+  alt="iOS grid"
+  src="ios-grid.png"
+%}
 
 Dad, I hope you like it.

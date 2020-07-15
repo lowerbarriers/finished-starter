@@ -64,13 +64,6 @@ main,
     flex-direction: column;
   }
 }
-@media all and (max-width: 767px) and (-ms-high-contrast: active),
-  all and (max-width: 767px) and (-ms-high-contrast: none) {
-  /* IE hack to avoid column spacing issues for responsive. */
-  .layout--row {
-    display: block;
-  }
-}
 
 /**
  * By default, stripes should have generous padding.

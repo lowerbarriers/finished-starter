@@ -90,7 +90,10 @@ are described.
 
 ### Visual Language
 
-[![An example of medium independence](/images/translit-medium-example.jpg)](/images/translit-medium-example.jpg)
+{% include atoms/image.html
+  alt="An example of medium independence"
+  src="translit-medium-example.jpg"
+%}
 
 Now we're getting somewhere! Visual language has structural units, like any other language.
 [Via Wikipedia](http://en.wikipedia.org/wiki/Visual_language):

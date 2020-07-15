@@ -11,7 +11,7 @@
 
     <ul class="pager--numbered list-style--none flex--2 align-items--center display--flex justify-content--center">
       {% for page in (1..paginator.total_pages) %}
-        <li class="pager--numbered--number flex--1 {% if page == paginator.page %}pager--number--current{% endif %}">
+        <li class="pager--numbered--number display--contents {% if page == paginator.page %}pager--number--current{% endif %}">
           <a class="pager--link pager--numbered--link button {% if page == paginator.page %}pager--link--current active{% endif %}"
              {% if page == 1 %}
                href="{{ include.base_url }}"

@@ -18,7 +18,10 @@ tags: [Libraries, Transliteracy]
 title: "Redefining Transliteracy"
 ---
 
-[![](/images/weirdcomm.jpg)](/images/weirdcomm.jpg)
+{% include atoms/image.html
+  alt="Weird communication"
+  src="weirdcomm.jpg"
+%}
 
 ### Preface
 

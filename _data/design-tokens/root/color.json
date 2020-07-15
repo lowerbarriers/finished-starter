@@ -50,79 +50,79 @@
     },
     "second": {
       "category": "Theme",
-      "description": "",
+      "description": "Medium shade of what is usually a hot color like red, yellow, or orange",
       "type": "color",
       "value": "#f07167"
     },
     "second-dark": {
       "category": "Theme",
-      "description": "",
+      "description": "A darker shade of the secondary hue",
       "type": "color",
       "value": "#331716"
     },
     "second-light": {
       "category": "Theme",
-      "description": "",
+      "description": "A light shade of the secondary hue",
       "type": "color",
       "value": "#ffcfcc"
     },
     "third": {
       "category": "Theme",
-      "description": "",
+      "description": "The third brand/theme color in a medium shade",
       "type": "color",
       "value": "#00afb9"
     },
     "third-dark": {
       "category": "Theme",
-      "description": "",
+      "description": "A dark shade of the third hue",
       "type": "color",
       "value": "#003033"
     },
     "third-light": {
       "category": "Theme",
-      "description": "",
+      "description": "A light shade of the third hue",
       "type": "color",
       "value": "#ccfcff"
     },
     "accent": {
       "category": "Theme",
-      "description": "",
+      "description": "A special color, often a medium shade. If the brand has a purple or teal, it is great here",
       "type": "color",
       "value": "#6100a7"
     },
     "status": {
       "category": "UI",
-      "description": "",
+      "description": "Text color for status alerts",
       "type": "color",
       "value": "#004085"
     },
     "status-background": {
       "category": "UI",
-      "description": "",
+      "description": "Background color for status alerts",
       "type": "color",
       "value": "#cce5ff"
     },
     "warning": {
       "category": "UI",
-      "description": "",
+      "description": "Text color for warning alerts",
       "type": "color",
       "value": "#856404"
     },
     "warning-background": {
       "category": "UI",
-      "description": "",
+      "description": "Background color for warning alerts",
       "type": "color",
       "value": "#fff3cd"
     },
     "error": {
       "category": "UI",
-      "description": "",
+      "description": "Text color for error alerts",
       "type": "color",
       "value": "#721c24"
     },
     "error-background": {
       "category": "UI",
-      "description": "",
+      "description": "Background color for error alerts",
       "type": "color",
       "value": "#f8d7da"
     }

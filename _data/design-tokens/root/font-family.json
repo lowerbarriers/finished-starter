@@ -2,25 +2,25 @@
   "font-family": {
     "input": {
       "category": "Typography",
-      "description": "One of the four font groups",
+      "description": "Font used for form fields, primarily",
       "type": "font-family",
       "value": "'Public Sans', Arial, Helvetica, sans-serif"
     },
     "monospace": {
       "category": "Typography",
-      "description": "One of the four font groups",
+      "description": "Code font. Usually defaults to a web-safe font",
       "type": "font-family",
       "value": "'courier new', courier, monospace"
     },
     "primary": {
       "category": "Typography",
-      "description": "One of the four font groups",
+      "description": "Main body copy and erstwhile main font",
       "type": "font-family",
       "value": "'Public Sans', Arial, Helvetica, sans-serif"
     },
     "secondary": {
       "category": "Typography",
-      "description": "One of the four font groups",
+      "description": "Font for headings and other visual emphasis",
       "type": "font-family",
       "value": "'Emberly', Georgia, Times New Roman, serif"
     }

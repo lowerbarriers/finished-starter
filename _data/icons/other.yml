@@ -1,2 +1,8 @@
+####
+## @file
+## A listing of all icons in the library, for use in the documentation.
+##
+## This file can be regenerated with `ls -1` and some regex find/replace. Paste this comment back on top.
+####
 files:
   - share.svg

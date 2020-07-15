@@ -20,6 +20,12 @@ title: "His name is Miles, get it?"
 
 For all you LOST fans. These have been around for a while, but I figured they were worth putting up:
 
-[![Nautical Miles](/images/nauticalmiles.png)](/images/nauticalmiles.png)
+{% include atoms/image.html
+  alt="Nautical Miles"
+  src="nauticalmiles.png"
+%}
 
-[![Frequest Flyer Miles](/images/frequentflyermiles.png)](/images/frequentflyermiles.png)
+{% include atoms/image.html
+  alt="Frequent flyer Miles"
+  src="frequentflyermiles.png"
+%}

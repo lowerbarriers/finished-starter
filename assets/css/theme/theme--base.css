@@ -526,7 +526,7 @@ mark,
 }
 
 p {
-  margin: calc(1 * var(--spacing--single)) 0;
+  margin: calc(2.5 * var(--spacing--single)) 0;
   max-width: 75ch;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -536,12 +536,6 @@ p:first-child {
 }
 p:last-child {
   margin-bottom: 0;
-}
-@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  /* Browser targeting hack. */
-  p {
-    max-width: 100ch;
-  }
 }
 
 /**
@@ -757,6 +751,7 @@ textarea {
 }
 
 .button,
+.button:link,
 button {
   background-color: var(--color--main);
   border: var(--border--default);
@@ -771,6 +766,9 @@ button {
   text-align: center;
   text-decoration: none;
   transition: var(--transition--default);
+}
+.button:visited {
+  color: var(--color--white);
 }
 .button:hover,
 button:hover,
