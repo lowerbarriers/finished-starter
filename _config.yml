@@ -17,8 +17,8 @@
 ####
 
 ## Technical site info
-baseurl: "" # This is better empty
-subpath: "" # Could be a subsite of a domain at a path, ex. "/sub-site"
+#baseurl: "" # This is better empty
+#subpath: "" # Could be a subsite of a domain at a path, ex. "/sub-site"
 google_analytics: UA-697953-3 # The UA- code provided by GA
 
 ## The option below lets you choose between having Jekyll process and minify your CSS and JS (good enough), or adding a
