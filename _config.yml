@@ -18,8 +18,8 @@
 
 ## Technical site info
 #baseurl: "" # This is better empty
-#subpath: "" # Could be a subsite of a domain at a path, ex. "/sub-site"
-google_analytics: UA-697953-3 # The UA- code provided by GA
+subpath: "/finished-starter" # Could be a subsite of a domain at a path, ex. "/sub-site"
+#google_analytics: UA-697953-3 # The UA- code provided by GA
 
 ## The option below lets you choose between having Jekyll process and minify your CSS and JS (good enough), or adding a
 ## step whenever you work on a CSS or JS file to run the .scripts/pre-commit.sh script before committing. This extra
@@ -32,10 +32,10 @@ no_pre_commit_dependencies: "false, style and script" # Set to true to make the 
 #content_security_policy: "default-src 'self'; script-src 'self' 'unsafe-inline'"
 
 ## Basic site info
-title: "Brad Czerniak"
+title: "finished-starter"
 primary_author: "Brad Czerniak"
-shortname: bpcz
-tagline: "The solve-it-once guy"
+shortname: fin-start
+tagline: "A website, not a project"
 
 ## Site and contact bits
 email: ao5357@gmail.com
@@ -43,7 +43,7 @@ email: ao5357@gmail.com
 #  display: "(248) 555-0123" # Fax number as displayed
 #  mailto: "12485550213" # Fex number with country code for the link
 locations:
-  - name: "Brad Czerniak"
+  - name: "Lower Barriers"
     street_address: "1428 Mark Ave"
     locality: Lincoln Park
     region: MI
