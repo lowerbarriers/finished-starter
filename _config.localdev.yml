@@ -1,0 +1,20 @@
+####
+## @file
+## Jekyll configuration
+##
+## This config is for local development overrides, such as the subpath.
+##
+## If you need help with YAML syntax, here are some quick references for you:
+## https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+## https://learnxinyminutes.com/docs/yaml/
+##
+## Throughout this file, you'll see two # marks at the start of a line for a permanent comment, and a single # for
+## configuration options that can be enabled by removing the #.
+##
+## When adding new sections, be sure to name them so they make sense to others, and to document with good comments
+## wherever possible/practical.
+####
+
+## Technical site info
+#baseurl: "" # This is better empty
+subpath: "" # Could be a subsite of a domain at a path, ex. "/sub-site"

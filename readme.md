@@ -10,6 +10,54 @@ that you can customize and extend to suit your needs.
 All the repetitive stuff for content, performance, SEO, accessibility, testing, etc. is done, so you can focus on what
 makes your site special.
 
+## Installation
+
+  1. Fork the repository (button at top of repo page)
+  2. On your forked repository page, go to 'Settings' and rename the repository to match your desired behavior
+    * Most of the time you will want `user/organization-name`.github.io
+    * It can also be any name, typically using the `gh-pages` branch
+  3. Edit to your heart's content
+
+If you want to use netlify,
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowerbarriers/finished-starter)
+
+If you prefer Vercel,
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/lowerbarriers/finished-starter)
+
+### Creating a local version for development
+
+  1. Clone the repository to your local machine
+  2. `cd` into it
+  3. Run the command `bundle install` in the root of the project to get the Jekyll standard items (requires
+    [bundler](https://bundler.io/))
+  4. Run `npm install` in the root of the project for non-required build dependencies (requires node and npm)
+  5. Run `bbundle exec jekyll serve --verbose --config _config.yml,_config.localdev.yml` to build and serve your site to
+    `http://localhost:4000/`
+
+Optionally you can look at the comments in the `.scripts/` directory for any image (optipng, pngcrush, jpegoptim, webp) and
+other dependencies for optimizing assets on the back end. This helps improve front-end performance if you can manage it.
+
+You can run the `.scripts/` from the project root, ideally when the server is not running since it will trigger a rebuild.
+
+```shell script
+user@computername $ .scripts/images.sh
+```
+
+and
+
+```shell script
+user@computername $ .scripts/pre-commit.sh
+```
+
+#### Aggressive caching
+
+While the service worker cache should increment every time the site builds, often you will have to use the 'Application'
+tab of the devtools to clear all site storage and caches. Keeping the devtools open also allows you to right-click the refresh
+button to select "Empty cache and hard reload".
+
+This is a mild inconvenience you learn to live with and admire, and is a reminder that front-end performance and optimization
+is important.
+
 ## Features
 
 The original version of this codebase gets four 100s in [Lighthouse](https://github.com/GoogleChrome/lighthouse) testing,
@@ -75,52 +123,6 @@ Also the following:
   * Four pre-configured menus: utility, main, footer, copyright
   * Editor configs and linters in place for consistent code styles
   * **Test coverage**: behavioral-like "user story" test definitions for both human and automated verification
-
-## Installation
-
-  1. Fork the repository (button at top of repo page)
-  2. On your forked repository page, go to 'Settings' and rename the repository to match your desired behavior
-    * Most of the time you will want `user/organization-name`.github.io
-    * It can also be any name, typically using the `gh-pages` branch
-  3. Edit to your heart's content
-
-If you want to use netlify,
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowerbarriers/finished-starter)
-
-If you prefer Vercel,
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/lowerbarriers/finished-starter)
-
-### Creating a local version for development
-
-  1. Clone the repository to your local machine
-  2. `cd` into it
-  3. Run the command `bundle install` in the root of the project to get the Jekyll standard items (requires [bundler](https://bundler.io/))
-  4. Run `npm install` in the root of the project for non-required build dependencies (requires node and npm)
-  5. Run `bundle exec jekyll serve --verbose` to build and serve your site to `http://localhost:4000/`
-
-Optionally you can look at the comments in the `.scripts/` directory for any image (optipng, pngcrush, jpegoptim, webp) and
-other dependencies for optimizing assets on the back end. This helps improve front-end performance if you can manage it.
-
-You can run the `.scripts/` from the project root, ideally when the server is not running since it will trigger a rebuild.
-
-```shell script
-user@computername $ .scripts/images.sh
-```
-
-and
-
-```shell script
-user@computername $ .scripts/pre-commit.sh
-```
-
-#### Aggressive caching
-
-While the service worker cache should increment every time the site builds, often you will have to use the 'Application'
-tab of the devtools to clear all site storage and caches. Keeping the devtools open also allows you to right-click the refresh
-button to select "Empty cache and hard reload".
-
-This is a mild inconvenience you learn to live with and admire, and is a reminder that front-end performance and optimization
-is important.
 
 ## Customizing
 

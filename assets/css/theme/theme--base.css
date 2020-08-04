@@ -130,7 +130,7 @@ body {
     background-image: none;
     filter: grayscale(100%) invert(100%);
   }
-  figure {
+  figure img {
     filter: invert(100%);
   }
 }
