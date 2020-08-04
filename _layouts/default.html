@@ -74,7 +74,7 @@ layout: compress
     {% include head/gdpr--cookie-disclosure.html %}
 
     {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
-      <script async defer src="{{ site.subpath }}/assets/js/pre-commit-dependency/behavior.js"></script>
+      <script async defer src="{{ site.subpath }}/assets/js/pre-commit-dependency.js"></script>
     {% else %}
       <script async defer src="{{ site.subpath }}/assets/js/behavior.js"></script>
     {% endif %}
