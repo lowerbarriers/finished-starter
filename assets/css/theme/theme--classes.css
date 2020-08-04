@@ -91,7 +91,7 @@
   );
 }
 .background-image--hero-home {
-  background-image: url("/assets/images/in-css/hero-home.jpg");
+  background-image: url("../images/in-css/hero-home.jpg");
   background-position: bottom left;
   background-repeat: no-repeat;
   min-height: 50vw; /* Roughly the aspect ratio. */

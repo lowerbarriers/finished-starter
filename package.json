@@ -16,8 +16,8 @@
     "browserslist": "env BROWSERSLIST_CONFIG=./_includes/.browserslistrc browserslist",
     "prettier-css": "prettier --write 'assets/css/{theme,utility}/*.css'",
     "prettier-js": "prettier --write 'assets/js/partials/*.js'",
-    "purgecss": "purgecss -c .node_config/purgecss.config.js -o assets/css/pre-commit-dependency/",
-    "terser": "terser _site/assets/js/behavior.js -o assets/js/pre-commit-dependency/behavior.js"
+    "purgecss": "purgecss -c .node_config/purgecss.config.js -o assets/css/pre-commit-dependency.css",
+    "terser": "terser _site/assets/js/behavior.js -o assets/js/pre-commit-dependency.js"
   },
   "dependencies": {},
   "devDependencies": {
