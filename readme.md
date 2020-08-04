@@ -4,6 +4,8 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/lowerbarriers/finished-starter)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+[![finshed-starter](assets/images/required/meta-image--default.jpg)](https://github.com/lowerbarriers/finished-starter)
+
 This is a great codebase to clone or fork if you want a full-fledged site **completely free** out of the box on day one,
 that you can customize and extend to suit your needs.
 
