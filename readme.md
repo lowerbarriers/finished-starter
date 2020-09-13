@@ -36,8 +36,8 @@ If you prefer Vercel,
   5. Run `bundle exec jekyll serve --verbose --config _config.yml,_config.localdev.yml` to build and serve your site to
     `http://localhost:4000/`
 
-Optionally you can look at the comments in the `.scripts/` directory for any image (optipng, pngcrush, jpegoptim, webp) and
-other dependencies for optimizing assets on the back end. This helps improve front-end performance if you can manage it.
+Optionally you can look at the comments in the `.scripts/` directory for any image (optipng, pngcrush, jpegoptim, webp, avif)
+and other dependencies for optimizing assets on the back end. This helps improve front-end performance if you can manage it.
 
 You can run the `.scripts/` from the project root, ideally when the server is not running since it will trigger a rebuild.
 
@@ -92,8 +92,8 @@ Also the following:
     [specificity graph](https://jonassebastianohlsson.com/specificity-graph/)
   * Clean break = [**no** Internet Explorer support](https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer-and-edge).
     It's the 2020s. Friendly conditional-comment message for IE users just in case
-  * [webp](https://www.tecmint.com/convert-images-to-webp-format-in-linux/) next-generation image format support built in
-    via scripts and components
+  * [webp](https://www.tecmint.com/convert-images-to-webp-format-in-linux/) and [avif](https://jakearchibald.com/2020/avif-has-landed/)
+    next-generation image formats support built in via scripts and components
   * Baked-in site search single-page app (SPA) simulating HTTP GET, with title boosts, highlighted excerpts, and History API
   * 'Collections' (AKA "content types") with semantic value: docs, events, forms, people, posts, products, pages
   * [Service worker](https://web.dev/service-worker-mindset/) with offline capability.
@@ -251,8 +251,8 @@ Graphic designers on your team are best served knowing 1200x630 is the preferred
 time.
 
 See `/scripts/images.sh` for instructions and commands to optimize JPEG and PNG files, as well as the script's core purpose
-of generating webp versions of image assets. The webp version will be the original filename with '.webp' appended -- and the
-image component uses this pattern to figure out whether a webp version exists in order to include it.
+of generating avif/webp versions of image assets. The webp version will be the original filename with '.webp' appended --
+and the image component uses this pattern to figure out whether a webp version exists in order to include it.
 
 When including images in content, overwhelmingly prefer the liquid include `_includes/atoms/image.html`:
 
@@ -265,7 +265,7 @@ When including images in content, overwhelmingly prefer the liquid include `_inc
 %}
 ```
 
-over markdown or hard-coded HTML. This ensures the webp images, lazy loading, and `<figure>`/`<picture>` semantics
+over markdown or hard-coded HTML. This ensures the avif/webp images, lazy loading, and `<figure>`/`<picture>` semantics
 work consistently across the site.
 
 ## Reasoning
