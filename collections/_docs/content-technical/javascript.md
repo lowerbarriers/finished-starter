@@ -162,6 +162,7 @@ item possible. The class dynamically does the following (conditional on the clas
     </div>
     <figure class="figure figure--image figure--card--image order--neg1">
       <picture class="picture picture--lazy-load layout--hide--no-javascript" itemprop="image">
+        <source data-srcset="/assets/images/required/meta-image--default.jpg.avif" type="image/avif">
         <source data-srcset="/assets/images/required/meta-image--default.jpg.webp" type="image/webp">
         <img data-src="/assets/images/required/meta-image--default.jpg" alt="Default alt text" loading="lazy">
       </picture>

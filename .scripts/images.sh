@@ -28,3 +28,8 @@
 for i in `find assets/ -name "*.jpg"`; do cwebp -q 75 $i -o $i.webp; done
 for i in `find assets/ -name "*.png"`; do cwebp -q 85 $i -o $i.webp; done
 for i in `find assets/ -name "*.gif"`; do gif2webp -q 75 $i -o $i.webp; done
+
+# If cavif [https://github.com/kornelski/cavif-rs/releases] available, make AVIFs like webp above.
+# @todo Switch this to the reference implementation once that's stable.
+for i in `find assets/ -name "*.jpg"`; do cavif $i -o $i.avif; done
+for i in `find assets/ -name "*.png"`; do cavif $i -o $i.avif; done
