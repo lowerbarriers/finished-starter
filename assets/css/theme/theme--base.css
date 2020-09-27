@@ -70,6 +70,14 @@ section {
 }
 
 /**
+ * Attempt snappier rendering performance with the content-visibility property on stripes.
+ */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 850px; /* Magic number heuristic for average stripe height. */
+}
+
+/**
  * Normalize and bugfix for some HTML5 media elements.
  */
 audio,
