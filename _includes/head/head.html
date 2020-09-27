@@ -9,6 +9,10 @@
   {% endfor %}
 {% endif %}
 
+{% comment %}<!-- While not explicitly blocking, these icon calls tend to behave best early in a head. -->{% endcomment %}
+<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
+<link rel="shortcut icon" href="{{ site.url }}{{ site.subpath }}/favicon.ico" />
+
 {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
   <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency.css" media="print" onload="this.media='all'" />
 {% else %}
@@ -110,12 +114,11 @@
 <meta name="apple-mobile-web-app-title" content="{{ site.shortname }}" />
 <meta name="theme-color" content="{{ site.manifest_webmanifest.theme_color }}" />
 <meta name="Generator" content="{{ site.meta.generator }}" />
-<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
-<link rel="manifest" href="{{ site.subpath }}/manifest.webmanifest" />
+<link rel="manifest" href="{{ site.url }}{{ site.subpath }}/manifest.webmanifest" />
 <link rel="author" href="{{ site.url }}{{ site.subpath }}/humans.txt" />
-<link rel="search" type="application/opensearchdescription+xml" href="{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.subpath }}/rss/blog/" title="Blog feed" />
-<link rel="alternate" type="application/json" href="{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.subpath }}/rss/events/" title="Events feed" />
-<link rel="alternate" type="application/json" href="{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
-<link rel="alternate" type="application/list+json" href="{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />
+<link rel="search" type="application/opensearchdescription+xml" href="{{ site.url }}{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.subpath }}/rss/blog/" title="Blog feed" />
+<link rel="alternate" type="application/json" href="{{ site.url }}{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.subpath }}/rss/events/" title="Events feed" />
+<link rel="alternate" type="application/json" href="{{ site.url }}{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
+<link rel="alternate" type="application/list+json" href="{{ site.url }}{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />

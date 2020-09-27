@@ -6,8 +6,15 @@ layout: compress
 
 document.body.classList.add('js');
 
+/**
+ * @file
+ * Load the service worker script at the site root.
+ */
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("{{ site.subpath }}/service-worker.js");
+}
+
 /* Globals and utilities. */
-{% include_relative partials/service-worker--register.js %}
 {% include_relative partials/js--event--eventType.js %}
 {% include_relative partials/body--scroll.js %}
 {% include_relative partials/utility--initializer.js %}
