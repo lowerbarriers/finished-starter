@@ -19,6 +19,11 @@ layout: compress
   </head>
   <body class="page--{% if page.front %}front{% else %}{{ page.url | slugify }}{% endif %}"
     itemscope itemtype="http://schema.org/{% if page.schema.type %}{{ page.schema.type }}{% else %}{{ site.schema.type }}{% endif %}">
+
+    {% comment %}<!--
+      We don't support old Internet Explorer versions.
+      Also, we want to give users of different abilities and device types the ability to skip the nav to the content.
+    -->{% endcomment %}
     {% include head/ie-upgrade-warning.html %}
     {% include head/a11y--skip-hide.html %}
 
@@ -44,7 +49,7 @@ layout: compress
     {% endif %}
 
     {% comment %}<!-- Set to true or remove conditional to show the external utility menu above the header. -->{% endcomment %}
-    {% if true %}
+    {% if false %}
       {% include organisms/utility-external.html %}
     {% endif %}
 

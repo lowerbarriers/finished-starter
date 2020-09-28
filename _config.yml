@@ -26,6 +26,7 @@ subpath: "/finished-starter" # Could be a subsite of a domain at a path, ex. "/s
 ## step minimizes the size of the CSS/JS files for better front-end performance, but is obviously kind of a pain in the
 ## butt.
 no_pre_commit_dependencies: "false, style and script" # Set to true to make the site work without added script hooks
+filament_load_css: "false" # Use the https://www.filamentgroup.com/lab/load-css-simpler/ technique to async CSS.
 
 ## Content-Security-Policy is preferably something to set in the HTTP headers, but is available here just in case.
 ## @see https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
@@ -33,12 +34,12 @@ no_pre_commit_dependencies: "false, style and script" # Set to true to make the 
 
 ## Basic site info
 title: "finished-starter"
-primary_author: "Brad Czerniak"
+primary_author: "Lower Barriers" # This is shown in the copyright statement in the footer of the site.
 shortname: fin-start
 tagline: "A website, not a project"
 
 ## Site and contact bits
-email: ao5357@gmail.com
+email: helper@lowerbarriers.org
 #fax:
 #  display: "(248) 555-0123" # Fax number as displayed
 #  mailto: "12485550213" # Fex number with country code for the link
@@ -50,48 +51,38 @@ locations:
     postal_code: "48146"
     country_name: USA
 phone:
-  display: "(248) 721-0350" # Phone number as displayed
-  mailto: "12487210350" # Phone number with country code for the link
+  display: "(313) 649-7359" # Phone number as displayed
+  mailto: "13136497359" # Phone number with country code for the link
 
 ## Social links
 ## Find icons in _includes/icons/[library]/[symbol].svg
 ## The _includes/icons/simple-icons library has all the social ones.
 social:
   - title: Facebook
-    url: https://www.facebook.com/bradczerniak
+    url: https://www.facebook.com/lowerbarriers
     icon:
       library: simple-icons
       symbol: facebook
   - title: Twitter
-    url: https://twitter.com/ao5357
+    url: https://twitter.com/lowerbarriers
     icon:
       library: simple-icons
       symbol: twitter
   - title: GitHub
-    url: https://github.com/ao5357
+    url: https://github.com/lowerbarriers/finished-starter
     icon:
       library: simple-icons
       symbol: github
-  - title: Drupal
-    url: https://drupal.org/user/313975
-    icon:
-      library: simple-icons
-      symbol: drupal
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/bczerniak
-    icon:
-      library: simple-icons
-      symbol: linkedin
 
 ## Press contact
 ## For small sites this is the same person and contact information as above. For companies... probably not.
 press:
   name: "Brad Czerniak"
   job_title: "Webmaster"
-  email: "ao5357@gmail.com"
+  email: "helper@lowerbarriers.org"
   phone:
-    display: "(248) 721-0350" # Phone number as displayed
-    mailto: "12487210350" # Phone number with country code for the link
+    display: "(313) 649-7359" # Phone number as displayed
+    mailto: "13136497359" # Phone number with country code for the link
 
 ## The <html> tag has language and language direction. We can make it configurable
 html:
@@ -101,7 +92,7 @@ html:
 
 ## Standard <meta> tags for SEO, etc.
 meta:
-  description: "Brad Czerniak is a web business problem-solver."
+  description: "finished-starter is the best free website on the market."
   generator: "[Jekyll](https://github.com/mojombo/jekyll)"
   image:
     alt: "Site default social image" # It's okay for this to be an empty string if the image is decorative
@@ -126,8 +117,8 @@ schema:
 ## @see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started
 twitter:
   card: "summary_large_image"
-  creator: "@ao5357"
-  site: "@ao5357"
+  creator: "@lowerbarriers"
+  site: "@lowerbarriers"
 
 ## PWA and other SEO
 ## @see https://developer.mozilla.org/en-US/docs/Web/Manifest
@@ -155,7 +146,9 @@ snipcart:
 ## @see https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content
 woff:
   - "public_sans/public_sans_variable.woff2"
+  - "emberly/emberly-variable.woff2"
   - "public_sans/public_sans_variable_italic.woff2"
+  - "emberly/emberly-variable-italic.woff2"
 
 ## The 'THANKS' and 'SITE' sections of humans.txt
 ## @see http://humanstxt.org/
