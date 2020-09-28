@@ -96,6 +96,11 @@
   background-repeat: no-repeat;
   min-height: 50vw; /* Roughly the aspect ratio. */
 }
+.background-image--hero-standout {
+  background-image: url("../images/in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 /**
  * Effects based on scroll.

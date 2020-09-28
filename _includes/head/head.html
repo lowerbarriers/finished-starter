@@ -9,23 +9,35 @@
   {% endfor %}
 {% endif %}
 
-{% comment %}<!-- While not explicitly blocking, these icon calls tend to behave best early in a head. -->{% endcomment %}
-<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
-<link rel="shortcut icon" href="{{ site.url }}{{ site.subpath }}/favicon.ico" />
-
-{% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
-  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency.css" media="print" onload="this.media='all'" />
+{% if site.filament_load_css == true %}
+  {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency.css"
+      media="print" onload="this.media='all'" />
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css"
+      media="print" onload="this.media='all'" />
+  {% endif %}
+  <noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" /></noscript>
+  {% include head/loading.html %}
 {% else %}
-  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" media="print" onload="this.media='all'" />
+  {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency.css" />
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" />
+  {% endif %}
 {% endif %}
-<noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" /></noscript>
-{% include head/loading.html %}
+
 {% if page.attached.css[0] %}
   {% for css in page.attached.css %}
+    {% comment %}<!-- Continue using filament technique for non-blocking CSS. -->{% endcomment %}
     <link rel="stylesheet" type="text/css" href="{{ site.subpath }}{{ css }}" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}{{ css }}" /></noscript>
   {% endfor %}
 {% endif %}
+
+{% comment %}<!-- While not explicitly blocking, these icon calls tend to behave best early in a head. -->{% endcomment %}
+<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
+<link rel="shortcut icon" href="{{ site.url }}{{ site.subpath }}/favicon.ico" />
 
 {% comment %}
   <!-- Page title (auto-appended with site title). Allow a different title tag string than the title that appears
