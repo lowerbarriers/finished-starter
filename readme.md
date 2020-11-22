@@ -4,13 +4,31 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/lowerbarriers/finished-starter)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-[![finshed-starter](assets/images/required/meta-image--default.jpg)](https://github.com/lowerbarriers/finished-starter)
+[![finshed-starter](assets/images/required/readme-screenshot.jpg)](https://github.com/lowerbarriers/finished-starter)
 
-This is a great codebase to clone or fork if you want a full-fledged site **completely free** out of the box on day one,
+This is great code to copy if you want a full-fledged site **completely free** out of the box on day one,
 that you can customize and extend to suit your needs.
 
 All the repetitive stuff for content, performance, SEO, accessibility, testing, etc. is done, so you can focus on what
 makes your site special.
+
+**Some of the wheels you won't have to reinvent**:
+
+  * **Blog** — with pagers, categories, tags, and bylines
+  * **Events** — with listings for current/future events and also past events
+  * **Forms** — results sent to your email automatically. Also a mailchimp subscription form
+  * **E-commerce** — products, cart, the whole deal ready to go
+  * **Search** — it just works
+  * **Pages and content** — Home, About, Privacy Policy, Terms and conditions, it's all there
+  * **Atomic components** — Insert fancy components, including layouts, anywhere you want
+  * **Accessibility** — Maybe not perfect <abbr title="Accessibility">a11y</abbr>, but we _try_ and care
+  * **Icons** — Easy to use and accessible
+  * **Vanilla code** — Better CSS than tailwind, less CSS needed than... anything!
+  * **Feeds and SEO** — All of the tags and feeds you could want. Social share images, too
+  * **Cloud CMS** — Forestry.io set up, so you can manage your site easily
+  * **Progressive Web App (PWA)** — Your site is offline-capable and installable on devices
+  * **Performance** — Tons of optimizations to eke out extra milliseconds of speed
+  * **Documentation** — A site with a design system and more docs than you'll believe
 
 ## Installation
 
@@ -61,6 +79,8 @@ This is a mild inconvenience you learn to live with and admire, and is a reminde
 is important.
 
 ## Features
+
+[![finshed-starter](assets/images/required/meta-image--default.jpg)](https://github.com/lowerbarriers/finished-starter)
 
 The original version of this codebase gets four 100s in [Lighthouse](https://github.com/GoogleChrome/lighthouse) testing,
 has valid HTML per [the w3 validator](http://validator.w3.org/), and has zero errors per [the WAVE tool](https://wave.webaim.org/).
