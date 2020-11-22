@@ -17,7 +17,7 @@ layout: compress
     {% comment %}<!-- The rest of the html <head> is in a separate include. This file was getting big. -->{% endcomment %}
     {% include head/head.html %}
   </head>
-  <body class="page--{% if page.front %}front{% else %}{{ page.url | slugify }}{% endif %}"
+  <body class="page--{% if page.front %}front{% else %}{{ page.url | slugify }}{% endif %} webp--disabled"
     itemscope itemtype="http://schema.org/{% if page.schema.type %}{{ page.schema.type }}{% else %}{{ site.schema.type }}{% endif %}">
 
     {% comment %}<!--
