@@ -1,0 +1,124 @@
+images:
+  - path: '1200x630/banana-invert.jpg'
+    height: 630
+    width: 1200
+  - path: '1200x630/banana-invert.jpg.webp'
+    height: 630
+    width: 1200
+  - path: '1200x630/brad-czerniak.jpg.webp'
+    height: 630
+    width: 1200
+  - path: '1200x630/banana.jpg.webp'
+    height: 630
+    width: 1200
+  - path: '1200x630/cytonn-photography-n95VMLxqM2I-unsplash.jpg.webp'
+    height: 630
+    width: 1200
+  - path: '1200x630/brad-czerniak.jpg'
+    height: 630
+    width: 1200
+  - path: '1200x630/noaa-aySTZ82UGus-unsplash.jpg'
+    height: 631
+    width: 1200
+  - path: '1200x630/banana.jpg'
+    height: 630
+    width: 1200
+  - path: '1200x630/john-locke.jpg'
+    height: 630
+    width: 1200
+  - path: '1200x630/john-locke.jpg.webp'
+    height: 630
+    width: 1200
+  - path: '1200x630/cytonn-photography-n95VMLxqM2I-unsplash.jpg'
+    height: 630
+    width: 1200
+  - path: '1200x630/noaa-aySTZ82UGus-unsplash.jpg.webp'
+    height: 631
+    width: 1200
+  - path: 'in-css/hero-home.jpg'
+    height: 972
+    width: 1920
+  - path: 'in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg.webp'
+    height: 1278
+    width: 1920
+  - path: 'in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg'
+    height: 1278
+    width: 1920
+  - path: 'in-css/hero-home.jpg.webp'
+    height: 972
+    width: 1920
+  - path: 'required/tile.png'
+    height: 558
+    width: 558
+  - path: 'required/s.gif'
+    height: 1
+    width: 1
+  - path: 'required/demo.jpg.webp'
+    height: 630
+    width: 1200
+  - path: 'required/demo_bw.jpg.webp'
+    height: 630
+    width: 1200
+  - path: 'required/logo-mark_512.png.webp'
+    height: 512
+    width: 512
+  - path: 'required/demo_bw.jpg'
+    height: 630
+    width: 1200
+  - path: 'required/tile.png.webp'
+    height: 558
+    width: 558
+  - path: 'required/demo.jpg'
+    height: 630
+    width: 1200
+  - path: 'required/s.webp'
+    height: 446
+    width: 11330
+  - path: 'required/tile-wide.png'
+    height: 270
+    width: 558
+  - path: 'required/tile-wide.png.webp'
+    height: 270
+    width: 558
+  - path: 'required/readme-screenshot.jpg.webp'
+    height: 1218
+    width: 1895
+  - path: 'required/logo-mark_512.png'
+    height: 512
+    width: 512
+  - path: 'required/meta-image--default.jpg.webp'
+    height: 630
+    width: 1200
+  - path: 'required/logo.png.webp'
+    height: 73
+    width: 73
+  - path: 'required/meta-image--default.jpg'
+    height: 630
+    width: 1200
+  - path: 'required/apple-touch-icon.png'
+    height: 512
+    width: 512
+  - path: 'required/apple-touch-icon.png.webp'
+    height: 512
+    width: 512
+  - path: 'required/readme-screenshot.jpg'
+    height: 1218
+    width: 1895
+  - path: 'required/s.gif.webp'
+    height: 1
+    width: 1
+  - path: 'required/logo.png'
+    height: 73
+    width: 73
+  - path: 'undraw_welcome_3gvl.png.webp'
+    height: 891
+    width: 1108
+  - path: 'undraw_To_do_list_re_9nt7.png'
+    height: 629
+    width: 1089
+  - path: 'undraw_To_do_list_re_9nt7.png.webp'
+    height: 629
+    width: 1089
+  - path: 'undraw_welcome_3gvl.png'
+    height: 891
+    width: 1108
