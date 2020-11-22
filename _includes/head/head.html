@@ -66,7 +66,7 @@
 <meta property="og:url" content="{{ site.url }}{{ site.subpath }}{{ page.url }}" />
 {% if page.previous %}<link rel="prev" href="{{ page.previous.url | relative_url }}" />{% endif %}
 {% if page.next %}<link rel="next" href="{{ page.next.url | relative_url }}" />{% endif %}
-<link rel="help" href="{% link collections/pages/faqs.html %}" />
+<link rel="help" href="{{ site.subpath }}{% link collections/pages/faqs.html %}" />
 
 {% comment %}<!-- Identification/Specification tags --> {% endcomment %}
 <meta name="author" content="{% if page.authors[0] %}{% for author in page.authors %}{% assign person = site.people | where: 'slug', author | first %}{{ person.title }}, {% endfor %}{% else %}{{ site.primary_author }}{% endif %}" />

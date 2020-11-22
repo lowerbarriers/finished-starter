@@ -7,7 +7,7 @@
       <span class="js--toggle-below--label a11y--visually-hidden">Open below</span>
     </button>
 
-    <form method="get" action="{% link collections/pages/search/index.html %}"
+    <form method="get" action="{{ site.subpath }}{% link collections/pages/search/index.html %}"
       class="display--flex flex-direction--row position--absolute right--0 js--toggle-below--closed">
       <div class="form--item form--item--input form--item--input--search">
         <label class="label form--item--label a11y--visually-hidden" for="q">Search query</label>

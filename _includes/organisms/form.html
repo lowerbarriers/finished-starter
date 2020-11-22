@@ -19,7 +19,7 @@
 {% if include.entity.thank_you %}
   {% assign thank_you = include.entity.thank_you %}
 {% else %}
-  {% capture thank_you %}{% link collections/pages/thank-you.md %}{% endcapture %}
+  {% capture thank_you %}{{ site.subpath }}{% link collections/pages/thank-you.md %}{% endcapture %}
 {% endif %}
 
 {% if include.entity.thankyou_name %}
