@@ -34,7 +34,7 @@
 {% capture component %}
   <li class="card js--child--link display--flex flex-direction--column {% if include.classes %}{{ include.classes }}{% endif %}">
     <div class="card--text padding-horizontal--4 padding-vertical--4">
-      <h3 class="card--title font-size--1p25em"><a href="{{ include.entity.url }}">{{ include.entity.title }}</a></h3>
+      <h3 class="card--title font-size--1p25em"><a href="{{ include.entity.url | relative_url }}">{{ include.entity.title }}</a></h3>
       {% if card_subtitle %}
         <strong class="card--subtitle display--block font-size--p875em font-weight--100 font-style--italic">{{ card_subtitle }}</strong>
       {% endif %}

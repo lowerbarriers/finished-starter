@@ -1,6 +1,6 @@
 {% capture component %}
   <figure class="figure figure--image figure--image--{{ include.src | slugify }} {% if include.classes %}{{ include.classes }}{% endif %}">
-    {% if include.link_url %}<a href="{{ include.link_url }}">{% endif %}
+    {% if include.link_url %}<a href="{{ include.link_url | relative_url }}">{% endif %}
       <picture class="picture picture--lazy-load layout--hide--no-javascript" itemprop="image">
         {% capture webp_path %}/assets/images/{{ include.src }}.webp{% endcapture %}
         {% assign webp_version = site.static_files | where: "path", webp_path | first %}
