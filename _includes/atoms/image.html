@@ -11,13 +11,17 @@
 
         {% capture avif_path %}/assets/images/{{ include.src }}.avif{% endcapture %}
         {% assign avif_version = site.static_files | where: "path", avif_path | first %}
+        {% assign height = site.data.image-metadata.images | where: "path", include.src | first %}
         {% if avif_version %}
           <source srcset="{{ site.subpath }}/assets/images/required/s.webp"
             data-srcset="{{ avif_version.path | relative_url }}" type="image/avif" />
         {% endif %}
 
         <img src="{{ site.subpath }}/assets/images/required/s.gif"
-          data-src="{{ site.subpath }}/assets/images/{{ include.src }}" alt="{{ include.alt }}" loading="lazy" />
+          data-src="{{ site.subpath }}/assets/images/{{ include.src }}" alt="{{ include.alt }}" loading="lazy"
+          {%if height %}height="{{ height.height }}"{% endif %}
+          {%if height %}width="{{ height.width }}"{% endif %}
+        />
       </picture>
       <noscript>
         <img src="{{ site.subpath }}/assets/images/{{ include.src }}" alt="{{ include.alt }}" loading="lazy" />

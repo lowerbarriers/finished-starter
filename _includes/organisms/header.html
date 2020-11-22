@@ -4,7 +4,9 @@
     <div class="layout--stripe--inner position--relative has--search-widget">
       <a class="header--logo logo" itemprop="url" href="{{ site.subpath }}/">
         <img src="{{ site.subpath }}/assets/images/required/logo.svg" alt="{{ site.title }}"
-          class="image header--image header--logo--image" loading="lazy" />
+          class="image header--image header--logo--image" loading="lazy"
+          height="73" width="73" {# Explicit height and width is a Lighthouse signal for CLS in CWV #}
+        />
         <span class="header--logo--tagline tagline font-weight--900 font-style--italic">{{ site.tagline }}</span>
       </a>
 
