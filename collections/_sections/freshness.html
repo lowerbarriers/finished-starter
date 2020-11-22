@@ -21,7 +21,7 @@ title_classes: ""
     {% endfor %}
   </ul>
 
-  <p>See more on our <a href="{% link blog/index.html %}">Blog page</a>.</p>
+  <p>See more on our <a href="{{ site.subpath }}{% link blog/index.html %}">Blog page</a>.</p>
 {% else %}
   <p class="listing--no-results">There are presently no posts.</p>
 {% endif %}

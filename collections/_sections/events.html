@@ -22,7 +22,7 @@ title_classes: " heading--h1"
     {% endfor %}
   </ul>
 
-  <p>To see all current events, check out the <a href="{% link collections/pages/events.html %}">Events page</a></p>
+  <p>To see all current events, check out the <a href="{{ site.subpath }}{% link collections/pages/events.html %}">Events page</a></p>
 {% else %}
   <p class="listing--no-results">There are presently no future events.</p>
 {% endif %}
