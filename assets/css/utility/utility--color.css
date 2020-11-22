@@ -138,6 +138,58 @@
 }
 
 /**
+ * Border color classes.
+ */
+.border-color--black {
+  border-color: var(--color--black);
+}
+.border-color--grey-dark {
+  border-color: var(--color--grey-dark);
+}
+.border-color--grey {
+  border-color: var(--color--grey);
+}
+.border-color--grey-light {
+  border-color: var(--color--grey-light);
+}
+.border-color--white {
+  border-color: var(--color--white);
+}
+.border-color--white a {
+  border-color: var(--color--white);
+}
+.border-color--main {
+  border-color: var(--color--main);
+}
+.border-color--main-dark {
+  border-color: var(--color--main-dark);
+}
+.border-color--main-light {
+  border-color: var(--color--main-light);
+}
+.border-color--second {
+  border-color: var(--color--second);
+}
+.border-color--second-dark {
+  border-color: var(--color--second-dark);
+}
+.border-color--second-light {
+  border-color: var(--color--second-light);
+}
+.border-color--third {
+  border-color: var(--color--third);
+}
+.border-color--third-dark {
+  border-color: var(--color--third-dark);
+}
+.border-color--third-light {
+  border-color: var(--color--third-light);
+}
+.border-color--accent {
+  border-color: var(--color--accent);
+}
+
+/**
  * Color classes for text.
  */
 .color--black {

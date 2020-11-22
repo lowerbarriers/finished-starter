@@ -4,7 +4,7 @@
       "category": "Mood",
       "description": "The thickness, style, and perhaps color of the default border",
       "type": "border",
-      "value": "1px solid"
+      "value": "1px solid #ccc"
     }
   }
 }
