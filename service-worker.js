@@ -67,10 +67,10 @@ self.addEventListener('fetch', event => {
         return handleNoCacheMatch(event);
       }
 
-      // Update cache record in the background
+      /* Update cache record in the background. */
       fetchFromNetworkAndCache(event);
 
-      // Reply with stale data
+      /* Reply with stale data. */
       return response
     });
   });
@@ -85,7 +85,7 @@ self.addEventListener('fetch', event => {
  * @returns {Promise<* | void>}
  */
 let fetchFromNetworkAndCache = (event) => {
-  // DevTools will trigger these o-i-c requests, which this can't handle.
+  /* DevTools will trigger these o-i-c requests, which this can't handle. */
   if (event.request.cache === 'only-if-cached'
     && event.request.mode !== 'same-origin'
   ) {
@@ -93,10 +93,10 @@ let fetchFromNetworkAndCache = (event) => {
   }
 
   return fetch(event.request).then(result => {
-    // foreign requests may be res.type === 'opaque' and missing a url
+    /* Foreign requests may be res.type === 'opaque' and missing a url. */
     if (!result.url) return result;
 
-    // regardless, we don't want to cache other origins' assets
+    /* Regardless, we don't want to cache other origins' assets. */
     if (new URL(result.url).origin !== location.origin) return result;
 
     return caches.open(PRECACHE).then(cache => {
