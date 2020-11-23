@@ -9,8 +9,8 @@
 ## Run this script from the repo root (ex: `.scripts/pre-commit.sh`).
 ####
 
+bundle exec jekyll build --verbose
 npm run prettier-css
 npm run prettier-js
-npm run purgecss
 npm run terser
-bundle exec jekyll build --verbose
+npm run purgecss
