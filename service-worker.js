@@ -41,16 +41,15 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // DevTools opening will trigger these o-i-c requests, which this SW can't handle.
-  if (event.request.cache === 'only-if-cached'
-    && event.request.mode !== 'same-origin'
-  ) {
-    return;
-  }
-
-  // Regular event handling.
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
+      // DevTools will trigger these o-i-c requests, which this SW can't handle.
+      if (event.request.cache === 'only-if-cached'
+        && event.request.mode !== 'same-origin'
+      ) {
+        return;
+      }
+
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           return cachedResponse;
