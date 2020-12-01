@@ -8,19 +8,21 @@ permalink: /manifest.webmanifest
   "description": "{{ site.tagline }}",
   "icons": [
     {
-      "src": "/apple-touch-icon.png",
+      "src": "{{ site.subpath }}/apple-touch-icon.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
-      "src": "/assets/images/required/logo-mark_512.png",
+      "src": "{{ site.subpath }}/assets/images/required/logo-mark_512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": "/?source=pwa",
+  "start_url": "{{ site.subpath }}/?source=pwa",
   "background_color": "{{ site.manifest_webmanifest.background_color }}",
   "display": "minimal-ui",
-  "scope": "/",
+  "scope": "{{ site.subpath }}/",
   "theme_color": "{{ site.manifest_webmanifest.theme_color }}"
 }

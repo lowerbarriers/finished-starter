@@ -16,15 +16,15 @@
     "browserslist": "env BROWSERSLIST_CONFIG=./_includes/.browserslistrc browserslist",
     "prettier-css": "prettier --write 'assets/css/{theme,utility}/*.css'",
     "prettier-js": "prettier --write 'assets/js/partials/*.js'",
-    "purgecss": "purgecss -c .node_config/purgecss.config.js -o assets/css/pre-commit-dependency/",
-    "terser": "terser _site/assets/js/behavior.js -o assets/js/pre-commit-dependency/behavior.js"
+    "purgecss": "purgecss -c .node_config/purgecss.config.js -o assets/css/pre-commit-dependency.css",
+    "terser": "terser _site/assets/js/behavior.js -o assets/js/pre-commit-dependency.js"
   },
   "dependencies": {},
   "devDependencies": {
-    "browserslist": "^4.9.1",
+    "browserslist": "^4.14.7",
     "dotenv": "^8.2.0",
-    "dotenv-flow": "^3.1.0",
-    "prettier": "^2.0.5",
+    "dotenv-flow": "^3.2.0",
+    "prettier": "^2.2.0",
     "purgecss": "^2.1.0",
     "terser": "^4.6.6"
   }

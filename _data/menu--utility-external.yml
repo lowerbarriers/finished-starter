@@ -5,11 +5,9 @@
 ## @see _includes/organisms/utility-external.html
 ####
 links:
-  - href: "https://solveitonce.com"
-    text: "Solve it once"
   - href: "https://lowerbarriers.org"
-    text: "Lower barriers"
-  - href: "https://shelbybrad.com"
-    text: "Shelby and Brad"
-  - href: "https://resume.bradczerniak.com"
-    text: "Resume"
+    text: "Lower Barriers"
+  - href: "https://github.com/lowerbarriers"
+    text: "LB GitHub"
+  - href: "https://github.com/lowerbarriers/resume"
+    text: "Free tech résumé"

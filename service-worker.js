@@ -59,3 +59,59 @@ self.addEventListener('fetch', event => {
     );
   }
 });
+
+self.addEventListener('fetch', event => {
+  let tryInCachesFirst = caches.open(PRECACHE).then(cache => {
+    return cache.match(event.request).then(response => {
+      if (!response) {
+        return handleNoCacheMatch(event);
+      }
+
+      /* Update cache record in the background. */
+      fetchFromNetworkAndCache(event);
+
+      /* Reply with stale data. */
+      return response
+    });
+  });
+
+  event.respondWith(tryInCachesFirst);
+});
+
+/**
+ * Fetch from network and cache.
+ *
+ * @param event
+ * @returns {Promise<* | void>}
+ */
+let fetchFromNetworkAndCache = (event) => {
+  /* DevTools will trigger these o-i-c requests, which this can't handle. */
+  if (event.request.cache === 'only-if-cached'
+    && event.request.mode !== 'same-origin'
+  ) {
+    return;
+  }
+
+  return fetch(event.request).then(result => {
+    /* Foreign requests may be res.type === 'opaque' and missing a url. */
+    if (!result.url) return result;
+
+    /* Regardless, we don't want to cache other origins' assets. */
+    if (new URL(result.url).origin !== location.origin) return result;
+
+    return caches.open(PRECACHE).then(cache => {
+      cache.put(event.request, result.clone());
+      return result;
+    });
+  }).catch(err => console.error(event.request.url, err));
+};
+
+/**
+ * Circular call for non-match, in case we want to do something different.
+ *
+ * @param event
+ * @returns {Promise<*|void>}
+ */
+let handleNoCacheMatch = (event) => {
+  return fetchFromNetworkAndCache(event);
+};

@@ -43,7 +43,7 @@
         <ul class="list-style--none margin-horizontal--0">
         {% for tag in include.entity.tags %}
           <li>
-            <a href="{% link collections/pages/tags.html %}#tag--{{ tag | slugify }}" rel="tag" class="tag">
+            <a href="{{ site.subpath }}{% link collections/pages/tags.html %}#tag--{{ tag | slugify }}" rel="tag" class="tag">
               {{ tag }}
             </a>
           </li>

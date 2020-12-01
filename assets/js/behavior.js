@@ -6,8 +6,33 @@ layout: compress
 
 document.body.classList.add('js');
 
+/* Toggle out a body class if the browser supports webp. */
+let browser_supports_webp = () => {
+  var elem = document.createElement('canvas');
+
+  if (!!(elem.getContext && elem.getContext('2d'))) {
+    /* Was able or not to get WebP representation. */
+    return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+  }
+  else {
+    /* Very old browser like IE 8, canvas not supported. */
+    return false;
+  }
+};
+if (browser_supports_webp()) {
+  document.body.classList.remove('webp--disabled');
+  document.body.classList.add('webp--enabled');
+}
+
+/**
+ * @file
+ * Load the service worker script at the site root.
+ */
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("{{ site.subpath }}/service-worker.js");
+}
+
 /* Globals and utilities. */
-{% include_relative partials/service-worker--register.js %}
 {% include_relative partials/js--event--eventType.js %}
 {% include_relative partials/body--scroll.js %}
 {% include_relative partials/utility--initializer.js %}

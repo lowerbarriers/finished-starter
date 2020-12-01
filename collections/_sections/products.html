@@ -22,7 +22,7 @@ title_classes: " heading--h1"
     {% endfor %}
   </ul>
 
-  <p>To see all products, check out the <a href="{% link collections/pages/products.html %}">Products page</a></p>
+  <p>To see all products, check out the <a href="{{ site.subpath }}{% link collections/pages/products.html %}">Products page</a></p>
 {% else %}
   <p class="listing--no-results">There are presently no products.</p>
 {% endif %}

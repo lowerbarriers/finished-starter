@@ -4,13 +4,83 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/lowerbarriers/finished-starter)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-This is a great codebase to clone or fork if you want a full-fledged site **completely free** out of the box on day one,
+[![finshed-starter](assets/images/required/readme-screenshot.jpg)](https://github.com/lowerbarriers/finished-starter)
+
+This is great code to copy if you want a full-fledged site **completely free** out of the box on day one,
 that you can customize and extend to suit your needs.
 
 All the repetitive stuff for content, performance, SEO, accessibility, testing, etc. is done, so you can focus on what
 makes your site special.
 
+**Some of the wheels you won't have to reinvent**:
+
+  * **Blog** — with pagers, categories, tags, and bylines
+  * **Events** — with listings for current/future events and also past events
+  * **Forms** — results sent to your email automatically. Also a mailchimp subscription form
+  * **E-commerce** — products, cart, the whole deal ready to go
+  * **Search** — it just works
+  * **Pages and content** — Home, About, Privacy Policy, Terms and conditions, it's all there
+  * **Atomic components** — Insert fancy components, including layouts, anywhere you want
+  * **Accessibility** — Maybe not perfect <abbr title="Accessibility">a11y</abbr>, but we _try_ and care
+  * **Icons** — Easy to use and accessible
+  * **Vanilla code** — Better CSS than tailwind, less CSS needed than... anything!
+  * **Feeds and SEO** — All of the tags and feeds you could want. Social share images, too
+  * **Cloud CMS** — Forestry.io set up, so you can manage your site easily
+  * **Progressive Web App (PWA)** — Your site is offline-capable and installable on devices
+  * **Performance** — Tons of optimizations to eke out extra milliseconds of speed
+  * **Documentation** — A site with a design system and more docs than you'll believe
+
+## Installation
+
+  1. Fork the repository (button at top of repo page)
+  2. On your forked repository page, go to 'Settings' and rename the repository to match your desired behavior
+    * Most of the time you will want `user/organization-name`.github.io
+    * It can also be any name, typically using the `gh-pages` branch
+  3. Edit to your heart's content
+
+If you want to use netlify,
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowerbarriers/finished-starter)
+
+If you prefer Vercel,
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/lowerbarriers/finished-starter)
+
+### Creating a local version for development
+
+  1. Clone the repository to your local machine
+  2. `cd` into it
+  3. Run the command `bundle install` in the root of the project to get the Jekyll standard items (requires
+    [bundler](https://bundler.io/))
+  4. Run `npm install` in the root of the project for non-required build dependencies (requires node and npm)
+  5. Run `bundle exec jekyll serve --verbose --config _config.yml,_config.localdev.yml` to build and serve your site to
+    `http://localhost:4000/`
+
+Optionally you can look at the comments in the `.scripts/` directory for any image (optipng, pngcrush, jpegoptim, webp, avif)
+and other dependencies for optimizing assets on the back end. This helps improve front-end performance if you can manage it.
+
+You can run the `.scripts/` from the project root, ideally when the server is not running since it will trigger a rebuild.
+
+```shell script
+user@computername $ .scripts/images.sh
+```
+
+and
+
+```shell script
+user@computername $ .scripts/pre-commit.sh
+```
+
+#### Aggressive caching
+
+While the service worker cache should increment every time the site builds, often you will have to use the 'Application'
+tab of the devtools to clear all site storage and caches. Keeping the devtools open also allows you to right-click the refresh
+button to select "Empty cache and hard reload".
+
+This is a mild inconvenience you learn to live with and admire, and is a reminder that front-end performance and optimization
+is important.
+
 ## Features
+
+[![finshed-starter](assets/images/required/meta-image--default.jpg)](https://github.com/lowerbarriers/finished-starter)
 
 The original version of this codebase gets four 100s in [Lighthouse](https://github.com/GoogleChrome/lighthouse) testing,
 has valid HTML per [the w3 validator](http://validator.w3.org/), and has zero errors per [the WAVE tool](https://wave.webaim.org/).
@@ -22,6 +92,7 @@ Also the following:
   * JSON [Design tokens](https://css-tricks.com/what-are-design-tokens/) (compatible with [style-dictionary](https://github.com/amzn/style-dictionary))
     populate both the design system's CSS decisions and the automatic documentation
   * **Real HTML** generated by the static site generator, so users and search engines get content immediately and reliably
+  * VS Code, [.editorconfig](.editorconfig) and GitHub Codespaces settings for quick dev setup anywhere
   * All the trappings of [Jekyll](https://jekyllrb.com/docs/) on [GitHub Pages](https://pages.github.com/):
     [markdown](https://kramdown.gettalong.org/quickref.html) content, [YAML front matter](https://jekyllrb.com/docs/front-matter/),
     [Liquid templates](https://shopify.github.io/liquid/basics/introduction/), GitHub builds, git revision tracking
@@ -41,8 +112,8 @@ Also the following:
     [specificity graph](https://jonassebastianohlsson.com/specificity-graph/)
   * Clean break = [**no** Internet Explorer support](https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer-and-edge).
     It's the 2020s. Friendly conditional-comment message for IE users just in case
-  * [webp](https://www.tecmint.com/convert-images-to-webp-format-in-linux/) next-generation image format support built in
-    via scripts and components
+  * [webp](https://www.tecmint.com/convert-images-to-webp-format-in-linux/) and [avif](https://jakearchibald.com/2020/avif-has-landed/)
+    next-generation image formats support built in via scripts and components
   * Baked-in site search single-page app (SPA) simulating HTTP GET, with title boosts, highlighted excerpts, and History API
   * 'Collections' (AKA "content types") with semantic value: docs, events, forms, people, posts, products, pages
   * [Service worker](https://web.dev/service-worker-mindset/) with offline capability.
@@ -75,52 +146,6 @@ Also the following:
   * Four pre-configured menus: utility, main, footer, copyright
   * Editor configs and linters in place for consistent code styles
   * **Test coverage**: behavioral-like "user story" test definitions for both human and automated verification
-
-## Installation
-
-  1. Fork the repository (button at top of repo page)
-  2. On your forked repository page, go to 'Settings' and rename the repository to match your desired behavior
-    * Most of the time you will want `user/organization-name`.github.io
-    * It can also be any name, typically using the `gh-pages` branch
-  3. Edit to your heart's content
-
-If you want to use netlify,
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowerbarriers/finished-starter)
-
-If you prefer Vercel,
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/lowerbarriers/finished-starter)
-
-### Creating a local version for development
-
-  1. Clone the repository to your local machine
-  2. `cd` into it
-  3. Run the command `bundle install` in the root of the project to get the Jekyll standard items (requires [bundler](https://bundler.io/))
-  4. Run `npm install` in the root of the project for non-required build dependencies (requires node and npm)
-  5. Run `bundle exec jekyll serve --verbose` to build and serve your site to `http://localhost:4000/`
-
-Optionally you can look at the comments in the `.scripts/` directory for any image (optipng, pngcrush, jpegoptim, webp) and
-other dependencies for optimizing assets on the back end. This helps improve front-end performance if you can manage it.
-
-You can run the `.scripts/` from the project root, ideally when the server is not running since it will trigger a rebuild.
-
-```shell script
-user@computername $ .scripts/images.sh
-```
-
-and
-
-```shell script
-user@computername $ .scripts/pre-commit.sh
-```
-
-#### Aggressive caching
-
-While the service worker cache should increment every time the site builds, often you will have to use the 'Application'
-tab of the devtools to clear all site storage and caches. Keeping the devtools open also allows you to right-click the refresh
-button to select "Empty cache and hard reload".
-
-This is a mild inconvenience you learn to live with and admire, and is a reminder that front-end performance and optimization
-is important.
 
 ## Customizing
 
@@ -246,8 +271,8 @@ Graphic designers on your team are best served knowing 1200x630 is the preferred
 time.
 
 See `/scripts/images.sh` for instructions and commands to optimize JPEG and PNG files, as well as the script's core purpose
-of generating webp versions of image assets. The webp version will be the original filename with '.webp' appended -- and the
-image component uses this pattern to figure out whether a webp version exists in order to include it.
+of generating avif/webp versions of image assets. The webp version will be the original filename with '.webp' appended --
+and the image component uses this pattern to figure out whether a webp version exists in order to include it.
 
 When including images in content, overwhelmingly prefer the liquid include `_includes/atoms/image.html`:
 
@@ -260,7 +285,7 @@ When including images in content, overwhelmingly prefer the liquid include `_inc
 %}
 ```
 
-over markdown or hard-coded HTML. This ensures the webp images, lazy loading, and `<figure>`/`<picture>` semantics
+over markdown or hard-coded HTML. This ensures the avif/webp images, lazy loading, and `<figure>`/`<picture>` semantics
 work consistently across the site.
 
 ## Reasoning

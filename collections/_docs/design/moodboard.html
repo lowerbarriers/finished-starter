@@ -6,9 +6,9 @@ authors:
 #hero_classes: "background-color--main-dark color--white"
 meta:
   description: "Fonts, colors, logos and imagery, and other things that contribute to the feel."
-#  image:
-#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
-#    src: required/meta-image--default.jpg
+  image:
+    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+    src: required/meta-image--default.jpg
   robots: "noindex,follow"
 #  title: "Overrides the tab title and social titles"
 #permalink: docs/path/page-title/
@@ -54,58 +54,58 @@ title: "Moodboard"
 <ul class="list-style--none layout--multiple--horizontal">
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
+      src="marks/mark.svg"
       alt="First logo concept"
-      caption="Rushed the logo"
+      caption="Safe, boring lettermark"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark2.svg"
+      alt="Second logo concept"
+      caption="Empty plate, as if the starter that is finished is an appetizer"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark3.svg"
+      alt="Third logo concept"
+      caption="Less focus on finished-starter and more on generic logo"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark4.svg"
+      alt="Fourth logo concept"
+      caption="Cool generic logo concept from the noun project"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark5.svg"
+      alt="Fifth logo concept"
+      caption="A plain omega in brand font"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark6.svg"
+      alt="Sixth logo concept"
+      caption="Wanted to make the omega more playful. May have swerved into unprofessional"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark7.svg"
+      alt="Seventh logo concept"
+      caption="Omega and italic lettermark. Don't hate it, don't love it"
     %}
   </li>
   <li class="flex--1">
     {% include atoms/image.html
-      src="required/logo.svg"
-      alt="First logo concept"
-      caption="Rushed the logo"
+      src="marks/mark8.svg"
+      alt="Eighth logo concept"
+      caption="Star works without changing out. Works great per h5bp"
     %}
   </li>
 </ul>
@@ -300,6 +300,39 @@ level="3"
   caption="A black-and-white photo similarly using a brand treatment."
 %}
 
+{% include atoms/spacer.html size="4" %}
+
+{% include atoms/heading.html
+children="Email signature"
+classes=""
+level="4"
+%}
+
+{% include atoms/spacer.html size="2" %}
+
+<table style="border:0 none;border-collapse: collapse;">
+  <thead style="display:none;">
+    <tr>
+      <th>Logo</th>
+      <th>Contact info</th>
+    </tr>
+  </thead>
+  <tbody style="border:0 none;">
+    <tr style="border:0 none;">
+      <td style="border:0 none; max-width:110px;">
+        <a href="{{ site.url }}{{ site.subpath }}" target="_blank">
+          <img src="{{ site.url }}{{ site.subpath }}/assets/images/required/logo.png" alt="{{ site.title }} logo"
+            style="border:0 none;line-height: 0;height:auto;" />
+        </a>
+      </td>
+      <td style="border:0 none; padding:10px 20px;">
+        {{ site.primary_author }}
+        <div>Proprietor</div>
+        <div><a href="{{ site.url }}{{ site.subpath }}" target="_blank"><b>{{ site.title }}</b></a></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 {% include atoms/heading.html
   children="Mood"

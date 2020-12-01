@@ -11,7 +11,7 @@ menus:
   main: 1
 #  utility: 1
 meta:
-  description: "Brad Czerniak is a Drupal and JAMstack developer in Michigan."
+  description: "Describe your site in a sentence that entices folks to visit."
 #  image:
 #    alt: "Default social image"
 #    src: required/meta-image--default.jpg
@@ -32,11 +32,11 @@ sections:
 title: "Home"
 ---
 
-<section class="layout--stripe background-color--grey-dark background-image--hero-home background-size--cover
-  color--white text-align--center background-image-display-mobile--hide" id="home">
+<section class="layout--stripe background-color--second-light background-image--hero-home background-size--cover
+  color--third-dark text-align--center background-image-display-mobile--hide" id="home">
   <div class="layout--stripe--inner">
     {% include atoms/heading.html
-      children="Brad would rather be at trivia night"
+      children="What you do, in clear words"
       classes=""
       level="1"
     %}
@@ -46,8 +46,7 @@ title: "Home"
     <div class="display--flex layout--row justify-content--center">
       <aside class="display--flex flex-direction--column justify-content--center">
         <p class="font-size--2em">
-          &hellip;but if he has to <a href="https://solveitonce.com">develop your Drupal or JAMstack website or solve your business
-          problems <em>once</em></a>, trivia can wait.
+          Here you can expand slightly on the headline and generate interest.
         </p>
       </aside>
     </div>
@@ -57,7 +56,7 @@ title: "Home"
 <section class="layout--stripe">
   <div class="layout--stripe--inner">
     {% include atoms/heading.html
-      children="Biography"
+      children="Elevator pitch"
       classes="text-align--center"
       level="2"
     %}
@@ -67,16 +66,17 @@ title: "Home"
     <div class="display--flex layout--row justify-content--center">
       <aside class="display--flex flex-direction--column justify-content--center">
         <p>
-          Brad Czerniak is a web developer and freelance librarian in Metro Detroit, Michigan, specializing in
-          <a href="https://frostdrupal.com/">Drupal</a> and the JAMstack. You can hire his unique blend of skills through
-          his company, <a href="https://solveitonce.com">Solve it once</a> and contribute to his open-source initiative via
-          <a href="https://lowerbarriers.org">Lower barriers</a>.
+          The headline and subtitle were meant to grab attention and get the visitor's interest. This section gives them
+          a payoff, with a little bit of detail on what you offer and why the user should stay.
         </p>
 
         <p>
-          In his down time, Brad enjoys classic films, sitcoms, trivia and British panel shows, and documentaries.
-          He occasionally leaves his bungalow headquarters to play frisbee sports. You
-          may see him jogging the streets of his town as well.
+          Keep paragraphs short and breezy. There's plenty of site left to give details, prove your worth, and get your
+          visitor to buy what you're selling.
+        </p>
+
+        <p>
+          <a class="button cta" href="{{ site.subpath }}{% link collections/pages/about.html %}">More about us</a>
         </p>
       </aside>
     </div>

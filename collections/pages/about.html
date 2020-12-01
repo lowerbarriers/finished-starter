@@ -6,14 +6,14 @@ authors:
 #hero_classes: "background-color--main-dark color--white"
 menus:
 #  copyright: 1
-#  footer: 2
-#  main: 2
+  footer: 4
+  main: 4
 #  utility: 1
 meta:
   description: "Who, what, when, where, why, and how."
-#  image:
-#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
-#    src: required/meta-image--default.jpg
+  image:
+    alt: "Shifting the synergy paradigm" # It's okay for this to be empty if the image is decorative
+    src: 1200x630/cytonn-photography-n95VMLxqM2I-unsplash.jpg
 #  robots: "index,follow"
 #  title: "Overrides the tab title and social titles"
 permalink: /about/
@@ -22,6 +22,7 @@ permalink: /about/
 #  type: "Thing"
 sections:
   - "freshness"
+  - "mailchimp"
 #sitemap: true
 #tags: ["three", "four"]
 title: "About"
@@ -30,7 +31,7 @@ title: "About"
 <section class="layout--stripe background-color--white">
   <div class="layout--stripe--inner">
     {% include atoms/heading.html
-      children="Our story, right quick"
+      children="Our story"
       classes=" heading--h1 text-align--center"
       level="2"
     %}
@@ -40,25 +41,29 @@ title: "About"
     <div class="layout--row display--flex flex-direction--row-reverse">
       <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
         padding-horizontal--4 padding-horizontal--collapse js--to-animate animation-name--reveal">
-        <p>Shelby and Brad met on Tinder, where they discovered an instant chemistry as well as a bunch of coincidences.</p>
-        <p>First, some coincidences:</p>
+        <p>
+          To crib <cite>Glengarry Glen Ross</cite>, "Always be closing." In this section you expose the what, the <em>why</em>,
+          maybe sneak some <em>how</em> in there. All to serve purposes:
+        </p>
         <ul>
-          <li>When they started chatting, Brad was supposed to be on a Tinder date with Shelby's friend, Emma. Instead,
-            <i>Shelby</i> was with Emma, looking at Tinder.
-          </li>
-          <li>Shelby's older brother, Tyson, was friends with Brad back in elementary school. Small world! Go Barnard
-            Bluejays!
-          </li>
+          <li>Get the people visiting the site and reading this page to like and trust you</li>
+          <li>Put a compelling story in front of what you're offering</li>
+          <li>Give your brand a human face or ten</li>
+          <li>Show how you're different from other brands in your space</li>
         </ul>
 
-        <p>Needless to say, they had plenty to talk about, and had a grand time getting phở and bánh mì on their first date.</p>
+        <p>
+          Write a few paragraphs! Use bullet lists and sub-headings for easy skimming. Let's keep things airy, and avoid
+          big walls of text.
+        </p>
       </aside>
+
       <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
         padding-horizontal--4 padding-horizontal--collapse">
         {% include atoms/image.html
-          src="bears-clipart-animated.gif"
-          alt=""
-          classes="js--to-animate js--event--click js--event--mouseover animation-name--spin animation-iteration-count--infinite animation-direction--alernate animation-duration--3s"
+          src="undraw_welcome_3gvl.png"
+          alt="Welcome to our story"
+          classes=""
         %}
       </aside>
     </div>
@@ -66,54 +71,43 @@ title: "About"
   </div>
 </section>
 
-<section class="layout--stripe background-color--main-dark color--white background-image--gradient--main">
+<section class="layout--stripe background-color--second-light background-image--hero-standout background-size--cover">
   <div class="layout--stripe--inner">
     {% include atoms/heading.html
-      children="What we've been up to"
-      classes=""
-      level="2"
+    children="How we stand out"
+    classes=" heading--h1 text-align--center"
+    level="2"
     %}
+
+    {% include atoms/spacer.html size="4" %}
 
     <div class="layout--row display--flex">
       <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center">
-        <h3>Places we've gone</h3>
+        <p>
+          We are special, distinct from our competition, and worthy of your time and money for the following reasons:
+        </p>
 
         <ul>
-          <li><em>Benton Harbor, MI</em>: Watched Kat do an Ironman!</li>
-          <li><em>Cuyahoga Valley National Park, OH</em>: Rocks, trees, rivers, all that jazz. We even camped</li>
-          <li><em>Philadelphia, PA</em>: Reading Terminal Market and Guy Fieri's Kitchen</li>
-          <li><em>Madison Heights, MI</em>: Augie's really does have great chicken tenders (and it's where we got engaged)</li>
-          <li><em>Rocky Mountain National Park and Fort Collins, CO</em>: Alex and Kat throw great parties. We saw moose!</li>
+          <li>You're on this site and not other ones</li>
+          <li>We have lots of experience and knowledge/wisdom</li>
+          <li>You fit our ideal demo/vertical, which are people aged 0-99 who are willing to spend money</li>
+          <li>Our offering is luxurious, sustainable, and has the right number of options</li>
+          <li>At one point or another, somebody affiliated with Google and Microsoft paid us for our expertise, we think</li>
+          <li>You're one of upwards of two customers we've had</li>
         </ul>
 
-        <h3>Things we've watched</h3>
+        <p>
+          Here's an unexpected and delightful fact about us: we started making our product by hand in a garage while listening
+          to "How Bizarre" by OMC.
+        </p>
 
-        <ul>
-          <li>Diners, Drive-ins, and Dives</li>
-          <li>LOST</li>
-          <li>Doughboys, live!</li>
-          <li>Sports Night</li>
-          <li>Brick</li>
-          <li>Parasite</li>
-          <li>Hereditary</li>
-          <li>Idiocracy</li>
-          <li>About Time</li>
-          <li>Sorry to bother you</li>
-          <li>A Detroit Pistons game (in person)</li>
-        </ul>
-      </aside>
+        <blockquote>
+          <p>We've gotten far, and soon we'll go further.</p>
+        </blockquote>
 
-      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-end
-        padding-horizontal--4 padding-horizontal--collapse">
-        {% include atoms/image.html
-          src="1200x630/hereditary.jpg"
-          alt=""
-          classes="box-shadow--lifted-edges"
-        %}
+        <p class="font-size--p875em text-align--right"><cite>- Guy Founderson, <i>founder</i></cite></p>
       </aside>
     </div>
-
-    <p>And the fun doesn't stop there! We've got big plans for 2020 and beyond.</p>
   </div>
 </section>
 
@@ -122,15 +116,10 @@ title: "About"
   slug="people"
 %}
 
-{% include organisms/section.html
-  mode="ref"
-  slug="gallery"
-%}
-
-<section class="layout--stripe">
+<section class="layout--stripe background-color--main-dark color--white background-image--gradient--main">
   <div class="layout--stripe--inner">
     {% include atoms/heading.html
-      children="Coming from out of town?"
+      children="Global reach"
       classes=" heading--h1 text-align--center"
       level="2"
     %}
@@ -138,18 +127,34 @@ title: "About"
     {% include atoms/spacer.html size="4" %}
 
     <div class="layout--row display--flex">
-      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
-        padding-horizontal--4 padding-horizontal--collapse">
-        <p>We'd be delighted to point you in the right direction for accommodations, sightseeing, food, activities, or
-          anything else your heart desires! Just contact either of us by phone, email, social media, or the
-          <a href="/rsvp/">RSVP form</a>.</p>
-        <p>For info on how cool Detroit is, <a href="https://visitdetroit.com/">check out visitdetroit.com</a>.</p>
+      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center">
+        <p>
+          Now that you've covered the other "W's", let's talk about the <em>where</em>. We can verbalize where we're from,
+          yes, but can also do two tricks to demonstrate our mastery of the globe.
+        </p>
+
+        <p>This first is to list where you have offices, remote workers, random P.O. boxes, etc.:</p>
+
+        <ul>
+          <li>Detroit, MI, USA</li>
+          <li>Santa Barbara, CA, USA</li>
+        </ul>
+
+        <p>...and the second is to show all the places where you've had an effect, like where your customers are, where
+          you've held events, where you've traveled on business, etc.:
+        </p>
+
+        <ul>
+          <li>Louisville, KY, USA</li>
+          <li>Sydney, Australia</li>
+        </ul>
       </aside>
-      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+
+      <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--flex-end
         padding-horizontal--4 padding-horizontal--collapse">
         {% include atoms/image.html
-          src="1200x630/detroit.jpg"
-          alt="An artist depiction of our wedding"
+          src="1200x630/noaa-aySTZ82UGus-unsplash.jpg"
+          alt=""
           classes="box-shadow--lifted-edges"
         %}
       </aside>

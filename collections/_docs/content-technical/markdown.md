@@ -177,14 +177,14 @@ to change. Given this, we can use a method of linking that the underlying (Jekyl
 {% raw %}
 
 ```markdown
-We go into our history on the [About us page]({% link collections/pages/about.html %}).
+We go into our history on the [About us page]({{ site.subpath }}{% link collections/pages/about.html %}).
 ```
 
 {% endraw %}
 
 This renders similar to the above link:
 
-We go into our history on the [About us page]({% link collections/pages/about.html %}).
+We go into our history on the [About us page]({{ site.subpath }}{% link collections/pages/about.html %}).
 
 If the pretty path to the About page changes, the Jekyll method will automatically update the link, while the hard-coded
 method will still point to the old path.

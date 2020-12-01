@@ -34,7 +34,7 @@
       "category": "Theme",
       "description": "A medium shade of an on-brand blue, ideally. Used for links by default",
       "type": "color",
-      "value": "#0081a7"
+      "value": "#00799E"
     },
     "main-dark": {
       "category": "Theme",
@@ -52,7 +52,7 @@
       "category": "Theme",
       "description": "Medium shade of what is usually a hot color like red, yellow, or orange",
       "type": "color",
-      "value": "#f07167"
+      "value": "#E32416"
     },
     "second-dark": {
       "category": "Theme",

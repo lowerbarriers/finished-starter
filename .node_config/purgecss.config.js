@@ -11,6 +11,7 @@ module.exports = {
   variables: true,
   whitelist: [],
   whitelistPatterns: [
-    /.*js--event--.*/
+    /.*js--event--.*/,
+    /.*webp.*/
   ]
 };

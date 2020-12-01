@@ -47,4 +47,4 @@ Phone: [{{ site.press.phone.display }}](tel:+{{ site.press.phone.mailto }})
 
 ### Other
 
-You may also use [the contact form]({% link collections/pages/contact.html %}) for any lower-priority questions.
+You may also use [the contact form]({{ site.subpath }}{% link collections/pages/contact.html %}) for any lower-priority questions.

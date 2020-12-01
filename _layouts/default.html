@@ -17,8 +17,13 @@ layout: compress
     {% comment %}<!-- The rest of the html <head> is in a separate include. This file was getting big. -->{% endcomment %}
     {% include head/head.html %}
   </head>
-  <body class="page--{% if page.front %}front{% else %}{{ page.url | slugify }}{% endif %}"
+  <body class="page--{% if page.front %}front{% else %}{{ page.url | slugify }}{% endif %} webp--disabled"
     itemscope itemtype="http://schema.org/{% if page.schema.type %}{{ page.schema.type }}{% else %}{{ site.schema.type }}{% endif %}">
+
+    {% comment %}<!--
+      We don't support old Internet Explorer versions.
+      Also, we want to give users of different abilities and device types the ability to skip the nav to the content.
+    -->{% endcomment %}
     {% include head/ie-upgrade-warning.html %}
     {% include head/a11y--skip-hide.html %}
 
@@ -44,7 +49,7 @@ layout: compress
     {% endif %}
 
     {% comment %}<!-- Set to true or remove conditional to show the external utility menu above the header. -->{% endcomment %}
-    {% if true %}
+    {% if false %}
       {% include organisms/utility-external.html %}
     {% endif %}
 
@@ -74,7 +79,7 @@ layout: compress
     {% include head/gdpr--cookie-disclosure.html %}
 
     {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
-      <script async defer src="{{ site.subpath }}/assets/js/pre-commit-dependency/behavior.js"></script>
+      <script async defer src="{{ site.subpath }}/assets/js/pre-commit-dependency.js"></script>
     {% else %}
       <script async defer src="{{ site.subpath }}/assets/js/behavior.js"></script>
     {% endif %}

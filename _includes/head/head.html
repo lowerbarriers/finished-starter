@@ -9,19 +9,35 @@
   {% endfor %}
 {% endif %}
 
-{% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
-  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency/style.css" media="print" onload="this.media='all'" />
+{% if site.filament_load_css == true %}
+  {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency.css"
+      media="print" onload="this.media='all'" />
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css"
+      media="print" onload="this.media='all'" />
+  {% endif %}
+  <noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" /></noscript>
+  {% include head/loading.html %}
 {% else %}
-  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" media="print" onload="this.media='all'" />
+  {% if jekyll.environment != "development" and site.no_pre_commit_dependencies != true %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/pre-commit-dependency.css" />
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" />
+  {% endif %}
 {% endif %}
-<noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/style.css" /></noscript>
-{% include head/loading.html %}
+
 {% if page.attached.css[0] %}
   {% for css in page.attached.css %}
+    {% comment %}<!-- Continue using filament technique for non-blocking CSS. -->{% endcomment %}
     <link rel="stylesheet" type="text/css" href="{{ site.subpath }}{{ css }}" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" type="text/css" href="{{ site.subpath }}{{ css }}" /></noscript>
   {% endfor %}
 {% endif %}
+
+{% comment %}<!-- While not explicitly blocking, these icon calls tend to behave best early in a head. -->{% endcomment %}
+<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
+<link rel="shortcut icon" href="{{ site.url }}{{ site.subpath }}/favicon.ico" />
 
 {% comment %}
   <!-- Page title (auto-appended with site title). Allow a different title tag string than the title that appears
@@ -50,7 +66,7 @@
 <meta property="og:url" content="{{ site.url }}{{ site.subpath }}{{ page.url }}" />
 {% if page.previous %}<link rel="prev" href="{{ page.previous.url | relative_url }}" />{% endif %}
 {% if page.next %}<link rel="next" href="{{ page.next.url | relative_url }}" />{% endif %}
-<link rel="help" href="{% link collections/pages/faqs.html %}" />
+<link rel="help" href="{{ site.subpath }}{% link collections/pages/faqs.html %}" />
 
 {% comment %}<!-- Identification/Specification tags --> {% endcomment %}
 <meta name="author" content="{% if page.authors[0] %}{% for author in page.authors %}{% assign person = site.people | where: 'slug', author | first %}{{ person.title }}, {% endfor %}{% else %}{{ site.primary_author }}{% endif %}" />
@@ -110,12 +126,11 @@
 <meta name="apple-mobile-web-app-title" content="{{ site.shortname }}" />
 <meta name="theme-color" content="{{ site.manifest_webmanifest.theme_color }}" />
 <meta name="Generator" content="{{ site.meta.generator }}" />
-<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
-<link rel="manifest" href="{{ site.subpath }}/manifest.webmanifest" />
+<link rel="manifest" href="{{ site.url }}{{ site.subpath }}/manifest.webmanifest" />
 <link rel="author" href="{{ site.url }}{{ site.subpath }}/humans.txt" />
-<link rel="search" type="application/opensearchdescription+xml" href="{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.subpath }}/rss/blog/" title="Blog feed" />
-<link rel="alternate" type="application/json" href="{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.subpath }}/rss/events/" title="Events feed" />
-<link rel="alternate" type="application/json" href="{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
-<link rel="alternate" type="application/list+json" href="{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />
+<link rel="search" type="application/opensearchdescription+xml" href="{{ site.url }}{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.subpath }}/rss/blog/" title="Blog feed" />
+<link rel="alternate" type="application/json" href="{{ site.url }}{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.subpath }}/rss/events/" title="Events feed" />
+<link rel="alternate" type="application/json" href="{{ site.url }}{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
+<link rel="alternate" type="application/list+json" href="{{ site.url }}{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />

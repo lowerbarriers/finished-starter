@@ -28,3 +28,30 @@
 for i in `find assets/ -name "*.jpg"`; do cwebp -q 75 $i -o $i.webp; done
 for i in `find assets/ -name "*.png"`; do cwebp -q 85 $i -o $i.webp; done
 for i in `find assets/ -name "*.gif"`; do gif2webp -q 75 $i -o $i.webp; done
+
+# If cavif [https://github.com/kornelski/cavif-rs/releases] available, make AVIFs like webp above.
+# @todo Switch this to the reference implementation once that's stable.
+for i in `find assets/ -name "*.jpg"`; do cavif $i -o $i.avif; done
+for i in `find assets/ -name "*.png"`; do cavif $i -o $i.avif; done
+
+##
+# Write image metadata to _data for includes and other purposes.
+#
+# Requires ImageMagick `identify` utility and other standard utils.
+##
+
+# First remove the existing data file and replace it.
+rm _data/image-metadata.yml
+touch _data/image-metadata.yml
+echo "images:" | tee -a _data/image-metadata.yml
+
+# Go to where the images are.
+cd assets/images
+
+# Loop through the images and write the metadata to the file in yml format.
+# Find uses regex, and the character class must not contain the letter a because then it will match the avif files.
+for i in `find . -type f -regextype posix-egrep -iregex "\./.*\.[webjpngif]{3,4}"`; do
+  echo "  - path: '"`echo ${i} | cut -c3-`"'" | tee -a ../../_data/image-metadata.yml
+  echo "    height: "`identify -format '%h' $i` | tee -a ../../_data/image-metadata.yml
+  echo "    width: "`identify -format '%w' $i` | tee -a ../../_data/image-metadata.yml
+done

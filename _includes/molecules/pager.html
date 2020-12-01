@@ -14,7 +14,7 @@
         <li class="pager--numbered--number display--contents {% if page == paginator.page %}pager--number--current{% endif %}">
           <a class="pager--link pager--numbered--link button {% if page == paginator.page %}pager--link--current active{% endif %}"
              {% if page == 1 %}
-               href="{{ include.base_url }}"
+               href="{{ include.base_url | relative_url }}"
              {% else %}
               href="{{ site.paginate_path | relative_url | replace: ':num', page }}"
              {% endif %}
