@@ -1,0 +1,172 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "Automated test results to ensure proper formatting and operation."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Tests"
+---
+
+{% include atoms/heading.html
+  children="Lighthouse"
+  classes=""
+  level="2"
+%}
+
+<p>
+  This report from Lighthouse against the site homepage gives information about performance, best practices compliance,
+  automated accessibility compliance, and SEO (search engine optimization) practices.
+</p>
+
+{% include atoms/heading.html
+  children="Top-line scores"
+  classes=""
+  level="3"
+%}
+
+<table>
+  <thead>
+  <tr>
+    <th>Category</th>
+    <th>Percent score</th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for category in site.data.lighthouse.categories %}
+      <tr>
+        <th>{{ category[1].title }}</th>
+        <td>{{ category[1].score | times: 100 | round }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Audits"
+  classes=""
+  level="3"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Audit</th>
+      <th>Pass/fail</th>
+      <th>Display value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for audit in site.data.lighthouse.audits %}
+      <tr>
+        <th>
+          {{ audit[1].title | escape }}
+          <small>{{ audit[1].description | markdownify }}</small>
+        </th>
+        <td>
+          {% if audit[1].score == 1 %}
+            Pass
+          {% elsif audit[1].scoreDisplayMode == "numeric" %}
+            {% if audit[1].score >= 0.7 %}
+              Pass
+            {% else %}
+              <strong>Fail</strong>
+            {% endif %}
+            ({{ audit[1].score | times: 100 | round }}%)
+          {% elsif audit[1].score == null %}
+            <em>Manual</em>
+          {% else %}
+            <strong>Fail</strong>
+          {% endif %}
+        </td>
+        <td>
+          {% if audit[1].displayValue %}
+            {{ audit[1].displayValue }}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Functional tests"
+  classes=""
+  level="2"
+%}
+
+<p>
+  These functional, behavioral, end-to-end (e2e) tests are run at the end of a development cycle, and the results update
+  here to reflect whether changes to the codebase and content have broken other mission-critical functionality.
+</p>
+
+<table>
+  <caption>Overall test result statistics</caption>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Total test suites</td>
+      <td><b>{{ site.data.jest-results.numTotalTestSuites }}</b></td>
+    </tr>
+    <tr>
+      <td>Passed test suites</td>
+      <td>{{ site.data.jest-results.numPassedTestSuites }}</td>
+    </tr>
+    <tr>
+      <td>Failed test suites</td>
+      <td>{{ site.data.jest-results.numFailedTestSuites }}</td>
+    </tr>
+    <tr>
+      <td>Total tests</td>
+      <td><b>{{ site.data.jest-results.numTotalTests }}</b></td>
+    </tr>
+    <tr>
+      <td>Passed tests</td>
+      <td>{{ site.data.jest-results.numPassedTests }}</td>
+    </tr>
+    <tr>
+      <td>Failed tests</td>
+      <td>{{ site.data.jest-results.numFailedTests }}</td>
+    </tr>
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Results"
+  classes=""
+  level="3"
+%}
+
+{% for test in site.data.jest-results.testResults %}
+  <h4>{{ test.testResults[0].ancestorTitles[0] }}</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Test</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for result in test.testResults %}
+        <tr>
+          <td>{{ result.title }}</td>
+          <td><b>{{ result.status }}</b></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endfor %}
