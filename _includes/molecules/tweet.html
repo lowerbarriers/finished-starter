@@ -1,0 +1,55 @@
+{% capture component %}
+  <blockquote class="twitter-tweet include include--molecule include--molecule--tweet
+    {% if include.classes %}{{ include.classes }}{% endif %}"
+    data-dnt="true" data-theme="dark"
+  >
+    <p>{{ include.children }}</p>
+    <a href="{{ include.url }}">{{ include.date }}</a>
+  </blockquote>
+{% endcapture %}
+
+{% capture name %}Tweet{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/tweet.html
+    classes=""
+    children="Add your stars and join the groundswell! <a href="https://t.co/XU2hI8gBbg">https://t.co/XU2hI8gBbg</a>"
+    date="November 25, 2020"
+    url="https://twitter.com/lowerbarriers/status/1331681214168780800"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+Tweets first render as blockquotes, and are then made into tweets via a third-party script. On this site we only include
+the Twitter script on pages that need it by using this molecule rather than encouraging direct tweet embeds (which do work).
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+children| content . Can be plain text or markup| Here is some plain text,
+classes| css classes applied to parent| color--main-dark,
+date| Human-readable date for the tweet,
+url| Link to the tweet from the embed code usually
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}
