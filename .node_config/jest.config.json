@@ -1,0 +1,15 @@
+{
+  "preset": "jest-puppeteer",
+  "reporters": [
+    "default",
+    [
+      "jest-json-reporter2",
+      {
+        "outputDir": "./_data",
+        "outputFile": "jest-results.json",
+        "fullOutput": true
+      }
+    ]
+  ],
+  "rootDir": "../tests"
+}
