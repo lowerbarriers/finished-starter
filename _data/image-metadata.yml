@@ -122,3 +122,15 @@ images:
   - path: 'undraw_welcome_3gvl.png'
     height: 891
     width: 1108
+  - path: 'youtube/jNQXAC9IVRw.jpg.webp'
+    height: 360
+    width: 480
+  - path: 'youtube/wM3MnO3H8jE.jpg'
+    height: 360
+    width: 480
+  - path: 'youtube/wM3MnO3H8jE.jpg.webp'
+    height: 360
+    width: 480
+  - path: 'youtube/jNQXAC9IVRw.jpg'
+    height: 360
+    width: 480

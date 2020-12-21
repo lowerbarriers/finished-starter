@@ -369,6 +369,42 @@
 }
 
 /**
+ * YouTube embeds, faked to look like iframes as much as possible.
+ */
+.include--molecule--youtube {
+  position: relative;
+}
+.include--molecule--youtube::before {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  color: var(--color--white);
+  content: attr(data-title);
+  cursor: pointer;
+  display: block;
+  left: 0;
+  padding: calc(2 * var(--spacing--single));
+  position: absolute;
+  right: 0;
+  text-shadow: var(--text-shadow--default);
+  top: 0;
+  z-index: 2;
+}
+.include--molecule--youtube::after {
+  background-image: url("../images/in-css/youtube.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: calc(50% - calc(3.4 * var(--spacing--single)));
+  content: "";
+  cursor: pointer;
+  display: block;
+  padding: calc(3.4 * var(--spacing--single));
+  position: absolute;
+  right: calc(50% - calc(3.4 * var(--spacing--single)));
+}
+.include--molecule--youtube:hover::after {
+  background-color: #f00;
+}
+
+/**
  * Dismissible elements.
  */
 .js--dismissible {

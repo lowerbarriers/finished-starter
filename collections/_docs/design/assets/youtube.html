@@ -1,0 +1,44 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "All the YouTube videos used on the site."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#sitemap: true
+#tags: ["three", "four"]
+title: "YouTube videos"
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>Video</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for video in site.data.youtube %}
+      <tr>
+        <td>
+          {% include molecules/youtube.html id=video.id %}
+        </td>
+        <td><code><pre>
+          {% raw %}
+            {% include molecules/youtube.html
+              id="{% endraw %}{{ video.id }}{% raw %}"
+            %}
+          {% endraw %}
+        </pre></code></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
