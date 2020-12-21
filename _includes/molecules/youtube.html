@@ -1,0 +1,94 @@
+{% capture component %}
+  {% assign meta = site.data.youtube | where: "id", include.id | first %}
+  <figure class="figure figure--youtube js--youtube include include--molecule include--molecule--youtube
+    {% if include.classes %}{{ include.classes }}{% endif %}"
+    data-youtube="{{ include.id }}" {% if meta %}data-title="{{ meta.title }}"{% endif %}
+  >
+    <a href="https://www.youtube.com/watch?v={{ include.id }}">
+      <picture class="picture picture--lazy-load layout--hide--no-javascript" itemprop="image">
+        {% comment %}<!-- Get image information and metadata. -->{% endcomment %}
+        {% capture jpg_path %}/assets/images/youtube/{{ include.id }}.jpg{% endcapture %}
+        {% capture src %}youtube/{{ include.id }}.jpg{% endcapture %}
+        {% assign jpg_version = site.static_files | where: "path", jpg_path | first %}
+        {% assign height = site.data.image-metadata.images | where: "path", src | first %}
+
+        {% comment %}<!-- Set alt text for the video. -->{% endcomment %}
+        {% assign jpg_version = site.static_files | where: "path", jpg_path | first %}
+        {% assign alt = "YouTube video thumbnail" %}
+        {% if meta %}
+          {% capture alt %}{{ meta.title }}{% endcapture %}
+        {% endif %}
+
+        {% comment %}<!-- Pick a local or remote thumbnail image for default. -->{% endcomment %}
+        {% capture img_src %}https://i3.ytimg.com/vi/{{ include.id }}/0.jpg{% endcapture %}
+        {% if jpg_version %}
+          {% capture img_src %}{{ site.subpath }}/assets/images/{{ src }}{% endcapture %}
+        {% endif %}
+
+        {% comment %}<!-- Support webp if available. -->{% endcomment %}
+        {% capture webp_path %}/assets/images/youtube/{{ include.id }}.jpg.webp{% endcapture %}
+        {% assign webp_version = site.static_files | where: "path", webp_path | first %}
+        {% if webp_version %}
+          <source srcset="{{ site.subpath }}/assets/images/required/s.webp"
+            data-srcset="{{ webp_version.path | relative_url }}" type="image/webp" />
+        {% endif %}
+
+        <img src="{{ site.subpath }}/assets/images/required/s.gif"
+          data-src="{{ img_src }}" alt="{{ alt }}" loading="lazy"
+          {%if height %}height="{{ height.height }}"{% endif %}
+          {%if height %}width="{{ height.width }}"{% endif %}
+        />
+      </picture>
+      <noscript>
+        <img src="{{ img_src }}" alt="{{ alt }}" loading="lazy" />
+      </noscript>
+    </a>
+    {% if include.caption %}
+      <figcaption class="figcaption figure--youtube--figcaption position--relative z-index--1">{{ include.caption }}</figcaption>
+    {% endif %}
+  </figure>
+{% endcapture %}
+
+{% capture name %}YouTube{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/youtube.html
+    classes=""
+    caption="The very first YouTube video"
+    id="jNQXAC9IVRw"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+YouTube videos can really slow down the page load, so using this component is a helper for performance. It loads only the
+thumbnail image until you interact with it, and which point the whole video loads.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+caption| optional text to describe the video| The very first YouTube video,
+classes| css classes applied to parent| color--main-dark,
+id| The string of letters and numbers in a YouTube URL after the v| jNQXAC9IVRw
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

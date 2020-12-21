@@ -45,6 +45,7 @@ if ("serviceWorker" in navigator) {
 {% include_relative partials/js--dismissible.js %}
 {% include_relative partials/js--share-to-native.js %}
 {% include_relative partials/js--toggle-below.js %}
+{% include_relative partials/js--youtube.js %}
 {% include_relative partials/twitter-tweet.js %}
 
 /* Partials that might be source-order dependent. */
