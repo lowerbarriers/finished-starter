@@ -23,13 +23,14 @@ if ("IntersectionObserver" in window) {
   let animationObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.5) {
-          if (entry.target.classList.contains("picture--lazy-load")) {
-            swapPictureSrc(entry.target);
-          } else {
-            entry.target.classList.add("js--animation--observed");
-          }
-
+        if (
+          entry.intersectionRatio >= 0 &&
+          entry.target.classList.contains("picture--lazy-load")
+        ) {
+          swapPictureSrc(entry.target);
+          animationObserver.unobserve(entry.target);
+        } else if (entry.intersectionRatio >= 0.5) {
+          entry.target.classList.add("js--animation--observed");
           animationObserver.unobserve(entry.target);
         }
       });

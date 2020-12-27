@@ -4,7 +4,7 @@
       "category": "Mood",
       "description": "The properties, timing, and easing of most site elements when they change between property values",
       "type": "transition",
-      "value": "all .3s ease-in"
+      "value": "background-color .3s ease-in"
     }
   }
 }
