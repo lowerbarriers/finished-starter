@@ -4,7 +4,7 @@
  */
 
 const chromeLauncher = require('chrome-launcher');
-const config = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
+let config = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
 const fs = require('fs');
 const lighthouse = require('lighthouse');
 const puppeteer = require('puppeteer');
@@ -23,6 +23,10 @@ const options = {
   },
   chromeFlags: ['--disable-mobile-emulation']
 };
+
+// Set up budgets from the budgets.json file.
+let rawBudgets = fs.readFileSync('_data/budget.json');
+config.settings.budgets = JSON.parse(rawBudgets);
 
 async function lighthouseFromPuppeteer(url, options, config = null) {
   // Launch chrome using chrome-launcher

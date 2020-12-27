@@ -51,6 +51,26 @@ title: "Tests"
   </tbody>
 </table>
 
+<p>
+  These scores are recorded on the local development machine of the last person to develop and test new functionality,
+  and as such may be lower or higher than scores experienced in real-word scenarios.
+</p>
+
+{% include atoms/heading.html
+  children="Progress"
+  classes=""
+  level="3"
+%}
+
+<div class="display--flex overflow-x--scroll">
+  {% for shot in site.data.lighthouse.audits.screenshot-thumbnails.details.items %}
+    <div class="flex--1">
+      <img src="{{ shot.data }}" alt="Progress at {{ shot.timing }} ms" />
+      <br /><span>{{ shot.timing }} <abbr title="milliseconds">ms</abbr></span>
+    </div>
+  {% endfor %}
+</div>
+
 {% include atoms/heading.html
   children="Audits"
   classes=""

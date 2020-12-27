@@ -46,6 +46,27 @@ title: "Performance budget"
   </tbody>
 </table>
 
+{% include atoms/heading.html
+  children="Timings"
+  classes=""
+  level="3"
+%}
+
+<table>
+  <thead>
+    <th>Metric</th>
+    <th>Budget</th>
+  </thead>
+  <tbody>
+  {% for metric in site.data.budget[0].timings %}
+    <tr>
+      <td>{{ metric.metric }}</td>
+      <td>{{ metric.budget }} <abbr title="milliseconds">ms</abbr></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
 <p>
   The above data comes from <code>./_data/budget.json</code>, which is a performance budget file that can be directly
   used <a href="https://web.dev/use-lighthouse-for-performance-budgets/">by the Lighthouse CLI</a> to test pages against

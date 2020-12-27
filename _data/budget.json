@@ -41,7 +41,7 @@
     "resourceSizes": [
       {
         "resourceType": "document",
-        "budget": 20
+        "budget": 30
       },
       {
         "resourceType": "font",
@@ -65,7 +65,7 @@
       },
       {
         "resourceType": "stylesheet",
-        "budget": 50
+        "budget": 100
       },
       {
         "resourceType": "third-party",
@@ -74,6 +74,44 @@
       {
         "resourceType": "total",
         "budget": 1500
+      }
+    ],
+    "timings": [
+      {
+        "metric": "first-contentful-paint",
+        "budget": 750
+      },
+      {
+        "metric": "first-cpu-idle",
+        "budget": 750
+      },
+      {
+        "metric": "interactive",
+        "budget": 750
+      },
+      {
+        "metric": "first-meaningful-paint",
+        "budget": 750
+      },
+      {
+        "metric": "max-potential-fid",
+        "budget": 100
+      },
+      {
+        "metric": "estimated-input-latency",
+        "budget": 100
+      },
+      {
+        "metric": "total-blocking-time",
+        "budget": 100
+      },
+      {
+        "metric": "speed-index",
+        "budget": 1500
+      },
+      {
+        "metric": "largest-contentful-paint",
+        "budget": 2500
       }
     ]
   }

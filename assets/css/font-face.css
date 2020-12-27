@@ -1,6 +1,6 @@
 /**
  * @file
- * Webfont @font-face calls with swaps and docs, declared before anything else.
+ * Webfont @font-face calls with optionals and docs, declared before anything else.
  *
  * Webfonts require additional round-trips which are non-blocking, so we want to call them early.
  */
@@ -9,34 +9,34 @@
  * Fonts imported early and directly.
  *
  * Only include fonts that are known to be used, since each is an asset to load.
- * font-display: swap; is used to prevent text from being hidden on load.
+ * font-display: optional; is used to prevent text from being hidden on load.
  * We list src in preference order: local, woff2, then woff
  *
  * @see https://google-webfonts-helper.herokuapp.com/fonts
  */
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Public Sans';
   font-style: normal;
   font-weight: 100 900;
   src: url('../fonts/public_sans/public_sans_variable.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Public Sans';
   font-style: italic;
   font-weight: 100 900;
   src: url('../fonts/public_sans/public_sans_variable_italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Emberly';
   font-style: normal;
   font-weight: 100 900;
   src: url('../fonts/emberly/emberly-variable.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Emberly';
   font-style: italic;
   font-weight: 100 900;
