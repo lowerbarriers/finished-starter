@@ -3,8 +3,14 @@
     -- Uses a slightly modified version of the print stylesheet technique: https://timkadlec.com/remembers/2020-02-13-when-css-blocks/
     -->
 {% endcomment %}
-{% if site.woff %}
-  {% for woff in site.woff %}
+{% if site.preload %}
+  {% for style in site.preload.style %}
+    <link rel="preload" href="{{ site.subpath }}/assets/css/{{ style }}" as="style" type="text/css" crossorigin />
+  {% endfor %}
+  {% for image in site.preload.image %}
+    <link rel="preload" href="{{ site.subpath }}/assets/images/{{ image }}" as="image" type="image/webp" crossorigin />
+  {% endfor %}
+  {% for woff in site.preload.woff %}
     <link rel="preload" href="{{ site.subpath }}/assets/fonts/{{ woff }}" as="font" type="font/woff2" crossorigin />
   {% endfor %}
 {% endif %}

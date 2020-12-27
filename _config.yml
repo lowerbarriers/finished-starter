@@ -144,11 +144,18 @@ snipcart:
 ## Woff2 files declared as webfonts in your css, relative to /assets/fonts/
 ## Placing them here sets them to be preloaded in the head, which reduces request chaining for better performance.
 ## @see https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content
-woff:
-  - "public_sans/public_sans_variable.woff2"
-  - "emberly/emberly-variable.woff2"
-  - "public_sans/public_sans_variable_italic.woff2"
-  - "emberly/emberly-variable-italic.woff2"
+preload:
+  image:
+    - "in-css/hero-home.jpg.webp"
+    - "in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg.webp"
+    - "required/s.gif.webp"
+  style:
+    - "pre-commit-dependency.css"
+  woff:
+    - "public_sans/public_sans_variable.woff2"
+    - "emberly/emberly-variable.woff2"
+    - "public_sans/public_sans_variable_italic.woff2"
+    - "emberly/emberly-variable-italic.woff2"
 
 ## The 'THANKS' and 'SITE' sections of humans.txt
 ## @see http://humanstxt.org/
