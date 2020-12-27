@@ -219,6 +219,10 @@
 .card--hover:focus-within {
   border-style: dot-dash;
 }
+.card--hover figure img {
+  transition-property: transform;
+  will-change: transform;
+}
 .card--hover:hover figure img,
 .card--hover:active figure img,
 .card--hover:focus-within figure img {
