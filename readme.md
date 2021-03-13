@@ -83,6 +83,14 @@ If you want to use netlify,
 If you prefer Vercel,
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/lowerbarriers/finished-starter)
 
+Presently **Cloudflare Pages** doesn't have a one-click deploy button (to our knowledge), but 
+[the Cloudflare Pages demo here](https://finished-starter.pages.dev/) demonstrates that it's quite possible to do:
+
+  1. Fork the repo
+  2. Sign in to Cloudflare and select Pages from the bottom sidebar
+  3. Connect your GitHub account and add your fork
+  4. Set the production branch to `gh-pages`, "Build command" to `jekyll build --config _config.yml,_config.localdev.yml`, and "Build output directory" to `_site`
+
 ### Creating a local version for development
 
   1. Clone the repository to your local machine
