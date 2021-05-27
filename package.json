@@ -33,7 +33,7 @@
     "lighthouse": "^7.4.0",
     "prettier": "^2.2.1",
     "puppeteer": "^5.5.0",
-    "purgecss": "^2.1.0",
+    "purgecss": "^4.0.3",
     "terser": "^4.6.6"
   }
 }
