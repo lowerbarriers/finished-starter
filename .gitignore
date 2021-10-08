@@ -6,3 +6,5 @@ _site
 node_modules
 .bundle
 .jekyll-cache/
+Gemfile.lock
+package-lock.json
