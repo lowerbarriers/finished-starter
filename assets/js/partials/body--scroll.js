@@ -34,4 +34,6 @@ var debounce = function (fn, wait) {
   };
 };
 
-window.addEventListener("scroll", debounce(scrollClasses, 20));
+window.addEventListener("scroll", debounce(scrollClasses, 20), {
+  passive: true,
+});

@@ -1,0 +1,70 @@
+{% capture component %}
+  <header class="header--main layout--strip background-color--white color--main-dark text-align--center sticky--top
+    {% if include.classes %}{{ include.classes }}{% endif %}">
+    <div class="layout--stripe--inner z-index--3 display--flex position--relative">
+      <aside class="layout--column flex--none display--flex flex-direction--column justify-content--center">
+        <a class="header--logo logo" itemprop="url" href="{{ site.subpath }}/">
+          <img src="{{ site.subpath }}/assets/images/required/logo.svg" alt="{{ site.title }}"
+            class="image header--image header--logo--image" loading="lazy"
+            height="73" width="73" {# Explicit height and width is a Lighthouse signal for CLS in CWV #}
+          />
+          <span class="header--logo--tagline tagline font-weight--900 font-style--italic">{{ site.tagline }}</span>
+        </a>
+      </aside>
+
+      <!-- Toggle hanburger button. -->
+      <button type="button" aria-label="Menu" aria-controls="main-navigation"
+        class="hamburger hamburger--spring js--hamburger frost-hamburger-icon margin-left--auto">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+
+      <aside id="main-navigation" class="flex--auto display--flex layout--row align-items--center
+        padding-horizontal--4 padding-horizontal--collapse utility-and-nav mobile--tray
+      ">
+        {% include molecules/menu.html
+          classes="border-spaced flex--auto display--flex layout--row menu-layout--horizontal"
+          menu="main"
+        %}
+
+        {% include molecules/search-widget.html %}
+      </aside>
+    </div>
+  </header>
+{% endcapture %}
+
+{% capture name %}Header + Main nav + Hamburger menu{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include organisms/header--main--hamburger.html %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+The header section contains the logo and identifying information. It also houses the main menu and search widget markup.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

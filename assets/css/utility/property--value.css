@@ -552,6 +552,10 @@
   text-align: justify;
 }
 
+.text-decoration--none {
+  text-decoration: none;
+}
+
 .text-transform--uppercase {
   text-transform: uppercase;
 }
