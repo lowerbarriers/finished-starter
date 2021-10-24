@@ -123,8 +123,8 @@ twitter:
 ## Web monetization
 ## Comment out this section to remove the <meta> tag.
 ## @see https://webmonetization.org/
-web_monetization:
-  pointer: "$ilp.uphold.com/DY7b72i8hmgm" # A valid ILP pointer
+#web_monetization:
+#  pointer: "$ilp.uphold.com/DY7b72i8hmgm" # A valid ILP pointer
 
 ## PWA and other SEO
 ## @see https://developer.mozilla.org/en-US/docs/Web/Manifest
