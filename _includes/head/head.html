@@ -99,6 +99,9 @@
 {% elsif site.fax.mailto %}
   <meta property="og:fax_number" content="{{ site.fax.mailto }}" />
 {% endif %}
+{% if site.web_monetization.pointer %}
+  <meta property="monetization" content="{{ site.web_monetization.pointer }}" />
+{% endif %}
 
 {% comment %}<!-- Image (social share) tags --> {% endcomment %}
 {% if page.meta.image.src %}
