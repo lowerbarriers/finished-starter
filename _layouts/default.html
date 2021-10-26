@@ -31,7 +31,7 @@ layout: compress
       The site alerts need not be only on the front page, though they may not render on markdown pages.
       Swap the alerts in collections/_sections/alerts.html
     -->{% endcomment %}
-    {% if page.front %}
+    {% if page.front and false %}
       {% include organisms/section.html
         mode="ref"
         slug="alerts"
@@ -54,7 +54,7 @@ layout: compress
     {% endif %}
 
     {% comment %}<!-- This can be replaced with header, header and nav separately, etc. -->{% endcomment %}
-    {% include organisms/header--main.html %}
+    {% include organisms/header--main--hamburger.html %}
 
     <main class="page" id="main-content">
       {% comment %}<!-- The 'hero' title area that appears on all non-front pages. -->{% endcomment %}

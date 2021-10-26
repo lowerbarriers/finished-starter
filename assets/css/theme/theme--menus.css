@@ -1,0 +1,149 @@
+/**
+ * @file
+ * CSS for the main menu toggle and tray. Tentatively for menu dropdowns later.
+ *
+ * @see https://github.com/jonsuh/hamburgers
+ */
+
+/**
+ * Hamburger icon class for animating the lines into an X.
+ */
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin: 0 0 0 auto;
+  overflow: visible;
+  padding: calc(1.5 * var(--spacing-single));
+  position: relative;
+  right: calc(-1 * var(--spacing--single));
+  text-transform: none;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  transition-timing-function: linear;
+}
+@media all and (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 40px;
+}
+
+.hamburger-inner {
+  display: block;
+  margin-top: -2px;
+  top: 50%;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #000;
+  border-radius: 4px;
+  height: 4px;
+  position: absolute;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  transition-timing-function: ease;
+  width: 40px;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--spring .hamburger-inner {
+  top: 2px;
+  transition: background-color 0s 0.13s linear;
+}
+.hamburger--spring .hamburger-inner::before {
+  top: 10px;
+  transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spring .hamburger-inner::after {
+  top: 20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring.is-active .hamburger-inner {
+  background-color: transparent;
+  transition-delay: 0.22s;
+}
+.hamburger--spring.is-active .hamburger-inner::before {
+  top: 0;
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+  transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spring.is-active .hamburger-inner::after {
+  top: 0;
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/**
+ * Toggleable menu tray for mobile.
+ */
+@media all and (max-width: 1023px) {
+  /* When toggle button is clicked, body has a class */
+  .mobile--tray--open .page > div,
+  .mobile--tray--open .page > footer,
+  .mobile--tray--open .page > main {
+    position: relative;
+    z-index: 0;
+  }
+
+  /* The nav in the header becomes a hidden, toggle-able tray. */
+  .mobile--tray {
+    background-color: var(--color--main-light);
+    bottom: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    left: calc(-1 * calc(100vw - calc(8 * var(--spacing--single))));
+    padding: calc(2 * var(--spacing--single));
+    position: fixed;
+    top: 0;
+    transition: left 0.3s ease-in;
+    width: calc(100vw - calc(8 * var(--spacing--single)));
+  }
+  .mobile--tray.open {
+    box-shadow: 0 0 20px var(--color--main);
+    left: 0;
+  }
+  .mobile--tray .menu {
+    flex-direction: column;
+  }
+  .mobile--tray .menu a {
+    margin-bottom: calc(0.5 * var(--spacing--single));
+    padding: calc(1.5 * var(--spacing--single))
+      calc(1.5 * var(--spacing--single));
+  }
+  .mobile--tray .border-spaced > li {
+    border-right: 0 none;
+  }
+  .mobile--tray .flex--auto {
+    flex: none;
+  }
+}

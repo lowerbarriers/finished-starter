@@ -692,22 +692,22 @@ legend {
  * Input elements, general styling.
  */
 ::-webkit-input-placeholder {
-  color: var(--color--grey-light);
+  color: var(--color--grey);
 }
 :-moz-placeholder {
-  color: var(--color--grey-light);
+  color: var(--color--grey);
 }
 ::-moz-placeholder {
-  color: var(--color--grey-light);
+  color: var(--color--grey);
 }
 :-ms-input-placeholder {
-  color: var(--color--grey-light);
+  color: var(--color--grey);
 }
 ::-ms-input-placeholder {
-  color: var(--color--grey-light);
+  color: var(--color--grey);
 }
 ::placeholder {
-  color: var(--color--grey-light);
+  color: var(--color--grey);
 }
 
 button,

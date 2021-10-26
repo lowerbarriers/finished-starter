@@ -91,6 +91,10 @@ main,
   position: relative;
   z-index: 2;
 }
+/* @shame: Override z-index for classed inner stripes, specifically to make hamburger menu work. */
+.layout--stripe--inner.z-index--3 {
+  z-index: 3;
+}
 
 /**
  * Layout classes for hiding (see below for showing) at various viewports.

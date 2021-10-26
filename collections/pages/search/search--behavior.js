@@ -168,7 +168,7 @@ let qListener = (event) => {
  * JSON to come back, then we make the data global and manage memory. Then we
  * start listening for events and kicking off page dynamism.
  */
-fetch('/assets/data/search-index.json')
+fetch('../../../assets/data/search-index.json')
   .then((blob) => {
     return blob.json();
   })
