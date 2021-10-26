@@ -29,6 +29,51 @@ title: "Forms"
   mode="docblock"
 %}
 
+{% comment %}<!-- Only arranged this way because it's cool. -->{% endcomment %}
+{% capture states %}
+AL|Alabama, AK|Alaska, AS|American Samoa, AZ|Arizona, AR|Arkansas,
+CA|California, CO|Colorado, CT|Connecticut,
+DE|Delaware, DC|Dist of Columbia,
+FL|Florida,
+GA|Georgia, GU|Guam,
+HI|Hawaii,
+ID|Idaho, IL|Illinois, IN|Indiana, IA|Iowa,
+KS|Kansas, KY|Kentucky,
+LA|Louisiana,
+ME|Maine, MD|Maryland, MA|Massachusetts, MI|Michigan, MN|Minnesota, UM|Minor Outlying Islands, MS|Mississippi, MO|Missouri, MT|Montana,
+NE|Nebraska, NV|Nevada, NH|New Hampshire, NJ|New Jersey, NM|New Mexico, NY|New York, NC|North Carolina, ND|North Dakota, MP|Northern Mariana Islands,
+OH|Ohio, OK|Oklahoma, OR|Oregon,
+PA|Pennsylvania, PR|Puerto Rico,
+RI|Rhode Island,
+SC|South Carolina, SD|South Dakota,
+TN|Tennessee, TX|Texas,
+UT|Utah,
+VT|Vermont, VA|Virginia, VI|U.S. Virgin Islands,
+WA|Washington, WV|West Virginia, WI|Wisconsin, WY|Wyoming
+{% endcapture %}
+
+{% include forms/form--select.html
+  classes=""
+  description="A single select uses a dropdown."
+  label="Favorite state"
+  multiple=false
+  name="states"
+  options=states
+  required=false
+  mode="docblock"
+%}
+
+{% include forms/form--select.html
+  classes=""
+  description="Users do not love default multi-selects, so this uses checkboxes."
+  label="Favorite states"
+  multiple=true
+  name="states"
+  options=states
+  required=false
+  mode="docblock"
+%}
+
 {% include forms/form--yes-no.html
   classes=""
   default=false

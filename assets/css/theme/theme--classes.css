@@ -320,6 +320,11 @@
 .form--item:not([class*="flex--"]) + .form--item:not([class*="flex--"]) {
   margin-top: calc(2 * var(--spacing--single));
 }
+.form--item--select--multiple
+  .form--item:not([class*="flex--"])
+  + .form--item:not([class*="flex--"]) {
+  margin-top: calc(0.25 * var(--spacing--single));
+}
 .form--item--description {
   font-size: 0.75em;
 }
@@ -522,7 +527,6 @@
  * The search widget in the header.
  */
 .search-widget {
-  top: calc(25% - (2 * var(--spacing--single)));
 }
 .search-widget form {
   max-width: calc(100vw - (4 * var(--spacing--single)));
