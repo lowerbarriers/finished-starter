@@ -42,8 +42,8 @@
 {% endif %}
 
 {% comment %}<!-- While not explicitly blocking, these icon calls tend to behave best early in a head. -->{% endcomment %}
-<link rel="apple-touch-icon" href="{{ site.url }}{{ site.subpath }}/apple-touch-icon.png" />
-<link rel="shortcut icon" href="{{ site.url }}{{ site.subpath }}/favicon.ico" />
+<link rel="apple-touch-icon" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/apple-touch-icon.png" />
+<link rel="shortcut icon" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/favicon.ico" />
 
 {% comment %}
   <!-- Page title (auto-appended with site title). Allow a different title tag string than the title that appears
@@ -68,8 +68,8 @@
 {% endcomment %}
 <meta property="og:title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="robots" content="{% if page.meta.robots %}{{ page.meta.robots }}{% else %}{{ site.meta.robots }}{% endif %}" />
-<link rel="canonical" href="{{ site.url }}{{ site.subpath }}{{ page.url }}" />
-<meta property="og:url" content="{{ site.url }}{{ site.subpath }}{{ page.url }}" />
+<link rel="canonical" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}{{ page.url }}" />
+<meta property="og:url" content="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}{{ page.url }}" />
 {% if page.previous %}<link rel="prev" href="{{ page.previous.url | relative_url }}" />{% endif %}
 {% if page.next %}<link rel="next" href="{{ page.next.url | relative_url }}" />{% endif %}
 <link rel="help" href="{{ site.subpath }}{% link collections/pages/faqs.html %}" />
@@ -105,13 +105,13 @@
 
 {% comment %}<!-- Image (social share) tags --> {% endcomment %}
 {% if page.meta.image.src %}
-  <meta property="og:image" content="{{ site.url }}{{ site.subpath }}/assets/images/{{ page.meta.image.src }}" />
-  <link rel="image_src" href="{{ site.url }}{{ site.subpath }}/assets/images/{{ page.meta.image.src }}" />
+  <meta property="og:image" content="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/assets/images/{{ page.meta.image.src }}" />
+  <link rel="image_src" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/assets/images/{{ page.meta.image.src }}" />
   <meta name="og:image:alt" content="{{ page.meta.image.alt }}" />
   <meta name="twitter:image:alt" content="{{ page.meta.image.alt }}" />
 {% else %}
-  <meta property="og:image" content="{{ site.url }}{{ site.subpath }}/assets/images/{{ site.meta.image.src }}" />
-  <link rel="image_src" href="{{ site.url }}{{ site.subpath }}/assets/images/{{ site.meta.image.src }}" />
+  <meta property="og:image" content="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/assets/images/{{ site.meta.image.src }}" />
+  <link rel="image_src" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/assets/images/{{ site.meta.image.src }}" />
   <meta name="og:image:alt" content="{{ site.meta.image.alt }}" />
   <meta name="twitter:image:alt" content="{{ site.meta.image.alt }}" />
 {% endif %}
@@ -135,11 +135,11 @@
 <meta name="apple-mobile-web-app-title" content="{{ site.shortname }}" />
 <meta name="theme-color" content="{{ site.manifest_webmanifest.theme_color }}" />
 <meta name="Generator" content="{{ site.meta.generator }}" />
-<link rel="manifest" href="{{ site.url }}{{ site.subpath }}/manifest.webmanifest" />
-<link rel="author" href="{{ site.url }}{{ site.subpath }}/humans.txt" />
-<link rel="search" type="application/opensearchdescription+xml" href="{{ site.url }}{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.subpath }}/rss/blog/" title="Blog feed" />
-<link rel="alternate" type="application/json" href="{{ site.url }}{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.subpath }}/rss/events/" title="Events feed" />
-<link rel="alternate" type="application/json" href="{{ site.url }}{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
-<link rel="alternate" type="application/list+json" href="{{ site.url }}{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />
+<link rel="manifest" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/manifest.webmanifest" />
+<link rel="author" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/humans.txt" />
+<link rel="search" type="application/opensearchdescription+xml" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/opensearch.xml" title="{{ site.title }} search" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/rss/blog/" title="Blog feed" />
+<link rel="alternate" type="application/json" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/rss/blog/jsonfeed.json" title="Blog feed (json)" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/rss/events/" title="Events feed" />
+<link rel="alternate" type="application/json" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/rss/events/jsonfeed.json" title="Events feed (json)" />
+<link rel="alternate" type="application/list+json" href="{{ site.url | replace: "http:", "https:" }}{{ site.subpath }}/assets/data/data-feeds.json" title="JSON feeds list" />

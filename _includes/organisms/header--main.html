@@ -1,7 +1,7 @@
 {% capture component %}
   <header class="header--main layout--strip background-color--white color--main-dark text-align--center sticky--top
     {% if include.classes %}{{ include.classes }}{% endif %}">
-    <div class="layout--stripe--inner ">
+    <div class="layout--stripe--inner">
       <div class="layout--row display--flex">
         <aside class="layout--column flex--none display--flex flex-direction--column justify-content--center">
           <a class="header--logo logo" itemprop="url" href="{{ site.subpath }}/">
@@ -13,16 +13,13 @@
           </a>
         </aside>
 
-        <aside class="layout--column flex--1 display--flex flex-direction--column justify-content--center
+        <aside class="flex--auto display--flex layout--row align-items--center
           padding-horizontal--4 padding-horizontal--collapse">
           {% include molecules/menu.html
-            classes="border-spaced display--flex layout--row menu-layout--horizontal"
+            classes="border-spaced flex--auto display--flex layout--row menu-layout--horizontal"
             menu="main"
           %}
-        </aside>
 
-        <aside class="layout--column flex--none display--flex flex-direction--column justify-content--center position--relative
-          has--search-widget">
           {% include molecules/search-widget.html %}
         </aside>
       </div>

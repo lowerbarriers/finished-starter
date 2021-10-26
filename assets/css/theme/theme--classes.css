@@ -522,14 +522,16 @@
  * The search widget in the header.
  */
 .search-widget {
-  top: calc(25% - (2 * var(--spacing--single)));
 }
 .search-widget form {
   max-width: calc(100vw - (4 * var(--spacing--single)));
+  right: calc(-12 * var(--spacing--single));
   width: calc(24 * var(--spacing--single));
 }
-.has--search-widget {
-  padding-right: calc(4 * var(--spacing--single));
+@media all and (min-width: 768px) {
+  .search-widget form {
+    right: 0;
+  }
 }
 .button--search-widget--submit {
   background-color: var(--color--accent);

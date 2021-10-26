@@ -1,7 +1,7 @@
 {% capture component %}
   <header class="header layout--strip background-color--main color--white text-align--center
   {% if include.classes %}{{ include.classes }}{% endif %}">
-    <div class="layout--stripe--inner position--relative has--search-widget">
+    <div class="layout--stripe--inner">
       <a class="header--logo logo" itemprop="url" href="{{ site.subpath }}/">
         <img src="{{ site.subpath }}/assets/images/required/logo.svg" alt="{{ site.title }}"
           class="image header--image header--logo--image" loading="lazy"
@@ -9,10 +9,6 @@
         />
         <span class="header--logo--tagline tagline font-weight--900 font-style--italic">{{ site.tagline }}</span>
       </a>
-
-      {% include molecules/search-widget.html
-        classes="position--absolute right--0"
-      %}
     </div>
   </header>
 {% endcapture %}
@@ -26,7 +22,7 @@
 {% capture usage %}
 #### General guidance
 
-The header section contains the logo and identifying information. It also houses the search widget markup.
+The header section contains the logo and identifying information.
 {% endcapture %}
 
 {% capture accessibility %}
