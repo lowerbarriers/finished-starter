@@ -1,0 +1,152 @@
+{% capture component %}
+  {% assign options = include.options | split: "," %}
+  {% if include.multiple %}
+    <fieldset class="fieldset form--fieldset form--fieldset--select form--item--select--multiple {% if include.classes %}{{ include.classes }}{% endif %}">
+      <legend>{{ include.label }}
+        {% if include.required %}
+          <sup class="form--item--required" aria-hidden="true">*</sup>
+          <span class="a11y--visually-hidden">required</span>
+        {% endif %}
+      </legend>
+
+      <div class="max-height--16 overflow-y--auto">
+        {% for option in options %}
+          {% assign keyval = option | split: "|" %}
+          <div class="form--item form--item--checkbox position--relative">
+            <input type="checkbox" name="{{ include.name }}" id="{{ include.name }}--{{ keyval[0] | strip | slugify }}"
+              {% if include.description %}aria-describedby="{{ include.name }}--description" {% endif %}
+              value="{{ keyval[0] | strip }}"
+            />
+            <label class="label form--item--label display--block font-size--p75em padding-vertical--1"
+              for="{{ include.name }}--{{ keyval[0] | strip | slugify }}">
+              {{ keyval[1] | strip }}
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if include.description %}
+        {% include atoms/spacer.html size="2" %}
+        {% comment %}Divs ensure aria-describedby is the same level in the DOM for copying.{% endcomment %}
+        <div class="text-align--center">
+          <div>
+            <p class="form--item--description" id="{{ include.name }}--description">{{ include.description }}</p>
+          </div>
+        </div>
+      {% endif %}
+    </fieldset>
+  {% else %}
+    <div class="form--item form--item--select form--item--select--single {% if include.classes %}{{ include.classes }}{% endif %}">
+      <label class="label form--item--label display--block font-size--p75em" for="{{ include.name }}">
+        {{ include.label }}
+        {% if include.required %}
+          <sup class="form--item--required" aria-hidden="true">*</sup>
+          <span class="a11y--visually-hidden">required</span>
+        {% endif %}
+      </label>
+      <select name="{{ include.name }}" id="{{ include.name }}"
+        {% if include.description %}aria-describedby="{{ include.name }}--description" {% endif %}
+        {% if include.required %}required{% endif %}
+      >
+        {% for option in options %}
+          {% assign keyval = option | split: "|" %}
+          <option value="{{ keyval[0] | strip }}">{{ keyval[1] | strip }}</option>
+        {% endfor %}
+      </select>
+      {% if include.description %}
+        <p class="form--item--description" id="{{ include.name }}--description">{{ include.description }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endcapture %}
+
+{% capture name %}Select{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include forms/form--select.html
+    classes=""
+    description="Users do not love default multi-selects, so this uses checkboxes."
+    label="Favorite states"
+    multiple=true
+    name="states"
+    options=states
+    required=false
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+A select component is used to capture results when you want users to pick from a 
+pre-selected list of options.
+
+If the user is to select one option among many, set the 'multiple' prop to false, 
+which will show a `<select>` dropdown.
+
+If the user can choose more than one option from the list, set 'multiple' to true,
+and the form control will instead be a scrollable list of checkboxes, which is a 
+more pleasant user experience than `<select multiple>`
+
+To make a list of options to pass into the 'options' prop, format a liquid capture 
+like this:
+```{% raw %}
+{% capture states %}
+AL|Alabama, AK|Alaska, AS|American Samoa, AZ|Arizona, AR|Arkansas,
+CA|California, CO|Colorado, CT|Connecticut,
+DE|Delaware, DC|Dist of Columbia,
+FL|Florida,
+GA|Georgia, GU|Guam,
+HI|Hawaii,
+ID|Idaho, IL|Illinois, IN|Indiana, IA|Iowa,
+KS|Kansas, KY|Kentucky,
+LA|Louisiana,
+ME|Maine, MD|Maryland, MA|Massachusetts, MI|Michigan, MN|Minnesota, UM|Minor Outlying Islands, MS|Mississippi, MO|Missouri, MT|Montana,
+NE|Nebraska, NV|Nevada, NH|New Hampshire, NJ|New Jersey, NM|New Mexico, NY|New York, NC|North Carolina, ND|North Dakota, MP|Northern Mariana Islands,
+OH|Ohio, OK|Oklahoma, OR|Oregon,
+PA|Pennsylvania, PR|Puerto Rico,
+RI|Rhode Island,
+SC|South Carolina, SD|South Dakota,
+TN|Tennessee, TX|Texas,
+UT|Utah,
+VT|Vermont, VA|Virginia, VI|U.S. Virgin Islands,
+WA|Washington, WV|West Virginia, WI|Wisconsin, WY|Wyoming
+{% endcapture %}{% endraw %}
+```
+
+Each row is a pipe-separated key|value pair, and rows are separated by a comma and 
+a space.
+{% endcapture %}
+
+{% capture accessibility %}
+Both checkboxes and the select element are recognized by most assistive technologies. 
+The more you change the markup the greater risk you have of breaking the experience 
+for somebody.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+description| Longer textual description or help text| Selects can have description text,
+label| text as short description of what to fill out| Primary email,
+multiple| true or false for whether you can choose more than one option| true,
+name| input name passed as the key for the value in the form| languages,
+options| A pipe-and-comma-separated list of key/value pairs to choose from| langs,
+required| Whether it is required to fill this out in order to submit the form| true
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}
+

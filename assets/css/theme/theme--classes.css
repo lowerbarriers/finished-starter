@@ -320,6 +320,11 @@
 .form--item:not([class*="flex--"]) + .form--item:not([class*="flex--"]) {
   margin-top: calc(2 * var(--spacing--single));
 }
+.form--item--select--multiple
+  .form--item:not([class*="flex--"])
+  + .form--item:not([class*="flex--"]) {
+  margin-top: calc(0.25 * var(--spacing--single));
+}
 .form--item--description {
   font-size: 0.75em;
 }

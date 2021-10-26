@@ -107,6 +107,31 @@ a.button.margin-vertical--4 {
 }
 
 /**
+ * Max-height helpers.
+ */
+.max-height--inherit {
+  max-height: inherit;
+}
+.max-height--1 {
+  max-height: calc(1 * var(--spacing--single));
+}
+.max-height--2 {
+  max-height: calc(2 * var(--spacing--single));
+}
+.max-height--4 {
+  max-height: calc(4 * var(--spacing--single));
+}
+.max-height--8 {
+  max-height: calc(8 * var(--spacing--single));
+}
+.max-height--16 {
+  max-height: calc(16 * var(--spacing--single));
+}
+.max-height--32 {
+  max-height: calc(32 * var(--spacing--single));
+}
+
+/**
  * Padding classes.
  *
  * Horizontal for column section entities. At the mobile breakpoint the padding
