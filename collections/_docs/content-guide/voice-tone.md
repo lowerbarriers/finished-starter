@@ -95,6 +95,7 @@ Let’s consider three examples that target three different reader groups. Obitu
 emails targeted at newly engaged couples have vastly different tones. Why? The three types of writing correspond to audiences
 in three highly different emotional states.
 
+<div class="table--wrapper">
 <table>
   <thead>
     <tr>
@@ -130,6 +131,7 @@ in three highly different emotional states.
     </tr>
   </tbody>
 </table>
+</div>
 
 If you’re having trouble finding an appropriate tone, try reframing the situation: How would you talk to a friend who’s
 in the same situation as your target user? Remembering that written communication is a conversation can help you settle
