@@ -592,3 +592,12 @@
     z-index: 8;
   }
 }
+
+/**
+ * Responsive wrapper for tables.
+ */
+ @media all and (max-width: 1024px) {
+  .table--wrapper {
+    overflow-x: scroll;
+  }
+}
