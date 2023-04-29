@@ -28,7 +28,7 @@ main,
  */
 @media all and (max-width: 1023px) {
   .layout--column {
-    min-width: 270px; /* This is nearly the max-width of the content area of a small phone. */
+    min-width: 250px; /* This is nearly the max-width of the content area of a small phone. */
   }
 }
 @media all and (max-width: 767px) {

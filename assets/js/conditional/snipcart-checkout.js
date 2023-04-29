@@ -6,7 +6,7 @@
  */
 
 const snipcartCheckout = `
-  <button type="button" class="snipcart-checkout color--grey position--fixed
+  <button type="button" class="snipcart-checkout position--fixed
     top--0 right--0 margin-horizontal--4 margin-vertical--4 z-index--9">
     <figure class="figure figure--icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 27">
@@ -16,7 +16,7 @@ const snipcartCheckout = `
     <span class="snipcart-total-price"></span>
   </button>
 `;
-const snipcartScript = `<script src="https://cdn.snipcart.com/themes/v3.0.9/default/snipcart.js"></script>`;
+const snipcartScript = `<script src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>`;
 
 var parseCookieString = function(cookieString) {
   cookieString = cookieString.split(', ');
@@ -35,7 +35,7 @@ var insertSnipcartCheckout = function() {
     /* Check whether the snipcart third-party JS is loaded. */
     if (!("Snipcart" in window)) {
       var tag = document.createElement("script");
-      tag.src = "https://cdn.snipcart.com/themes/v3.0.9/default/snipcart.js";
+      tag.src = "https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js";
       document.body.appendChild(tag);
     }
 
@@ -63,7 +63,7 @@ window.addEventListener('load', (event) => {
   if ("Snipcart" in window) {
     var tag = document.createElement("link");
     tag.rel = "stylesheet";
-    tag.href = "https://cdn.snipcart.com/themes/v3.0.9/default/snipcart.css";
+    tag.href = "https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css";
     document.head.appendChild(tag);
   }
 });

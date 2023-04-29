@@ -1,4 +1,9 @@
 {% comment %}<!-- For privacy this only loads third-party if user has already started a cart. -->{% endcomment %}
 <div id="snipcart" data-api-key="{{ site.snipcart.api_key }}" hidden></div>
-
+<script>
+  window.SnipcartSettings = {
+    publicApiKey: "{{ site.snipcart.api_key }}",
+    version: "3.6.0"
+  };
+</script>
 <script async defer src="{{ site.subpath }}/assets/js/conditional/snipcart-checkout.js"></script>

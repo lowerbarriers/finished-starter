@@ -122,6 +122,8 @@
     flex-direction: column;
     justify-content: center;
     left: calc(-1 * calc(100vw - calc(8 * var(--spacing--single))));
+    max-height: 100vh;
+    overflow-y: auto;
     padding: calc(2 * var(--spacing--single));
     position: fixed;
     top: 0;
@@ -133,6 +135,7 @@
     left: 0;
   }
   .mobile--tray .menu {
+    flex: 0;
     flex-direction: column;
   }
   .mobile--tray .menu a {

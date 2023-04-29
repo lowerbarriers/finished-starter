@@ -11,7 +11,7 @@
           padding-horizontal--4 padding-horizontal--collapse">
           {% for location in site.locations %}
             <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              <span>{{ location.name }}</span><br>
+              <strong>{{ location.name }}</strong><br>
               <span itemprop="streetAddress">{{ location.street_address }}</span><br>
               <span itemprop="addressLocality">{{ location.locality }}</span>,
               <span itemprop="addressRegion">{{ location.region }}</span>
@@ -33,6 +33,12 @@
               </li>
             {% endfor %}
             </ul>
+          {% endif %}
+
+          {% if site.email %}<div><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>{% endif %}
+
+          {% if site.phone %}
+            <div><a href="tel:+{{ site.phone.mailto }}">{{ site.phone.display }}</a></div>
           {% endif %}
         </aside>
 

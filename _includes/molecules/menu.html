@@ -7,7 +7,7 @@
     {% unless p.url contains "page-" %}
       <li class="menu-item menu-item--menu-{{ include.menu | slugify }} menu-item--page-{{ p.title | slugify }}
         menu-item--menu-{{ include.menu | slugify }}--page-{{ p.title | slugify }} flex--1 display--flex
-        flex-direction--column justify-content--center">
+        flex-direction--column justify-content--center {% if include.item_classes %}{{ include.item_classes }}{% endif %}">
         <a href="{{ p.url | relative_url }}" class="menu-item--link {% if p.url == page.url %}active{% endif %}
           display--flex flex-direction--column justify-content--center">{{ p.title }}</a>
       </li>
@@ -22,6 +22,7 @@
   {% include molecules/menu.html
     menu="copyright"
     classes="border-spaced display--flex layout--row menu-layout--horizontal"
+    item_classes="filter--drop-shadow--white"
   %}
 {% endraw %}{% endcapture %}
 
@@ -37,6 +38,7 @@ Just some sample text in the accessibility section for now.
 
 {% capture props %}
 classes| css classes applied to parent| color--main-dark,
+item_classes| css classes applied to each list item in the menu| filter--drop-shadow--white,
 menu| the name of the menu as it appears in the front matter of the page| main
 {% endcapture %}
 

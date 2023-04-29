@@ -72,8 +72,8 @@ images:
     height: 630
     width: 1200
   - path: 'required/s.webp'
-    height: 446
-    width: 11330
+    height: 
+    width: 
   - path: 'required/tile-wide.png'
     height: 270
     width: 558

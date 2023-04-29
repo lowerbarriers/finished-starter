@@ -42,6 +42,12 @@ title: "Blog"
 ---
 
 <section class="layout--stripe "><div class="layout--stripe--inner">
+  {% include atoms/heading.html
+    children="Available blog posts"
+    classes="a11y--visually-hidden"
+    level="2"
+  %}
+
   <ul class="list-style--none layout--multiple--horizontal">
     {% for post in paginator.posts %}
       {% include molecules/card.html

@@ -141,12 +141,12 @@ body {
   }
 }
 @media all and (prefers-color-scheme: dark) {
-  body {
+  .prefers-color-scheme--dark {
     background-color: var(--color--grey-dark);
     background-image: none;
     filter: grayscale(100%) invert(100%);
   }
-  figure img {
+  .prefers-color-scheme--dark figure img {
     filter: invert(100%);
   }
 }
@@ -660,6 +660,9 @@ ol ol {
 ol ol ol {
   list-style-type: lower-roman;
 }
+li {
+  max-width: 75ch;
+}
 
 /**
  * Ensure <video> tags are responsive like <img> tags.
@@ -754,6 +757,15 @@ textarea {
     max-width: 700px; /* Arbitrary, but about right. */
     width: 100%;
   }
+}
+
+/**
+ * Constrain number inputs to a reasonable, arbitrary width.
+ *
+ * The primary place number inputs are used is product widgets.
+ */
+input[type="number"] {
+  max-width: calc(8.5 * var(--spacing--single));
 }
 button,
 input {

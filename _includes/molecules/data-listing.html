@@ -1,0 +1,59 @@
+{% capture component %}
+  {% assign listing = site.data[include.data][include.data] %}
+  <div class="data-listing {% if include.classes %}{{ include.classes }}{% endif %}">
+    {% for data in listing %}
+      {% if data.active == true %}
+        {% assign item_classes = include.item_classes %}
+        {% include atoms/image.html
+          src=data.logo
+          alt=data.name
+          classes=item_classes
+          link_url=data.href
+        %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endcapture %}
+
+{% capture name %}Data Listing{% endcapture %}
+
+{% capture liquid %}{% raw %}
+  {% include molecules/data-listing.html
+    data="brands"
+    classes="display--flex"
+    item_classes="flex--1"
+  %}
+{% endraw %}{% endcapture %}
+
+{% capture usage %}
+#### General guidance
+
+A data listing is most usually used for a "wall of logos", used commonly for social proof on a service website.
+{% endcapture %}
+
+{% capture accessibility %}
+Just some sample text in the accessibility section for now.
+{% endcapture %}
+
+{% capture props %}
+classes| css classes applied to parent| color--main-dark,
+data| name of the file containing the data to list in the _data directory| brands,
+item_classes| css classes applied to each item in the listing| color--main-dark
+{% endcapture %}
+
+{% assign classes = "background-color--main-light, font-size--2em" | split: ", " %}
+
+{% if include.mode == "docblock" %}
+  {% include molecules/docblock.html
+    accessibility=accessibility
+    classes=classes
+    html=component
+    liquid=liquid
+    name=name
+    props=props
+    source=include
+    usage=usage
+  %}
+{% else %}
+  {{ component }}
+{% endif %}

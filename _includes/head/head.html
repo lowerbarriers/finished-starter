@@ -52,10 +52,12 @@
     -- See in the SEO/social meta sections for how these titles are handled, too.
     -->
 {% endcomment %}
-{% if page.front %}
-  <title>{{ site.title }} | {{ page.title }}</title>
+{% if page.meta.title and page.front %}
+  <title>{{ site.title }} | {{ page.meta.title }}</title>
 {% elsif page.meta.title %}
   <title>{{ page.meta.title }} | {{ site.title }}</title>
+{% elsif page.front %}
+  <title>{{ site.title }} | {{ page.title }}</title>
 {% else %}
   <title>{{ page.title }} | {{ site.title }}</title>
 {% endif %}
