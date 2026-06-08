@@ -32,9 +32,14 @@ Headings provide your document with an hierarchical outline.
 {% endcapture %}
 
 {% capture accessibility %}
-A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine
-the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion,
-as the person navigating this way may be left wondering where the missing heading is.
+Headings communicate the structure of a page, and assistive technologies can use them for in-page navigation. Choose a
+`level` that matches the surrounding outline instead of choosing a heading for its visual size.
+
+Avoid skipping heading levels when opening new sections. For example, do not move from an `<h2>` directly to an `<h4>`
+unless the intervening section has ended. The W3C WAI headings tutorial notes that skipped ranks can be confusing for
+people navigating by heading.
+
+@see [W3C WAI tutorial on headings](https://www.w3.org/WAI/tutorials/page-structure/headings/)
 {% endcapture %}
 
 {% capture props %}

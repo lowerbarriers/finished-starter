@@ -57,9 +57,15 @@ checks to insert next-generation optimized images if available.
 {% endcapture %}
 
 {% capture accessibility %}
-It is required for all images to have an alt attribute. If an image has no communicative value (ie. it is purely decorative),
-its alt attribute should be an empty string. Otherwise, the alt attribute's text should be a description of the image's role
-in the corpus of the page.
+Every image needs an `alt` value, but the right value depends on the image's purpose in the current page. Use concise alt
+text when the image communicates information or acts as a link, and use an empty string when the image is purely decorative.
+
+When an image is wrapped in a link, the alt text becomes part of the link's accessible name, so describe the link
+destination or action instead of the pixels. For complex images, provide the short identification in `alt` and put the
+longer explanation in nearby page text or a linked description.
+
+@see [W3C WAI alt decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+@see [WCAG Understanding 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 {% endcapture %}
 
 {% capture props %}

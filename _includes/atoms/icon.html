@@ -21,8 +21,14 @@ Icons visually represent a small concept. They're used to provide both visual gu
 {% endcapture %}
 
 {% capture accessibility %}
-Since icons are primarily visual, it's important that icons not be the only way of conveying meaning. Textual labels are
-important to avoid inaccessible and unusable "mystery meat navigation".
+Icons must not be the only way to convey meaning. If the icon is part of a link, button, or other control, make sure the
+control has an accessible text label from visible text, `aria-label`, or another appropriate labeling technique.
+
+If an icon is decorative and the same meaning is already provided in text, hide the icon from assistive technologies so it
+does not create duplicate or noisy output. MDN's `aria-hidden` guidance notes that hidden content is removed from the
+accessibility tree.
+
+@see [MDN aria-hidden reference](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
 {% endcapture %}
 
 {% capture props %}
