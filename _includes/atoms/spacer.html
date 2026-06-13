@@ -21,7 +21,14 @@ Spacers are only available in 1, 2, 4, 8, 16, and 32 sizes. Other size values wi
 {% endcapture %}
 
 {% capture accessibility %}
-Spacers are empty `<div>` elements with no semantic value. Spacers should not be used for any semantic purpose.
+Spacers are empty `<div>` elements with no semantic value. Use them only for visual spacing, not to imply grouping,
+section breaks, reading order, or hierarchy.
+
+If the page needs structure, use semantic HTML such as headings, lists, landmarks, or sectioning elements. WCAG's
+non-text-content guidance treats purely decorative content differently from content that communicates information; spacers
+should stay decorative.
+
+@see [WCAG Understanding 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 {% endcapture %}
 
 {% capture props %}
